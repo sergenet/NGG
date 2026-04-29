@@ -1,0 +1,2112 @@
+[
+  {
+    "id": "P-B08T5S6JLN",
+    "slug": "elgato-prompter",
+    "title": "Elgato Prompter",
+    "description": "The first all-in-one teleprompter for creators. Plugs into a PC/Mac to display scripts, chat, or any window.",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Elgato (Direct)",
+        "url": "#",
+        "price": 265.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B08T5S6JLN?tag=newgiftsandgadgets-20",
+        "price": 279.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Built-in 9-inch monitor",
+      "Multi-camera support",
+      "Plug-and-play USB-C",
+      "The ultimate solution for creators who want to look professional on camera without the hassle of tablets."
+    ],
+    "brand": "Elgato"
+  },
+  {
+    "id": "P-B0GS5VHRF9",
+    "slug": "logitech-ergo-k860-wireless-keyboard",
+    "title": "Logitech Ergo K860 Wireless Keyboard",
+    "description": "A split ergonomic keyboard designed for better posture, less strain, and 54% more wrist support.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Logitech (Direct)",
+        "url": "#",
+        "price": 122.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GS5VHRF9?tag=newgiftsandgadgets-20",
+        "price": 129.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Pillowed wrist rest",
+      "Perfect Stroke keys",
+      "Multi-device pairing",
+      "Hands down the best ergonomic keyboard for long-haul office work. Your wrists will thank you."
+    ],
+    "brand": "Logitech"
+  },
+  {
+    "id": "P-B094912VBT",
+    "slug": "anker-555-usb-c-hub-8-in-1",
+    "title": "Anker 555 USB-C Hub (8-in-1)",
+    "description": "Compact 8-in-1 docking station with 4K HDMI, power delivery, and ultra-fast data transfer.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Anker (Direct)",
+        "url": "#",
+        "price": 75.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B094912VBT?tag=newgiftsandgadgets-20",
+        "price": 79.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Anker"
+  },
+  {
+    "id": "P-B0938ZCDVG",
+    "slug": "sony-wh-1000xm5-wireless-headphones",
+    "title": "Sony WH-1000XM5 Wireless Headphones",
+    "description": "Industry-leading noise cancellation and world-class sound quality for the ultimate focus.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Sony (Direct)",
+        "url": "#",
+        "price": 330.59999999999997,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0938ZCDVG?tag=newgiftsandgadgets-20",
+        "price": 348.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Superior ANC",
+      "30-hour battery",
+      "Crystal clear calls",
+      "The gold standard for office headphones. If you need 100% silence to focus, this is the one."
+    ],
+    "brand": "Sony"
+  },
+  {
+    "id": "P-B09VPHVT2Z",
+    "slug": "anker-737-power-bank-powercore-24k",
+    "title": "Anker 737 Power Bank (PowerCore 24K)",
+    "description": "Ultra-powerful two-way charging with a smart digital display for your laptop and phone.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Anker (Direct)",
+        "url": "#",
+        "price": 141.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=newgiftsandgadgets-20",
+        "price": 149.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Anker"
+  },
+  {
+    "id": "P-B0DK59YKRS",
+    "slug": "benq-screenbar-halo",
+    "title": "BenQ ScreenBar Halo",
+    "description": "Monitor light bar with wireless controller. Reduces eye strain and saves desk space.",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "BenQ (Direct)",
+        "url": "#",
+        "price": 170.04999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DK59YKRS?tag=newgiftsandgadgets-20",
+        "price": 179.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "BenQ"
+  },
+  {
+    "id": "P-B0FWT456MD",
+    "slug": "caldigit-ts4-thunderbolt-4-dock",
+    "title": "CalDigit TS4 Thunderbolt 4 Dock",
+    "description": "The most powerful dock for Mac and PC. 18 ports of extreme connectivity.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "CalDigit (Direct)",
+        "url": "#",
+        "price": 379.04999999999995,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0FWT456MD?tag=newgiftsandgadgets-20",
+        "price": 399.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [],
+    "brand": "CalDigit"
+  },
+  {
+    "id": "P-B0GXCG8S8W",
+    "slug": "vari-electric-standing-desk-48x30",
+    "title": "Vari Electric Standing Desk (48x30)",
+    "description": "Commercial-grade stability and a powerful dual motor for a seamless sit-to-stand transition.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Vari (Direct)",
+        "url": "#",
+        "price": 565.25,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GXCG8S8W?tag=newgiftsandgadgets-20",
+        "price": 595.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [],
+    "brand": "Vari"
+  },
+  {
+    "id": "P-B084BXDTK2",
+    "slug": "ember-smart-mug-2",
+    "title": "Ember Smart Mug 2",
+    "description": "Keep your coffee at the exact temperature you like for 80 minutes. The ultimate desk luxury for 2026.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ember (Direct)",
+        "url": "#",
+        "price": 141.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B084BXDTK2?tag=newgiftsandgadgets-20",
+        "price": 149.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Ember"
+  },
+  {
+    "id": "P-B084BPQ4QB",
+    "slug": "elgato-stream-deck-mk2",
+    "title": "Elgato Stream Deck MK.2",
+    "description": "15 customizable LCD keys to trigger any action. It’s like a remote control for your entire computer workflow.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Elgato (Direct)",
+        "url": "#",
+        "price": 137.75,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B084BPQ4QB?tag=newgiftsandgadgets-20",
+        "price": 145.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Elgato"
+  },
+  {
+    "id": "P-B009S750LA",
+    "slug": "vivo-dual-monitor-desk-mount",
+    "title": "VIVO Dual Monitor Desk Mount",
+    "description": "A heavy-duty steel monitor mount that supports two screens up to 27 inches. Perfect for budget-conscious professionals.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "VIVO (Direct)",
+        "url": "#",
+        "price": 32.3,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B009S750LA?tag=newgiftsandgadgets-20",
+        "price": 34.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Incredible value",
+      "Sturdy steel construction",
+      "Full motion articulation",
+      "The king of budget dual-monitor mounts. It's solid, reliable, and costs less than a lunch for two."
+    ],
+    "brand": "VIVO"
+  },
+  {
+    "id": "P-B0DSJN4XSX",
+    "slug": "ergotron-lx-single-monitor-arm",
+    "title": "Ergotron LX Single Monitor Arm",
+    "description": "The gold standard of monitor arms, offering unmatched smoothness and durability with patented Constant Force technology.",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ergotron (Direct)",
+        "url": "#",
+        "price": 179.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DSJN4XSX?tag=newgiftsandgadgets-20",
+        "price": 189.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Polished aluminum build",
+      "Constant Force technology",
+      "10-year warranty",
+      "The gold standard for monitor arms. If you want the smoothest movement and best durability, this is it."
+    ],
+    "brand": "Ergotron"
+  },
+  {
+    "id": "P-B074P7Y9ZG",
+    "slug": "amazon-basics-premium-monitor-stand",
+    "title": "Amazon Basics Premium Monitor Stand",
+    "description": "High-performance monitor arm that offers Ergotron-level quality at a slightly more accessible price point.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Amazon (Direct)",
+        "url": "#",
+        "price": 106.39999999999999,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B074P7Y9ZG?tag=newgiftsandgadgets-20",
+        "price": 112.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "OEM Ergotron quality",
+      "Great cable management",
+      "Easy to install",
+      "Essentially an Ergotron LX in black, offered at a lower price. The best mid-range premium choice."
+    ],
+    "brand": "Amazon"
+  },
+  {
+    "id": "P-B0CTHMKLH4",
+    "slug": "huanuo-dual-monitor-mount",
+    "title": "HUANUO Dual Monitor Mount",
+    "description": "A versatile gas-spring dual monitor mount that handles larger screens with ease and provides built-in cable management.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "HUANUO (Direct)",
+        "url": "#",
+        "price": 65.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CTHMKLH4?tag=newgiftsandgadgets-20",
+        "price": 69.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Smooth gas spring adjustment",
+      "Built-in USB ports",
+      "Supports large screens",
+      "The best value for a dual-monitor gas spring mount. Effortless movement for 27-inch screens."
+    ],
+    "brand": "HUANUO"
+  },
+  {
+    "id": "P-B07BF9Y667",
+    "slug": "taotronics-led-desk-lamp",
+    "title": "TaoTronics LED Desk Lamp",
+    "description": "A highly-rated LED desk lamp with multiple color modes and an integrated USB charging port for your devices.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "TaoTronics (Direct)",
+        "url": "#",
+        "price": 42.75,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B07BF9Y667?tag=newgiftsandgadgets-20",
+        "price": 45.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "5 color modes",
+      "Integrated USB charging",
+      "Non-glare lighting",
+      "A reliable, versatile desk lamp that covers all the basics without breaking the bank."
+    ],
+    "brand": "TaoTronics"
+  },
+  {
+    "id": "P-B07RNZN2JH",
+    "slug": "dyson-lightcycle-morph",
+    "title": "Dyson Lightcycle Morph",
+    "description": "An intelligent lighting solution that tracks local daylight and transforms as you work, relax, or sleep.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Dyson (Direct)",
+        "url": "#",
+        "price": 616.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B07RNZN2JH?tag=newgiftsandgadgets-20",
+        "price": 649.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Adapts to daylight",
+      "60-year light quality",
+      "4-in-1 lighting",
+      "For those who want the absolute peak of lighting technology. Overkill for most, but a masterpiece of design."
+    ],
+    "brand": "Dyson"
+  },
+  {
+    "id": "P-B01LQMKT6A",
+    "slug": "lepower-metal-desk-lamp",
+    "title": "LEPOWER Metal Desk Lamp",
+    "description": "Simple, industrial-style desk lamp with a sturdy metal build and flexible goose neck for precise task lighting.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "LEPOWER (Direct)",
+        "url": "#",
+        "price": 27.549999999999997,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B01LQMKT6A?tag=newgiftsandgadgets-20",
+        "price": 29.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Industrial design",
+      "Flexible goose neck",
+      "Sturdy metal build",
+      "A simple, timeless design that works. No Frills, just solid task lighting."
+    ],
+    "brand": "LEPOWER"
+  },
+  {
+    "id": "P-B0FQMLC3CB",
+    "slug": "ergear-single-monitor-arm",
+    "title": "ErGear Single Monitor Arm",
+    "description": "A top-rated monitor arm with a heavy-duty gas spring that provides effortless height adjustment and cable management.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "ErGear (Direct)",
+        "url": "#",
+        "price": 37.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0FQMLC3CB?tag=newgiftsandgadgets-20",
+        "price": 39.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Heavy-duty gas spring",
+      "Stable at full extension",
+      "Easy installation",
+      "The best value monitor arm on the market. It performs like a $100 mount for less than half the price."
+    ],
+    "brand": "ErGear"
+  },
+  {
+    "id": "P-B08C5HG5CS",
+    "slug": "eppiebasic-led-desk-lamp",
+    "title": "EppieBasic LED Desk Lamp",
+    "description": "A wide-reaching desk lamp perfect for dual monitor setups, offering flicker-free lighting and multiple customization options.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "EppieBasic (Direct)",
+        "url": "#",
+        "price": 56.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B08C5HG5CS?tag=newgiftsandgadgets-20",
+        "price": 59.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Extra wide light bar",
+      "Highly adjustable neck",
+      "Multiple color modes",
+      "Perfect for dual-monitor setups that need even, flicker-free lighting across the entire desk."
+    ],
+    "brand": "EppieBasic"
+  },
+  {
+    "id": "P-B0CZ6XY78Y",
+    "slug": "elgato-facecam-pro",
+    "title": "Elgato Facecam Pro",
+    "description": "The world's first 4K60 webcam. Professional-grade lens and sensor for studio-quality video directly from your desk.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Elgato (Direct)",
+        "url": "#",
+        "price": 284.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=newgiftsandgadgets-20",
+        "price": 299.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "True 4K at 60fps",
+      "DSLR-like controls",
+      "Excellent low-light performance",
+      "The best webcam on the market. Period. If you need the absolute best video quality for streaming or meetings, this is it."
+    ],
+    "brand": "Elgato"
+  },
+  {
+    "id": "P-B01N5RLYNX",
+    "slug": "logitech-brio-4k",
+    "title": "Logitech Brio 4K",
+    "description": "A legendary 4K webcam with RightLight 3 and HDR technology to ensure you look great in any lighting condition.",
+    "images": [
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Logitech (Direct)",
+        "url": "#",
+        "price": 151.04999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B01N5RLYNX?tag=newgiftsandgadgets-20",
+        "price": 159.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Reliable 4K resolution",
+      "Windows Hello support",
+      "Great background removal",
+      "A reliable workhorse that remains one of the best 4K webcams for professional use in 2026."
+    ],
+    "brand": "Logitech"
+  },
+  {
+    "id": "P-B0BRQ3T1V7",
+    "slug": "razer-kiyo-pro-ultra",
+    "title": "Razer Kiyo Pro Ultra",
+    "description": "Boasts the largest sensor ever in a webcam, providing incredible bokeh and light sensitivity that rivals dedicated cameras.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Razer (Direct)",
+        "url": "#",
+        "price": 284.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0BRQ3T1V7?tag=newgiftsandgadgets-20",
+        "price": 299.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Massive 1/1.2\" sensor",
+      "F/1.7 aperture for bokeh",
+      "Raw 4K 30fps output",
+      "If you want a 'blurred background' without using software filters, this is the webcam for you."
+    ],
+    "brand": "Razer"
+  },
+  {
+    "id": "P-B09MFMTMPD",
+    "slug": "anker-powerconf-c200",
+    "title": "Anker PowerConf C200",
+    "description": "A compact 2K webcam with a built-in privacy cover and AI-powered noise reduction for clear meetings on a budget.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Anker (Direct)",
+        "url": "#",
+        "price": 56.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B09MFMTMPD?tag=newgiftsandgadgets-20",
+        "price": 59.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Sharp 2K resolution",
+      "Physical privacy shutter",
+      "Compact design",
+      "The best value upgrade for anyone currently using a laptop's built-in webcam."
+    ],
+    "brand": "Anker"
+  },
+  {
+    "id": "P-B0D9W7J9SK",
+    "slug": "opal-tadpole",
+    "title": "Opal Tadpole",
+    "description": "The smallest webcam ever made, designed specifically for laptops with a high-end sensor and a bead-style mute button.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Opal (Direct)",
+        "url": "#",
+        "price": 122.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0D9W7J9SK?tag=newgiftsandgadgets-20",
+        "price": 129.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Ultra-portable",
+      "Clip-and-play design",
+      "Unique hardware mute",
+      "The perfect companion for digital nomads who want professional video without the bulk."
+    ],
+    "brand": "Opal"
+  },
+  {
+    "id": "P-B0DX1DQKMD",
+    "slug": "irobot-roomba-j9",
+    "title": "iRobot Roomba j9+",
+    "description": "The most powerful Roomba yet, featuring superior suction and the ability to identify and avoid common household obstacles.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "iRobot (Direct)",
+        "url": "#",
+        "price": 854.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DX1DQKMD?tag=newgiftsandgadgets-20",
+        "price": 899.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "PrecisionVision Navigation",
+      "Self-emptying base",
+      "P.O.O.P. guarantee",
+      "The ultimate set-it-and-forget-it vacuum for busy homes with pets."
+    ],
+    "brand": "iRobot"
+  },
+  {
+    "id": "P-B0B94T5M2F",
+    "slug": "irobot-roomba-combo-j7",
+    "title": "iRobot Roomba Combo j7+",
+    "description": "A 2-in-1 robot vacuum and mop with a fully retractable mop pad that keeps carpets completely dry.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "iRobot (Direct)",
+        "url": "#",
+        "price": 759.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0B94T5M2F?tag=newgiftsandgadgets-20",
+        "price": 799.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Retractable mop",
+      "Smart mapping",
+      "Avoids obstacles well",
+      "Best for homes with a mix of hard floors and area rugs that must stay dry."
+    ],
+    "brand": "iRobot"
+  },
+  {
+    "id": "P-B0GFDQNK82",
+    "slug": "lifx-a19-smart-led",
+    "title": "LIFX A19 Smart LED",
+    "description": "Incredible brightness and best-in-class color saturation without needing a separate smart home hub.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "LIFX (Direct)",
+        "url": "#",
+        "price": 46.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GFDQNK82?tag=newgiftsandgadgets-20",
+        "price": 49.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "No hub required",
+      "Incredible brightness",
+      "Works with Matter",
+      "The best choice for those who want the most saturated and vibrant colors available in smart lighting."
+    ],
+    "brand": "LIFX"
+  },
+  {
+    "id": "P-B0GF1J3YM7",
+    "slug": "govee-smart-led-bulbs",
+    "title": "Govee Smart LED Bulbs",
+    "description": "Affordable multi-packs that offer solid performance and great control via the Govee Home app.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Govee (Direct)",
+        "url": "#",
+        "price": 0.0,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GF1J3YM7?tag=newgiftsandgadgets-20",
+        "price": 0.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Great value multi-packs",
+      "Easy setup",
+      "Music sync features",
+      "The best way to light up an entire room with smart bulbs for under $30."
+    ],
+    "brand": "Govee"
+  },
+  {
+    "id": "P-B084C3D3XV",
+    "slug": "switchbot-hub-2-matter",
+    "title": "SwitchBot Hub 2 (Matter)",
+    "description": "The ultimate smart hub with Matter support, built-in temperature/humidity sensors, and IR control.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "SwitchBot (Direct)",
+        "url": "#",
+        "price": 65.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B084C3D3XV?tag=newgiftsandgadgets-20",
+        "price": 69.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "SwitchBot"
+  },
+  {
+    "id": "P-B0DZTPZKTT",
+    "slug": "govee-ai-sync-box-2",
+    "title": "Govee AI Sync Box 2",
+    "description": "Immersive TV backlighting that syncs with your gaming and movies using advanced AI detection.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Govee (Direct)",
+        "url": "#",
+        "price": 189.04999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DZTPZKTT?tag=newgiftsandgadgets-20",
+        "price": 199.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Govee"
+  },
+  {
+    "id": "P-B0GKFLT2HY",
+    "slug": "ring-indoor-cam-2nd-gen",
+    "title": "Ring Indoor Cam (2nd Gen)",
+    "description": "Compact plug-in security camera with privacy cover and advanced motion detection.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ring (Direct)",
+        "url": "#",
+        "price": 56.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GKFLT2HY?tag=newgiftsandgadgets-20",
+        "price": 59.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Ring"
+  },
+  {
+    "id": "P-B0BPHQ9DF5",
+    "slug": "samsung-t7-shield-1tb",
+    "title": "Samsung T7 Shield 1TB",
+    "description": "Rugged, fast, and water-resistant portable SSD for creative professionals on the go.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Samsung (Direct)",
+        "url": "#",
+        "price": 103.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0BPHQ9DF5?tag=newgiftsandgadgets-20",
+        "price": 109.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Samsung"
+  },
+  {
+    "id": "P-B0DGVQHFBZ",
+    "slug": "philips-hue-bridge-starter-kit",
+    "title": "Philips Hue Bridge & Starter Kit",
+    "description": "The gold standard for smart lighting. Millions of colors and rock-solid reliability.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Philips (Direct)",
+        "url": "#",
+        "price": 151.04999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DGVQHFBZ?tag=newgiftsandgadgets-20",
+        "price": 159.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Philips"
+  },
+  {
+    "id": "P-B07NQVWRR3",
+    "slug": "ecobee-premium-smart-thermostat",
+    "title": "Ecobee Premium Smart Thermostat",
+    "description": "Saves energy and improves comfort with air quality monitoring and Siri/Alexa integration.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ecobee (Direct)",
+        "url": "#",
+        "price": 236.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B07NQVWRR3?tag=newgiftsandgadgets-20",
+        "price": 249.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [],
+    "brand": "Ecobee"
+  },
+  {
+    "id": "P-B0F8VWZF5R",
+    "slug": "wyze-cam-v4-latest-model",
+    "title": "Wyze Cam v4 (Latest Model)",
+    "description": "2.5K high-definition security camera with stellar night vision and local storage options.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Wyze (Direct)",
+        "url": "#",
+        "price": 33.25,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0F8VWZF5R?tag=newgiftsandgadgets-20",
+        "price": 35.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [],
+    "brand": "Wyze"
+  },
+  {
+    "id": "P-B0B6RB5Q19",
+    "slug": "august-wi-fi-smart-lock-4th-gen",
+    "title": "August Wi-Fi Smart Lock (4th Gen)",
+    "description": "Attach to your existing deadbolt for remote locking/unlocking and guest access logs.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "August (Direct)",
+        "url": "#",
+        "price": 189.04999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0B6RB5Q19?tag=newgiftsandgadgets-20",
+        "price": 199.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "August"
+  },
+  {
+    "id": "P-B0F1N5HPVH",
+    "slug": "lifx-luna-smart-lamp",
+    "title": "Lifx Luna Smart Lamp",
+    "description": "A stunning, moon-shaped smart lamp with 1,000 lumens of brightness. Perfect for voice-controlled mood lighting.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Lifx (Direct)",
+        "url": "#",
+        "price": 56.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0F1N5HPVH?tag=newgiftsandgadgets-20",
+        "price": 59.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Lifx"
+  },
+  {
+    "id": "P-B0FG2MD3YP",
+    "slug": "aqara-fp2-presence-sensor",
+    "title": "Aqara FP2 Presence Sensor",
+    "description": "The ultimate smart home sensor. It detects multiple people in a room using radar—no cameras, just pure automation magic.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Aqara (Direct)",
+        "url": "#",
+        "price": 78.85,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0FG2MD3YP?tag=newgiftsandgadgets-20",
+        "price": 83.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Aqara"
+  },
+  {
+    "id": "P-B0FXG2BDTJ",
+    "slug": "roborock-qrevo-curv",
+    "title": "Roborock Qrevo Curv",
+    "description": "The 2026 king of robot vacs. It features a Chassis Lift System to climb over high thresholds and tangle-free technology for pet hair.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Roborock (Direct)",
+        "url": "#",
+        "price": 1519.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0FXG2BDTJ?tag=newgiftsandgadgets-20",
+        "price": 1599.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [],
+    "brand": "Roborock"
+  },
+  {
+    "id": "P-B0GQ6FPC4Y",
+    "slug": "amazon-echo-show-8-3rd-gen",
+    "title": "Amazon Echo Show 8 (3rd Gen)",
+    "description": "Features spatial audio and a built-in smart home hub. The screen adjusts content based on how close you are standing to it.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Amazon (Direct)",
+        "url": "#",
+        "price": 141.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GQ6FPC4Y?tag=newgiftsandgadgets-20",
+        "price": 149.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Amazon"
+  },
+  {
+    "id": "P-B01MSZR0JY",
+    "slug": "thermopro-twin-tempspike-plus",
+    "title": "ThermoPro Twin TempSpike Plus",
+    "description": "The ultimate wireless meat thermometer with dual probes and 600ft range. Features an LCD-enhanced booster for extreme 2026-level precision.",
+    "images": [
+      "https://images.unsplash.com/photo-1588622648712-8700eb8b3877?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "ThermoPro (Direct)",
+        "url": "#",
+        "price": 122.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B01MSZR0JY?tag=newgiftsandgadgets-20",
+        "price": 129.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Truly wireless",
+      "Dual-sensor probes",
+      "600ft range booster",
+      "The must-have gadget for any serious griller. Eliminates guesswork entirely."
+    ],
+    "brand": "ThermoPro"
+  },
+  {
+    "id": "P-B084BQGB82",
+    "slug": "zyliss-e900010u-viral-peeler",
+    "title": "Zyliss E900010U Viral Peeler",
+    "description": "The electric peeler that went viral on social media for its ability to peel anything from a grape to a squash in seconds.",
+    "images": [
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Zyliss (Direct)",
+        "url": "#",
+        "price": 18.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B084BQGB82?tag=newgiftsandgadgets-20",
+        "price": 19.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [],
+    "brand": "Zyliss"
+  },
+  {
+    "id": "P-B09MV5TTSM",
+    "slug": "fullstar-vegetable-chopper-mandoline-slicer-9-in-1",
+    "title": "Fullstar Vegetable Chopper & Mandoline Slicer 9-in-1",
+    "description": "The viral 9-in-1 vegetable chopper with container, cheese grater, and mandoline slicer. Dice, slice, julienne, and grate in seconds.",
+    "images": [
+      "https://images.unsplash.com/photo-1588622648712-8700eb8b3877?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Fullstar (Direct)",
+        "url": "#",
+        "price": 27.549999999999997,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B09MV5TTSM?tag=newgiftsandgadgets-20",
+        "price": 29.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "9 functions in one tool",
+      "Built-in catch container",
+      "Dishwasher safe",
+      "The best value vegetable chopper on the market. It replaces a drawer full of kitchen tools for under $30."
+    ],
+    "brand": "Fullstar"
+  },
+  {
+    "id": "P-B0DBN87GQJ",
+    "slug": "ninja-air-fryer-4-in-1-pro",
+    "title": "Ninja Air Fryer 4-in-1 Pro",
+    "description": "The gold standard for air frying — fast, consistent, and easy to clean.",
+    "images": [
+      "https://images.unsplash.com/photo-1588622648712-8700eb8b3877?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ninja (Direct)",
+        "url": "#",
+        "price": 113.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DBN87GQJ?tag=newgiftsandgadgets-20",
+        "price": 119.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Rapid heat tech",
+      "Dishwasher safe",
+      "Compact design",
+      "If you are cooking for 1-2 people, this is the most efficient kitchen tool you can buy."
+    ],
+    "brand": "Ninja"
+  },
+  {
+    "id": "P-B0CZKT382D",
+    "slug": "cosori-turboblaze-60-quart",
+    "title": "COSORI TurboBlaze 6.0-Quart",
+    "description": "Features a pro-grade DC motor for faster cooking and more precise temperature control than traditional models.",
+    "images": [
+      "https://images.unsplash.com/photo-1585515320310-259814833e62?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "COSORI (Direct)",
+        "url": "#",
+        "price": 94.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CZKT382D?tag=newgiftsandgadgets-20",
+        "price": 99.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Silent DC motor",
+      "9 cooking functions",
+      "Sleek compact design",
+      "The quietest and fastest 6-quart fryer in its class. Perfect for modern, tech-forward kitchens."
+    ],
+    "brand": "COSORI"
+  },
+  {
+    "id": "P-B0GWHYF9QD",
+    "slug": "instant-vortex-plus-6-in-1",
+    "title": "Instant Vortex Plus 6-in-1",
+    "description": "The ClearCook window and internal light let you monitor progress without opening the basket. Includes OdorErase filters.",
+    "images": [
+      "https://images.unsplash.com/photo-1588622648712-8700eb8b3877?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Instant (Direct)",
+        "url": "#",
+        "price": 141.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GWHYF9QD?tag=newgiftsandgadgets-20",
+        "price": 149.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "See-through window",
+      "Odor reducing filters",
+      "6-in-1 functionality",
+      "The best choice for those who hate the 'air fryer smell' and want to see their food cook in real-time."
+    ],
+    "brand": "Instant"
+  },
+  {
+    "id": "P-B0DH7YV11T",
+    "slug": "aerolatte-handheld-milk-frother",
+    "title": "Aerolatte Handheld Milk Frother",
+    "description": "The original handheld milk frother. Makes barista-quality froth in under 30 seconds.",
+    "images": [
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Aerolatte (Direct)",
+        "url": "#",
+        "price": 18.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DH7YV11T?tag=newgiftsandgadgets-20",
+        "price": 19.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Affordable",
+      "Battery powered",
+      "Easy to clean",
+      "The simplest way to upgrade your morning coffee for under $20."
+    ],
+    "brand": "Aerolatte"
+  },
+  {
+    "id": "P-B0DVNRCGC1",
+    "slug": "breville-barista-express-impress",
+    "title": "Breville Barista Express Impress",
+    "description": "Integrated conical burr grinder with intelligent dosing for barista-quality espresso at home.",
+    "images": [
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Breville (Direct)",
+        "url": "#",
+        "price": 711.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0DVNRCGC1?tag=newgiftsandgadgets-20",
+        "price": 749.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Built-in grinder",
+      "Precise dosing",
+      "Commercial-grade",
+      "The best all-in-one espresso machine for serious home baristas."
+    ],
+    "brand": "Breville"
+  },
+  {
+    "id": "P-B08GSSWDK6",
+    "slug": "herman-miller-aeron-chair",
+    "title": "Herman Miller Aeron Chair",
+    "description": "The legendary ergonomic office chair with PostureFit SL support and 12-year warranty.",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Herman (Direct)",
+        "url": "#",
+        "price": 1325.25,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B08GSSWDK6?tag=newgiftsandgadgets-20",
+        "price": 1395.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "12-year warranty",
+      "PostureFit SL",
+      "Breathable 8Z Pellicle mesh",
+      "The gold standard for ergonomic office seating. Worth every penny if you sit 8+ hours daily."
+    ],
+    "brand": "Herman"
+  },
+  {
+    "id": "P-B0GXVX5VBZ",
+    "slug": "magsafe-compatible-phone-stand",
+    "title": "MagSafe Compatible Phone Stand",
+    "description": "Three viewing modes and space for two cards, all in a slim, MagSafe-compatible design.",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "MagSafe (Direct)",
+        "url": "#",
+        "price": 27.549999999999997,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GXVX5VBZ?tag=newgiftsandgadgets-20",
+        "price": 29.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [],
+    "brand": "MagSafe"
+  },
+  {
+    "id": "P-B0CRG7XMT7",
+    "slug": "google-nest-hub-2nd-gen",
+    "title": "Google Nest Hub (2nd Gen)",
+    "description": "Smart display with sleep tracking and Google Assistant built in. The best bedside smart display.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Google (Direct)",
+        "url": "#",
+        "price": 94.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CRG7XMT7?tag=newgiftsandgadgets-20",
+        "price": 99.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Sleep tracking",
+      "Great display",
+      "Google Photos integration",
+      "The best Google ecosystem smart display for bedrooms and kitchens."
+    ],
+    "brand": "Google"
+  },
+  {
+    "id": "P-B0GVGFQCBQ",
+    "slug": "google-nest-cam-battery",
+    "title": "Google Nest Cam (Battery)",
+    "description": "Wire-free indoor/outdoor camera with intelligent alerts and 3 hours of free event recording.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Google (Direct)",
+        "url": "#",
+        "price": 170.04999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GVGFQCBQ?tag=newgiftsandgadgets-20",
+        "price": 179.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [],
+    "brand": "Google"
+  },
+  {
+    "id": "P-B0GS3S7DS8",
+    "slug": "apple-homepod-mini",
+    "title": "Apple HomePod Mini",
+    "description": "Compact speaker with Siri, AirPlay 2, and seamless Apple ecosystem integration.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Apple (Direct)",
+        "url": "#",
+        "price": 94.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GS3S7DS8?tag=newgiftsandgadgets-20",
+        "price": 99.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Excellent sound for size",
+      "Siri integration",
+      "AirPlay 2",
+      "The obvious choice for iPhone users who want whole-home audio."
+    ],
+    "brand": "Apple"
+  },
+  {
+    "id": "P-B0FCMPW212",
+    "slug": "ring-battery-doorbell-plus",
+    "title": "Ring Battery Doorbell Plus",
+    "description": "Head-to-toe HD+ video doorbell with enhanced motion detection and Alexa integration.",
+    "images": [
+      "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ring (Direct)",
+        "url": "#",
+        "price": 141.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0FCMPW212?tag=newgiftsandgadgets-20",
+        "price": 149.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Head-to-toe video",
+      "Easy install",
+      "Alexa integration",
+      "The best video doorbell for Alexa households. Easy to install and reliable."
+    ],
+    "brand": "Ring"
+  },
+  {
+    "id": "P-B084BP4ZNN",
+    "slug": "sonos-era-100",
+    "title": "Sonos Era 100",
+    "description": "Audiophile-grade smart speaker with spatial audio, Bluetooth, and multi-room support.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Sonos (Direct)",
+        "url": "#",
+        "price": 236.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B084BP4ZNN?tag=newgiftsandgadgets-20",
+        "price": 249.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Incredible sound quality",
+      "Stereo pairing",
+      "AirPlay 2 + Bluetooth",
+      "If audio fidelity is your priority, the Era 100 is in a different league."
+    ],
+    "brand": "Sonos"
+  },
+  {
+    "id": "P-B0GNNNB577",
+    "slug": "arlo-pro-5s-2k-spotlight-camera",
+    "title": "Arlo Pro 5S 2K Spotlight Camera",
+    "description": "Wire-free 2K HDR outdoor camera with color night vision, built-in spotlight, and 6-month battery.",
+    "images": [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Arlo (Direct)",
+        "url": "#",
+        "price": 236.54999999999998,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GNNNB577?tag=newgiftsandgadgets-20",
+        "price": 249.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "2K HDR video",
+      "Color night vision",
+      "6-month battery",
+      "The best wire-free outdoor security camera for comprehensive home protection."
+    ],
+    "brand": "Arlo"
+  },
+  {
+    "id": "P-B0GXSXJ48Q",
+    "slug": "vitamix-e310-explorian-blender",
+    "title": "Vitamix E310 Explorian Blender",
+    "description": "The gold standard for high-performance blending. Powerful motor and aircraft-grade stainless steel blades.",
+    "images": [
+      "https://images.unsplash.com/photo-1585515320310-259814833e62?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Vitamix (Direct)",
+        "url": "#",
+        "price": 331.55,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GXSXJ48Q?tag=newgiftsandgadgets-20",
+        "price": 349.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Incredible power",
+      "Self-cleaning feature",
+      "10-year warranty",
+      "If you want a blender that will last a decade and blend anything to a perfect silk, this is it."
+    ],
+    "brand": "Vitamix"
+  },
+  {
+    "id": "P-B0GRTH917V",
+    "slug": "ninja-professional-blender-bl610",
+    "title": "Ninja Professional Blender (BL610)",
+    "description": "1000 watts of professional power to crush ice and blast through tough ingredients for smoothies and frozen drinks.",
+    "images": [
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Ninja (Direct)",
+        "url": "#",
+        "price": 94.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0GRTH917V?tag=newgiftsandgadgets-20",
+        "price": 99.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Great value",
+      "Large 72oz capacity",
+      "BPA free",
+      "The best high-power blender under $100. Perfect for families making smoothies."
+    ],
+    "brand": "Ninja"
+  },
+  {
+    "id": "P-B0G5ZH7N5L",
+    "slug": "logitech-mx-master-3s",
+    "title": "Logitech MX Master 3S",
+    "description": "The ultimate productivity mouse. Features a MagSpeed electromagnetic scroll wheel and silent-click switches.",
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Logitech (Direct)",
+        "url": "#",
+        "price": 94.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0G5ZH7N5L?tag=newgiftsandgadgets-20",
+        "price": 99.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Home Office",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "50-100"
+    },
+    "features": [
+      "Ergonomic shape",
+      "Works on any surface (including glass)",
+      "Long battery life",
+      "The favorite mouse of developers and designers everywhere for a reason. Highly recommended."
+    ],
+    "brand": "Logitech"
+  },
+  {
+    "id": "P-B0CH9QWOU",
+    "slug": "breville-barista-express-espresso-machine",
+    "title": "Breville Barista Express Espresso Machine",
+    "description": "The ultimate all-in-one espresso machine. Includes a precision conical burr grinder and manual microfoam milk texturing.",
+    "images": [
+      "https://images.unsplash.com/photo-1585515320310-259814833e62?w=800&q=80"
+    ],
+    "vendors": [
+      {
+        "name": "Breville (Direct)",
+        "url": "#",
+        "price": 664.05,
+        "isPrimary": true
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CH9QWOU?tag=newgiftsandgadgets-20",
+        "price": 699.0,
+        "isPrimary": false
+      }
+    ],
+    "tags": {
+      "category": "Kitchen",
+      "recipient": [
+        "Everyone"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Professional grade",
+      "Built-in grinder",
+      "Excellent thermal control",
+      "The best investment for anyone serious about making cafe-quality espresso at home."
+    ],
+    "brand": "Breville"
+  }
+]
