@@ -11,6 +11,7 @@ Result: PASS. Stage 0 is complete; Stage 1 is now the next eligible stage but ha
 - Recoverable working branch: `codex/ngg-stage-0-baseline`.
 - Rebuilt-source baseline commit: `6e14d92` (`chore: capture rebuilt NGG baseline`).
 - Legacy-automation safety commit: `1cba33d` (`safety: retire legacy NGG automation`).
+- Current export-helper recovery commit: `b7bc0a0` (`build: track current export helpers`).
 - Existing unrelated and reference files were preserved.
 
 ## 2. PDF disposition
