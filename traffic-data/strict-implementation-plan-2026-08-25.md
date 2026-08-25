@@ -1,7 +1,7 @@
 # NewGiftsAndGadgets strict implementation plan
 
 Date agreed for planning: 2026-08-25
-Status: Stage 0 complete; Stage 1 awaiting deployment approval
+Status: Stages 0-1 complete; Stage 2 ready but not started
 
 ## Binding execution rule
 
@@ -373,8 +373,8 @@ Evidence file for each quarter: `traffic-data/quarterly-review-YYYY-QN.md`.
 | Stage | Status | Completion evidence |
 |---:|---|---|
 | 0 | Completed | `traffic-data/stage-0-completion.md` |
-| 1 | In progress; local gate passed, awaiting deployment approval | `traffic-data/stage-1-predeployment.md` |
-| 2 | Locked | — |
+| 1 | Completed | `traffic-data/stage-1-completion.md` |
+| 2 | Ready; not started | — |
 | 3 | Locked | — |
 | 4 | Locked | — |
 | 5 | Locked | — |
