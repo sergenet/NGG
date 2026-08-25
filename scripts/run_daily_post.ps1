@@ -1,4 +1,5 @@
 # run_daily_post.ps1
+throw "DISABLED: obsolete product affiliate autoposter retired during Stage 0 on 2026-08-25."
 # This script runs the social_autopost.py script, alternating platforms based on the day of the year.
 # Designed to be scheduled via Windows Task Scheduler (e.g., daily at 10:00 AM).
 

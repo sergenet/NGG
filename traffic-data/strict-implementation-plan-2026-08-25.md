@@ -1,7 +1,7 @@
 # NewGiftsAndGadgets strict implementation plan
 
 Date agreed for planning: 2026-08-25
-Status: Stage 0 not started
+Status: Stage 0 in progress
 
 ## Binding execution rule
 
@@ -372,7 +372,7 @@ Evidence file for each quarter: `traffic-data/quarterly-review-YYYY-QN.md`.
 
 | Stage | Status | Completion evidence |
 |---:|---|---|
-| 0 | Not started | — |
+| 0 | In progress | `traffic-data/stage-0-completion.md` pending final checks |
 | 1 | Locked | — |
 | 2 | Locked | — |
 | 3 | Locked | — |
