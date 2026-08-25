@@ -4,14 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "validate:data": "node scripts/validate-catalog.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run validate:data && npm run lint && npm run typecheck",
+    "build": "npm run validate:data && next build && python engine/sitemap_generator.py && python engine/rss_generator.py && python engine/generate_pinterest_feed.py",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint src",
+    "report:traffic": "node scripts/build-traffic-report.mjs"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.14.0",
     "next": "16.2.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

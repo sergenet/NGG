@@ -1,0 +1,14 @@
+import type { Metadata } from 'next';
+import { RemoteWorkerTopicGuide } from '@/components/RemoteWorkerTopicGuide';
+
+export const metadata: Metadata = { title: 'Gifts for People on Video Calls All Day', description: 'Compare useful video-call gifts by lighting, camera fit, privacy, software requirements, and the problem they actually solve.', alternates: { canonical: '/gifts/video-call-gifts/' } };
+
+const items = [
+  { slug: 'anker-powerconf-c200', bestFor: 'A practical step up from a weak laptop camera', checkFirst: 'USB connection, mounting position, and permission to use its controls', skipWhen: 'Lighting or internet quality—not the camera—is the real problem' },
+  { slug: 'logitech-brio-4k', bestFor: 'Business calls and users who value Windows Hello', checkFirst: 'Operating-system support and whether 4K capture will be used', skipWhen: 'The recipient only needs a basic 1080p meeting camera' },
+  { slug: 'opal-tadpole', bestFor: 'Laptop users who take calls from several locations', checkFirst: 'USB-C availability and a screen thin enough for its clip', skipWhen: 'They mainly use a thick desktop monitor' },
+  { slug: 'benq-screenbar-halo', bestFor: 'A desk needing task and ambient light without another lamp base', checkFirst: 'Monitor shape, webcam clearance, USB power, and mounting area', skipWhen: 'The monitor cannot accept a top-mounted light' },
+  { slug: 'elgato-prompter', bestFor: 'Presenters who need eye contact while reading notes', checkFirst: 'Camera compatibility, desk room, computer support, and software installation', skipWhen: 'They rarely present or cannot install companion software' },
+] as const;
+
+export default function Page() { return <RemoteWorkerTopicGuide eyebrow="Remote work · Video calls" title="Gifts for people who live on video calls" dek="Choose the bottleneck first: poor light, weak framing, lost eye contact, or a setup that cannot travel. A higher specification does not fix the wrong problem." updated="August 23, 2026" principles={[{ title: 'Fix light before pixels', body: 'A well-placed light can improve an existing camera more than 4K hardware in a dark or backlit room.' }, { title: 'Respect work-device limits', body: 'Employer-managed computers may block companion software, drivers, or account-based features.' }, { title: 'Protect privacy', body: 'Prefer a physical shutter or a setup the recipient can disconnect easily when the call ends.' }]} items={[...items]} method="We selected products whose published functions address a distinct video-call problem, then added the mounting, port, software, and workspace questions most likely to cause a disappointing gift." related={[{ href: '/home-office/best-webcam-for-zoom-meetings-2026/', label: 'Compare webcams' }, { href: '/gifts/small-home-office/', label: 'Small-office gifts' }, { href: '/gifts/remote-workers-under-50/', label: 'Gifts under $50' }]} />; }

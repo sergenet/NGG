@@ -16,6 +16,14 @@
 # next.js
 /.next/
 /out/
+/temp_extract/
+/scratch/
+/__pycache__/
+**/__pycache__/
+*.pyc
+*.log
+*.mp4
+*.zip
 
 # production
 /build
@@ -36,6 +44,20 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local secrets and operational state
+social_config.json
+post_history.json
+social_autopost.log
+social_autopost_runner.log
+.deploy-manifest.json
+
+# ad-hoc notes that may contain credentials
+X API and automated posting.txt
+record screen.txt
+run build to update site npm run bu.txt
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

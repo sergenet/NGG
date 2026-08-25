@@ -1,0 +1,44 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Consolidate legacy routes into their closest current equivalents.
+Redirect 301 /home-office/best-monitor-arms/ /home-office/best-monitor-arms-for-dual-setups-2026/
+RedirectMatch 301 ^/smart-home/?$ /shop/smart-home/
+Redirect 301 /gift-guides/best-gifts-for-dad-fathers-day-2026/ /gift-guides/fathers-day-gadget-gifts/
+
+# Retired WordPress product and feed URLs have no equivalent current page.
+# Return 410 so crawlers stop retrying them instead of treating them as soft 404s.
+RewriteRule ^product/[^/]+/feed/?$ - [G,L]
+RewriteCond %{DOCUMENT_ROOT}/product/$1/index.html !-f
+RewriteRule ^product/([^/]+)/?$ - [G,L]
+
+# Expired or administrative WordPress-era routes should leave the index.
+Redirect gone /my-account/
+Redirect gone /reviews/
+Redirect gone /deals/amazon-big-spring-sale-2026-the-best-tech-gadget-deals/
+RedirectMatch gone ^/wp-content/.*$
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://s.pinimg.com https://cdn.geniuslink.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.beehiiv.com https://ct.pinterest.com; frame-src https://*.beehiiv.com; base-uri 'self'; form-action 'self' https://*.beehiiv.com; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root { --ink:#172019; --paper:#fbfaf6; --cream:#f1eee4; --coral:#ef6a4d; --sage:#bfd0b8; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+a,button { outline-offset:4px; }
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid #4f46e5; }
+::selection { background:#f7c6b9; color:#172019; }
+.site-container { width:min(100% - 2rem,80rem); margin-inline:auto; }
+.hero-shell { overflow:hidden; border-bottom:1px solid #dedbd1; background:radial-gradient(circle at 90% 5%,#f6c4b7 0,transparent 32%),radial-gradient(circle at 5% 80%,#dce7d7 0,transparent 28%),#f7f4eb; }
+.display-title { font-size:clamp(3.4rem,7vw,6.8rem); line-height:.92; letter-spacing:-.065em; font-weight:950; color:#18231d; }
+.section-title { margin-top:.7rem; font-size:clamp(2rem,4vw,3.5rem); line-height:1; letter-spacing:-.045em; font-weight:900; color:#18231d; }
+.section-heading-row { display:flex; flex-direction:column; gap:1.25rem; }
+.section-intro { max-width:37rem; color:#5f6c63; line-height:1.7; }
+.eyebrow { display:inline-flex; align-items:center; gap:.45rem; color:#b3432c; font-size:.73rem; line-height:1; font-weight:900; text-transform:uppercase; letter-spacing:.18em; }
+.eyebrow-dark { color:#f6b09e; }
+.button-primary,.button-secondary { display:inline-flex; min-height:3.25rem; align-items:center; justify-content:center; gap:.55rem; border-radius:999px; padding:.8rem 1.25rem; font-size:.92rem; font-weight:900; transition:.2s ease; }
+.button-primary { background:#18231d; color:white; box-shadow:0 12px 30px #18231d2b; }
+.button-primary:hover { transform:translateY(-2px); background:#29382e; }
+.button-secondary { border:1px solid #cbc8bd; background:#fffdf8; color:#18231d; }
+.button-secondary:hover { border-color:#18231d; }
+.text-link { display:inline-flex; align-items:center; gap:.4rem; color:#344a3b; font-weight:850; }
+.text-link:hover { text-decoration:underline; text-underline-offset:4px; }
+.hero-card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; transform:rotate(1deg); }
+.hero-category-card { display:flex; min-height:13.5rem; flex-direction:column; border:1px solid #d9d4c8; border-radius:1.6rem; padding:1.35rem; box-shadow:0 18px 45px #3b342519; transition:.25s ease; }
+.hero-category-card:hover { transform:translateY(-5px) rotate(-1deg); box-shadow:0 24px 50px #3b34252b; }
+.hero-category-1{background:#f7b7a8}.hero-category-2{background:#c7d8c0}.hero-category-3{background:#f4d98a}.hero-category-4{background:#c9d3ee}
+.category-tile { display:flex; align-items:center; gap:1rem; min-height:7.5rem; border:1px solid #ddd9cf; border-radius:1.5rem; background:white; padding:1.1rem; transition:.2s ease; }
+.category-tile:hover { border-color:#9cae9d; transform:translateY(-2px); box-shadow:0 14px 35px #17201912; }
+.category-icon { display:grid; width:3.25rem; height:3.25rem; flex:none; place-items:center; border-radius:1rem; background:#f2efe6; font-size:1.5rem; }
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
+.skip-link { position:fixed; left:1rem; top:-5rem; z-index:100; background:#fff; padding:.8rem 1rem; border-radius:.75rem; font-weight:800; }.skip-link:focus{top:1rem}
+@media (min-width:768px){.section-heading-row{flex-direction:row;align-items:end;justify-content:space-between}.section-heading-row>.section-intro{padding-bottom:.3rem}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}

@@ -1,65 +1,97 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { ArrowRight, BriefcaseBusiness, ChefHat, Compass, Gift, House, PawPrint, Plane, Search, ShieldCheck, Sparkles, Users } from 'lucide-react';
+import productsData from '@/lib/data/products.json';
+import { Product } from '@/lib/schema';
+import { DealCard } from '@/components/DealCard';
+import { NewsletterInline } from '@/components/NewsletterInline';
+
+export const metadata = {
+  title: 'Gift Ideas & Useful Gadgets, Thoughtfully Curated',
+  description: 'Discover practical gifts, clever gadgets, and research-based buying guides for home, work, travel, pets, and everyday life.',
+  alternates: { canonical: '/' },
+};
+
+const categoryDetails = [
+  { name: 'Home Office', slug: 'home-office', icon: '⌨️', copy: 'Comfort, focus, and smarter desk setups.' },
+  { name: 'Smart Home', slug: 'smart-home', icon: '💡', copy: 'Useful automation without the gimmicks.' },
+  { name: 'Kitchen', slug: 'kitchen', icon: '🍳', copy: 'Tools that earn their counter space.' },
+  { name: 'Travel Tech', slug: 'travel-tech', icon: '🧳', copy: 'Portable gear for smoother journeys.' },
+  { name: 'Pet Tech', slug: 'pet-tech', icon: '🐾', copy: 'Clever upgrades for pets and their people.' },
+  { name: 'Desk Toys & Novelty Gifts', slug: 'desk-toys-novelty-gifts', icon: '✨', copy: 'Delightful finds with genuine personality.' },
+];
+
+const giftPaths = [
+  { title: 'Remote workers', copy: 'Comfort, focus, calls, and portable productivity.', href: '/gifts/remote-workers/', icon: BriefcaseBusiness, tone: 'bg-[#d7e5d2]' },
+  { title: 'Home cooks', copy: 'Useful tools that earn their counter or drawer space.', href: '/gifts/home-cooks/', icon: ChefHat, tone: 'bg-[#f5df9d]' },
+  { title: 'New homeowners', copy: 'Smart upgrades with compatibility kept in view.', href: '/gifts/new-homeowners/', icon: House, tone: 'bg-[#cddff0]' },
+  { title: 'Pet parents', copy: 'Practical help for care, grooming, and checking in.', href: '/gifts/pet-parents/', icon: PawPrint, tone: 'bg-[#f5c7bb]' },
+  { title: 'Travelers', copy: 'Portable power and gear for smoother journeys.', href: '/gifts/travelers/', icon: Plane, tone: 'bg-[#d9d1ec]' },
+  { title: 'Coworkers', copy: 'Approachable desk gifts with personality and purpose.', href: '/gifts/coworkers/', icon: Users, tone: 'bg-[#eadbc9]' },
+];
 
 export default function Home() {
+  const products = productsData as Product[];
+  const featured = products.filter((product) => product.vendors.some((vendor) => vendor.isPrimary)).slice(0, 6);
+  const under50 = products.filter((product) => Math.min(...product.vendors.map((vendor) => vendor.price)) < 50).slice(0, 4);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main id="main-content">
+      <section className="hero-shell">
+        <div className="site-container grid gap-12 py-16 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:py-24">
+          <div>
+            <div className="eyebrow"><Sparkles className="h-4 w-4" /> Fresh finds, practical picks</div>
+            <h1 className="display-title mt-6 max-w-4xl">Find the gift they’ll actually use.</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">A research-led portal for useful gadgets, memorable gifts, and honest trade-offs—organized by person, purpose, and price.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href="/shop/all/" className="button-primary">Explore all picks <ArrowRight className="h-4 w-4" /></Link>
+              <Link href="/gift-guides/" className="button-secondary"><Gift className="h-4 w-4" /> Browse gift guides</Link>
+            </div>
+            <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-600">
+              <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-600" /> Clear affiliate disclosure</span>
+              <span className="inline-flex items-center gap-2"><Compass className="h-4 w-4 text-indigo-600" /> Research-based curation</span>
+              <span className="inline-flex items-center gap-2"><Search className="h-4 w-4 text-orange-500" /> Pros, cons, and best fit</span>
+            </div>
+          </div>
+          <div className="hero-card-grid" aria-label="Featured gift categories">
+            {categoryDetails.slice(0, 4).map((category, index) => (
+              <Link key={category.slug} href={`/shop/${category.slug}/`} className={`hero-category-card hero-category-${index + 1}`}>
+                <span className="text-4xl" aria-hidden="true">{category.icon}</span><span className="mt-8 block text-sm font-bold uppercase tracking-[.18em] text-slate-500">Explore</span><span className="mt-1 block text-xl font-black text-slate-950">{category.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="site-container py-16" aria-labelledby="person-heading">
+        <div className="section-heading-row"><div><p className="eyebrow">Start with the person</p><h2 id="person-heading" className="section-title">Who are you shopping for?</h2></div><p className="section-intro">A useful gift begins with their routines, constraints, and interests—not a generic bestseller badge.</p></div>
+        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {giftPaths.map(({ icon: Icon, ...path }) => (
+            <Link key={path.href} href={path.href} className={`group rounded-[1.75rem] p-6 transition-transform hover:-translate-y-1 ${path.tone}`}>
+              <Icon className="h-7 w-7 text-[#18231d]" />
+              <h3 className="mt-8 text-2xl font-black text-[#18231d]">{path.title}</h3>
+              <p className="mt-2 leading-7 text-slate-700">{path.copy}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#18231d]">See the shortlist <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+            </Link>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="site-container pb-16" aria-labelledby="category-heading">
+        <div className="section-heading-row"><div><p className="eyebrow">Or start with their interests</p><h2 id="category-heading" className="section-title">Shop ideas, not endless aisles</h2></div><p className="section-intro">Focused collections make it easier to get from “I need a gift” to a shortlist worth comparing.</p></div>
+        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {categoryDetails.map((category) => <Link key={category.slug} href={`/shop/${category.slug}/`} className="category-tile group"><span className="category-icon" aria-hidden="true">{category.icon}</span><span><strong className="block text-lg text-slate-950">{category.name}</strong><span className="mt-1 block text-sm text-slate-600">{category.copy}</span></span><ArrowRight className="ml-auto h-5 w-5 text-slate-400 transition-transform group-hover:translate-x-1" /></Link>)}
+        </div>
+      </section>
+
+      <section className="site-container pb-16" aria-labelledby="featured-heading">
+        <div className="section-heading-row"><div><p className="eyebrow">Editor’s shortlist</p><h2 id="featured-heading" className="section-title">Standout gadgets right now</h2></div><Link href="/shop/all/" className="text-link">View the complete catalog <ArrowRight className="h-4 w-4" /></Link></div>
+        <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{featured.map((product) => <DealCard key={product.id} product={product} />)}</div>
+      </section>
+
+      <section className="site-container pb-16" aria-labelledby="budget-heading">
+        <div className="rounded-[2.5rem] bg-[#18231d] px-6 py-10 text-white md:px-10 md:py-14"><div className="section-heading-row"><div><p className="eyebrow eyebrow-dark">Small price, big delight</p><h2 id="budget-heading" className="section-title text-white">Gifts under $50</h2></div><Link href="/shop/all/?price=under-50" className="text-link text-amber-300">See more affordable finds <ArrowRight className="h-4 w-4" /></Link></div><div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{under50.map((product) => <DealCard key={product.id} product={product} />)}</div></div>
+      </section>
+      <section className="site-container pb-20"><NewsletterInline /></section>
+    </main>
   );
 }
