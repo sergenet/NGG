@@ -262,7 +262,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="text-center">
               <h4 className="text-green-400 font-bold uppercase tracking-widest text-xs mb-4">Pros</h4>
               <ul className="space-y-4 inline-block text-left">
-                {((product.pros && product.pros.length) ? product.pros : ['Exceptional build quality', 'Seamless integration', 'Long-term durability']).map((pro, idx) => (
+                {((product.pros && product.pros.length) ? product.pros : ['Published features address the intended use', 'Available specifications support comparison', 'Can be compared with alternatives before purchase']).map((pro, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-slate-300">
                     <span className="text-green-400 font-bold">+</span>
                     {pro}
@@ -273,7 +273,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="text-center">
               <h4 className="text-red-400 font-bold uppercase tracking-widest text-xs mb-4">Cons</h4>
               <ul className="space-y-4 inline-block text-left">
-                {((product.cons && product.cons.length) ? product.cons : ['High entry cost', 'Learning curve for advanced features', 'Availability can be limited']).map((con, idx) => (
+                {((product.cons && product.cons.length) ? product.cons : ['Compatibility still needs confirmation', 'Current retailer terms may change', 'Long-term performance has not been independently tested']).map((con, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-slate-300">
                     <span className="text-red-400 font-bold">-</span>
                     {con}

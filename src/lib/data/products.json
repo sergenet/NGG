@@ -342,7 +342,7 @@
     "id": "P-B009S750LA",
     "slug": "vivo-dual-monitor-desk-mount",
     "title": "VIVO Dual Monitor Desk Mount",
-    "description": "A heavy-duty steel monitor mount that supports two screens up to 27 inches. Perfect for budget-conscious professionals.",
+    "description": "A steel desk mount for two supported monitors, with published screen-size, weight, VESA, and desk-mounting requirements that should be checked before purchase.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -664,7 +664,7 @@
     "id": "P-B0FQMLC3CB",
     "slug": "ergear-single-monitor-arm",
     "title": "ErGear Single Monitor Arm",
-    "description": "A top-rated monitor arm with a heavy-duty gas spring that provides effortless height adjustment and cable management.",
+    "description": "A single-monitor arm with a gas-spring adjustment mechanism, cable routing, and published screen, weight, VESA, and desk-thickness limits that should be checked before installation.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -1129,7 +1129,7 @@
     "id": "P-B0F1468WTK",
     "slug": "irobot-roomba-j9-series",
     "title": "iRobot Roomba j9+",
-    "description": "The most powerful Roomba yet, featuring superior suction and the ability to identify and avoid common household obstacles.",
+    "description": "A robot vacuum with published object-detection, mapping, app-control, and dock options. Cleaning results depend on the floor plan, surface, obstacles, maintenance, and selected model.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -1505,7 +1505,7 @@
     "id": "P-B09VLK9W3S",
     "slug": "samsung-t7-shield-1tb",
     "title": "Samsung T7 Shield 1TB",
-    "description": "Rugged, fast, and water-resistant portable SSD for creative professionals on the go.",
+    "description": "A portable solid-state drive with published USB performance and water, dust, and drop-resistance ratings. Those ratings apply only under the manufacturer's stated test conditions.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -1737,7 +1737,7 @@
     "id": "P-AW-SHADOWAUTO",
     "slug": "shadowauto-obd-ii-gps-car-tracker",
     "title": "ShadowAuto OBD-II GPS Car Tracker",
-    "description": "A plug-and-play GPS tracker that connects directly to your vehicle's OBD-II port. Provides 5-second real-time tracking, 12-month route history, and smart engine diagnostics (fuel, battery voltage, and check engine lights) with zero wiring.",
+    "description": "An OBD-II vehicle tracker with published location, route-history, alert, and diagnostic features. Confirm vehicle compatibility, cellular coverage, subscription terms, consent, and applicable law.",
     "images": [
       "https://theshadowgps.com/cdn/shop/files/ShadowAuto_box_7.jpg"
     ],
@@ -1829,7 +1829,7 @@
     "id": "P-B0CHBPXHC6",
     "slug": "fullstar-vegetable-chopper-mandoline-slicer-9-in-1",
     "title": "Fullstar Vegetable Chopper & Mandoline Slicer 9-in-1",
-    "description": "The viral 9-in-1 vegetable chopper with container, cheese grater, and mandoline slicer. Dice, slice, julienne, and grate in seconds.",
+    "description": "A multi-part vegetable preparation tool with a collection container and several cutting and grating inserts. Review blade-safety, cleaning, and storage instructions before use.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -2540,7 +2540,7 @@
     "id": "P-B00NGV4506",
     "slug": "ninja-professional-blender-bl610",
     "title": "Ninja Professional Blender (BL610)",
-    "description": "1000 watts of professional power to crush ice and blast through tough ingredients for smoothies and frozen drinks.",
+    "description": "A full-size blender sold as the Ninja Professional Blender BL610, with a published 1,000-watt motor rating and a large pitcher for supported blending tasks.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -2867,7 +2867,7 @@
     "id": "P-B0BWN22T25",
     "slug": "furbo-360-dog-camera",
     "title": "Furbo 360° Dog Camera",
-    "description": "Keep your dog safe and happy when you're away. The Furbo 360° Dog Camera features full HD video, auto dog tracking, real-time barking alerts, and a fun treat-tosser.",
+    "description": "A connected pet camera with published video, movement-tracking, bark-alert, and treat-tossing features. Confirm subscriptions, privacy settings, app support, and pet suitability.",
     "images": [
       "/default-thumbnail.png"
     ],
@@ -2912,7 +2912,7 @@
     "id": "P-AW-NEAKASA-P1",
     "slug": "neakasa-p1-pro-pet-grooming-vacuum",
     "title": "Neakasa P1 Pro Pet Grooming Vacuum",
-    "description": "Groom your pet at home without the mess. The Neakasa P1 Pro combines professional de-shedding, trimming, and grooming tools with a powerful built-in vacuum that captures 99% of loose pet hair.",
+    "description": "A pet-grooming vacuum kit with several published grooming attachments. Noise tolerance, coat type, cleaning, filter care, and safe tool use should be checked for the individual pet.",
     "images": [
       "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=800&q=80"
     ],

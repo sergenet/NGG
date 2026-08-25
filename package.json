@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "validate:data": "node scripts/validate-catalog.mjs",
+    "validate:data": "node scripts/validate-catalog.mjs && node scripts/validate-truthmode.mjs",
     "typecheck": "tsc --noEmit",
     "check": "npm run validate:data && npm run lint && npm run typecheck",
     "build": "npm run validate:data && next build && python engine/sitemap_generator.py && python engine/rss_generator.py && python engine/generate_pinterest_feed.py",
