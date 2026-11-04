@@ -4,10 +4,9 @@ import { RemoteWorkerTopicGuide } from '@/components/RemoteWorkerTopicGuide';
 export const metadata: Metadata = { title: 'Ergonomic Gifts for Desk Workers: A Fit-First Guide', description: 'Compare ergonomic desk gifts by body fit, monitor compatibility, adjustment, handedness, desk construction, and returnability.', alternates: { canonical: '/gifts/ergonomic-desk-worker-gifts/' } };
 
 const items = [
-  { slug: 'logitech-ergo-k860-wireless-keyboard', bestFor: 'A user who wants a split keyboard and wrist support', checkFirst: 'Keyboard layout preference, desk depth, operating system, and adjustment period', skipWhen: 'They dislike split layouts or need a compact travel keyboard' },
-  { slug: 'logitech-mx-master-3s', bestFor: 'A right-handed user doing repetitive scrolling and multi-device work', checkFirst: 'Handedness, hand size, operating system, and software permissions', skipWhen: 'They are left-handed or prefer a small symmetrical mouse' },
   { slug: 'ergear-single-monitor-arm', bestFor: 'Raising and repositioning one supported monitor', checkFirst: 'VESA pattern, monitor weight, desk thickness, clamp and wall clearance', skipWhen: 'The desktop is glass, hollow, beveled, or otherwise unsuitable for clamping' },
   { slug: 'vivo-dual-monitor-desk-mount', bestFor: 'Reclaiming surface area under two supported monitors', checkFirst: 'Both screens, desk edge, clearance, and the preferred shared height', skipWhen: 'Frequent independent height changes are essential' },
+  { slug: 'sunaofe-lunar-dual-motor-standing-desk', bestFor: 'A smooth dual-motor sit-to-stand desk upgrade with programmable memory presets and anti-collision safety', checkFirst: 'Room dimensions, floor level, and routing cables with sufficient standing slack', skipWhen: 'They already have a working motorized standing desk or prefer manual desks' },
   { slug: 'vari-electric-standing-desk-48x30', bestFor: 'A full workspace where sit-to-stand adjustment will actually be used', checkFirst: 'Room dimensions, delivery, assembly, height range, and cable slack', skipWhen: 'The recipient has not asked for a desk or the room measurements are unknown' },
 ] as const;
 

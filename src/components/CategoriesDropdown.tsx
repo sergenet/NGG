@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { categorySlug } from '@/lib/utils';
 
 interface CategoriesDropdownProps {
   categories: string[];
@@ -56,10 +57,21 @@ export function CategoriesDropdown({ categories }: CategoriesDropdownProps) {
         }`}
       >
         <div className="py-1">
+          <Link 
+            href="/shop/new-arrivals/"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-between px-4 py-2.5 text-sm font-bold text-amber-700 bg-amber-50/60 hover:bg-amber-100 hover:text-amber-800 transition-colors border-b border-stone-100 dark:border-slate-800"
+          >
+            <span className="flex items-center gap-1.5">
+              <span>✨</span>
+              <span>New Arrivals</span>
+            </span>
+            <span className="text-[10px] uppercase font-black tracking-wider bg-amber-200/70 text-amber-900 px-1.5 py-0.5 rounded-full">New</span>
+          </Link>
           {categories.map(cat => (
             <Link 
               key={cat} 
-              href={`/shop/${cat.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/shop/${categorySlug(cat)}/`}
               onClick={() => setIsOpen(false)}
               className="block px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >

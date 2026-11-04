@@ -5,6 +5,33 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+/**
+ * Single source of truth for /shop/<slug> URLs.
+ *
+ * A raw "&" in a category name used to flow straight into the slug, which produced
+ * /shop/health-&-wellness — a path that cannot be safely written into the sitemap XML
+ * and that Next exports as a 404 body. "&" now becomes "and" so every slug is
+ * [a-z0-9-] only.
+ */
+export function categorySlug(categoryName: string | undefined): string {
+  return String(categoryName ?? '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+/**
+ * Newest first, by the date a product was added or last updated.
+ *
+ * "New Arrivals" used to be the purchasable catalog reversed, which is the same set
+ * as /shop/all in the opposite order. Ordering by `lastUpdated` is what makes the
+ * page genuinely recency-based; it also survives catalog reordering.
+ */
+export function sortByRecency<T extends { lastUpdated?: string }>(items: T[]): T[] {
+  return [...items].sort((a, b) => (b.lastUpdated ?? '').localeCompare(a.lastUpdated ?? ''))
+}
+
 export function formatPriceBracket(bracket: string | undefined): string {
   const labels: Record<string, string> = {
     'under-50': 'Under $50',

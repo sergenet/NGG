@@ -1,0 +1,22 @@
+.account-bar{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.account-bar button{min-height:38px;font-size:.82rem;padding:6px 11px}
+
+.auth-page{display:grid;place-items:center;min-height:100vh;background:var(--cream)}
+.auth-shell{max-width:420px;width:100%;margin:0 auto;padding:32px 18px 60px}
+.auth-shell h1{font-size:2.4rem}
+.auth-lede{color:#5c6a62;margin:0 0 18px}
+.auth-card{display:grid;gap:10px;background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 5px 25px #1938290b}
+.auth-card label,.dialog-body label{font-weight:700;font-size:.82rem;color:#3d4c44}
+.auth-card input,.dialog-body input{min-height:44px;border:1px solid #9cac9f;border-radius:9px;padding:9px 12px;font:inherit;width:100%}
+.auth-card button{width:100%}
+.auth-message{margin:0;min-height:1.2em;color:var(--coral);font-size:.86rem}
+.auth-note{margin-top:18px;color:#68746c;font-size:.8rem}
+
+dialog{border:1px solid var(--line);border-radius:15px;padding:0;max-width:420px;width:calc(100% - 32px);box-shadow:0 20px 60px #1020183d}
+dialog::backdrop{background:#10201859}
+.dialog-body{padding:22px}
+.dialog-body p{margin-top:0;color:#5c6a62;font-size:.86rem}
+.dialog-body form{display:grid;gap:10px}
+#account-message{min-height:1.2em;margin:0;font-size:.86rem;color:var(--coral)}
+#account-message.ok{color:var(--forest)}
+.dialog-actions{display:flex;gap:8px;justify-content:flex-end}

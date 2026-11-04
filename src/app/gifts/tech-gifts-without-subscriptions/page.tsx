@@ -4,10 +4,9 @@ import { RemoteWorkerTopicGuide } from '@/components/RemoteWorkerTopicGuide';
 export const metadata: Metadata = { title: 'Tech Gifts Without Required Subscriptions', description: 'Find useful remote-work tech gifts that do not depend on a recurring service fee, with compatibility and software cautions checked first.', alternates: { canonical: '/gifts/tech-gifts-without-subscriptions/' } };
 
 const items = [
-  { slug: 'anker-555-usb-c-hub-8-in-1', bestFor: 'Adding common ports to a compatible USB-C laptop', checkFirst: 'The laptop port supports the expected video, data, and charging functions', skipWhen: 'The required display or power standard is not supported' },
-  { slug: 'anker-737-power-bank-powercore-24k', bestFor: 'Charging a laptop and phone away from an outlet', checkFirst: 'Device wattage, cable rating, capacity rules, and carry weight', skipWhen: 'The recipient only needs a small phone battery' },
-  { slug: 'logitech-mx-master-3s', bestFor: 'A right-handed multi-device productivity setup', checkFirst: 'Handedness, operating system, Bluetooth or receiver support, and software policy', skipWhen: 'A compact or left-handed mouse is needed' },
-  { slug: 'lepower-metal-desk-lamp', bestFor: 'Straightforward task lighting with no app or account', checkFirst: 'Bulb requirements, desk footprint, outlet position, and desired dimming', skipWhen: 'Integrated brightness controls are essential' },
+  { slug: 'everblog-homecal-smart-family-calendar', bestFor: 'Centralizing shared household schedules, chores, and meal planning with zero monthly subscription fees', checkFirst: 'Requires standard home Wi-Fi and nearby AC outlet for continuous display power', skipWhen: 'They want a portable multi-app tablet rather than a dedicated family calendar' },
+  { slug: 'skilhunt-m150-v4-edc-pocket-flashlight', bestFor: 'Compact everyday pocket carry with dual-fuel support for standard AA or rechargeable cells', checkFirst: 'Includes magnetic USB charging cable and deep-carry clip; operates without apps or accounts', skipWhen: 'A large spotlight thrower is needed rather than an EDC pocket light' },
+  { slug: 'traverseon-cordless-graphene-heated-shawl-wearable-blanket', bestFor: 'Staying warm in chilly home offices and travel without heating up the entire house', checkFirst: 'Requires any standard 5V/2A USB power bank for cordless heating', skipWhen: 'They want a stationary plug-in bed-size electric blanket' },
   { slug: 'magsafe-compatible-phone-stand', bestFor: 'Keeping a compatible phone visible without another account', checkFirst: 'Phone model, case thickness, and MagSafe compatibility', skipWhen: 'The phone or case lacks reliable magnetic attachment' },
 ] as const;
 

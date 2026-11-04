@@ -57,16 +57,16 @@ export function RemoteWorkerTopicGuide({ eyebrow, title, dek, updated, principle
           ))}
         </section>
 
-        <section className="mt-16" aria-labelledby="compare-heading">
+        {selections.length > 0 && <section className="mt-16" aria-labelledby="compare-heading">
           <p className="eyebrow">Decision table</p><h2 id="compare-heading" className="section-title mt-3">Compare the fit before the features</h2>
           <div className="mt-7 overflow-x-auto rounded-[1.5rem] border border-slate-200 bg-white">
             <table className="w-full min-w-[980px] text-left text-sm"><thead className="bg-slate-100 text-slate-900"><tr><th className="p-4 font-black">Gift</th><th className="p-4 font-black">Best for</th><th className="p-4 font-black">Check first</th><th className="p-4 font-black">Skip when</th></tr></thead>
               <tbody className="divide-y divide-slate-200">{selections.map(({ entry, product }) => <tr key={product.id} className="align-top"><th className="p-4 font-black"><Link href={`/product/${product.slug}/`} className="hover:text-[#bd4b34]">{product.title}</Link></th><td className="p-4 leading-6 text-slate-600">{entry.bestFor}</td><td className="p-4 leading-6 text-slate-600">{entry.checkFirst}</td><td className="p-4 leading-6 text-slate-600">{entry.skipWhen}</td></tr>)}</tbody>
             </table>
           </div>
-        </section>
+        </section>}
 
-        <section className="mt-16" aria-labelledby="shortlist-heading"><div className="section-heading-row"><div><p className="eyebrow">Curated shortlist</p><h2 id="shortlist-heading" className="section-title">{selections.length} relevant options</h2></div><Link href={shopHref} className="text-link">{shopLabel}</Link></div><div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{selections.map(({ product }) => <DealCard key={product.id} product={product} />)}</div></section>
+        <section className="mt-16" aria-labelledby="shortlist-heading"><div className="section-heading-row"><div><p className="eyebrow">Curated shortlist</p><h2 id="shortlist-heading" className="section-title">{selections.length > 0 ? `${selections.length} relevant options` : 'Shortlist under revision'}</h2></div><Link href={shopHref} className="text-link">{shopLabel}</Link></div>{selections.length > 0 ? <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{selections.map(({ product }) => <DealCard key={product.id} product={product} />)}</div> : <p className="mt-6 max-w-2xl leading-8 text-slate-600">These picks are being re-sourced, so the shortlist is temporarily empty. <Link href={shopHref} className="font-bold text-[#bd4b34] hover:underline">{shopLabel}</Link> instead.</p>}</section>
 
         <section className="mt-16 rounded-[2rem] bg-slate-100 p-7 md:p-10" aria-labelledby="method-heading"><div className="grid gap-7 md:grid-cols-[.7fr_1.3fr]"><div><CircleAlert className="h-6 w-6 text-[#bd4b34]" /><p className="eyebrow mt-5">Editorial method</p><h2 id="method-heading" className="mt-3 text-3xl font-black">How this list was built</h2></div><div><p className="leading-8 text-slate-600">{method}</p><p className="mt-5 text-sm leading-6 text-slate-500">This is a research-based editorial comparison of published product information, not a claim that we personally tested every item.</p></div></div></section>
 

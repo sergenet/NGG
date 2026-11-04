@@ -1,6 +1,8 @@
 import html
 import json
 import re
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime
 
 from utils import BASE_DIR, PUBLIC_DIR, read_file, slugify, write_file
 
@@ -16,7 +18,8 @@ def article_items(out_dir):
     products = json.loads((BASE_DIR / "src/lib/data/products.json").read_text(encoding="utf-8"))
     products_by_asin = {product["id"].removeprefix("P-"): product for product in products}
     items = []
-    for article in articles.get("queue", []):
+    # Reverse so newest comparison guides (GRABO, ShadowGPS) appear first
+    for article in reversed(articles.get("queue", [])):
         if article.get("status") != "published":
             continue
         category = article.get("category_slug", "")
@@ -25,30 +28,38 @@ def article_items(out_dir):
             continue
         product = next((products_by_asin.get(asin) for asin in article.get("product_asins", []) if products_by_asin.get(asin)), None)
         image = product.get("images", [""])[0] if product else ""
+        # Only include articles that have an active external high-res product image (not old dead Amazon default-thumbnail)
+        if not image.startswith("http"):
+            continue
         items.append({
             "title": article["title"],
             "link": f"https://newgiftsandgadgets.com/{category}/{article_slug}/",
             "description": clean_description(article.get("body_intro", "")),
-            "image": image if image.startswith("http") else "https://newgiftsandgadgets.com/default-thumbnail.png",
+            "image": image,
         })
     return items
 
 
-def audience_items(out_dir):
+def active_product_items(out_dir):
+    products = json.loads((BASE_DIR / "src/lib/data/products.json").read_text(encoding="utf-8"))
     items = []
-    gifts_dir = out_dir / "gifts"
-    if not gifts_dir.exists():
-        return items
-    for route in sorted(gifts_dir.glob("*/index.html")):
-        page_html = read_file(route)
-        title = page_html.split("<title>", 1)[1].split("</title>", 1)[0] if "<title>" in page_html else route.parent.name
-        description_match = re.search(r'<meta name="description" content="([^"]+)"', page_html)
-        image_match = re.search(r'<img[^>]+src="([^"]+)"', page_html)
+    for product in reversed(products):
+        vendors = product.get("vendors", [])
+        has_active_vendor = any(
+            v.get("isPrimary") and v.get("url") and "amazon." not in v.get("url", "")
+            for v in vendors
+        )
+        if not has_active_vendor:
+            continue
+        slug = product.get("slug", "")
+        if not (out_dir / "product" / slug / "index.html").exists():
+            continue
+        image = (product.get("images") or [""])[0]
         items.append({
-            "title": title.replace(" | NewGiftsAndGadgets", "").replace(" — NewGiftsAndGadgets", ""),
-            "link": f"https://newgiftsandgadgets.com/gifts/{route.parent.name}/",
-            "description": html.unescape(description_match.group(1)) if description_match else "Practical gift ideas organized around the recipient.",
-            "image": html.unescape(image_match.group(1)) if image_match and image_match.group(1).startswith("http") else "https://newgiftsandgadgets.com/default-thumbnail.png",
+            "title": f"{product['title']} — Buying Guide & Review",
+            "link": f"https://newgiftsandgadgets.com/product/{slug}/",
+            "description": clean_description(product.get("description", "")),
+            "image": image if image.startswith("http") else f"https://newgiftsandgadgets.com{image}",
         })
     return items
 
@@ -56,7 +67,8 @@ def audience_items(out_dir):
 def generate_rss():
     out_dir = BASE_DIR / "out"
     scan_dir = out_dir if out_dir.exists() else PUBLIC_DIR
-    items = audience_items(scan_dir) + article_items(scan_dir)
+    items = active_product_items(scan_dir) + article_items(scan_dir)
+    now_utc = datetime.now(timezone.utc)
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">',
@@ -65,25 +77,28 @@ def generate_rss():
         "    <link>https://newgiftsandgadgets.com/</link>",
         "    <description>Research-based gift ideas and practical gadget buying guides.</description>",
         "    <language>en-us</language>",
+        f"    <lastBuildDate>{format_datetime(now_utc)}</lastBuildDate>",
     ]
-    for item in items:
+    for idx, item in enumerate(items):
+        img_url = html.escape(item["image"], quote=True)
+        item_pub_date = format_datetime(now_utc - timedelta(minutes=idx * 5))
         lines.extend([
             "    <item>",
             f"      <title>{html.escape(item['title'])}</title>",
             f"      <link>{html.escape(item['link'])}</link>",
             f"      <guid isPermaLink=\"true\">{html.escape(item['link'])}</guid>",
+            f"      <pubDate>{item_pub_date}</pubDate>",
             f"      <description>{html.escape(item['description'])}</description>",
-            f"      <media:content url=\"{html.escape(item['image'], quote=True)}\" medium=\"image\" />",
+            f"      <media:content url=\"{img_url}\" medium=\"image\" />",
             "    </item>",
         ])
     lines.extend(["  </channel>", "</rss>", ""])
     rss = "\n".join(lines)
-    write_file(scan_dir / "rss.xml", rss)
-    write_file(scan_dir / "sitemap.rss", rss)
-    if scan_dir == out_dir:
-        write_file(PUBLIC_DIR / "rss.xml", rss)
-        write_file(PUBLIC_DIR / "sitemap.rss", rss)
-    print(f"Editorial RSS generated with {len(items)} gift and guide items.")
+    for filename in ("rss.xml", "sitemap.rss", "pinterest-rss.xml"):
+        write_file(scan_dir / filename, rss)
+        if scan_dir == out_dir:
+            write_file(PUBLIC_DIR / filename, rss)
+    print(f"Editorial RSS generated with {len(items)} active Awin items.")
 
 
 if __name__ == "__main__":

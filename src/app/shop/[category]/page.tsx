@@ -5,13 +5,19 @@ import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { GiftFinderClient, ProductGrid } from './GiftFinderClient';
 import { StickyMobileFilter } from '@/components/StickyMobileFilter';
+import ProductImageDisplay from '@/components/ProductImageDisplay';
+import { categorySlug, formatPriceBracket, isActiveRetailerUrl, sortByRecency } from '@/lib/utils';
+
+// How many picks "New Arrivals" shows. The window is recency-ordered rather than
+// date-filtered so the page can never render empty when the catalog goes quiet.
+const NEW_ARRIVAL_LIMIT = 12;
 
 function getCategoryCopy(categoryName: string) {
   switch (categoryName) {
     case 'Home Office':
       return {
         eyebrow: 'Remote work essentials',
-        intro: 'Build a more comfortable, focused workspace with practical upgrades for posture, lighting, video calls, charging, and desk organization.',
+        intro: 'Build a more comfortable, focused workspace with practical upgrades for posture, screen height, cable routing, and desk organization.',
         faqs: [
           { question: 'What is the best home office category to start with?', answer: 'Start with the item that removes your biggest daily bottleneck first: ergonomics, monitor setup, or desk organization.' },
           { question: 'Should I buy direct or from a marketplace?', answer: 'Compare the current price, delivery estimate, return window, warranty coverage, and support. The best retailer can vary by product and location.' },
@@ -20,10 +26,10 @@ function getCategoryCopy(categoryName: string) {
     case 'Smart Home':
       return {
         eyebrow: 'Automation and convenience',
-        intro: 'Start with devices that solve a recurring problem—lighting, cleaning, climate, or security—and confirm they work with the ecosystem already in the home.',
+        intro: 'Start with a device that solves a recurring problem—outdoor lighting, shared scheduling, or lawn care—and confirm it works with what is already in the home.',
         faqs: [
           { question: 'Do smart home buyers care about ecosystem?', answer: 'Yes. Compatibility with Alexa, Google Home, and Matter can make or break the purchase decision.' },
-          { question: 'Which smart-home upgrade should come first?', answer: 'Choose one repeated frustration to solve. Lighting is approachable, security needs careful privacy decisions, and robot vacuums require the largest budget.' },
+          { question: 'Which smart-home upgrade should come first?', answer: 'Choose one repeated frustration to solve. Lighting is the easiest place to start, a shared calendar only pays off if the household will use it, and a robotic mower is the largest commitment of the three.' },
         ],
       };
     case 'Kitchen':
@@ -32,33 +38,33 @@ function getCategoryCopy(categoryName: string) {
         intro: 'Prioritize tools that save time, simplify cleanup, or replace a task you perform often. Counter space and ease of storage matter as much as headline features.',
         faqs: [
           { question: 'What makes a kitchen gadget a good gift?', answer: 'The safest choices are easy to learn, useful every week, simple to clean, and sized appropriately for the recipient’s kitchen.' },
-          { question: 'What should I verify before buying an appliance?', answer: 'Check dimensions, voltage, capacity, included accessories, cleaning requirements, warranty coverage, and the retailer’s return policy.' },
+          { question: 'What should I verify before buying a kitchen tool?', answer: 'Check dimensions, materials, what is included, cleaning requirements, warranty coverage, and the retailer’s return policy.' },
         ],
       };
     case 'Outdoor & Adventure':
       return {
         eyebrow: 'Gear for the wild and travel',
-        intro: 'Explore outdoor and adventure gear selected for useful features, durability signals, and comfort. From lightweight tools to rugged accessories, find your next travel companion.',
+        intro: 'Explore outdoor gear selected for useful features, durability signals, and comfort—from rechargeable lighting and rugged accessories to e-bikes, fishing kit, and heated wear.',
         faqs: [
-          { question: 'What is the most essential outdoor gear to invest in?', answer: 'Focus on high-durability essentials first: reliable weather protection, modular storage, and versatile multi-tools.' },
+          { question: 'What is the most essential outdoor gear to invest in?', answer: 'Focus on what the trip actually needs: dependable lighting, weather protection, secure luggage, and repairable components before specialty extras.' },
           { question: 'How should I assess outdoor product durability?', answer: 'Check material specifications, weather-resistance ratings, repairability, warranty terms, weight, and patterns in recent owner feedback. Current catalog pages are research-based, not hands-on tests.' },
         ],
       };
     case 'Pet Tech & Smart Pet Gear':
       return {
-        eyebrow: 'Smart solutions for pet parents',
-        intro: 'Upgrade your pet care routine with smart feeders, cameras, and grooming tech selected for practical features, quieter operation, and ease of use.',
+        eyebrow: 'Practical gear for pet parents',
+        intro: 'Keep shedding and grooming mess under control with tools judged on suction, noise, attachment storage, and how easy the bin is to empty.',
         faqs: [
-          { question: 'Is smart pet gear safe to leave unattended?', answer: 'Do not assume so. Review the manufacturer’s safety instructions, backup-power behavior, failure modes, cleaning requirements, and recent owner reports before relying on a device while away.' },
-          { question: 'Does pet tech require premium subscriptions?', answer: 'Some cameras and trackers require subscriptions for cloud storage or GPS cellular tracking. However, most feeders and fountains operate fully with their free basic apps.' },
+          { question: 'Is grooming equipment safe for an anxious pet?', answer: 'Introduce it slowly and at the lowest setting. Noise is the usual problem, so follow the manufacturer’s guidance, keep sessions short, and stop if the animal is distressed.' },
+          { question: 'Does pet grooming gear need a subscription?', answer: 'No. Nothing in this catalog requires an account or a monthly fee; the running costs to weigh are replacement bags, filters, and blades.' },
         ],
       };
     case 'Travel & Digital Nomad Tech':
       return {
         eyebrow: 'Gear for mobile productivity',
-        intro: 'Compare portable power, bags, and organizers by weight, dimensions, compatibility, airline constraints, and how much complexity they remove from a real trip.',
+        intro: 'Compare packing and in-transit gear by weight, dimensions, power requirements, airline constraints, and how much complexity they remove from a real trip.',
         faqs: [
-          { question: 'Are high-capacity power banks allowed on airplanes?', answer: 'Yes. Most airlines and the TSA allow power banks under 100Wh (approximately 27,000mAh) in carry-on luggage. You should not place them in checked bags.' },
+          { question: 'What should I confirm before taking a portable appliance abroad?', answer: 'Voltage and plug type at the destination, whether the device is dual-voltage, and the airline’s rules on anything with a battery or a heating element.' },
           { question: 'What makes a backpack good for tech travel?', answer: 'Look for dedicated, padded laptop compartments, water-resistant zippers/materials, ergonomic support, and TSA lay-flat designs to speed up airport security.' },
         ],
       };
@@ -68,7 +74,62 @@ function getCategoryCopy(categoryName: string) {
         intro: 'Add a touch of personality and stress relief to your workspace with these curated desk toys and novelty items. Perfect for resetting your focus or finding a unique gift.',
         faqs: [
           { question: 'What are the benefits of desk toys?', answer: 'Desk toys provide micro-breaks that can help relieve stress, stimulate creative thinking, and improve focus during long tasks.' },
-          { question: 'Are these items good for professional settings?', answer: 'Yes. Our picks combine satisfying tactile feedback with premium aesthetics (like matte black finishes and glass prisms) that look great in any modern office.' },
+          { question: 'Are these items good for professional settings?', answer: 'Yes. Our picks favour restrained finishes—brushed metal, tinted glass, soft glow—that read as deliberate rather than gimmicky in a shared office.' },
+        ],
+      };
+    case 'Home Decor':
+      return {
+        eyebrow: 'Pieces that hold a room together',
+        intro: 'Decor earns its place through material, finish, and how it ages rather than through trend. Compare exact dimensions, placement, and care requirements before buying.',
+        faqs: [
+          { question: 'What should I check before buying decor online?', answer: 'Confirm the exact dimensions and weight against the space you have in mind, then read the return terms. Finish and colour often read differently in person than on a screen.' },
+          { question: 'Is a decorative piece a safe gift?', answer: 'It is when the recipient has room for it. Ask about shelf depth, wall space, or whether they would rather receive something practical.' },
+        ],
+      };
+    case 'Novelty Tech':
+      return {
+        eyebrow: 'Fun hardware with a clear purpose',
+        intro: 'Novelty tech is worth buying when it does one thing well and installs cleanly. The fun is in the effect, so check fit, power, and compatibility first.',
+        faqs: [
+          { question: 'What is the most common mistake with novelty tech?', answer: 'Buying for the effect instead of the setup. Confirm the power source, the mounting method, and whether it needs an app or account to work at all.' },
+          { question: 'Do collector lighting kits fit any build?', answer: 'No. Kits are usually cut for one specific set or scale, so match the kit to the exact model and check whether it replaces or overlays existing pieces.' },
+        ],
+      };
+    case 'Smart Wearables':
+      return {
+        eyebrow: 'Wearables worth the wrist time',
+        intro: 'Compare wearables on what decides daily use: sizing, battery behaviour with real notifications, app requirements, and the data you actually want to see.',
+        faqs: [
+          { question: 'Is a smart ring a replacement for a smartwatch?', answer: 'Usually not. Rings trade a screen and sensors for size and battery life, so they suit people who want passive tracking without another display to charge.' },
+          { question: 'What should I confirm before buying a wearable?', answer: 'Sizing, phone compatibility, any subscription requirement, water resistance, and the return window in case the fit is wrong.' },
+        ],
+      };
+    case 'Home Entertainment':
+      return {
+        eyebrow: 'Streaming hardware that fits the room',
+        intro: 'Media players and streaming hubs differ mainly in codec support, port layout, and how much of the interface you can live with. Match the box to your screen and your habits.',
+        faqs: [
+          { question: 'Do I need a media player if my TV is already smart?', answer: 'Only if the built-in interface is slow, missing apps you use, or cannot pass the audio format your soundbar or receiver expects.' },
+          { question: 'What matters more: resolution or ports?', answer: 'Ports and audio handling, usually. 4K output is common; whether the device can drive your speakers and read your storage is what causes returns.' },
+        ],
+      };
+    case 'Health & Wellness':
+      return {
+        eyebrow: 'Recovery equipment for the home',
+        intro: 'Recovery gear is a space, power, and maintenance decision as much as a health one. Check footprint, drainage, cleaning routine, and the manufacturer’s safety guidance before buying.',
+        faqs: [
+          { question: 'What should I confirm before buying a cold plunge?', answer: 'Filled weight on your floor, drainage and refill access, the chiller’s noise and power draw, and the manufacturer’s limits on temperature and duration.' },
+          { question: 'Is recovery equipment safe for everyone?', answer: 'No. Cold exposure and similar routines are not appropriate for every health condition. Check with a clinician before starting and follow the manufacturer’s limits.' },
+        ],
+      };
+    case 'New Arrivals':
+      return {
+        eyebrow: 'Fresh finds & newly added tech',
+        intro: 'The most recently added and updated picks in the catalog, newest first — each one linked to a live retailer listing.',
+        faqs: [
+          { question: 'How is this list ordered?', answer: 'Newest first, by the date a pick was added or last updated. The list re-sorts itself whenever the catalog changes, so an item can drop off without being removed.' },
+          { question: 'Are all new arrivals backed by active warranties and return windows?', answer: 'Warranty and returns come from the retailer, not from us. Every pick links to an authorized storefront, so confirm the current terms on that listing before buying.' },
+          { question: 'Does this list ever run out?', answer: 'No. It shows the most recent picks rather than everything published after a fixed date, so it stays populated even when nothing new has been added for a while.' },
         ],
       };
     default:
@@ -85,9 +146,10 @@ function getCategoryCopy(categoryName: string) {
 
 export async function generateStaticParams() {
   // Extract all unique categories
-  const categories = Array.from(new Set(productsData.map(p => p.tags.category.toLowerCase().replace(/\s+/g, '-'))));
+  const categories = Array.from(new Set(productsData.map(p => categorySlug(p.tags.category))));
   return [
     { category: 'all' },
+    { category: 'new-arrivals' },
     ...categories.map(category => ({ category }))
   ];
 }
@@ -102,18 +164,18 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     },
     'home-office': {
       title: 'Best Home Office Gadgets & Furniture 2026 | Buying Guides',
-      description: 'Find standing desks, ergonomic chairs, monitors, and home office gadgets with research-based buying notes for remote workers.',
-      keywords: 'home office gadgets, standing desk, ergonomic chair, office accessories, workspace'
+      description: 'Find standing desks, ergonomic chairs, monitor arms and stands, and desk accessories with research-based buying notes for remote workers.',
+      keywords: 'home office gadgets, standing desk, ergonomic chair, monitor arm, office accessories, workspace'
     },
     'smart-home': {
       title: 'Smart Home Devices 2026 | Guides & Comparisons',
-      description: 'Discover the best smart speakers, security cameras, thermostats, and automations. Compare Alexa, Google Home, and smart home tech.',
-      keywords: 'smart home devices, smart speakers, smart lights, robot vacuum, smart thermostat'
+      description: 'Smart displays, connected calendars, outdoor lighting, robotic mowers, and lifting tools compared on setup, apps, subscriptions, and privacy.',
+      keywords: 'smart home devices, smart display, smart lighting, robotic lawn mower, connected calendar'
     },
     'kitchen': {
-      title: 'Best Kitchen Gadgets & Appliances 2026 | Buying Guides',
-      description: 'Find air fryers, blenders, coffee makers, and kitchen gadgets with practical comparisons for home cooks.',
-      keywords: 'kitchen gadgets, air fryer, best blender, coffee maker, kitchen appliances'
+      title: 'Best Kitchen Gadgets & Tools 2026 | Buying Guides',
+      description: 'Compare choppers, slicers, milk frothers, digital scales, jar openers, and grill baskets with practical notes for home cooks.',
+      keywords: 'kitchen gadgets, food chopper, milk frother, kitchen scale, jar opener, grill basket'
     },
     'outdoor-adventure': {
       title: 'Best Outdoor & Adventure Gear 2026 | Buying Guides',
@@ -122,18 +184,48 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     },
     'pet-tech': {
       title: 'Pet Tech & Smart Pet Gear 2026 | Guides & Comparisons',
-      description: 'Discover smart pet cameras, automatic feeders, and grooming vacuums with practical buying notes for pet owners.',
-      keywords: 'pet tech, smart pet gear, dog camera, smart feeder, automatic litter box'
+      description: 'Grooming vacuums and pet-care tools compared on suction, noise, attachment storage, and cleanup for pet owners.',
+      keywords: 'pet tech, pet grooming vacuum, dog grooming, pet hair removal'
     },
     'travel-tech': {
       title: 'Best Travel & Digital Nomad Tech 2026 | Buying Guides',
-      description: 'Find travel backpacks, high-speed power banks, and portable gear with research-based notes for productive travelers.',
-      keywords: 'travel tech, digital nomad gear, travel backpack, portable power bank, tech organizer'
+      description: 'Travel backpacks, portable washing, and in-vehicle gear compared on packed weight, power needs, and real-world maintenance.',
+      keywords: 'travel tech, digital nomad gear, travel backpack, portable washing machine, car heater'
     },
     'desk-toys-novelty-gifts': {
       title: 'Desk Toys & Novelty Gifts 2026 | Buying Notes',
-      description: 'Discover the coolest desk toys, optical prisms, levitating lights, and novelty gifts for your workspace. Enhance your office aesthetics and boost focus.',
-      keywords: 'desk toys, novelty gifts, cool desk accessories, levitating lamp, fidget toys, office gadgets'
+      description: 'Levitating lamps, mood lighting, and desk novelty pieces judged on footprint, power, noise, and whether they earn their space.',
+      keywords: 'desk toys, novelty gifts, cool desk accessories, levitating lamp, mood lamp'
+    },
+    'home-decor': {
+      title: 'Home Decor & Display Pieces 2026 | Buying Notes',
+      description: 'Decor and display pieces judged on material, finish, sizing, and how they age in a real room, with the care and placement questions to check first.',
+      keywords: 'home decor, display pieces, preserved rose gift, decorative accents, room styling'
+    },
+    'novelty-tech': {
+      title: 'Novelty Tech & Collector Kits 2026 | Buying Notes',
+      description: 'Novelty tech, display lighting kits, and collector accessories, with the fit, power, and build-compatibility checks worth making before you buy.',
+      keywords: 'novelty tech, led lighting kit, collector display, novelty gifts, tech toys'
+    },
+    'smart-wearables': {
+      title: 'Smart Wearables & Smart Rings 2026 | Buying Notes',
+      description: 'Wearables compared on sizing, battery behaviour, app requirements, and subscription traps, so you know what each screen-free or on-wrist device adds.',
+      keywords: 'smart ring, smart wearables, wearable tech, fitness tracker, smart ring display'
+    },
+    'home-entertainment': {
+      title: 'Home Entertainment & Streaming Hardware 2026 | Buying Notes',
+      description: 'Media players and streaming hubs compared on codec support, port layout, audio passthrough, and whether the built-in apps are the ones you use.',
+      keywords: 'android media player, streaming box, home entertainment hub, 4k player, media player'
+    },
+    'health-and-wellness': {
+      title: 'Health & Wellness Recovery Gear 2026 | Buying Notes',
+      description: 'Recovery and wellness equipment compared on footprint, power draw, drainage, maintenance, and the safety guidance to settle before buying.',
+      keywords: 'cold plunge tub, recovery gear, wellness equipment, cold therapy, home recovery'
+    },
+    'new-arrivals': {
+      title: 'New Arrivals: Latest Clever Gadgets & Trending Gifts 2026',
+      description: 'Browse the newest clever gadgets, wearable tech, and innovative gifts just added to NewGiftsAndGadgets. Explore practical new releases.',
+      keywords: 'new gadgets, new arrivals, latest tech gifts, smart gadgets 2026, trending tech'
     },
   };
 
@@ -153,7 +245,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       url: `https://newgiftsandgadgets.com/shop/${category}`,
       images: [
         {
-          url: '/default-thumbnail.png',
+          url: '/social/shop.png',
           width: 1200,
           height: 630,
           alt: meta.title,
@@ -179,7 +271,9 @@ export default async function CategoryPage({
   // Base filtering by category param
   const baseProducts = category === 'all' 
     ? products 
-    : products.filter(p => p.tags.category.toLowerCase().replace(/\s+/g, '-') === category);
+    : category === 'new-arrivals'
+      ? sortByRecency(products.filter(p => p.images[0] !== '/default-thumbnail.png' && p.vendors.some(v => v.isPrimary && isActiveRetailerUrl(v.url)))).slice(0, NEW_ARRIVAL_LIMIT)
+      : products.filter(p => categorySlug(p.tags.category) === category);
 
   if (baseProducts.length === 0) {
     notFound();
@@ -197,15 +291,27 @@ export default async function CategoryPage({
 
   const categoryName = category === 'all' 
     ? 'All Gifts & Gadgets' 
-    : category === 'outdoor-adventure' 
-      ? 'Outdoor & Adventure' 
-      : category === 'pet-tech'
-        ? 'Pet Tech & Smart Pet Gear'
-        : category === 'travel-tech'
-          ? 'Travel & Digital Nomad Tech'
-          : category === 'desk-toys-novelty-gifts'
-            ? 'Desk Toys & Novelty Gifts'
-            : category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    : category === 'new-arrivals'
+      ? 'New Arrivals'
+      : category === 'outdoor-adventure' 
+        ? 'Outdoor & Adventure' 
+        : category === 'pet-tech'
+          ? 'Pet Tech & Smart Pet Gear'
+          : category === 'travel-tech'
+            ? 'Travel & Digital Nomad Tech'
+            : category === 'desk-toys-novelty-gifts'
+              ? 'Desk Toys & Novelty Gifts'
+              : category === 'health-and-wellness'
+                ? 'Health & Wellness'
+                : category === 'home-decor'
+                  ? 'Home Decor'
+                  : category === 'novelty-tech'
+                    ? 'Novelty Tech'
+                    : category === 'smart-wearables'
+                      ? 'Smart Wearables'
+                      : category === 'home-entertainment'
+                        ? 'Home Entertainment'
+                        : category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   const categoryCopy = getCategoryCopy(categoryName);
   const featuredProducts = baseProducts.slice(0, 3);
 
@@ -242,7 +348,7 @@ export default async function CategoryPage({
             <GiftFinderClient 
               categories={availableCategories} 
               priceBrackets={priceBrackets}
-              initialCategory={category === 'all' ? null : availableCategories.find(c => c.toLowerCase().replace(/\s+/g, '-') === category) || null}
+              initialCategory={category === 'all' || category === 'new-arrivals' ? null : availableCategories.find(c => categorySlug(c) === category) || null}
             />
           </aside>
 
@@ -251,23 +357,51 @@ export default async function CategoryPage({
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Featured picks</p>
-                  <h2 className="text-2xl font-black text-slate-900 dark:text-white">Best starting points in this category</h2>
+                  <h2 className="text-2xl font-black text-slate-900 dark:text-white">
+                    {category === 'new-arrivals' ? 'Latest Highlight Launches' : 'Best starting points in this category'}
+                  </h2>
                 </div>
-                  <Link href="/gift-guides/" className="text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline">
+                <Link href="/gift-guides/" className="text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline">
                   Browse Gift Guides
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {featuredProducts.map((product) => (
                   <Link
                     key={product.id}
                     href={`/product/${product.slug}`}
-                    className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-5 hover:border-blue-400 hover:shadow-md transition-all"
+                    className="group flex flex-col rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 overflow-hidden hover:border-blue-400 hover:shadow-md transition-all"
                   >
-                    <div className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">Featured pick</div>
-                    <h3 className="font-bold text-slate-900 dark:text-white leading-snug mb-2">{product.title}</h3>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-3">{product.description}</p>
+                    <div className="relative aspect-video w-full bg-white dark:bg-slate-900 overflow-hidden border-b border-slate-100 dark:border-slate-800">
+                      <ProductImageDisplay
+                        src={product.images?.[0] || '🎁'}
+                        alt={product.title}
+                        fill
+                        className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs">
+                        Featured
+                      </div>
+                    </div>
+                    <div className="p-4 flex flex-col flex-1">
+                      {product.brand && (
+                        <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-1">
+                          {product.brand}
+                        </span>
+                      )}
+                      <h3 className="font-bold text-sm text-slate-900 dark:text-white leading-snug mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                        {product.title}
+                      </h3>
+                      <div className="mt-auto pt-2 flex items-center justify-between text-xs border-t border-slate-200/60 dark:border-slate-800">
+                        <span className="font-bold text-slate-900 dark:text-white">
+                          {formatPriceBracket(product.tags.priceBracket)}
+                        </span>
+                        <span className="text-blue-600 font-semibold group-hover:translate-x-0.5 transition-transform">
+                          View details &rarr;
+                        </span>
+                      </div>
+                    </div>
                   </Link>
                 ))}
               </div>
@@ -278,15 +412,34 @@ export default async function CategoryPage({
               <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">What to look for before you click</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
-                <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
-                  Compare the current retailer price with warranty, shipping, returns, and direct-brand support before choosing where to buy.
-                </div>
-                <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
-                  Check the related guide pages in the same silo to understand comparisons, seasonal angles, and gift intent.
-                </div>
-                <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
-                  Use the filter sidebar to narrow by price bracket, then open the product page for a full vendor comparison.
-                </div>
+                {category === 'new-arrivals' ? (
+                  <>
+                    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                      <strong className="block text-slate-900 dark:text-white font-bold mb-1.5">Direct Brand Backing</strong>
+                      Every newly added item links directly to verified brand storefronts or authorized merchants with genuine warranties and customer support.
+                    </div>
+                    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                      <strong className="block text-slate-900 dark:text-white font-bold mb-1.5">Verified Specifications</strong>
+                      Dimensions, materials, battery claims, and compatibility are cross-checked directly against manufacturer spec sheets and early reviews.
+                    </div>
+                    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                      <strong className="block text-slate-900 dark:text-white font-bold mb-1.5">Launch Pricing &amp; Stock</strong>
+                      Newly introduced gadgets often feature early-bird promotional pricing or introductory coupons—compare live vendor listings before buying.
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                      Compare the current retailer price with warranty, shipping, returns, and direct-brand support before choosing where to buy.
+                    </div>
+                    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                      Check the related guide pages in the same silo to understand comparisons, seasonal angles, and gift intent.
+                    </div>
+                    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                      Use the filter sidebar to narrow by price bracket, then open the product page for a full vendor comparison.
+                    </div>
+                  </>
+                )}
               </div>
             </section>
 
@@ -312,7 +465,7 @@ export default async function CategoryPage({
 
         <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 md:p-6 shadow-sm">
           <Suspense fallback={<div className="text-center py-20 text-slate-500">Loading products...</div>}>
-            <ProductGrid initialProducts={baseProducts} allProducts={products} category={category} />
+            <ProductGrid initialProducts={baseProducts} allProducts={category === 'new-arrivals' ? baseProducts : products} category={category} />
           </Suspense>
         </section>
 

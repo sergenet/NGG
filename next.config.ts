@@ -34,6 +34,18 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'traverseon.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'order.grabo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.shopify.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.dealgenius.com',
+      },
     ],
   },
 };

@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       url,
       images: [
         {
-          url: '/default-thumbnail.png',
+          url: '/social/gift-guides.png',
           width: 1200,
           height: 630,
           alt: article.title,

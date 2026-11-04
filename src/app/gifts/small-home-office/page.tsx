@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Gifts for Small Home Offices: A Desk-Fit Guide',
     description: 'A practical gift guide for limited workspaces, organized around fit, compatibility, and setup.',
     url: '/gifts/small-home-office/',
-    images: ['/default-thumbnail.png'],
+    images: ['/social/gifts.png'],
   },
 };
 
@@ -30,31 +30,13 @@ const guideItems = [
     fitCheck: 'Confirm both screens fit the stated limits and can move without hitting a wall or one another.',
     skipWhen: 'The recipient frequently changes monitor height; this model uses manual height adjustment.',
   },
-  {
-    slug: 'benq-screenbar-halo',
-    role: 'Add task lighting without using desktop surface',
-    fitCheck: 'Confirm the monitor shape can accept a screen-mounted light and that USB power is available.',
-    skipWhen: 'A webcam, monitor hood, or curved display occupies the mounting area without adequate clearance.',
-  },
-  {
-    slug: 'anker-555-usb-c-hub-8-in-1',
-    role: 'Replace several loose adapters with one compact hub',
-    fitCheck: 'Confirm laptop USB-C capabilities, required display output, charging needs, and cable reach.',
-    skipWhen: 'The laptop port does not support the video or charging function the recipient expects.',
-  },
-  {
+      {
     slug: 'magsafe-compatible-phone-stand',
     role: 'Give a phone a predictable upright position',
     fitCheck: 'Confirm MagSafe compatibility, including the phone model and case.',
     skipWhen: 'The recipient uses an incompatible phone or a thick, non-magnetic case.',
   },
-  {
-    slug: 'logitech-mx-master-3s',
-    role: 'Reduce cable clutter and support multi-device work',
-    fitCheck: 'Confirm right-handed use, operating-system support, and room for the mouse’s larger ergonomic shape.',
-    skipWhen: 'The recipient is left-handed or prefers a compact, symmetrical mouse.',
-  },
-] as const;
+  ] as const;
 
 const products = productsData as Product[];
 const selectedProducts = guideItems

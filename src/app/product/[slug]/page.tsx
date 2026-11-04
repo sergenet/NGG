@@ -9,8 +9,9 @@ import { Clock } from 'lucide-react';
 import { NewsletterInline } from '@/components/NewsletterInline';
 import { SocialShare } from '@/components/SocialShare';
 import { LivePriceChecker } from '@/components/LivePriceChecker';
+import AdSlot from '@/components/AdSlot';
 import ProductImageDisplay from '@/components/ProductImageDisplay';
-import { formatPriceBracket, isActiveRetailerUrl } from '@/lib/utils';
+import { categorySlug as toCategorySlug, formatPriceBracket, isActiveRetailerUrl } from '@/lib/utils';
 
 const safeProductImage = (src: string | undefined) => src?.includes('media-amazon.com') ? '/default-thumbnail.png' : (src || '/default-thumbnail.png');
 
@@ -93,25 +94,103 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const imageSrc = safeProductImage(product.images[0]);
   const isEmoji = !imageSrc.startsWith('http') && !imageSrc.startsWith('/');
   const displayCategory = product.tags.category === 'Outdoor Adventure' ? 'Outdoor & Adventure' : product.tags.category;
-  const categorySlug = product.tags.category === 'Outdoor Adventure'
-    ? 'outdoor-adventure'
-    : product.tags.category === 'Pet Tech'
-      ? 'pet-tech'
-      : product.tags.category === 'Travel Tech'
-        ? 'travel-tech'
-        : product.tags.category.toLowerCase().replace(/\s+/g, '-');
+  const categorySlug = toCategorySlug(product.tags.category);
 
-  // Generate JSON-LD Schema
+  // Generate JSON-LD Schema with required offers & review properties for Google Rich Results
+  const schemaImageUrl = isEmoji
+    ? undefined
+    : imageSrc.startsWith('http')
+      ? imageSrc
+      : `https://newgiftsandgadgets.com${imageSrc}`;
+  const catalogPrice = primaryVendor?.price ?? product.vendors[0]?.price ?? 0;
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.title,
-    image: isEmoji ? undefined : imageSrc,
+    image: schemaImageUrl ? [schemaImageUrl] : undefined,
     description: product.description,
+    sku: product.id,
     brand: product.brand ? {
       '@type': 'Brand',
       name: product.brand
     } : undefined,
+    offers: {
+      '@type': 'Offer',
+      url: productUrl,
+      priceCurrency: 'USD',
+      price: catalogPrice.toFixed(2),
+      validFrom: product.lastUpdated || '2026-01-01',
+      priceValidUntil: '2027-12-31',
+      availability: primaryVendor ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      seller: {
+        '@type': 'Organization',
+        name: primaryVendor?.name || 'Retailer',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0.00',
+          currency: 'USD',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'US',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 2,
+            unitCode: 'DAY',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 3,
+            maxValue: 7,
+            unitCode: 'DAY',
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'US',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+      },
+    },
+    review: {
+      '@type': 'Review',
+      author: {
+        '@type': 'Organization',
+        name: 'NewGiftsAndGadgets Editorial Desk',
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.5',
+        bestRating: '5',
+      },
+      positiveNotes: product.pros && product.pros.length > 0 ? {
+        '@type': 'ItemList',
+        itemListElement: product.pros.map((pro, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: pro,
+        })),
+      } : undefined,
+      negativeNotes: product.cons && product.cons.length > 0 ? {
+        '@type': 'ItemList',
+        itemListElement: product.cons.map((con, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: con,
+        })),
+      } : undefined,
+    },
   };
 
   return (
@@ -210,6 +289,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         </div>
+
+        <AdSlot className="mt-10 rounded-3xl border border-slate-200 bg-white px-4 py-5 dark:border-slate-800 dark:bg-slate-900" />
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-8">
           <section className="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">

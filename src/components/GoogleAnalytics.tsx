@@ -5,7 +5,43 @@ import Script from 'next/script';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const CONSENT_KEY = 'ngg_analytics_consent';
+const GA_SCRIPT_ID = 'ngg-ga4-script';
 type Consent = 'loading' | 'unknown' | 'granted' | 'denied';
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[][];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function initializeAnalyticsQueue() {
+  if (!GA_ID || typeof window === 'undefined') return;
+
+  (window as unknown as Record<string, unknown>)[`ga-disable-${GA_ID}`] = false;
+  window.dataLayer = window.dataLayer || [];
+
+  if (typeof window.gtag !== 'function') {
+    window.gtag = (...args: unknown[]) => {
+      window.dataLayer?.push(args);
+    };
+  }
+
+  const analyticsWindow = window as unknown as Record<string, unknown>;
+  if (!analyticsWindow.__nggGaConfigured) {
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+    analyticsWindow.__nggGaConfigured = true;
+  }
+}
+
+function disableAnalytics() {
+  if (!GA_ID || typeof window === 'undefined') return;
+  window.gtag?.('consent', 'update', { analytics_storage: 'denied' });
+  (window as unknown as Record<string, unknown>)[`ga-disable-${GA_ID}`] = true;
+  document.getElementById(GA_SCRIPT_ID)?.remove();
+  document.getElementById('ga4-init')?.remove();
+}
 
 export default function GoogleAnalytics() {
   // Keep the server and the browser's first render identical. Reading storage
@@ -31,6 +67,10 @@ export default function GoogleAnalytics() {
     };
   }, []);
 
+  useEffect(() => {
+    if (consent === 'granted') initializeAnalyticsQueue();
+  }, [consent]);
+
   if (!GA_ID) return null;
 
   const choose = (value: 'granted' | 'denied') => {
@@ -39,7 +79,8 @@ export default function GoogleAnalytics() {
     } catch {
       // The choice should still take effect for this page when storage fails.
     }
-    window.gtag?.('consent', 'update', { analytics_storage: value });
+    if (value === 'granted') initializeAnalyticsQueue();
+    if (value === 'denied') disableAnalytics();
     setConsent(value);
   };
 
@@ -47,9 +88,9 @@ export default function GoogleAnalytics() {
     <>
       {consent === 'granted' && (
         <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+          <Script id={GA_SCRIPT_ID} src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
           <Script id="ga4-init" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`}
+            {`window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};if(!window.__nggGaConfigured){window.gtag('js',new Date());window.gtag('config','${GA_ID}',{anonymize_ip:true});window.__nggGaConfigured=true;}`}
           </Script>
         </>
       )}

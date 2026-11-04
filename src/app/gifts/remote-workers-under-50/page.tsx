@@ -13,11 +13,26 @@ export const metadata: Metadata = {
     title: 'Gifts for Remote Workers Under $50 That Fit a Real Desk',
     description: 'A practical shortlist organized by workspace fit, setup effort, and likely everyday use.',
     url: '/gifts/remote-workers-under-50/',
-    images: ['/default-thumbnail.png'],
+    images: ['/social/gifts.png'],
   },
 };
 
 const shortlist = [
+  {
+    slug: 'poster-master-things-that-require-zero-talent-office-print',
+    bestFor: 'Upgrading a home-office or video-call wall background under $20 (20% off with code MOTIVATE20 or HALLOWEEN20)',
+    checkFirst: 'Choose the right print dimensions for your wall and check whether you want a frame added at checkout',
+  },
+  {
+    slug: 'poster-master-premium-wall-art',
+    bestFor: 'Adding warm abstract or botanical art to a desk corner (20% off with code NATURE20, SPOOKY20, or HALLOWEEN20)',
+    checkFirst: 'Base price covers the unframed archival print; frames are optional',
+  },
+  {
+    slug: 'dealgenius-foldable-portable-washing-machine-spin-basket',
+    bestFor: 'Remote workers, travelers, and studio apartment dwellers washing daily delicates and workout gear without laundromat trips',
+    checkFirst: 'Requires standard electrical outlet and sink/tub access for the gravity drain hose',
+  },
   {
     slug: 'vivo-dual-monitor-desk-mount',
     bestFor: 'A two-monitor desk that needs more usable surface area',
@@ -28,17 +43,7 @@ const shortlist = [
     bestFor: 'A single monitor that needs smoother height and position changes',
     checkFirst: 'Desk edge, clamp clearance, monitor weight, and cable slack',
   },
-  {
-    slug: 'taotronics-led-desk-lamp',
-    bestFor: 'A dim workspace that also needs convenient USB charging',
-    checkFirst: 'Available desktop area and tolerance for touch controls',
-  },
-  {
-    slug: 'lepower-metal-desk-lamp',
-    bestFor: 'A simple, adjustable task light without app setup',
-    checkFirst: 'A compatible bulb is needed; this model does not provide dimming',
-  },
-  {
+      {
     slug: 'levitating-globe-lamp',
     bestFor: 'A compact conversation piece for a desk or video-call background',
     checkFirst: 'It needs constant power and takes a little practice to balance',

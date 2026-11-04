@@ -5,10 +5,87 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Consolidate www onto the canonical bare domain. Both hosts served 200 with a
+# non-www canonical, which Search Console reported as 31 "alternate page with
+# proper canonical" duplicates; a redirect removes the duplicate crawl instead.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# The pre-/product/ export wrote every product page as a flat file at the web
+# root (/sony-wh-1000xm5-wireless-headphones.html). Those files are gone, but
+# Search Console still lists a pile of them, so send the old URL to the live
+# product page whenever the slug still exists in the catalogue.
+
 # Consolidate legacy routes into their closest current equivalents.
+RewriteCond %{DOCUMENT_ROOT}/product/$1/index.html -f
+RewriteRule ^([^/]+)\.html$ /product/$1/ [R=301,L]
+
+# The same export also wrote flat files inside the section folders
+# (/home-office/best-ergonomic-chairs.html beside best-ergonomic-chairs/).
+# Send those to the directory form too, but only when the page still exists so
+# retired guides fall straight through to their own redirects below.
+RewriteCond %{DOCUMENT_ROOT}/$1/$2/index.html -f
+RewriteRule ^(product|shop|home-office|kitchen|smart-home|gift-guides|gifts)/([^/]+)\.html$ /$1/$2/ [R=301,L]
+
+# Old category hubs, once flat files at the root.
+RedirectMatch 301 ^/all\.html$ /shop/all/
+RedirectMatch 301 ^/home-office\.html$ /shop/home-office/
+RedirectMatch 301 ^/kitchen\.html$ /shop/kitchen/
+RedirectMatch 301 ^/smart-home\.html$ /shop/smart-home/
+
 Redirect 301 /home-office/best-monitor-arms/ /home-office/best-monitor-arms-for-dual-setups-2026/
 RedirectMatch 301 ^/smart-home/?$ /shop/smart-home/
 Redirect 301 /gift-guides/best-gifts-for-dad-fathers-day-2026/ /gift-guides/fathers-day-gadget-gifts/
+
+# Guides retired 2026-11-02: their products left the catalog with the Amazon
+# store and nothing in the current one fits the headline, so the template was
+# back-filling unrelated items. Each 301s to the closest page that still
+# delivers on the promise rather than 404ing an indexed URL.
+Redirect 301 /smart-home/best-smart-speakers/ /smart-home/top-smart-home-tech-2026/
+Redirect 301 /kitchen/best-air-fryers-of-2026/ /kitchen/best-kitchen-gadgets-2026-updated/
+Redirect 301 /smart-home/best-smart-home-upgrades-2026/ /smart-home/top-smart-home-tech-2026/
+Redirect 301 /home-office/best-desk-lamps-for-home-office-2026/ /shop/home-office/
+Redirect 301 /home-office/best-webcam-for-zoom-meetings-2026/ /gifts/video-call-gifts/
+Redirect 301 /smart-home/roomba-vs-roborock-which-robot-vacuum-wins/ /shop/smart-home/
+Redirect 301 /smart-home/best-smart-light-bulbs-for-every-room/ /smart-home/top-smart-home-tech-2026/
+Redirect 301 /kitchen/ninja-vs-vitamix-the-professional-blender-showdown/ /shop/kitchen/
+Redirect 301 /kitchen/top-5-smart-coffee-makers-for-2026/ /shop/kitchen/
+Redirect 301 /home-office/mx-master-3s-review-the-best-office-mouse/ /home-office/essential-desk-upgrades/
+Redirect 301 /home-office/best-power-delivery-hubs-for-macbook-pro/ /home-office/essential-desk-upgrades/
+Redirect 301 /smart-home/smart-home-on-a-budget-build-your-setup-under-200/ /smart-home/top-smart-home-tech-2026/
+
+# Retired section guides that the current build no longer produces. Each goes
+# to the closest page that still delivers on the headline.
+RedirectMatch 301 ^/kitchen/best-kitchen-gadgets/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/kitchen/best-kitchen-gadgets-under-25/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/kitchen/best-air-fryers/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/kitchen/7-best-air-fryers-worth-buying/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/kitchen/best-blenders/?$ /shop/kitchen/
+RedirectMatch 301 ^/kitchen/best-coffee-makers/?$ /shop/kitchen/
+RedirectMatch 301 ^/kitchen/best-espresso-machines-under-500/?$ /shop/kitchen/
+RedirectMatch 301 ^/home-office/best-monitors/?$ /shop/home-office/
+RedirectMatch 301 ^/home-office/best-standing-desks/?$ /home-office/best-standing-desks-of-2026/
+RedirectMatch 301 ^/home-office/10-best-standing-desks-for-2026/?$ /home-office/best-standing-desks-of-2026/
+# Scoped to the old flat file: `.*$` also swallowed the live page at
+# /home-office/best-ergonomic-chairs/, which is in the sitemap, so Search
+# Console filed it as "Page with redirect" instead of indexing it.
+RedirectMatch 301 ^/home-office/best-ergonomic-chairs\.html$ /shop/home-office/
+RedirectMatch 301 ^/home-office/best-desk-accessories/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/home-office/best-usb-c-hubs-docking-stations.*$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/smart-home/best-robot-vacuums.*$ /shop/smart-home/
+RedirectMatch 301 ^/smart-home/best-smart-lights/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/smart-home/best-smart-thermostats.*$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/smart-home/best-security-cameras/?$ /shop/smart-home/
+RedirectMatch 301 ^/smart-home/alexa-vs-google-home.*$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/gift-guides/10-best-tech-gifts-for-gadget-lovers/?$ /gift-guides/
+RedirectMatch 301 ^/gift-guides/15-best-gadget-gifts-under-50/?$ /gift-guides/
+RedirectMatch 301 ^/gift-guides/best-gifts-for-mom-mothers-day-2026/?$ /gift-guides/
+RedirectMatch 301 ^/gift-guides/best-gifts-for-dad-father-s-day-2026/?$ /gift-guides/fathers-day-gadget-gifts/
+
+# Comparisons and the expired sale page have no current equivalent at all.
+RewriteRule ^comparisons/ - [G,L]
+RewriteRule ^deals/amazon-big-spring-sale-2026-the-best-tech-gadget-deals/?$ - [G,L]
+RewriteRule ^reviews/?$ - [G,L]
 
 # Retired WordPress product and feed URLs have no equivalent current page.
 # Return 410 so crawlers stop retrying them instead of treating them as soft 404s.
@@ -18,8 +95,6 @@ RewriteRule ^product/([^/]+)/?$ - [G,L]
 
 # Expired or administrative WordPress-era routes should leave the index.
 Redirect gone /my-account/
-Redirect gone /reviews/
-Redirect gone /deals/amazon-big-spring-sale-2026-the-best-tech-gadget-deals/
 RedirectMatch gone ^/wp-content/.*$
 
 ErrorDocument 404 /404.html
@@ -30,7 +105,11 @@ ErrorDocument 404 /404.html
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://s.pinimg.com https://cdn.geniuslink.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.beehiiv.com https://ct.pinterest.com; frame-src https://*.beehiiv.com; base-uri 'self'; form-action 'self' https://*.beehiiv.com; frame-ancestors 'self'; upgrade-insecure-requests"
+  # AdSense needs its own hosts in script-src (the loader), frame-src (the ad
+  # iframe), connect-src (beacon/impression calls) and img-src (creative).
+  # analytics.google.com is the GA4 collect endpoint — without it every pageview
+  # was refused by CSP and the traffic numbers stayed empty.
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googleadservices.com https://adservice.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://s.pinimg.com https://cdn.geniuslink.com https://eomail5.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://gallery.eo.page; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://eomail5.com https://www.google.com https://ct.pinterest.com; frame-src https://www.google.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; base-uri 'self'; form-action 'self' https://eomail5.com; frame-ancestors 'self'; upgrade-insecure-requests"
 </IfModule>
 
 <IfModule mod_expires.c>

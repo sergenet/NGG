@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Sunrise Plumbing & Repair",
+    "category": "Plumbing",
+    "description": "Family-owned plumbing service with over 20 years of experience. We specialize in leak repairs, pipe replacement, and bathroom fixture installation. Licensed, insured, and always on time.",
+    "phone": "(555) 201-4433",
+    "website": "https://sunriseplumbing.example.com",
+    "city": "Springfield",
+    "featured": true,
+    "email": "info@sunriseplumbing.example.com"
+  },
+  {
+    "id": 2,
+    "name": "Bright Home Electrical",
+    "category": "Electrical",
+    "description": "Certified electricians available 7 days a week for safety inspections, outlet repairs, and lighting upgrades. We treat every home as if it were our own. Free estimates for seniors.",
+    "phone": "(555) 338-9921",
+    "website": "",
+    "city": "Maplewood",
+    "featured": true,
+    "email": "contact@brighthome.example.com"
+  },
+  {
+    "id": 3,
+    "name": "Gentle Hands Home Care",
+    "category": "Home Care",
+    "description": "Compassionate caregivers providing personal care, companionship, meal preparation, and medication reminders. All staff are background-checked and CPR certified. Available 24/7.",
+    "phone": "(555) 472-6610",
+    "website": "https://gentlehands.example.com",
+    "city": "Oakdale",
+    "featured": true,
+    "email": "hello@gentlehands.example.com"
+  },
+  {
+    "id": 4,
+    "name": "Spotless Home Cleaning",
+    "category": "Cleaning",
+    "description": "Professional cleaning services tailored for seniors. We use non-toxic, fragrance-free products safe for those with sensitivities. Weekly, bi-weekly, and one-time deep clean options available.",
+    "phone": "(555) 519-7750",
+    "website": "https://spotlesshome.example.com",
+    "city": "Springfield",
+    "featured": false,
+    "email": "book@spotlesshome.example.com"
+  },
+  {
+    "id": 5,
+    "name": "SafeRide Senior Transport",
+    "category": "Transportation",
+    "description": "Door-to-door transportation for medical appointments, grocery shopping, and social outings. Wheelchair-accessible vehicles available. Friendly drivers trained in senior assistance.",
+    "phone": "(555) 644-3322",
+    "website": "",
+    "city": "Rivertown",
+    "featured": true,
+    "email": "rides@saferide.example.com"
+  },
+  {
+    "id": 6,
+    "name": "Lawn & Garden Pros",
+    "category": "Lawn & Garden",
+    "description": "Reliable lawn mowing, hedge trimming, leaf removal, and garden maintenance. Affordable seasonal packages for seniors. Fully insured and locally operated for over 12 years.",
+    "phone": "(555) 782-1145",
+    "website": "https://lawnpros.example.com",
+    "city": "Maplewood",
+    "featured": false,
+    "email": "lawn@lawnpros.example.com"
+  },
+  {
+    "id": 7,
+    "name": "Handy Harold Home Repairs",
+    "category": "Handyman",
+    "description": "From leaky faucets to broken doors, Harold handles small repairs quickly and affordably. No job too small. Trust built on 15 years of five-star service in the community.",
+    "phone": "(555) 855-9988",
+    "website": "",
+    "city": "Springfield",
+    "featured": false,
+    "email": "harold@handyharold.example.com"
+  },
+  {
+    "id": 8,
+    "name": "TechHelp Senior Tech Support",
+    "category": "Tech Support",
+    "description": "Patient, in-home help with smartphones, tablets, computers, and smart TVs. We explain everything clearly with no jargon. Perfect for seniors wanting to stay connected with family.",
+    "phone": "(555) 921-6677",
+    "website": "https://techhelp.example.com",
+    "city": "Oakdale",
+    "featured": false,
+    "email": "help@techhelp.example.com"
+  },
+  {
+    "id": 9,
+    "name": "Meals by Maria",
+    "category": "Meal Delivery",
+    "description": "Fresh, home-cooked meals delivered daily. Heart-healthy, diabetic-friendly, and low-sodium options available. All meals made from scratch with fresh local ingredients. No preservatives.",
+    "phone": "(555) 103-5544",
+    "website": "",
+    "city": "Rivertown",
+    "featured": false,
+    "email": "maria@mealsbymaria.example.com"
+  },
+  {
+    "id": 10,
+    "name": "SecureHome Lock & Security",
+    "category": "Home Security",
+    "description": "Simple, easy-to-use home security systems designed with seniors in mind. Medical alert integration, door sensors, and camera installation. Monitoring starts at just $19/month.",
+    "phone": "(555) 267-8833",
+    "website": "https://securehome.example.com",
+    "city": "Maplewood",
+    "featured": true,
+    "email": "info@securehome.example.com"
+  }
+]

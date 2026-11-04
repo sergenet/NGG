@@ -1,8 +1,8 @@
 'use client';
 
-import { ArrowRight, Download, Mail, ShieldCheck } from 'lucide-react';
+import { Download, ShieldCheck } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
-import { BEEHIIV_SUBSCRIBE_URL } from '@/lib/beehiiv';
+import { EmailOctopusForm } from '@/components/EmailOctopusForm';
 
 const CHECKLIST_URL = '/downloads/2026-gadget-buyers-checklist.pdf';
 
@@ -33,10 +33,8 @@ export function NewsletterInline() {
           </a>
           <p className="text-center text-sm text-slate-500">The PDF downloads immediately. No signup, redirect, or second email entry.</p>
           <div className="border-t border-slate-200 pt-4 text-center">
-            <p className="mb-3 text-sm text-slate-600">Want new gift ideas in your inbox?</p>
-            <a href={BEEHIIV_SUBSCRIBE_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-semibold text-blue-700 hover:text-blue-800">
-              <Mail className="h-4 w-4" /> Join the optional newsletter <ArrowRight className="h-4 w-4" />
-            </a>
+            <p className="mb-3 text-sm text-slate-600">Get one useful email each month with practical gift ideas, buying checks, and new guides. Unsubscribe anytime.</p>
+            <EmailOctopusForm />
           </div>
         </div>
       </div>

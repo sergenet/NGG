@@ -4,8 +4,10 @@ import { ArrowUpRight, Gift, Mail } from 'lucide-react';
 import './globals.css';
 import productsData from '@/lib/data/products.json';
 import { CategoriesDropdown } from '@/components/CategoriesDropdown';
+import { PageBottomNav } from '@/components/PageBottomNav';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { AnalyticsPreferencesButton } from '@/components/AnalyticsPreferencesButton';
+import { FirstPartyAnalytics } from '@/components/FirstPartyAnalytics';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://newgiftsandgadgets.com'),
@@ -18,9 +20,9 @@ export const metadata: Metadata = {
     type: 'website', url: '/', siteName: 'NewGiftsAndGadgets',
     title: 'NewGiftsAndGadgets — Useful Gifts, Clever Gadgets',
     description: 'Find a gift they’ll actually use. Browse practical picks by person, purpose, and price.',
-    images: [{ url: '/default-thumbnail.png', width: 1200, height: 630, alt: 'NewGiftsAndGadgets gift and gadget portal' }],
+    images: [{ url: '/social/home.png', width: 1200, height: 630, alt: 'NewGiftsAndGadgets gift and gadget portal' }],
   },
-  twitter: { card: 'summary_large_image', title: 'NewGiftsAndGadgets', description: 'Useful gifts and clever gadgets, thoughtfully curated.', images: ['/default-thumbnail.png'] },
+  twitter: { card: 'summary_large_image', title: 'NewGiftsAndGadgets', description: 'Useful gifts and clever gadgets, thoughtfully curated.', images: ['/social/home.png'] },
   robots: { index: true, follow: true },
   verification: { other: { 'p:domain_verify': '72cef8dccd016abd8a0325a8f305d18d' } },
 };
@@ -36,6 +38,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const categories = Array.from(new Set(productsData.map((product) => product.tags.category)));
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0467059729557007"
+          crossOrigin="anonymous"
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTLRDD8KP0" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VTLRDD8KP0', { anonymize_ip: true });`,
+          }}
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         <div className="border-b border-amber-200 bg-amber-100 px-4 py-2 text-center text-xs font-bold text-amber-950">
@@ -47,7 +62,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-[#ef6a4d] text-white"><Gift className="h-5 w-5" /></span>
               <span>NewGifts<span className="text-[#bd4b34]">&amp;</span>Gadgets</span>
             </Link>
-            <nav aria-label="Primary navigation" className="hidden items-center gap-6 text-sm font-bold text-slate-700 lg:flex">
+            <nav aria-label="Primary navigation" className="hidden items-center gap-5 text-sm font-bold text-slate-700 lg:flex">
+              <Link href="/shop/new-arrivals/" className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-black text-amber-900 border border-amber-300/80 transition hover:bg-amber-500/20 hover:border-amber-400">
+                <span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
+                New Arrivals ✨
+              </Link>
               <Link href="/shop/all/" className="hover:text-[#bd4b34]">All finds</Link>
               <Link href="/gift-guides/" className="hover:text-[#bd4b34]">Gift guides</Link>
               <CategoriesDropdown categories={categories} />
@@ -56,21 +75,31 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </nav>
             <Link href="/shop/all/" className="button-primary min-h-10 px-4 py-2 text-xs">Find a gift <ArrowUpRight className="h-4 w-4" /></Link>
           </div>
-          <nav aria-label="Mobile navigation" className="site-container flex gap-5 overflow-x-auto border-t border-stone-200 py-2 text-sm font-bold text-slate-700 no-scrollbar lg:hidden">
-            <Link href="/shop/all/">All finds</Link><Link href="/gift-guides/">Gift guides</Link><Link href="/shop/home-office/">Home office</Link><Link href="/shop/kitchen/">Kitchen</Link><Link href="/about/">About</Link>
+          <nav aria-label="Mobile navigation" className="site-container flex items-center gap-4 overflow-x-auto border-t border-stone-200 py-2.5 text-sm font-bold text-slate-700 no-scrollbar lg:hidden">
+            <Link href="/shop/new-arrivals/" className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-2.5 py-0.5 text-xs font-black text-amber-900 whitespace-nowrap border border-amber-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
+              New Arrivals ✨
+            </Link>
+            <Link href="/shop/all/">All finds</Link>
+            <Link href="/gift-guides/">Gift guides</Link>
+            <Link href="/shop/home-office/">Home office</Link>
+            <Link href="/shop/kitchen/">Kitchen</Link>
+            <Link href="/about/">About</Link>
           </nav>
         </header>
         {children}
         <footer className="border-t border-stone-200 bg-[#18231d] text-white">
           <div className="site-container grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
             <div><div className="flex items-center gap-2 text-xl font-black"><Gift className="h-5 w-5 text-[#ef8a73]" /> NewGifts&amp;Gadgets</div><p className="mt-4 max-w-md text-sm leading-7 text-slate-300">A practical portal for finding useful, giftable products. We explain who each pick suits, what to consider, and where affiliate compensation may apply.</p><div className="mt-5"><a className="inline-flex rounded-full border border-white/20 p-2.5 hover:bg-white/10" href="mailto:contact@newgiftsandgadgets.com" aria-label="Email NewGiftsAndGadgets"><Mail className="h-4 w-4" /></a></div></div>
-            <div><h2 className="text-sm font-black uppercase tracking-[.18em] text-[#efb09f]">Explore</h2><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link href="/shop/all/">All gifts &amp; gadgets</Link></li><li><Link href="/gift-guides/">Gift guides</Link></li><li><Link href="/brands/">Browse brands</Link></li><li><Link href="/work-with-us/">Work with us</Link></li></ul></div>
+            <div><h2 className="text-sm font-black uppercase tracking-[.18em] text-[#efb09f]">Explore</h2><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link href="/shop/new-arrivals/">New arrivals ✨</Link></li><li><Link href="/shop/all/">All gifts &amp; gadgets</Link></li><li><Link href="/gift-guides/">Gift guides</Link></li><li><Link href="/brands/">Browse brands</Link></li><li><Link href="/work-with-us/">Work with us</Link></li></ul></div>
             <div><h2 className="text-sm font-black uppercase tracking-[.18em] text-[#efb09f]">Trust</h2><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link href="/about/">How we choose</Link></li><li><Link href="/editorial-policy/">Editorial policy</Link></li><li><Link href="/affiliate-disclosure/">Affiliate disclosure</Link></li><li><Link href="/privacy/">Privacy</Link></li><li><AnalyticsPreferencesButton /></li><li><Link href="/terms/">Terms</Link></li><li><Link href="/contact/">Contact</Link></li></ul></div>
           </div>
           <div className="border-t border-white/10"><div className="site-container flex flex-col gap-2 py-5 text-xs text-slate-400 sm:flex-row sm:justify-between"><p>© 2026 NewGiftsAndGadgets. All rights reserved.</p><p>Prices and availability may change after publication.</p></div></div>
         </footer>
+        <PageBottomNav />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <GoogleAnalytics />
+        <FirstPartyAnalytics />
       </body>
     </html>
   );

@@ -4,6 +4,8 @@ import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { DealCard } from '@/components/DealCard';
 import { NewsletterInline } from '@/components/NewsletterInline';
+import { isActiveRetailerUrl, sortByRecency } from '@/lib/utils';
+import AdSlot from '@/components/AdSlot';
 
 export const metadata = {
   title: 'Gift Ideas & Useful Gadgets, Thoughtfully Curated',
@@ -31,8 +33,20 @@ const giftPaths = [
 
 export default function Home() {
   const products = productsData as Product[];
-  const featured = products.filter((product) => product.vendors.some((vendor) => vendor.isPrimary)).slice(0, 6);
-  const under50 = products.filter((product) => Math.min(...product.vendors.map((vendor) => vendor.price)) < 50).slice(0, 4);
+  const newArrivals = sortByRecency(
+    products.filter((product) => product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url))),
+  ).slice(0, 4);
+  const featured = products
+    .filter((product) => product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)))
+    .reverse()
+    .slice(0, 6);
+  const retailerBacked = products
+    .filter((product) =>
+      product.images[0] !== '/default-thumbnail.png'
+      && product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)),
+    )
+    .sort((a, b) => Math.min(...a.vendors.map((vendor) => vendor.price)) - Math.min(...b.vendors.map((vendor) => vendor.price)))
+    .slice(0, 8);
 
   return (
     <main id="main-content">
@@ -44,7 +58,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">A research-led portal for useful gadgets, memorable gifts, and honest trade-offs—organized by person, purpose, and price.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/shop/all/" className="button-primary">Explore all picks <ArrowRight className="h-4 w-4" /></Link>
-              <Link href="/gift-guides/" className="button-secondary"><Gift className="h-4 w-4" /> Browse gift guides</Link>
+              <Link href="/shop/new-arrivals/" className="button-secondary"><Sparkles className="h-4 w-4 text-amber-600" /> See new arrivals</Link>
             </div>
             <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-600">
               <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-600" /> Clear affiliate disclosure</span>
@@ -57,6 +71,28 @@ export default function Home() {
               <Link key={category.slug} href={`/shop/${category.slug}/`} className={`hero-category-card hero-category-${index + 1}`}>
                 <span className="text-4xl" aria-hidden="true">{category.icon}</span><span className="mt-8 block text-sm font-bold uppercase tracking-[.18em] text-slate-500">Explore</span><span className="mt-1 block text-xl font-black text-slate-950">{category.name}</span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fresh New Arrivals Showcase */}
+      <section className="site-container py-12" aria-labelledby="new-arrivals-heading">
+        <div className="rounded-[2.5rem] border border-amber-200/90 bg-gradient-to-br from-amber-50/70 via-[#fcfaf4] to-orange-50/40 p-6 md:p-10 shadow-xs">
+          <div className="section-heading-row mb-8">
+            <div>
+              <p className="eyebrow inline-flex items-center gap-1.5 text-amber-900 bg-amber-100/90 px-3 py-1 rounded-full border border-amber-200">
+                <Sparkles className="h-3.5 w-3.5 text-amber-600" /> Fresh Discoveries
+              </p>
+              <h2 id="new-arrivals-heading" className="section-title mt-3">New arrivals worth watching</h2>
+            </div>
+            <Link href="/shop/new-arrivals/" className="text-link font-black text-amber-900 hover:text-amber-700">
+              Browse all new arrivals <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {newArrivals.map((product) => (
+              <DealCard key={product.id} product={product} />
             ))}
           </div>
         </div>
@@ -83,13 +119,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="site-container pb-16">
+        <AdSlot className="rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
+      </section>
+
       <section className="site-container pb-16" aria-labelledby="featured-heading">
         <div className="section-heading-row"><div><p className="eyebrow">Editor’s shortlist</p><h2 id="featured-heading" className="section-title">Standout gadgets right now</h2></div><Link href="/shop/all/" className="text-link">View the complete catalog <ArrowRight className="h-4 w-4" /></Link></div>
         <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{featured.map((product) => <DealCard key={product.id} product={product} />)}</div>
       </section>
 
       <section className="site-container pb-16" aria-labelledby="budget-heading">
-        <div className="rounded-[2.5rem] bg-[#18231d] px-6 py-10 text-white md:px-10 md:py-14"><div className="section-heading-row"><div><p className="eyebrow eyebrow-dark">Small price, big delight</p><h2 id="budget-heading" className="section-title text-white">Gifts under $50</h2></div><Link href="/shop/all/?price=under-50" className="text-link text-amber-300">See more affordable finds <ArrowRight className="h-4 w-4" /></Link></div><div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{under50.map((product) => <DealCard key={product.id} product={product} />)}</div></div>
+        <div className="rounded-[2.5rem] bg-[#18231d] px-6 py-10 text-white md:px-10 md:py-14"><div className="section-heading-row"><div><p className="eyebrow eyebrow-dark">Ready to compare</p><h2 id="budget-heading" className="section-title text-white">Available from active retailers</h2></div><Link href="/shop/all/" className="text-link text-amber-300">Browse all researched picks <ArrowRight className="h-4 w-4" /></Link></div><div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{retailerBacked.map((product) => <DealCard key={product.id} product={product} />)}</div></div>
       </section>
       <section className="site-container pb-20"><NewsletterInline /></section>
     </main>

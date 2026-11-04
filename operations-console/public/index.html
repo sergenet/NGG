@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>NewGifts &amp; Gadgets Control Room</title>
+<link rel="stylesheet" href="/control-room/assets/style.css">
+<link rel="stylesheet" href="/control-room/assets/account.css">
+<script src="/control-room/assets/app.js?v=20260904-emailoctopus" defer></script>
+<script src="/control-room/assets/account.js?v=20261102-auth" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">NEWGIFTSANDGADGETS.COM</p>
+      <h1>Control room</h1>
+      <p>Fresh first-party signals, without vanity-metric fog.</p>
+    </div>
+    <div>
+      <div class="controls">
+        <select id="days" aria-label="Reporting period">
+          <option value="1">Today</option>
+          <option value="7">7 days</option>
+          <option value="30" selected>30 days</option>
+          <option value="90">90 days</option>
+        </select>
+        <button id="refresh">Refresh now</button>
+      </div>
+      <div class="account-bar" style="margin-top:8px;justify-content:flex-end">
+        <button type="button" id="open-account">Change password</button>
+        <button type="button" id="logout">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="status" role="status">Connecting…</div>
+
+  <section id="cards" class="cards"></section>
+
+  <section class="split">
+    <article><h2>Traffic by day</h2><div id="daily"></div></article>
+    <article><h2>Attention → intent</h2><div id="funnel"></div></article>
+  </section>
+
+  <section class="split">
+    <article><h2>Top landing pages</h2><div id="pages"></div></article>
+    <article><h2>Traffic sources</h2><div id="sources"></div></article>
+  </section>
+
+  <article>
+    <h2>Business results</h2>
+    <p>EmailOctopus confirmations and affiliate-network sales will appear only after their provider connection succeeds. Signup attempts and retailer clicks are not sales.</p>
+    <div id="providers"></div>
+  </article>
+
+  <footer>Private aggregate reporting · Raw IP addresses and subscriber addresses are not displayed or stored as analytics.</footer>
+</main>
+
+<dialog id="account-dialog" aria-labelledby="account-heading">
+  <div class="dialog-body">
+    <h2 id="account-heading">Change password</h2>
+    <p>Set a password you will remember. It is stored as a scrypt hash on the server, never in plain text.</p>
+    <form id="password-form" novalidate>
+      <label for="new-password">New password</label>
+      <input id="new-password" type="password" autocomplete="new-password" minlength="10" required>
+      <label for="confirm-password">Repeat it</label>
+      <input id="confirm-password" type="password" autocomplete="new-password" minlength="10" required>
+      <p id="account-message" role="status" aria-live="polite"></p>
+      <div class="dialog-actions">
+        <button type="button" class="secondary" id="cancel-account">Cancel</button>
+        <button type="submit" id="save-password">Save password</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+</body>
+</html>

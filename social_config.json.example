@@ -1,0 +1,13 @@
+{
+    "_instructions": "Copy this file to social_config.json and replace all YOUR_* values with real credentials.",
+
+    "X_API_KEY":              "YOUR_X_API_KEY",
+    "X_API_SECRET":           "YOUR_X_API_SECRET",
+    "X_ACCESS_TOKEN":         "YOUR_X_ACCESS_TOKEN",
+    "X_ACCESS_TOKEN_SECRET":  "YOUR_X_ACCESS_TOKEN_SECRET",
+
+    "PINTEREST_ACCESS_TOKEN": "YOUR_PINTEREST_TOKEN",
+    "PINTEREST_BOARD_ID":     "YOUR_BOARD_ID",
+    "PINTEREST_USE_SANDBOX":  true,
+    "PINTEREST_REFRESH_TOKEN": "YOUR_PINTEREST_REFRESH_TOKEN"
+}

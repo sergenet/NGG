@@ -1,39 +1,42 @@
-# NewGiftsAndGadgets weekly traffic report
+# NewGiftsAndGadgets measurement report
 
-Week starting: 2026-08-24
+Historical matching window: 2026-07-28 through 2026-08-24 (28 days)  
+Captured: 2026-08-27
+
+This is the pre-correction historical baseline. The clean post-verification GA4 period begins after Stage 3 event verification and is not replaced with placeholder zeroes.
 
 ## Acquisition
 
-| Metric | Value |
-|---|---:|
-| GA sessions | 0 |
-| Engaged sessions | 0 |
-| Engagement rate | n/a |
-| Search impressions | 217 |
-| Search clicks | 2 |
-| Search CTR | 0.92% |
-| Indexed pages | 79 |
-| Pinterest impressions | 1 |
-| Pinterest saves | 0 |
-| Pinterest outbound clicks | 0 |
+| Source | Metric | Observed value |
+|---|---|---:|
+| GA4 | Sessions | Pending clean 28-day window |
+| GA4 | Engaged sessions | Pending clean 28-day window |
+| Google Search Console | Search impressions | 4 |
+| Google Search Console | Search clicks | 0 |
+| Google Search Console | Search CTR | 0% |
+| Bing Webmaster Tools | Search impressions | 10 |
+| Bing Webmaster Tools | Search clicks | 0 |
+| Pinterest | Impressions | 7 |
+| Pinterest | Engagements | 0 |
+| Pinterest | Outbound clicks | 0 |
 
-## Conversion
+Current indexing snapshot: 114 indexed and 179 not indexed. This is a capture-date state, not a 28-day performance total.
 
-| Metric | Value |
-|---|---:|
-| Affiliate clicks | 0 |
-| Affiliate CTR per session | n/a |
-| Checklist downloads | 0 |
-| Email subscribers | 1 |
-| Email unsubscribes | 0 |
-| Amazon ordered items | 0 |
-| Amazon earnings | $0.00 |
-| Amazon earnings per affiliate click | n/a |
+## Commercial and audience outcomes
 
-## Notes
+| Source | Metric | Observed value |
+|---|---|---:|
+| Awin | Affiliate clicks | 0 |
+| Awin | Transactions | 0 |
+| Awin | Sale amount | USD 0.00 |
+| Awin | Commission | USD 0.00 |
+| EmailOctopus | Eligible subscribers during historical window | Not applicable — provider activated afterward |
+| EmailOctopus | Current subscribed contacts | 1 owner test contact |
+| GA4 | Checklist downloads | Pending clean 28-day window |
+| GA4 | Newsletter signup attempts | Pending clean 28-day window |
 
-Pre-growth baseline captured 2026-08-23: GA4 post-fix metrics are not yet trustworthy and the zero fields are placeholders pending a complete consented reporting window. Search Console recorded 217 impressions, 2 clicks, and 79 indexed pages. Bing recorded 13 impressions and 0 clicks. Amazon recorded 604 clicks over the prior 30 days, 0 ordered items, and $0 earnings. On 2026-08-24 Amazon closed the Associates application for not reaching three qualifying purchases within 180 days; all 69 Amazon offers and 67 Amazon-hosted images were suspended, and the 128-URL live sitemap crawl passed cleanly.
+The EmailOctopus owner-only test is compliance evidence, not production campaign performance. Two Awin clicks generated on August 26 during controlled verification fall outside this report window.
 
 ## Decision rule
 
-Do not scale a traffic source from impressions alone. Prioritize pages and channels that produce engaged sessions, retailer clicks, subscribers, and ordered items.
+Do not interpret this low-volume historical window as growth. Wait for the clean post-verification 28-day period, then compare matching dates across GA4, Search Console, EmailOctopus, Awin, Bing, and Pinterest. Prioritize channels and pages that produce engaged visits, retailer clicks, confirmed subscribers, transactions, and commission—not impressions alone.

@@ -1,0 +1,962 @@
+[
+  {
+    "product": "Elgato Prompter",
+    "vendor": "Elgato (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Elgato Prompter",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B08T5S6JLN?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Logitech Ergo K860 Wireless Keyboard",
+    "vendor": "Logitech (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Logitech Ergo K860 Wireless Keyboard",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GS5VHRF9?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Anker 555 USB-C Hub (8-in-1)",
+    "vendor": "Anker (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Anker 555 USB-C Hub (8-in-1)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B094912VBT?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Sony WH-1000XM5 Wireless Headphones",
+    "vendor": "Sony (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Sony WH-1000XM5 Wireless Headphones",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0938ZCDVG?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Anker 737 Power Bank (PowerCore 24K)",
+    "vendor": "Anker (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Anker 737 Power Bank (PowerCore 24K)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "BenQ ScreenBar Halo",
+    "vendor": "BenQ (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "BenQ ScreenBar Halo",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DK59YKRS?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "CalDigit TS4 Thunderbolt 4 Dock",
+    "vendor": "CalDigit (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "CalDigit TS4 Thunderbolt 4 Dock",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0FWT456MD?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Vari Electric Standing Desk (48x30)",
+    "vendor": "Vari (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Vari Electric Standing Desk (48x30)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GXCG8S8W?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ember Smart Mug 2",
+    "vendor": "Ember (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ember Smart Mug 2",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B084BXDTK2?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Elgato Stream Deck MK.2",
+    "vendor": "Elgato (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Elgato Stream Deck MK.2",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B084BPQ4QB?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "VIVO Dual Monitor Desk Mount",
+    "vendor": "VIVO (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "VIVO Dual Monitor Desk Mount",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B009S750LA?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ergotron LX Single Monitor Arm",
+    "vendor": "Ergotron (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ergotron LX Single Monitor Arm",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DSJN4XSX?tag=sergenet05-20",
+    "status": "OK (GET 200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Amazon Basics Premium Monitor Stand",
+    "vendor": "Amazon (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Amazon Basics Premium Monitor Stand",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B074P7Y9ZG?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "HUANUO Dual Monitor Mount",
+    "vendor": "HUANUO (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "HUANUO Dual Monitor Mount",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0CTHMKLH4?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "TaoTronics LED Desk Lamp",
+    "vendor": "TaoTronics (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "TaoTronics LED Desk Lamp",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B07BF9Y667?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Dyson Lightcycle Morph",
+    "vendor": "Dyson (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Dyson Lightcycle Morph",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B07RNZN2JH?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "LEPOWER Metal Desk Lamp",
+    "vendor": "LEPOWER (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "LEPOWER Metal Desk Lamp",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B01LQMKT6A?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "ErGear Single Monitor Arm",
+    "vendor": "ErGear (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "ErGear Single Monitor Arm",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0FQMLC3CB?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "EppieBasic LED Desk Lamp",
+    "vendor": "EppieBasic (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "EppieBasic LED Desk Lamp",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B08C5HG5CS?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Elgato Facecam Pro",
+    "vendor": "Elgato (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Elgato Facecam Pro",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Logitech Brio 4K",
+    "vendor": "Logitech (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Logitech Brio 4K",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B01N5RLYNX?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Razer Kiyo Pro Ultra",
+    "vendor": "Razer (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Razer Kiyo Pro Ultra",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0BRQ3T1V7?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Anker PowerConf C200",
+    "vendor": "Anker (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Anker PowerConf C200",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B09MFMTMPD?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Opal Tadpole",
+    "vendor": "Opal (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Opal Tadpole",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0D9W7J9SK?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "iRobot Roomba j9+",
+    "vendor": "iRobot (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "iRobot Roomba j9+",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DX1DQKMD?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "iRobot Roomba Combo j7+",
+    "vendor": "iRobot (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "iRobot Roomba Combo j7+",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0B94T5M2F?tag=sergenet05-20",
+    "status": "OK (GET 200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "LIFX A19 Smart LED",
+    "vendor": "LIFX (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "LIFX A19 Smart LED",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GFDQNK82?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Govee Smart LED Bulbs",
+    "vendor": "Govee (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Govee Smart LED Bulbs",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GF1J3YM7?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "SwitchBot Hub 2 (Matter)",
+    "vendor": "SwitchBot (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "SwitchBot Hub 2 (Matter)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B084C3D3XV?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Govee AI Sync Box 2",
+    "vendor": "Govee (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Govee AI Sync Box 2",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DZTPZKTT?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ring Indoor Cam (2nd Gen)",
+    "vendor": "Ring (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ring Indoor Cam (2nd Gen)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GKFLT2HY?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Samsung T7 Shield 1TB",
+    "vendor": "Samsung (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Samsung T7 Shield 1TB",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0BPHQ9DF5?tag=sergenet05-20",
+    "status": "Exception: HTTPSConnectionPool(host='www.amazon.com', port=443): Max retries exceeded with url: /dp/B0BPHQ9DF5?tag=sergenet05-20 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.amazon.com', port=443) at 0x23896bdd950>, 'Connection to www.amazon.com timed out. (connect timeout=5)'))",
+    "is_valid": false,
+    "has_tag": true
+  },
+  {
+    "product": "Philips Hue Bridge & Starter Kit",
+    "vendor": "Philips (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Philips Hue Bridge & Starter Kit",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DGVQHFBZ?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ecobee Premium Smart Thermostat",
+    "vendor": "Ecobee (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ecobee Premium Smart Thermostat",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B07NQVWRR3?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Wyze Cam v4 (Latest Model)",
+    "vendor": "Wyze (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Wyze Cam v4 (Latest Model)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0F8VWZF5R?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "August Wi-Fi Smart Lock (4th Gen)",
+    "vendor": "August (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "August Wi-Fi Smart Lock (4th Gen)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0B6RB5Q19?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Lifx Luna Smart Lamp",
+    "vendor": "Lifx (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Lifx Luna Smart Lamp",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0F1N5HPVH?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Aqara FP2 Presence Sensor",
+    "vendor": "Aqara (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Aqara FP2 Presence Sensor",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0FG2MD3YP?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Roborock Qrevo Curv",
+    "vendor": "Roborock (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Roborock Qrevo Curv",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0FXG2BDTJ?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Amazon Echo Show 8 (3rd Gen)",
+    "vendor": "Amazon (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Amazon Echo Show 8 (3rd Gen)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GQ6FPC4Y?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "ThermoPro Twin TempSpike Plus",
+    "vendor": "ThermoPro (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "ThermoPro Twin TempSpike Plus",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B01MSZR0JY?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Zyliss E900010U Viral Peeler",
+    "vendor": "Zyliss (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Zyliss E900010U Viral Peeler",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B084BQGB82?tag=sergenet05-20",
+    "status": "Exception: HTTPSConnectionPool(host='www.amazon.com', port=443): Max retries exceeded with url: /dp/B084BQGB82?tag=sergenet05-20 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.amazon.com', port=443) at 0x23896bdd090>, 'Connection to www.amazon.com timed out. (connect timeout=5)'))",
+    "is_valid": false,
+    "has_tag": true
+  },
+  {
+    "product": "Fullstar Vegetable Chopper & Mandoline Slicer 9-in-1",
+    "vendor": "Fullstar (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Fullstar Vegetable Chopper & Mandoline Slicer 9-in-1",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B09MV5TTSM?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ninja Air Fryer 4-in-1 Pro",
+    "vendor": "Ninja (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ninja Air Fryer 4-in-1 Pro",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DBN87GQJ?tag=sergenet05-20",
+    "status": "Exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+    "is_valid": false,
+    "has_tag": true
+  },
+  {
+    "product": "COSORI TurboBlaze 6.0-Quart",
+    "vendor": "COSORI (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "COSORI TurboBlaze 6.0-Quart",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0CZKT382D?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Instant Vortex Plus 6-in-1",
+    "vendor": "Instant (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Instant Vortex Plus 6-in-1",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GWHYF9QD?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Aerolatte Handheld Milk Frother",
+    "vendor": "Aerolatte (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Aerolatte Handheld Milk Frother",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DH7YV11T?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Breville Barista Express Impress",
+    "vendor": "Breville (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Breville Barista Express Impress",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0DVNRCGC1?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Herman Miller Aeron Chair",
+    "vendor": "Herman (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Herman Miller Aeron Chair",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B08GSSWDK6?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "MagSafe Compatible Phone Stand",
+    "vendor": "MagSafe (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "MagSafe Compatible Phone Stand",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GXVX5VBZ?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Google Nest Hub (2nd Gen)",
+    "vendor": "Google (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Google Nest Hub (2nd Gen)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0CRG7XMT7?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Google Nest Cam (Battery)",
+    "vendor": "Google (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Google Nest Cam (Battery)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GVGFQCBQ?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Apple HomePod Mini",
+    "vendor": "Apple (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Apple HomePod Mini",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GS3S7DS8?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ring Battery Doorbell Plus",
+    "vendor": "Ring (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ring Battery Doorbell Plus",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0FCMPW212?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Sonos Era 100",
+    "vendor": "Sonos (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Sonos Era 100",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B084BP4ZNN?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Arlo Pro 5S 2K Spotlight Camera",
+    "vendor": "Arlo (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Arlo Pro 5S 2K Spotlight Camera",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GNNNB577?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Vitamix E310 Explorian Blender",
+    "vendor": "Vitamix (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Vitamix E310 Explorian Blender",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GXSXJ48Q?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ninja Professional Blender (BL610)",
+    "vendor": "Ninja (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Ninja Professional Blender (BL610)",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0GRTH917V?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Logitech MX Master 3S",
+    "vendor": "Logitech (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Logitech MX Master 3S",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0G5ZH7N5L?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Breville Barista Express Espresso Machine",
+    "vendor": "Breville (Direct)",
+    "url": "#",
+    "status": "Placeholder",
+    "is_valid": true,
+    "has_tag": true
+  },
+  {
+    "product": "Breville Barista Express Espresso Machine",
+    "vendor": "Amazon",
+    "url": "https://www.amazon.com/dp/B0CH9QWOU?tag=sergenet05-20",
+    "status": "OK (200)",
+    "is_valid": true,
+    "has_tag": true
+  }
+]

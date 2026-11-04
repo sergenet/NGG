@@ -1,0 +1,75 @@
+{
+  "mainNav": [
+    {
+      "label": "Home",
+      "url": "/",
+      "children": []
+    },
+    {
+      "label": "Home Office",
+      "url": "/home-office/",
+      "children": [
+        { "label": "Standing Desks", "url": "/home-office/best-standing-desks/" },
+        { "label": "Ergonomic Chairs", "url": "/home-office/best-ergonomic-chairs/" },
+        { "label": "Desk Accessories", "url": "/home-office/best-desk-accessories/" },
+        { "label": "Monitors & Arms", "url": "/home-office/best-monitors/" }
+      ]
+    },
+    {
+      "label": "Smart Home",
+      "url": "/smart-home/",
+      "children": [
+        { "label": "Smart Speakers", "url": "/smart-home/best-smart-speakers/" },
+        { "label": "Security Cameras", "url": "/smart-home/best-security-cameras/" },
+        { "label": "Smart Lighting", "url": "/smart-home/best-smart-lights/" },
+        { "label": "Robot Vacuums", "url": "/smart-home/best-robot-vacuums/" }
+      ]
+    },
+    {
+      "label": "Kitchen",
+      "url": "/kitchen/",
+      "children": [
+        { "label": "Air Fryers", "url": "/kitchen/best-air-fryers/" },
+        { "label": "Blenders", "url": "/kitchen/best-blenders/" },
+        { "label": "Coffee Makers", "url": "/kitchen/best-coffee-makers/" },
+        { "label": "Kitchen Gadgets", "url": "/kitchen/best-kitchen-gadgets/" }
+      ]
+    },
+    {
+      "label": "Gift Guides",
+      "url": "/gift-guides/",
+      "children": [
+        { "label": "Gifts Under $50", "url": "/gift-guides/under-50/" },
+        { "label": "Gifts Under $100", "url": "/gift-guides/under-100/" },
+        { "label": "Gifts for Him", "url": "/gift-guides/for-him/" },
+        { "label": "Gifts for Her", "url": "/gift-guides/for-her/" },
+        { "label": "Gifts for Tech Lovers", "url": "/gift-guides/tech-lovers/" }
+      ]
+    },
+    {
+      "label": "Reviews",
+      "url": "/reviews/",
+      "children": []
+    }
+  ],
+  "footerNav": {
+    "explore": [
+      { "label": "Home Office", "url": "/home-office/" },
+      { "label": "Smart Home", "url": "/smart-home/" },
+      { "label": "Kitchen", "url": "/kitchen/" },
+      { "label": "All Products", "url": "/reviews/" }
+    ],
+    "resources": [
+      { "label": "Gift Guides", "url": "/gift-guides/" },
+      { "label": "Latest Reviews", "url": "/reviews/" },
+      { "label": "Comparisons", "url": "/comparisons/" },
+      { "label": "How We Review", "url": "/about/#methodology" }
+    ],
+    "about": [
+      { "label": "About Us", "url": "/about/" },
+      { "label": "Privacy Policy", "url": "/privacy/" },
+      { "label": "Terms of Service", "url": "/terms/" },
+      { "label": "Affiliate Disclosure", "url": "/affiliate-disclosure/" }
+    ]
+  }
+}

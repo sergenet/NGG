@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils';
+import { categorySlug, cn } from '@/lib/utils';
 
 interface StickyMobileFilterProps {
   categories: string[];
@@ -46,8 +46,8 @@ export function StickyMobileFilter({ categories }: StickyMobileFilterProps) {
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {allCategories.map((cat) => {
-          const slug = cat.toLowerCase().replace(/\s+/g, '-');
-          const href = `/shop/${slug}`;
+          const slug = categorySlug(cat);
+          const href = `/shop/${slug}/`;
           const isActive = activeSlug === slug;
 
           return (

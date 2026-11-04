@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: 'Gift Guides by Person, Interest, and Budget',
   description: 'Find practical gift ideas for remote workers, home cooks, new homeowners, pet parents, travelers, and coworkers.',
   alternates: { canonical: '/gift-guides/' },
+  openGraph: { images: ['/social/gift-guides.png'] },
+  twitter: { card: 'summary_large_image', images: ['/social/gift-guides.png'] },
 };
 
 const guides = [

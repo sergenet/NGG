@@ -56,6 +56,14 @@ X API and automated posting.txt
 record screen.txt
 run build to update site npm run bu.txt
 
+# local backups and editor state
+backups/
+.vscode/
+
+# nested dependencies (the operations console has its own)
+**/node_modules/
+operations-console/data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

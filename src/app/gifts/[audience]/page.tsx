@@ -8,10 +8,10 @@ import { DealCard } from '@/components/DealCard';
 
 const audiences = {
   'remote-workers': { label: 'Remote Workers', title: 'Useful gifts for remote workers', intro: 'Practical desk, comfort, video-call, and travel upgrades for people whose workspace matters every day.', note: 'Start with the friction they mention most: posture, lighting, charging, focus, or portability.' },
-  'home-cooks': { label: 'Home Cooks', title: 'Useful gifts for home cooks', intro: 'Kitchen tools and appliances chosen around repeat use, cleanup, storage, and the recipient’s actual cooking habits.', note: 'Check counter space, capacity, cleaning requirements, and whether they already own a similar tool.' },
-  'new-homeowners': { label: 'New Homeowners', title: 'Smart gifts for new homeowners', intro: 'Connected-home upgrades for lighting, climate, cleaning, and security—without pretending every device fits every ecosystem.', note: 'Confirm Wi-Fi requirements, platform compatibility, subscriptions, installation, and privacy expectations.' },
-  'pet-parents': { label: 'Pet Parents', title: 'Helpful gifts for pet parents', intro: 'Cameras, grooming tools, and practical pet technology selected for real routines rather than novelty alone.', note: 'Safety instructions, cleaning, backup behavior, noise, and ongoing subscriptions matter more than app screenshots.' },
-  travelers: { label: 'Travelers', title: 'Practical gifts for travelers', intro: 'Portable power, bags, trackers, and compact tools for smoother trips and fewer cable-drawer mistakes.', note: 'Check dimensions, weight, airline restrictions, regional compatibility, and what the recipient already carries.' },
+  'home-cooks': { label: 'Home Cooks', title: 'Useful gifts for home cooks', intro: 'Kitchen tools chosen around repeat use, cleanup, storage, and the recipient’s actual cooking habits.', note: 'Check counter space, capacity, cleaning requirements, and whether they already own a similar tool.' },
+  'new-homeowners': { label: 'New Homeowners', title: 'Smart gifts for new homeowners', intro: 'Connected-home upgrades for lighting, shared scheduling, and lawn care—without pretending every device fits every ecosystem.', note: 'Confirm Wi-Fi requirements, platform compatibility, subscriptions, installation, and privacy expectations.' },
+  'pet-parents': { label: 'Pet Parents', title: 'Helpful gifts for pet parents', intro: 'Grooming vacuums and practical pet tools selected for real routines rather than novelty alone.', note: 'Safety instructions, cleaning, backup behavior, noise, and ongoing subscriptions matter more than app screenshots.' },
+  travelers: { label: 'Travelers', title: 'Practical gifts for travelers', intro: 'Packing, laundry, and in-transit gear for smoother trips and fewer cable-drawer mistakes.', note: 'Check dimensions, weight, airline restrictions, regional compatibility, and what the recipient already carries.' },
   coworkers: { label: 'Coworkers', title: 'Giftable desk finds for coworkers', intro: 'Approachable desk gifts with personality, useful function, and budgets that work for exchanges or thank-yous.', note: 'For workplace gifts, favor compact, easy-to-share items and avoid anything too personal or difficult to return.' },
 } as const;
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ audience:
     title: config.title,
     description: config.intro,
     alternates: { canonical: `/gifts/${audience}/` },
-    openGraph: { title: config.title, description: config.intro, url: `/gifts/${audience}/`, images: ['/default-thumbnail.png'] },
+    openGraph: { title: config.title, description: config.intro, url: `/gifts/${audience}/`, images: ['/social/gifts.png'] },
   };
 }
 

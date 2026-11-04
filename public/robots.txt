@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# The operations launchpad and the Next.js build artefacts are not content.
+# /admin/ also carries a noindex meta tag; disallowing it keeps Search Console
+# from filing it as "Excluded by noindex" on every report.
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_not-found/
+
 Sitemap: https://newgiftsandgadgets.com/sitemap.xml
+Sitemap: https://newgiftsandgadgets.com/rss.xml

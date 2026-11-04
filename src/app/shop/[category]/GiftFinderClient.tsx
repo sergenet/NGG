@@ -6,6 +6,7 @@ import { Product } from '@/lib/schema';
 import { GiftFinder, FilterState } from '@/components/GiftFinder';
 import { DealCard } from '@/components/DealCard';
 import { trackEvent } from '@/lib/analytics';
+import { categorySlug } from '@/lib/utils';
 
 type PriceBracket = { label: string; value: string };
 type GiftFinderClientProps = { categories: string[]; priceBrackets: PriceBracket[]; initialCategory: string | null };
@@ -20,7 +21,7 @@ export function GiftFinderClient({ categories, priceBrackets, initialCategory }:
       category: next.category ?? 'all',
       price_bracket: next.priceBracket ?? 'all',
     });
-    if (next.category !== initialCategory) router.push(next.category ? `/shop/${next.category.toLowerCase().replace(/\s+/g, '-')}/` : '/shop/all/');
+    if (next.category !== initialCategory) router.push(next.category ? `/shop/${categorySlug(next.category)}/` : '/shop/all/');
     window.dispatchEvent(new CustomEvent<FilterState>('filterChange', { detail: next }));
   };
 
@@ -33,7 +34,10 @@ export function ProductGrid({ initialProducts, allProducts, category }: { initia
   const brand = searchParams.get('brand');
   const recipient = searchParams.get('recipient');
   const requestedPrice = searchParams.get('price');
-  const [activeFilters, setActiveFilters] = useState<FilterState>({ category: category === 'all' ? null : initialProducts[0]?.tags.category ?? null, priceBracket: requestedPrice });
+  const [activeFilters, setActiveFilters] = useState<FilterState>({
+    category: category === 'all' || category === 'new-arrivals' ? null : initialProducts[0]?.tags.category ?? null,
+    priceBracket: requestedPrice,
+  });
 
   useEffect(() => {
     const handleFilter = (event: Event) => setActiveFilters((event as CustomEvent<FilterState>).detail);

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Sign in · NewGifts &amp; Gadgets Control Room</title>
+<link rel="stylesheet" href="/control-room/assets/style.css">
+<link rel="stylesheet" href="/control-room/assets/account.css">
+<script src="/control-room/assets/login.js?v=20261102-php" defer></script>
+</head>
+<body class="auth-page">
+<main class="auth-shell">
+  <p class="eyebrow">NEWGIFTSANDGADGETS.COM</p>
+  <h1>Control room</h1>
+  <p class="auth-lede">Private aggregate reporting. Sign in to continue.</p>
+
+  <form id="login-form" class="auth-card" method="post" action="/control-room/login.html" novalidate>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+    <button type="submit" id="submit">Sign in</button>
+    <p id="message" role="status" aria-live="polite" class="auth-message"></p>
+  </form>
+
+  <p class="auth-note">The password is stored only as a hash, so it cannot be read back. Once you are signed in you can replace it with one you will remember.</p>
+</main>
+</body>
+</html>

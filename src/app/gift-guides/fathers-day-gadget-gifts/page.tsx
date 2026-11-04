@@ -16,12 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-const darkOfficeSlugs = [
-  'benq-screenbar-halo',
-  'logitech-mx-master-3s',
-  'sony-wh-1000xm5-wireless-headphones',
-  'elgato-stream-deck-mk-2',
-  'ember-smart-mug-2',
+const darkOfficeSlugs: string[] = [
 ];
 
 export default function FathersDayGadgetGiftsPage() {
@@ -31,6 +26,7 @@ export default function FathersDayGadgetGiftsPage() {
     .filter((p): p is Product => !!p);
 
   const traverseonProduct = products.find(p => p.slug === 'traverseon-precision-micro-baitcasting-reel');
+  const graboProduct = products.find(p => p.slug === 'grabo-pro-lifter-20-electric-vacuum-lifter');
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 pt-24 pb-16 font-sans relative">
@@ -69,10 +65,12 @@ export default function FathersDayGadgetGiftsPage() {
 
         {/* Curated Products Section */}
         <div className="space-y-10">
-          <h2 className="text-2xl md:text-3xl font-black text-white mb-6 flex items-center gap-2">
-            <Award className="w-7 h-7 text-indigo-500" />
-            Essential Dark-Themed Upgrades
-          </h2>
+          {workspaceProducts.length > 0 && (
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-6 flex items-center gap-2">
+              <Award className="w-7 h-7 text-indigo-500" />
+              Essential Dark-Themed Upgrades
+            </h2>
+          )}
 
           {workspaceProducts.map((product, index) => {
             const primaryVendor = product.vendors.find(v => v.isPrimary) || product.vendors[0];
@@ -195,6 +193,54 @@ export default function FathersDayGadgetGiftsPage() {
                     href={traverseonProduct.vendors[0].url} 
                     storeName="Traverseon" 
                     className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 shadow-amber-500/20"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* GRABO Heavy-Duty DIY & Homeowner Spotlight */}
+        {graboProduct && (
+          <section className="mt-10 rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-emerald-950/40 to-slate-900 border border-slate-800 p-8 md:p-12 shadow-2xl text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+            
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-8 space-y-4">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-black uppercase tracking-wider">
+                  🛠️ Serious DIY & Homeowner Pick
+                </span>
+                <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight">
+                  <Link href={`/product/${graboProduct.slug}`} className="hover:text-emerald-400 transition-colors">
+                    {graboProduct.title}
+                  </Link>
+                </h2>
+                <p className="text-sm md:text-base text-slate-300 leading-relaxed max-w-3xl">
+                  {graboProduct.description}
+                </p>
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-xs md:text-sm font-semibold max-w-2xl leading-relaxed text-slate-300">
+                  Features an automatic digital vacuum sensor and up to 375 lbs rated holding capacity across smooth, rough, and porous materials.
+                </div>
+              </div>
+              
+              <div className="lg:col-span-4 flex flex-col justify-center items-center bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-md">
+                <div className="relative w-40 h-40 bg-slate-950 rounded-2xl p-2 mb-4">
+                  <ProductImageDisplay
+                    src={graboProduct.images[0]} 
+                    alt={graboProduct.title}
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+                <div className="w-full text-center">
+                  <div className="mb-4">
+                    <span className="text-xs text-emerald-300 block mb-1">Typical price band</span>
+                    <span className="text-2xl font-black text-white">{formatPriceBracket(graboProduct.tags.priceBracket)}</span>
+                  </div>
+                  <PrimaryCTA 
+                    href={graboProduct.vendors[0].url} 
+                    storeName="GRABO Factory Shop" 
+                    className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 shadow-emerald-500/20"
                   />
                 </div>
               </div>

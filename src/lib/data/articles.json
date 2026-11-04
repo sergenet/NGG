@@ -19,60 +19,42 @@
       "status": "published"
     },
     {
-      "title": "Best Smart Speakers",
-      "category_slug": "smart-home",
-      "product_asins": [
-        "B0FR462KL8"
-      ],
-      "body_intro": "<p>This research-based guide compares smart speakers by published compatibility, audio and assistant features, privacy controls, and ecosystem requirements. The right choice depends on the services and devices already used in the home.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Best Air Fryers of 2026",
-      "category_slug": "kitchen",
-      "product_asins": [
-        "B0CCS2TH8Q",
-        "B0CZKT382D",
-        "B096N3FTZP"
-      ],
-      "body_intro": "<p>This research-based guide compares published capacity, controls, cleaning requirements, counter-space needs, and catalog price bands. Confirm current specifications and safety instructions with the manufacturer.</p>",
-      "status": "published"
-    },
-    {
       "title": "Best Kitchen Gadgets 2026 UPDATED",
       "category_slug": "kitchen",
-      "product_asins": [],
-      "body_intro": "<p>This research-based shortlist covers kitchen tools with different jobs, from temperature monitoring to food preparation. Compare storage, cleanup, safety, compatibility, and likely frequency of use before buying.</p>",
+      "product_asins": [
+        "B0CHBPXHC6",
+        "B0002KZUNA",
+        "AW-DG-FOOD-SCALE",
+        "AW-DG-5IN1-OPENER",
+        "AW-DG-ROLLING-GRILL-BASKET"
+      ],
+      "body_intro": "<p>This shortlist covers kitchen tools that do different jobs: chopping and slicing, frothing milk, weighing ingredients, opening stubborn jars, and grilling small items without losing them through the grate.</p><p>Each pick was assessed on counter and drawer footprint, how many parts need washing, whether the working parts are exposed to heat or hard to clean, and how often the tool would realistically be used. A gadget that saves two minutes and takes four to clean is not an upgrade.</p><p>Before buying, measure the space it occupies in use as well as stored, and check whether the recipient already owns a version of the same tool.</p>",
       "status": "published"
     },
     {
       "title": "Top Smart Home Tech 2026",
       "category_slug": "smart-home",
       "product_asins": [
-        "B0BXWZMQJ3"
+        "B0BLS3Y632",
+        "AW-EVERBLOG-HOMECAL",
+        "AW-DG-750LED-LIGHTS",
+        "AW-DG-SOLAR-EYEBALLS",
+        "AW-ANTHBOT-M9-PRO"
       ],
-      "body_intro": "<p>This research-based guide compares published smart-home features, compatibility requirements, privacy considerations, and likely setup effort. No device is the right fit for every household.</p>",
+      "body_intro": "<p>This guide compares connected devices by what they actually take off someone's plate: a shared family calendar, seasonal outdoor lighting, a kitchen display hub, and lawn care that runs without a boundary wire.</p><p>Published features matter less than setup reality. For each pick, check what app or hub it needs, whether it depends on a subscription, how it behaves when the connection drops, what data leaves the household, and what maintenance the hardware needs over a season.</p><p>Start with the routine that costs the household the most time, then confirm the device fits the platform already in use rather than adding a fourth app to the phone.</p>",
       "status": "published"
     },
     {
       "title": "Essential Desk Upgrades",
       "category_slug": "home-office",
       "product_asins": [
-        "B0CH3P9K1X",
-        "B09738CV2G",
-        "B0H2BHDDSV"
+        "B009S750LA",
+        "B0DSJN4XSX",
+        "B074P7Y9ZG",
+        "B0D2QXRW9K",
+        "AW-DIMA-EYEWEAR-BLUELIGHT"
       ],
-      "body_intro": "<p>The best desk upgrade fixes a frustration you notice every day. This shortlist targets three different problems: maintaining eye contact while presenting, replacing repetitive computer actions with one-touch shortcuts, and keeping coffee at a preferred temperature through a long work block. They are not interchangeable, so start with the bottleneck that costs the recipient the most attention.</p><p>Choose the Elgato Prompter for a creator, trainer, or sales professional who presents on camera and has room around a compatible monitor and camera. Choose the Stream Deck MK.2 for someone willing to configure software shortcuts; its value depends on a repeatable workflow, not the number of buttons. The Ember Smart Mug 2 is the simpler quality-of-life gift for a coffee or tea drinker, but it solves comfort rather than core productivity.</p><p>Before buying, check the recipient's computer ports, available desk space, employer restrictions on installing software, and tolerance for another desktop app. For smaller gifts and tighter workspaces, compare our <a href=\"/gifts/remote-workers-under-50/\">remote-work gifts under $50</a> and <a href=\"/gifts/small-home-office/\">small-home-office gifts</a>.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Best Smart Home Upgrades 2026",
-      "category_slug": "smart-home",
-      "product_asins": [
-        "B0BXWZMQJ3",
-        "B0FR462KL8"
-      ],
-      "body_intro": "<p>This research-based guide compares products that address different household tasks. Check ecosystem compatibility, privacy controls, subscriptions, installation requirements, and current manufacturer terms before choosing.</p>",
+      "body_intro": "<p>The best desk upgrade fixes something the person notices every day. This shortlist targets reclaiming desk surface, raising a screen to eye level, keeping a phone visible without occupying a hand, and cutting late-evening glare from a screen.</p><p>Monitor arms are judged on supported weight, VESA compatibility and the desk depth the clamp needs. A mount that cannot hold the panel at the height someone actually works at is worse than the stand it replaced, so the specifications matter more than the mechanism.</p><p>Before buying, measure the desk thickness for the clamp, confirm the monitor's VESA pattern and weight, and decide whether the recipient would rather have a riser than an arm.</p>",
       "status": "published"
     },
     {
@@ -87,111 +69,16 @@
       "status": "published"
     },
     {
-      "title": "Best Desk Lamps for Home Office 2026",
-      "category_slug": "home-office",
-      "product_asins": [
-        "B0DK59YKRS",
-        "B0C4KMDNWF",
-        "B07WLQ2BTY",
-        "B08C5HG5CS",
-        "B0831FQBM3"
-      ],
-      "body_intro": "<p>This research-based guide compares published lamp dimensions, controls, mounting methods, and lighting features. Comfort and visibility vary by room and user; this is not a medical or hands-on assessment.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Best Webcam for Zoom Meetings 2026",
-      "category_slug": "home-office",
-      "product_asins": [
-        "B0CW1S7XP5",
-        "B0DCHD4BCR",
-        "B0DB3K6G4T",
-        "B09MFMTMPD",
-        "B0CM8V52PG"
-      ],
-      "body_intro": "<p>For Zoom and Teams calls, consistent lighting, dependable autofocus, a useful field of view, and clear audio often matter more than the largest resolution number. A 4K camera can create more room for cropping, but video platforms may transmit at a lower resolution; paying extra makes the most sense for creators who also record locally or need software framing controls.</p><p>The Anker PowerConf C200 is the practical value upgrade here, with 2K capture and a physical privacy shutter. The Logitech Brio 4K suits business users who value its established feature set and Windows Hello support. Elgato Facecam Pro and Razer Kiyo Pro Ultra target creators and streamers who can use their larger hardware, higher-end capture, and companion software. Opal Tadpole is the travel choice, but its thin-screen clip and USB-C connection make compatibility checks essential.</p><p>Before buying, confirm the recipient has the required port, permission to install companion software, a stable mounting position, and enough bandwidth for reliable calls. A lamp facing the user may improve an existing camera more than a premium webcam used in poor backlighting. For related gift ideas, visit <a href=\"/gifts/remote-workers-under-50/\">remote-worker gifts under $50</a>, <a href=\"/gifts/small-home-office/\">small-home-office gifts</a>, or the broader <a href=\"/gifts/remote-workers/\">remote-worker gift guide</a>.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Roomba vs Roborock: Which Robot Vacuum Wins?",
-      "category_slug": "smart-home",
-      "product_asins": [
-        "B0F1468WTK",
-        "B0D8N9HVL9"
-      ],
-      "body_intro": "<p>This research-based comparison uses published cleaning features, navigation approaches, dock functions, maintenance needs, and catalog information. Floor plan, thresholds, pets, and upkeep can change which option fits a household.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Best Smart Light Bulbs for Every Room",
-      "category_slug": "smart-home",
-      "product_asins": [
-        "B0H7T6B3XZ",
-        "B0GF1J3YM7",
-        "B0H7T6B3XZ",
-        "B0H7T6B3XZ"
-      ],
-      "body_intro": "<p>This research-based guide compares published bulb compatibility, brightness and color controls, hub requirements, privacy considerations, and automation options. Confirm fixture, dimmer, app, and ecosystem support before buying.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Ninja vs Vitamix: The Professional Blender Showdown",
-      "category_slug": "kitchen",
-      "product_asins": [
-        "B0GVJ1VYY9",
-        "B0D2WX2KF1"
-      ],
-      "body_intro": "<p>This research-based comparison looks at published controls, container size, motor specifications, warranty information, and ownership trade-offs. Expected use, budget, noise tolerance, and storage should drive the choice.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Top 5 Smart Coffee Makers for 2026",
-      "category_slug": "kitchen",
-      "product_asins": [
-        "B0H2BHDDSV"
-      ],
-      "body_intro": "<p>This research-based guide compares published scheduling, brewing, app, capacity, and cleaning features. Flavor is subjective, and connected features may add setup, account, privacy, or support requirements.</p>",
-      "status": "published"
-    },
-    {
-      "title": "MX Master 3S Review: The Best Office Mouse?",
-      "category_slug": "home-office",
-      "product_asins": [
-        "B0FB21526X"
-      ],
-      "body_intro": "<p>This is a research-based buying guide, not a hands-on review. It considers published controls, connectivity, software, shape, and workflow fit. Hand size, handedness, operating system, and employer software policy should be checked before purchase.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Best Power Delivery Hubs for MacBook Pro",
-      "category_slug": "home-office",
-      "product_asins": [
-        "B094912VBT",
-        "B094912VBT"
-      ],
-      "body_intro": "<p>Modern laptops like the MacBook Pro have incredible performance but often lack the necessary ports for a productive desktop setup. A high-quality USB-C or Thunderbolt 4 hub is the centerpiece of any professional home office.</p><p>This guide compares leading docks by published transfer speeds, display support, power delivery, port selection, and ownership considerations.</p><p>## Thunderbolt 4 vs USB-C\nIf you are running multiple high-resolution displays or transferring massive video files, Thunderbolt 4 is worth considering for demanding multi-display or high-bandwidth workflows. It provides 40Gbps bandwidth compared to standard USB-C's 10Gbps. However, if you just need a few extra USB-A ports and an HDMI out for travel, a standard USB-C hub will save you hundreds of dollars.</p><p>## Power Delivery (PD)\nA good hub doesn't just connect peripherals—it powers your laptop. Look for hubs that offer at least 85W of pass-through power delivery. This allows you to use a single cable to connect your laptop to your monitor, keyboard, mouse, and power grid.</p><p>Check out the products compared for every budget below.</p>",
-      "status": "published"
-    },
-    {
-      "title": "Smart Home on a Budget: Build Your Setup Under $200",
-      "category_slug": "smart-home",
-      "product_asins": [
-        "B078NN17K3",
-        "B0GF1J3YM7",
-        "B0H7T6B3XZ"
-      ],
-      "body_intro": "<p>A sub-$200 smart-home setup is a planning target, not a guaranteed total. This research-based guide compares published compatibility, features, and catalog price bands; taxes, shipping, subscriptions, required hubs, and price changes can alter the final cost.</p><h2>Start with compatibility</h2><p>Choose one useful task, then confirm the home network, phone, voice assistant, hub, account, privacy, and wiring requirements. A Matter logo can improve cross-platform options, but it does not guarantee that every feature works in every ecosystem.</p><h2>Add devices selectively</h2><p>Lighting and plugs can automate supported lamps or appliances, but electrical ratings and manufacturer safety instructions matter. Avoid using a smart plug with heating or high-draw equipment unless both manufacturers explicitly permit that use.</p>",
-      "status": "published"
-    },
-    {
       "title": "Must-Have Travel Gadgets for Digital Nomads",
       "category_slug": "home-office",
       "product_asins": [
-        "B09VPHVT2Z",
-        "B09VLK9W3S",
-        "B09Z2S9FSX"
+        "B07782GG5T",
+        "AW-DG-PORTABLE-WASHER",
+        "AW-TRAVERSEON-CAR-HEATER",
+        "AW-SHADOWTRACK",
+        "AW-TRAVERSEON-SHAWL"
       ],
-      "body_intro": "<p>This research-based guide groups travel technology by portability, compatibility, power needs, and day-to-day usefulness. Check airline battery limits, destination plug standards, device power requirements, data-security practices, and carry weight before travel.</p><h2>Power away from an outlet</h2><p>Compare rated capacity, output, cable requirements, and airline rules. Published battery capacity does not guarantee a particular laptop runtime because device load and conversion losses vary.</p><h2>Storage and focus</h2><p>A portable SSD can provide a local backup option, but durability claims have limits and one drive is not a complete backup plan. Noise-canceling headphones may reduce some ambient sound; fit, comfort, and microphone performance vary.</p>",
+      "body_intro": "<p>Travel gear earns its place by surviving repetition: packing the same bag for months, washing clothes in a sink or a small apartment, and staying warm in a cold car or a cold room.</p><p>These picks were compared on packed weight and dimensions, power requirements and plug standards, maintenance, and what happens when an outlet or a connection is unavailable. A tracker is only useful if its coverage and running cost suit the countries on the itinerary.</p><p>Check airline carry-on limits, vehicle voltage and destination plug types before buying, and confirm the recipient is not already travelling with a working version.</p>",
       "status": "published"
     },
     {
@@ -202,6 +89,17 @@
         "AW-SHADOWTRACK"
       ],
       "body_intro": "<p>This research-based guide compares published power, mounting, location, alert, subscription, and app requirements for two ShadowGPS products. It is not a hands-on security test, and a tracker cannot prevent theft or guarantee recovery.</p><h2>Check consent, law, and coverage</h2><p>Use tracking devices only on property and vehicles you are legally permitted to monitor. Confirm local law, cellular coverage, subscription terms, battery expectations, installation location, and the effect of signal conditions before purchase.</p><h2>Choose by power source</h2><p>An OBD-II model may suit a compatible vehicle when continuous vehicle power and visible port placement are acceptable. A rechargeable asset tracker may suit non-vehicle property, but it requires a charging routine and an appropriate mounting surface. Verify every feature with the manufacturer.</p>",
+      "status": "published"
+    },
+    {
+      "title": "GRABO Pro-Lifter 20 vs GRABO V2 vs OTTOVAC: Electric Vacuum Lifter Buying Guide",
+      "category_slug": "smart-home",
+      "product_asins": [
+        "AW-GRABO-PRO-20",
+        "AW-GRABO-V2",
+        "AW-GRABO-OTTOVAC"
+      ],
+      "body_intro": "<p>This research-based buying guide compares published lifting capacities, surface compatibility, pressure-monitoring systems, power sources, and price bands across three battery-powered suction lifters from GRABO. Always verify safe working load limits for your specific material and lifting direction with the manufacturer before lifting heavy loads.</p><h2>Surface material comes first: Porous vs. Smooth</h2><p>The biggest difference between the full-size GRABO lifters (Pro-Lifter 20 and GRABO V2) and the compact OTTOVAC is surface compatibility. Both the GRABO Pro-Lifter 20 and GRABO V2 use a thick patented foam rubber seal paired with a high-flow vacuum pump capable of gripping rough, textured, and slightly porous materials\u2014including concrete patio pavers, textured natural stone, drywall, plywood, and appliances\u2014up to a maximum rated holding force of 375 lbs on ideal non-porous surfaces. By contrast, the 8-inch OTTOVAC is engineered strictly for smooth, non-porous surfaces such as glass, polished tile, and smooth sheet metal up to 220 lbs.</p><h2>Automatic Digital Sensor vs. Manual Gauge</h2><p>If you are working with slightly porous stone, drywall, or textured tile where air slowly seeps past the seal, the GRABO Pro-Lifter 20 adds an automatic digital pressure sensor inside a slimmer ergonomic handle. When vacuum pressure drops, the Pro-Lifter 20 automatically re-engages its pump to restore grip and displays real-time pressure in bar/psi and lbs/kg. The Nemo GRABO V2 delivers the same 375 lb rated holding power at a lower catalog price using a mechanical analog gauge, requiring the operator to leave the pump running or toggle it manually on semi-porous materials. The OTTOVAC also includes an automatic start/stop sensor (re-pumping below 55 kPa), making it a convenient sub-$100 gift for homeowners handling smooth glass, mirrors, or kitchen appliances.</p>",
       "status": "published"
     }
   ]
