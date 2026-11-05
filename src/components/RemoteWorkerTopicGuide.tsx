@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Check, CircleAlert } from 'lucide-react';
 import { DealCard } from '@/components/DealCard';
+import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';
 import productsData from '@/lib/data/products.json';
 import type { Product } from '@/lib/schema';
 
@@ -68,9 +69,12 @@ export function RemoteWorkerTopicGuide({ eyebrow, title, dek, updated, principle
 
         <section className="mt-16" aria-labelledby="shortlist-heading"><div className="section-heading-row"><div><p className="eyebrow">Curated shortlist</p><h2 id="shortlist-heading" className="section-title">{selections.length > 0 ? `${selections.length} relevant options` : 'Shortlist under revision'}</h2></div><Link href={shopHref} className="text-link">{shopLabel}</Link></div>{selections.length > 0 ? <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{selections.map(({ product }) => <DealCard key={product.id} product={product} />)}</div> : <p className="mt-6 max-w-2xl leading-8 text-slate-600">These picks are being re-sourced, so the shortlist is temporarily empty. <Link href={shopHref} className="font-bold text-[#bd4b34] hover:underline">{shopLabel}</Link> instead.</p>}</section>
 
+        <AdSlot className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
+
         <section className="mt-16 rounded-[2rem] bg-slate-100 p-7 md:p-10" aria-labelledby="method-heading"><div className="grid gap-7 md:grid-cols-[.7fr_1.3fr]"><div><CircleAlert className="h-6 w-6 text-[#bd4b34]" /><p className="eyebrow mt-5">Editorial method</p><h2 id="method-heading" className="mt-3 text-3xl font-black">How this list was built</h2></div><div><p className="leading-8 text-slate-600">{method}</p><p className="mt-5 text-sm leading-6 text-slate-500">This is a research-based editorial comparison of published product information, not a claim that we personally tested every item.</p></div></div></section>
 
         <nav className="mt-16" aria-label="Related remote-worker guides"><p className="eyebrow">Continue the search</p><div className="mt-4 flex flex-wrap gap-3">{related.map((link) => <Link key={link.href} href={link.href} className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 font-black text-slate-800 hover:border-[#bd4b34] hover:text-[#bd4b34]"><Check className="h-4 w-4" />{link.label}</Link>)}</div></nav>
+        <AdSlot slot={AD_SLOT_FOOTER} className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       </article>
     </main>
   );

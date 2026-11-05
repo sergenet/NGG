@@ -3,11 +3,13 @@
 import { useEffect, useRef } from 'react';
 
 // AdSense inventory for this publisher account (the same account that serves
-// Blue Seas Fishing). The slot below is the account's in-article unit; it can be
-// placed on any site in the account. Swap AD_SLOT for a dedicated NGG unit once
-// one is created in AdSense, so reporting stays separated by site.
+// Blue Seas Fishing). These are the account's two units, matching what Blue Seas
+// and TimerHaven run: IN_ARTICLE in the body, FOOTER at the end of a page. Swap
+// either for a dedicated NGG unit once one is created in AdSense, so reporting
+// stays separated by site.
 const AD_CLIENT = 'ca-pub-0467059729557007';
 const AD_SLOT = '2835722251';
+export const AD_SLOT_FOOTER = '1522640584';
 
 declare global {
   interface Window {
@@ -15,7 +17,7 @@ declare global {
   }
 }
 
-export default function AdSlot({ className = '' }: { className?: string }) {
+export default function AdSlot({ className = '', slot = AD_SLOT }: { className?: string; slot?: string }) {
   const insRef = useRef<HTMLModElement>(null);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ export default function AdSlot({ className = '' }: { className?: string }) {
         className="adsbygoogle"
         style={{ display: 'block', minHeight: '90px' }}
         data-ad-client={AD_CLIENT}
-        data-ad-slot={AD_SLOT}
+        data-ad-slot={slot}
         data-ad-format="auto"
         data-full-width-responsive="true"
       />

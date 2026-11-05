@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, BriefcaseBusiness, ChefHat, Gift, Home, PawPrint, Plane, Users } from 'lucide-react';
+import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';
 
 export const metadata: Metadata = {
   title: 'Gift Guides by Person, Interest, and Budget',
@@ -37,10 +38,12 @@ export default function GiftGuidesPage() {
           </Link>
         ))}
       </div>
+      <AdSlot className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       <section className="mt-16 rounded-[2.25rem] bg-[#18231d] p-8 text-white md:flex md:items-center md:justify-between md:p-10">
         <div><p className="text-sm font-black uppercase tracking-[.2em] text-amber-300">Featured budget guide</p><h2 className="mt-3 text-3xl font-black">Remote-worker gifts under $50 that fit a real desk.</h2><p className="mt-3 max-w-2xl leading-7 text-slate-300">Compare desk fit, setup effort, and compatibility before choosing a seemingly simple accessory.</p></div>
         <Link href="/gifts/remote-workers-under-50/" className="button-secondary mt-6 shrink-0 md:ml-8 md:mt-0">Open the guide <ArrowRight className="h-4 w-4" /></Link>
       </section>
+      <AdSlot slot={AD_SLOT_FOOTER} className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
     </main>
   );
 }

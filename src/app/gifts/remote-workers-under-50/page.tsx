@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Check, Ruler, ShieldCheck, WalletCards } from 'lucide-react';
 import { DealCard } from '@/components/DealCard';
+import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';
 import productsData from '@/lib/data/products.json';
 import type { Product } from '@/lib/schema';
 
@@ -142,6 +143,8 @@ export default function RemoteWorkerGiftsUnderFiftyPage() {
           </div>
         </section>
 
+        <AdSlot className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
+
         <section className="mt-16 grid gap-8 rounded-[2rem] bg-slate-100 p-7 md:grid-cols-2 md:p-10" aria-labelledby="skip-heading">
           <div>
             <p className="eyebrow">Fast filter</p>
@@ -165,6 +168,7 @@ export default function RemoteWorkerGiftsUnderFiftyPage() {
           </p>
           <p className="mt-5 leading-8 text-slate-600">Need to optimize a constrained workspace first? Use our <Link href="/gifts/small-home-office/" className="font-black text-[#bd4b34] underline underline-offset-4">small-home-office desk-fit guide</Link>.</p>
         </section>
+        <AdSlot slot={AD_SLOT_FOOTER} className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       </article>
     </main>
   );

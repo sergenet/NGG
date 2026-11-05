@@ -5,6 +5,7 @@ import { ArrowLeft, Compass, ShieldCheck } from 'lucide-react';
 import productsData from '@/lib/data/products.json';
 import type { Product } from '@/lib/schema';
 import { DealCard } from '@/components/DealCard';
+import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';
 
 const audiences = {
   'remote-workers': { label: 'Remote Workers', title: 'Useful gifts for remote workers', intro: 'Practical desk, comfort, video-call, and travel upgrades for people whose workspace matters every day.', note: 'Start with the friction they mention most: posture, lighting, charging, focus, or portability.' },
@@ -72,10 +73,12 @@ export default async function AudiencePage({ params }: { params: Promise<{ audie
           <Link href="/gifts/home-cooks-by-cooking-style/" className="group rounded-[1.75rem] border border-[#c7c3dd] bg-[#f3f0ff] p-6 transition-transform hover:-translate-y-1 md:p-8"><p className="eyebrow">Habit guide</p><h2 className="mt-2 text-2xl font-black text-[#18231d]">Match how they cook</h2><p className="mt-2 leading-7 text-slate-600">Choose for batch prep, meat cooking, air frying, coffee, or hands-on espresso.</p><span className="mt-5 inline-flex font-black text-[#bd4b34]">Choose by cooking style →</span></Link>
         </section>
       )}
+      <AdSlot className="mt-12 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       <section className="mt-14" aria-labelledby="collection-heading">
         <div className="section-heading-row"><div><p className="eyebrow">Curated shortlist</p><h2 id="collection-heading" className="section-title">{products.length} ideas to compare</h2></div><Link href="/shop/all/" className="text-link">Browse the full catalog</Link></div>
         <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{products.map((product) => <DealCard key={product.id} product={product} />)}</div>
       </section>
+      <AdSlot slot={AD_SLOT_FOOTER} className="mt-14 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
     </main>
   );
 }

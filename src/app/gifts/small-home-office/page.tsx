@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Check, MonitorUp, PlugZap, Ruler, TriangleAlert } from 'lucide-react';
 import { DealCard } from '@/components/DealCard';
+import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';
 import productsData from '@/lib/data/products.json';
 import type { Product } from '@/lib/schema';
 
@@ -133,6 +134,8 @@ export default function SmallHomeOfficeGiftGuidePage() {
           <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{selectedProducts.map(({ product }) => <DealCard key={product.id} product={product} />)}</div>
         </section>
 
+        <AdSlot className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
+
         <section className="mt-16 grid gap-8 rounded-[2rem] bg-slate-100 p-7 md:grid-cols-2 md:p-10" aria-labelledby="gift-check-heading">
           <div><p className="eyebrow">Before checkout</p><h2 id="gift-check-heading" className="mt-3 text-3xl font-black text-slate-950">A giftable fit checklist</h2></div>
           <ul className="space-y-4 text-slate-700">
@@ -152,6 +155,7 @@ export default function SmallHomeOfficeGiftGuidePage() {
           <p className="mt-5 leading-8 text-slate-600">We selected catalog items relevant to remote work that can reduce surface clutter, consolidate connections, or use vertical space. The fit guidance is based on the products’ published functions and known compatibility questions. This is an editorial comparison, not a claim that we personally tested every item.</p>
           <p className="mt-5 leading-8 text-slate-600">Working with a tighter budget? Continue to <Link href="/gifts/remote-workers-under-50/" className="font-black text-[#bd4b34] underline underline-offset-4">remote-worker gifts under $50</Link>.</p>
         </section>
+        <AdSlot slot={AD_SLOT_FOOTER} className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       </article>
     </main>
   );
