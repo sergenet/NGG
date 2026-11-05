@@ -18,6 +18,22 @@ import base64
 import urllib.request
 from pathlib import Path
 
+def _cred(key, default=""):
+    """Environment variable first, else the matching line in .env beside this file."""
+    value = os.environ.get(key)
+    if value:
+        return value
+    env_path = Path(__file__).resolve().parent / ".env"
+    try:
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line.startswith(key + "="):
+                return line.split("=", 1)[1].strip().strip('"').strip("'")
+    except OSError:
+        pass
+    return default
+
+
 BASE_DIR = Path(__file__).resolve().parent
 OUT_DIR = BASE_DIR / "out"
 ZIP_LOCAL = BASE_DIR / "deploy-bundle.zip"
@@ -26,7 +42,9 @@ UNZIP_REMOTE = "ngg-unzip.php"
 
 FTP_HOST = "newgiftsandgadgets.com"
 FTP_USER = "serge@newgiftsandgadgets.com"
-FTP_PASS = base64.b64decode("U2FrbyEhTkdHRlRQMjAyNg==").decode("utf-8")
+FTP_PASS = _cred("NGG_FTP_PASS")
+if not FTP_PASS:
+    raise SystemExit("set NGG_FTP_PASS in .env - the password is never stored in this file")
 
 UNZIP_PHP = """<?php
 @set_time_limit(300);

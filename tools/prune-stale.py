@@ -42,8 +42,14 @@ import sys
 
 HOST = "newgiftsandgadgets.com"
 USER = "serge@newgiftsandgadgets.com"
-PW = base64.b64decode("U2FrbyEhTkdHRlRQMjAyNg==").decode("utf-8")
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PW = next(
+    (ln.split("=", 1)[1].strip() for ln in open(os.path.join(BASE, ".env"), encoding="utf-8").read().splitlines()
+     if ln.startswith("NGG_FTP_PASS=")),
+    "",
+)
+if not PW:
+    sys.exit("set NGG_FTP_PASS in .env - the password is never stored in this file")
 OUT = os.path.join(BASE, "out")
 
 # Content sections whose contents should mirror out/ exactly.

@@ -29,7 +29,14 @@ OUT = BASE / "out"
 
 FTP_HOST = "newgiftsandgadgets.com"
 FTP_USER = "serge@newgiftsandgadgets.com"
-FTP_PASS = base64.b64decode("U2FrbyEhTkdHRlRQMjAyNg==").decode("utf-8")
+_ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+FTP_PASS = next(
+    (ln.split("=", 1)[1].strip() for ln in _ENV_FILE.read_text(encoding="utf-8").splitlines()
+     if ln.startswith("NGG_FTP_PASS=")),
+    "",
+)
+if not FTP_PASS:
+    sys.exit("set NGG_FTP_PASS in .env - the password is never stored in this file")
 
 PUBLIC = "https://newgiftsandgadgets.com"
 
