@@ -44,12 +44,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0467059729557007"
           crossOrigin="anonymous"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTLRDD8KP0" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VTLRDD8KP0', { anonymize_ip: true });`,
-          }}
-        />
+        {/*
+          No gtag here on purpose. GA4 is owned by <GoogleAnalytics /> below,
+          which loads it only after the visitor allows analytics. A second,
+          unconditional loader in this head sent pageviews — including European
+          ones — before anyone had been asked, and configured the same property
+          twice for visitors who then accepted.
+        */}
       </head>
       <body>
         <a className="skip-link" href="#main-content">Skip to main content</a>
