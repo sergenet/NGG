@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { ArrowLeft, Check, MonitorUp, PlugZap, Ruler, TriangleAlert } from 'lucide-react';
 import { DealCard } from '@/components/DealCard';
 import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';

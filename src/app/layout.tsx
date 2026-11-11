@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { ArrowUpRight, Gift, Mail } from 'lucide-react';
 import './globals.css';
 import productsData from '@/lib/data/products.json';

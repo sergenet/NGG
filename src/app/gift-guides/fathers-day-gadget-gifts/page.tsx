@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { PrimaryCTA } from '@/components/ui/PrimaryCTA';

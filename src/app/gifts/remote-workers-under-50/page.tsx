@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { ArrowLeft, Check, Ruler, ShieldCheck, WalletCards } from 'lucide-react';
 import { DealCard } from '@/components/DealCard';
 import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import Image from 'next/image';
 import { TrendingUp, ArrowRight } from 'lucide-react';
 import { Product } from '@/lib/schema';

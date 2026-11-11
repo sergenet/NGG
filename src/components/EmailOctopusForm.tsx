@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { trackEvent } from '@/lib/analytics';
 
 const FORM_ID = 'c209e1e8-a14d-11f1-a4bf-1507f2a577fb';

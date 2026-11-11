@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { usePathname } from 'next/navigation';
 import { categorySlug, cn } from '@/lib/utils';
 

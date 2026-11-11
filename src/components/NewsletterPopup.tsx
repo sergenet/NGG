@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Download, Mail, X } from 'lucide-react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { trackEvent } from '@/lib/analytics';
 
 const CHECKLIST_URL = '/downloads/2026-gadget-buyers-checklist.pdf';

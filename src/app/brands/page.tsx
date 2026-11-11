@@ -1,7 +1,7 @@
 import React from 'react';
 import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {

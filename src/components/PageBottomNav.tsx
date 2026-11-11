@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowUp, Home } from 'lucide-react';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { ArrowRight, BriefcaseBusiness, ChefHat, Gift, Home, PawPrint, Plane, Users } from 'lucide-react';
 import AdSlot, { AD_SLOT_FOOTER } from '@/components/AdSlot';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { CheckCircle2, CircleDollarSign, FileSearch, RefreshCw } from 'lucide-react';
 
 export const metadata: Metadata = { title: 'How We Choose Gifts & Gadgets', description: 'Our research, selection, disclosure, and correction standards.', alternates: { canonical: '/about/' }, openGraph: { images: ['/social/about.png'] }, twitter: { card: 'summary_large_image', images: ['/social/about.png'] } };

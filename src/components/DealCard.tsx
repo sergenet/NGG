@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { Product } from '@/lib/schema';
 import { PrimaryCTA } from './ui/PrimaryCTA';
 import { VendorGrid } from './VendorGrid';

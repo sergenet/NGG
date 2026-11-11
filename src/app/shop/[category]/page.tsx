@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
 import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';

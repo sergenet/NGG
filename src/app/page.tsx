@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { ArrowRight, BriefcaseBusiness, ChefHat, Compass, Gift, House, PawPrint, Plane, Search, ShieldCheck, Sparkles, Users } from 'lucide-react';
+import Link from '@/components/SiteLink';
+import { ArrowRight, BriefcaseBusiness, ChefHat, Compass, House, PawPrint, Plane, Search, ShieldCheck, Sparkles, Users } from 'lucide-react';
 import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { DealCard } from '@/components/DealCard';
