@@ -109,7 +109,20 @@ ErrorDocument 404 /404.html
   # iframe), connect-src (beacon/impression calls) and img-src (creative).
   # analytics.google.com is the GA4 collect endpoint — without it every pageview
   # was refused by CSP and the traffic numbers stayed empty.
-  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googleadservices.com https://adservice.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://s.pinimg.com https://cdn.geniuslink.com https://eomail5.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://gallery.eo.page; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://eomail5.com https://www.google.com https://ct.pinterest.com; frame-src https://www.google.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; base-uri 'self'; form-action 'self' https://eomail5.com; frame-ancestors 'self'; upgrade-insecure-requests"
+  # www.recaptcha.net is the reCAPTCHA host the EmailOctopus newsletter embed
+  # loads; without it the form showed "couldn't load reCAPTCHA" and nobody could
+  # subscribe.
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googleadservices.com https://adservice.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://s.pinimg.com https://cdn.geniuslink.com https://eomail5.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://gallery.eo.page; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://eomail5.com https://www.google.com https://ct.pinterest.com https://www.recaptcha.net; frame-src https://www.google.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://www.recaptcha.net; base-uri 'self'; form-action 'self' https://eomail5.com; frame-ancestors 'self'; upgrade-insecure-requests"
+
+  # Build assets live under /_next/static/ with a content hash in the filename,
+  # so they can be cached for a year. mod_expires is declared further down but is
+  # not enabled on this LiteSpeed host (responses carried neither Expires nor
+  # Cache-Control), so set the header directly. Both modules are guarded: if
+  # either is missing the assets simply stay uncached instead of returning 500.
+  <IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/_next/static/" NGG_IMMUTABLE_ASSET
+    Header set Cache-Control "public, max-age=31536000, immutable" env=NGG_IMMUTABLE_ASSET
+  </IfModule>
 </IfModule>
 
 <IfModule mod_expires.c>
