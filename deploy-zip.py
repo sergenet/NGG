@@ -134,6 +134,25 @@ def prune_orphans():
         print(f"  prune skipped: {e}")
 
 
+def smoke_check():
+    """Verify the release the way a visitor and a crawler see it.
+
+    Extraction can succeed while the site is broken: a bad .htaccess directive
+    returns 500 for every page, a missing file leaves a 404 behind a schema
+    reference, a CSP change blocks a third-party widget. scripts/smoke-check.mjs
+    covers those cases, and its exit code becomes the deploy's.
+    """
+    print("Running post-deploy smoke check...")
+    try:
+        result = subprocess.run(["node", "scripts/smoke-check.mjs"], cwd=BASE_DIR, check=False)
+    except FileNotFoundError:
+        print("  node was not found; smoke check skipped")
+        return 0
+    if result.returncode != 0:
+        print("  The release is live but did not pass the smoke check.")
+    return result.returncode
+
+
 def deploy():
     total_files = build_zip()
     ftp = connect_ftp()
@@ -169,7 +188,7 @@ def deploy():
                     if ZIP_LOCAL.exists():
                         ZIP_LOCAL.unlink()
                     prune_orphans()
-                    return 0
+                    return smoke_check()
                 else:
                     print(f"Extraction error: {body}")
                     return 1
