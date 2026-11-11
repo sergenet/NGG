@@ -128,17 +128,21 @@ export function AdminLaunchpadClient() {
   const [rememberDevice, setRememberDevice] = useState(true);
   const [error, setError] = useState('');
 
+  // Read the remembered device after paint, then unlock. Setting state directly
+  // in the effect body triggers a cascading render (react-hooks/set-state-in-effect),
+  // so the result is applied from a zero-delay timeout, as GoogleAnalytics does.
   useEffect(() => {
+    let remembered = false;
     try {
-      const saved = window.localStorage.getItem(STORAGE_KEY);
-      if (saved === EXPECTED_HASH) {
-        setUnlocked(true);
-      }
+      remembered = window.localStorage.getItem(STORAGE_KEY) === EXPECTED_HASH;
     } catch {
       // Ignore storage access errors in private browsing
-    } finally {
-      setChecking(false);
     }
+    const initialize = window.setTimeout(() => {
+      if (remembered) setUnlocked(true);
+      setChecking(false);
+    }, 0);
+    return () => window.clearTimeout(initialize);
   }, []);
 
   const verifyPin = async (candidate: string) => {
