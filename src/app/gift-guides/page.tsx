@@ -38,6 +38,59 @@ export default function GiftGuidesPage() {
           </Link>
         ))}
       </div>
+      <section className="mt-16 grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+        <div className="rounded-[2.25rem] border border-stone-200 bg-white p-8 md:p-10">
+          <p className="eyebrow">How a guide gets built</p>
+          <h2 className="section-title mt-5 text-4xl">Three steps, in this order</h2>
+          <ol className="mt-8 space-y-6">
+            <li>
+              <h3 className="text-xl font-black">Start from a job, not a list</h3>
+              <p className="mt-2 leading-8 text-slate-600">Every guide begins with a person and the thing they are trying to do: take calls from a shared room, cook without a dishwasher, keep a flat tidy with a dog in it. The occasion only changes the budget and the wrapping, not the shortlist.</p>
+            </li>
+            <li>
+              <h3 className="text-xl font-black">Cut the catalogue down</h3>
+              <p className="mt-2 leading-8 text-slate-600">A product only appears when its published specification supports the reason it is included, and when a current retailer listing exists. Everything else stays out, however well it photographs.</p>
+            </li>
+            <li>
+              <h3 className="text-xl font-black">Name the trade-off</h3>
+              <p className="mt-2 leading-8 text-slate-600">Each entry has to say what it is not good at. A gift that suits one desk and frustrates another is only useful if you know which one you are buying for.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div className="space-y-8">
+          <div className="rounded-[2.25rem] border border-stone-200 bg-white p-8">
+            <p className="eyebrow">Choosing a path</p>
+            <h2 className="mt-5 text-2xl font-black">Person, interest, or budget</h2>
+            <p className="mt-4 leading-8 text-slate-600"><strong className="font-black text-slate-900">By person</strong> is the safest start when you know who the gift is for but not what they need. <strong className="font-black text-slate-900">By interest</strong> narrows faster if they have a hobby or a room you can name. <strong className="font-black text-slate-900">By budget</strong> is the honest one when the number is already fixed: see the banded guides below rather than stretching a pick that does not fit.</p>
+          </div>
+          <div className="rounded-[2.25rem] border border-stone-200 bg-white p-8">
+            <p className="eyebrow">What these guides are not</p>
+            <h2 className="mt-5 text-2xl font-black">Limits worth knowing</h2>
+            <p className="mt-4 leading-8 text-slate-600">These are research-based shortlists, not hands-on test results, and no retailer pays for placement. We cannot check a recipient’s shelf depth or answer order questions — returns, warranties, and delivery belong to the retailer you buy from.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16 rounded-[2.25rem] border border-stone-200 bg-white p-8 md:p-10">
+        <p className="eyebrow">Frequently asked</p>
+        <h2 className="section-title mt-5 text-4xl">Questions about the shortlists</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <details className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+            <summary className="cursor-pointer list-none font-black">How often are these updated?</summary>
+            <p className="mt-3 text-sm leading-7 text-slate-600">Picks are revised when a retailer listing changes or a product stops being a sensible recommendation. Each product page shows the date its notes were last touched, so you can see how current the advice is before you buy.</p>
+          </details>
+          <details className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+            <summary className="cursor-pointer list-none font-black">There is no guide for my person. Now what?</summary>
+            <p className="mt-3 text-sm leading-7 text-slate-600">Open the closest person guide and read the trade-offs rather than the titles. The reasoning transfers: a pick chosen for a small flat usually suits a student too, and the shop filters narrow the same catalogue by price if the shortlist is the wrong size.</p>
+          </details>
+          <details className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+            <summary className="cursor-pointer list-none font-black">Do brands pay to appear?</summary>
+            <p className="mt-3 text-sm leading-7 text-slate-600">No. Retailer links are affiliate links, which means we may earn a commission if you buy, and that is disclosed on every product page. Inclusion is decided before commission is considered, and a product is removed when it stops earning its place.</p>
+          </details>
+        </div>
+      </section>
+
       <AdSlot className="mt-16 rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       <section className="mt-16 rounded-[2.25rem] bg-[#18231d] p-8 text-white md:flex md:items-center md:justify-between md:p-10">
         <div><p className="text-sm font-black uppercase tracking-[.2em] text-amber-300">Featured budget guide</p><h2 className="mt-3 text-3xl font-black">Remote-worker gifts under $50 that fit a real desk.</h2><p className="mt-3 max-w-2xl leading-7 text-slate-300">Compare desk fit, setup effort, and compatibility before choosing a seemingly simple accessory.</p></div>

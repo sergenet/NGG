@@ -12,7 +12,15 @@ import { categorySlug, formatPriceBracket, isActiveRetailerUrl, sortByRecency } 
 // date-filtered so the page can never render empty when the catalog goes quiet.
 const NEW_ARRIVAL_LIMIT = 12;
 
-function getCategoryCopy(categoryName: string) {
+type CategorySection = { title: string; body: string };
+type CategoryCopy = {
+  eyebrow: string;
+  intro: string;
+  faqs: { question: string; answer: string }[];
+  sections?: CategorySection[];
+};
+
+function getCategoryCopy(categoryName: string): CategoryCopy {
   switch (categoryName) {
     case 'Home Office':
       return {
@@ -21,6 +29,22 @@ function getCategoryCopy(categoryName: string) {
         faqs: [
           { question: 'What is the best home office category to start with?', answer: 'Start with the item that removes your biggest daily bottleneck first: ergonomics, monitor setup, or desk organization.' },
           { question: 'Should I buy direct or from a marketplace?', answer: 'Compare the current price, delivery estimate, return window, warranty coverage, and support. The best retailer can vary by product and location.' },
+          { question: 'Is a standing desk worth it without an anti-fatigue mat?', answer: 'A mat helps mainly because standing still for hours is uncomfortable. Alternating between sitting and standing through the day matters more than either the mat or the desk, so treat the mat as an optional comfort add-on.' },
+          { question: 'How much desk depth do monitor arms need?', answer: 'Most clamps need roughly five centimetres of clear edge and a flat underside. Check the manufacturer’s minimum and maximum desk thickness as well, because thin tops can flex under the load.' },
+        ],
+        sections: [
+          {
+            title: 'What earns a place at the desk',
+            body: 'The picks here fix something you feel by the end of a working day: screen height, wrist angle, light on the desk, or the minutes spent tidying cables. A desk or chair that puts you at the right height matters more than any accessory, which is why furniture comes before extras in this collection.',
+          },
+          {
+            title: 'What we leave out',
+            body: 'Desk decor that takes space without doing a job, and anything that needs a phone app or an account for basic operation. Complete computer systems are out of scope as well: this collection covers the desk around a machine you already own, not the machine itself.',
+          },
+          {
+            title: 'Measure before you buy',
+            body: 'Three numbers decide most of these purchases: the depth of your desk edge for a clamp, the weight a monitor arm has to hold, and the height range you need between sitting and standing. Check each against the published specification before ordering, because a clamp that is a centimetre too shallow is a return.',
+          },
         ],
       };
     case 'Smart Home':
@@ -39,6 +63,22 @@ function getCategoryCopy(categoryName: string) {
         faqs: [
           { question: 'What makes a kitchen gadget a good gift?', answer: 'The safest choices are easy to learn, useful every week, simple to clean, and sized appropriately for the recipient’s kitchen.' },
           { question: 'What should I verify before buying a kitchen tool?', answer: 'Check dimensions, materials, what is included, cleaning requirements, warranty coverage, and the retailer’s return policy.' },
+          { question: 'Does a more expensive kitchen tool last longer?', answer: 'Not reliably. Price buys better materials and motors up to a point, then buys capacity you may not need. Compare the parts that wear — blades, seals, motors — and the warranty that covers them.' },
+          { question: 'How do I judge a kitchen gadget without handling it?', answer: 'Read the dimensions, the material grades, and what is in the box. Then look at how it is cleaned: dishwasher-safe parts and removable blades are often the difference between a tool you use weekly and one you avoid.' },
+        ],
+        sections: [
+          {
+            title: 'What earns a place in this collection',
+            body: 'Counter space is the real budget in a kitchen, so a tool has to replace a step you already repeat. The strongest picks here remove a knife task, shorten a cleanup, or take over a job an appliance was doing badly. We favour models that store in a drawer or tuck against a backsplash over anything that needs to live permanently on the counter.',
+          },
+          {
+            title: 'What we leave out',
+            body: 'Single-purpose machines that handle one shape of food, appliances that need pods or proprietary refills, and anything whose cleaning routine takes longer than the task it performs. Novelty shapes are skipped too: a cartoon silicone mould is harder to wash and stores worse than a plain one doing the same job.',
+          },
+          {
+            title: 'How to buy in the right order',
+            body: 'Start with the tool you reach for most and work backwards. Prep tools — choppers, scales, good openers — return more per dollar than a second appliance, and they rarely need warranty service. If a large appliance is the goal, size it from your storage and your usual batch size rather than from the feature list.',
+          },
         ],
       };
     case 'Outdoor & Adventure':
@@ -66,6 +106,22 @@ function getCategoryCopy(categoryName: string) {
         faqs: [
           { question: 'What should I confirm before taking a portable appliance abroad?', answer: 'Voltage and plug type at the destination, whether the device is dual-voltage, and the airline’s rules on anything with a battery or a heating element.' },
           { question: 'What makes a backpack good for tech travel?', answer: 'Look for dedicated, padded laptop compartments, water-resistant zippers/materials, ergonomic support, and TSA lay-flat designs to speed up airport security.' },
+          { question: 'Do I need a power converter or just an adapter?', answer: 'An adapter only changes the plug shape; a converter changes the voltage. Most electronics are dual-voltage and need only an adapter, but heating appliances usually are not, so check the label before plugging anything in.' },
+          { question: 'What is the practical limit for a carry-on bag?', answer: 'Check the specific airline, because limits differ by a few centimetres and some carriers weigh cabin bags. A bag comfortably under the published limit is safer than one that claims to be exact.' },
+        ],
+        sections: [
+          {
+            title: 'What earns a place in the bag',
+            body: 'Travel gear earns its weight by surviving the trip: it packs flat, runs on the power available where you are going, and does not need a proprietary cable left behind at home. Everything here is judged on packed size and on how many separate items it replaces.',
+          },
+          {
+            title: 'What we leave out',
+            body: 'Anything with a heating element that is not dual-voltage, bags that exceed the carry-on limits of the airlines you actually fly, and devices that only work through their own app. A gadget needing a subscription to function is a running cost disguised as luggage.',
+          },
+          {
+            title: 'Check the destination, not the listing',
+            body: 'Voltage and plug type come first, then the airline rules on lithium batteries and anything that heats. A portable appliance that works at home may need a converter abroad, and the converter often costs more than the device, so confirm the destination before committing.',
+          },
         ],
       };
     case 'Desk Toys & Novelty Gifts':
@@ -84,6 +140,22 @@ function getCategoryCopy(categoryName: string) {
         faqs: [
           { question: 'What should I check before buying decor online?', answer: 'Confirm the exact dimensions and weight against the space you have in mind, then read the return terms. Finish and colour often read differently in person than on a screen.' },
           { question: 'Is a decorative piece a safe gift?', answer: 'It is when the recipient has room for it. Ask about shelf depth, wall space, or whether they would rather receive something practical.' },
+          { question: 'Is decor a good gift if I do not know their space?', answer: 'Only when it is small and easy to place. Anything needing a wall, a shelf of a specific depth, or a particular colour scheme is a risk, so lean towards something the recipient can move between rooms.' },
+          { question: 'How do I judge finish quality online?', answer: 'Look for the material description and the care instructions. Solid materials with simple care notes tend to age better than finishes that need special cleaners, and a listing will usually say which it is.' },
+        ],
+        sections: [
+          {
+            title: 'What earns a place in the room',
+            body: 'Decor here is judged on what a photograph cannot show: exact dimensions, weight, how the finish wears, and whether it needs dusting every week. A piece that fits the space it was bought for ages better than one chosen for how it photographs.',
+          },
+          {
+            title: 'What we leave out',
+            body: 'Trend pieces with a short shelf life, anything sold without published dimensions, and fragile items whose packaging is never described. If a listing will not state a size or a material, that is usually the answer.',
+          },
+          {
+            title: 'Measure the space first',
+            body: 'Shelf depth, wall width, and the height of whatever already sits there decide whether a piece works. Note those numbers before browsing, then compare them against the listing. Colour is the other risk: screen calibration shifts warm and cool tones, so treat the photo as a guide rather than a match.',
+          },
         ],
       };
     case 'Novelty Tech':
@@ -93,6 +165,22 @@ function getCategoryCopy(categoryName: string) {
         faqs: [
           { question: 'What is the most common mistake with novelty tech?', answer: 'Buying for the effect instead of the setup. Confirm the power source, the mounting method, and whether it needs an app or account to work at all.' },
           { question: 'Do collector lighting kits fit any build?', answer: 'No. Kits are usually cut for one specific set or scale, so match the kit to the exact model and check whether it replaces or overlays existing pieces.' },
+          { question: 'Will a display lighting kit fit my set?', answer: 'Only if the kit names the exact model or scale. Most are cut for one specific build, so match the set number and check whether the kit replaces existing parts or layers over them.' },
+          { question: 'Are novelty pieces office-appropriate?', answer: 'The restrained ones are: brushed metal, tinted glass, soft light. Anything with a moving part or a speaker tends to be noticed by everyone nearby, which is worth considering before it goes on a shared desk.' },
+        ],
+        sections: [
+          {
+            title: 'What earns a place on the desk',
+            body: 'A novelty piece earns its space when it does one thing convincingly and installs cleanly. That means a standard power source, a mounting method that needs no tools you do not have, and an effect you still like after a month.',
+          },
+          {
+            title: 'What we leave out',
+            body: 'App-only effects, kits that need permanent modification of the item they light, and anything loud enough to be noticed at the next desk. Pieces that only work in the dark are skipped as well: an effect you cannot see in daylight rarely survives an office.',
+          },
+          {
+            title: 'Plan the install, not just the effect',
+            body: 'Trace the power route before buying. A cable that has to cross a walkway will not stay there, and a battery piece needing a weekly charge ends up switched off. Check the footprint too, since these pieces compete for the same few centimetres as everything else on the desk.',
+          },
         ],
       };
     case 'Smart Wearables':
@@ -442,6 +530,24 @@ export default async function CategoryPage({
                 )}
               </div>
             </section>
+
+            {categoryCopy.sections && categoryCopy.sections.length > 0 && (
+              <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">In depth</p>
+                <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">
+                  How this {categoryName.toLowerCase()} collection is built
+                </h2>
+
+                <div className="space-y-6">
+                  {categoryCopy.sections.map((section) => (
+                    <div key={section.title}>
+                      <h3 className="font-bold text-slate-900 dark:text-white mb-2">{section.title}</h3>
+                      <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{section.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
               <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Frequently asked</p>

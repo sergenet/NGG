@@ -90,6 +90,32 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const activeVendors = product.vendors.filter((vendor) => isActiveRetailerUrl(vendor.url));
   const primaryVendor = activeVendors.find(v => v.isPrimary) || activeVendors[0];
   const relatedProducts = getRelatedProducts(product, products);
+
+  // Real numbers, so the copy on this page describes this product rather than
+  // the template. Where only one retailer is tracked, say only that.
+  const trackedPrices = activeVendors
+    .map((vendor) => vendor.price)
+    .filter((price): price is number => typeof price === 'number' && price > 0);
+  const lowestPrice = trackedPrices.length ? Math.min(...trackedPrices) : null;
+  const highestPrice = trackedPrices.length ? Math.max(...trackedPrices) : null;
+  const priceSpread = lowestPrice !== null && highestPrice !== null && highestPrice > lowestPrice ? highestPrice - lowestPrice : null;
+  const money = (value: number) => `$${value.toFixed(2)}`;
+  const recipients = product.tags.recipient ?? [];
+  // Amazon's associate programme closed, so many entries keep a recorded price
+  // but no purchasable link. Say which one it is rather than print the same
+  // apology on every page.
+  const recordedPrices = product.vendors
+    .map((vendor) => vendor.price)
+    .filter((price): price is number => typeof price === 'number' && price > 0);
+  const lowestRecorded = recordedPrices.length ? Math.min(...recordedPrices) : null;
+  const priceSentence =
+    trackedPrices.length >= 2 && lowestPrice !== null && highestPrice !== null
+      ? ` We track ${trackedPrices.length} retailer listings for it, from ${money(lowestPrice)} to ${money(highestPrice)}${priceSpread !== null ? ` — a spread of ${money(priceSpread)} on the same product` : ''}.`
+      : trackedPrices.length === 1 && lowestPrice !== null
+        ? ` One retailer listing is tracked at ${money(lowestPrice)}.`
+        : lowestRecorded !== null
+          ? ` No retailer link is active for it at the moment; the lowest price we recorded was ${money(lowestRecorded)}.`
+          : ' No retailer price is recorded for it yet, so treat the band above as the range to expect.';
   
   const imageSrc = safeProductImage(product.images[0]);
   const isEmoji = !imageSrc.startsWith('http') && !imageSrc.startsWith('/');
@@ -299,8 +325,32 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               Why this product makes the cut
             </h2>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-              We include this product as a research-based candidate for a specific {displayCategory.toLowerCase()} need. Use the fit and tradeoff notes below as a starting point, then confirm current specifications, warranty, availability, and returns with the retailer.
+              {product.title} is catalogued as a {displayCategory.toLowerCase()} pick
+              {recipients.length > 0 ? ` for ${recipients.join(' and ').toLowerCase()}` : ''}, priced in the{' '}
+              {formatPriceBracket(product.tags.priceBracket).toLowerCase()} band.{priceSentence} The notes below
+              come from the published listing and the retailer prices we track, not from a hands-on test.
             </p>
+
+            <dl className="mb-6 grid grid-cols-2 gap-3 text-sm md:grid-cols-4">
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Brand</dt>
+                <dd className="font-bold text-slate-900 dark:text-white">{product.brand ?? 'Unlisted'}</dd>
+              </div>
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Retailers tracked</dt>
+                <dd className="font-bold text-slate-900 dark:text-white">{trackedPrices.length}</dd>
+              </div>
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Lowest recorded</dt>
+                <dd className="font-bold text-slate-900 dark:text-white">
+                  {lowestPrice !== null ? money(lowestPrice) : lowestRecorded !== null ? money(lowestRecorded) : '—'}
+                </dd>
+              </div>
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Notes updated</dt>
+                <dd className="font-bold text-slate-900 dark:text-white">{product.lastUpdated ?? '—'}</dd>
+              </div>
+            </dl>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
@@ -316,6 +366,25 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </p>
               </div>
             </div>
+
+            {product.features && product.features.length > 0 && (
+              <div className="mt-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                <h3 className="font-bold text-slate-900 dark:text-white mb-3">
+                  What the {product.title} listing records
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                  {product.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 leading-relaxed">
+                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-3 text-xs leading-6 text-slate-400">
+                  These are the points that decided the shortlisting, including the ones that count against it.
+                </p>
+              </div>
+            )}
           </section>
 
           <aside className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl">
@@ -338,7 +407,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         {/* Pros and Cons */}
         <div className="mt-8 bg-slate-900 dark:bg-slate-900/50 text-white p-8 md:p-12 rounded-[2.5rem] shadow-xl">
           <h2 className="text-3xl font-black mb-3 text-center">Research snapshot</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-6 text-slate-300">These are catalog-level considerations, not hands-on test results. Check recent owner feedback and retailer terms before buying.</p>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-6 text-slate-300">What the shortlist records about the {product.brand ?? 'unbranded'} {product.title} and the alternatives around it — catalog-level considerations, not hands-on test results. Check recent owner feedback and retailer terms before buying.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto">
             <div className="text-center">
               <h4 className="text-green-400 font-bold uppercase tracking-widest text-xs mb-4">Pros</h4>

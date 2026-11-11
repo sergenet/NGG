@@ -77,6 +77,8 @@ See `NEXT_BUILD_TODO.md` for the current list. The two navigation controls previ
 - Links no longer prefetch the RSC payloads the static export cannot serve.
 - Newsletter consent box is marked required, so an unticked Subscribe button explains itself instead of doing nothing.
 - `npm run check:newsletter` drives real Chrome over the live form: 10 checks that a submit is blocked without consent and allowed with it. `--submit` completes a genuine signup and creates a pending subscriber.
+- The five excluded `/shop/` categories, the gift-guides hub and the contact page now carry their own depth: 539–591, 548 and 372 words against 285–305, 156 and 39 before.
+- Product pages render each product's recorded shortlist notes and its own retailer price spread. Unique share moved 43% → 50% and pair similarity 0.40 → 0.34 (max 0.82 → 0.72) on the same measure, so the template is better but still carries most of the wording.
 
 ---
 
