@@ -89,3 +89,18 @@ See `NEXT_BUILD_TODO.md` for the current list. The two navigation controls previ
 - Of the 99 sitemap URLs, 55 were indexed at the 6 Nov snapshot. The 44 excluded all answer 200 with self-canonicals and no noindex: 39 product pages, plus `/shop/kitchen/`, `/shop/home-office/`, `/shop/travel-tech/`, `/shop/home-decor/`, `/shop/novelty-tech/`, `/gift-guides/`, `/gift-guides/fathers-day-gadget-gifts/`, `/contact/`.
 - Root cause is template duplication, not thin copy: median 450 words on excluded pages against 440 on indexed ones, but only ~35% of the wording on a `/shop/` page and ~43% on a product page is unique to it. Rewriting the template is the lever; rewriting single pages is not.
 - Buckets naming retired URLs (`/product/govee-ai-sync-box-2/` now 410, the Roomba comparison now 301) are stale and will clear as Google recrawls.
+
+## 8. Catalogue integrity (12 November 2026)
+- The catalogue is **42 products**, all with a purchasable retailer link. `scripts/validate-catalog.mjs` now fails a build that contains a product without one.
+- Nine products were removed because no storefront could be verified: HUANUO and ErGear monitor mounts (HUANUO no longer sells mounts; ergear.com redirects to HUANUO), the UGREEN MagSafe stand, the Nexbie pet portrait (not a Nexbie product), Dima Eyewear blue-light glasses, the Aerolatte frother (official page has no purchase path), the two Amazon-only items (Associates account closed), and a generic levitating lamp.
+- Seven vendor rows were replaced with the brand's own store, each loaded in a browser and confirmed to show the product with a price and a working cart: Vari, VIVO, Ergotron, Herman Miller, NOMATIC, Fullstar, BKWAT.
+- The BKWAT Awin link was dead in a way that no HTTP check caught: it resolved to `awin1.com/closedMerchant.html`, meaning merchant 77730 is closed. Any future dead-affiliate sweep should assert the final URL is not on awin1.com.
+- Ergotron's product page sits behind a Cloudflare challenge that blocks automated verification; it was confirmed as a real page, but the link has never been loaded end to end by a script.
+- Removed products return **410 Gone** (the `.htaccess` rule handles missing product dirs), not 404.
+
+## 9. Follow-up due around 19 November 2026
+Re-read Search Console and compare against this baseline: 55 of 99 sitemap URLs indexed at the 6 Nov snapshot; sitemap resubmitted 12 Nov carrying **90** URLs after the prune. Worth checking:
+1. Whether `/sitemap.xml` reports 90 discovered pages (if it still says 99, the submission did not trigger a re-read).
+2. Whether the five rewritten `/shop/` categories, `/gift-guides/` and `/contact/` moved out of "Crawled – currently not indexed".
+3. Whether the nine removed product URLs drop out of the 404/410 buckets.
+4. The count of indexed product pages against the 17 that now carry editorial notes.
