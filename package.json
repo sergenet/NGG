@@ -7,6 +7,7 @@
     "validate:data": "node scripts/validate-catalog.mjs && node scripts/validate-truthmode.mjs",
     "typecheck": "tsc --noEmit",
     "check": "npm run validate:data && npm run lint && npm run typecheck",
+    "check:links": "node scripts/check-affiliate-links.mjs",
     "smoke": "node scripts/smoke-check.mjs",
     "smoke:local": "node scripts/smoke-check.mjs --local",
     "check:newsletter": "node scripts/check-newsletter.mjs",
