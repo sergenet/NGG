@@ -238,6 +238,28 @@ function fetchFeed(origin, page) {
 
 const catalog = JSON.parse(readFileSync(CATALOG, 'utf8'));
 const existingSlugs = new Set(catalog.map((product) => product.slug));
+
+/**
+ * The same product is already listed.
+ *
+ * Title similarity is not enough: the DealGenius feed lists some items under a
+ * second, differently-worded title with the same destination URL and image.
+ * The URL the reader actually lands on is the definition of "same product", so
+ * it is the dedupe key.
+ */
+const normalizeDestination = (url) => {
+  try {
+    const parsed = new URL(url);
+    const target = parsed.searchParams.get('ued') ? decodeURIComponent(parsed.searchParams.get('ued')) : url;
+    return target.replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '').toLowerCase();
+  } catch {
+    return String(url || '').toLowerCase();
+  }
+};
+
+const existingDestinations = new Set(
+  catalog.flatMap((product) => (product.vendors || []).map((vendor) => normalizeDestination(vendor.url))),
+);
 const existingTitles = new Set(
   catalog.map((product) => product.title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()),
 );
@@ -318,6 +340,11 @@ for (const merchant of MERCHANTS) {
     if (!slug || existingSlugs.has(slug)) { skip('slug collision'); continue; }
 
     const destination = `${merchant.origin}/products/${product.handle}`;
+    if (existingDestinations.has(normalizeDestination(destination))) {
+      skip('same destination as an existing product');
+      continue;
+    }
+
     const features = bullets(product.body_html);
     if (!features.length && variants.length > 1) {
       const options = (product.options || []).map((option) => option.name).filter(Boolean);
@@ -347,6 +374,7 @@ for (const merchant of MERCHANTS) {
     };
 
     existingSlugs.add(slug);
+    existingDestinations.add(normalizeDestination(destination));
     existingTitles.add(title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim());
     existingTokenSets.push(titleTokens(title));
     nextId += 1;
