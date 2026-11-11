@@ -9,6 +9,7 @@
     "check": "npm run validate:data && npm run lint && npm run typecheck",
     "smoke": "node scripts/smoke-check.mjs",
     "smoke:local": "node scripts/smoke-check.mjs --local",
+    "check:newsletter": "node scripts/check-newsletter.mjs",
     "build": "npm run validate:data && next build && python engine/sitemap_generator.py && python engine/rss_generator.py && python engine/generate_pinterest_feed.py",
     "start": "next start",
     "lint": "eslint src",
@@ -29,6 +30,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "puppeteer-core": "^25.17.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
