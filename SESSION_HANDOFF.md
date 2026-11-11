@@ -3,7 +3,9 @@
 **Date:** October 19, 2026  
 **Source Conversation ID:** `2c88490d-b4af-4cf9-9b5d-59c5c2d37a94`  
 **Site URL:** https://newgiftsandgadgets.com  
-**Project Path:** `C:\Projects\NewGiftsAndGadgets-Website\newgiftsandgadgets.com` (Junction: `C:\newgiftsandgadgets`)
+**Project Path:** `C:\newgiftsandgadgets.com` (junction to `C:\Projects\NewGiftsAndGadgets-Website\newgiftsandgadgets.com`)
+
+**Build & deploy:** `npm run build` (validation + static export + sitemap/RSS), then `python deploy-zip.py`, which zips `out/`, uploads one bundle, unpacks it server-side with a temporary PHP script, and prunes pages the build no longer produces.
 
 ---
 
@@ -59,5 +61,15 @@ The automated 4-day alternating schedule is configured in `C:\YouTube Videos\soc
 ---
 
 ## 5. Next Build Queue
-- **Home Navigation Button**: Add a dedicated "Return Home" button / quick-action control across catalog, category, and product views.
-- **Scroll-to-Top ("Up" Arrow) Button**: Implement a floating action button with smooth scrolling `window.scrollTo({ top: 0, behavior: 'smooth' })` that appears after scrolling down on long pages.
+See `NEXT_BUILD_TODO.md` for the current list. The two navigation controls previously queued here shipped in November 2026: the Home button lives in the page-bottom nav, and the floating scroll-to-top arrow appears after 320px of scroll.
+
+---
+
+## 6. Shipped in the November 2026 audit
+- Admin launchpad effect no longer trips `react-hooks/set-state-in-effect`, so `npm run check` passes again.
+- Organization schema logo added at `public/assets/images/ngg-logo.png` (the referenced file had never existed).
+- `.env.example` repaired (single GA key, `NGG_FTP_PASS` documented) and re-tracked in git.
+- Consent-gated tracking survives browsers where `localStorage` throws; `sendBeacon` failures no longer break a click.
+- CSP now allows `www.recaptcha.net`, which unblocks the newsletter form's reCAPTCHA.
+- Hashed `/_next/static/*` assets return a one-year immutable `Cache-Control`.
+- Links no longer prefetch the RSC payloads the static export cannot serve.
