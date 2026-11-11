@@ -1,0 +1,24 @@
+#!/bin/sh
+# Pre-commit gate.
+#
+# Always runs the fast quality gate. When the commit touches anything that ends
+# up in the static export, it also builds and smoke-tests the export locally, so
+# a build that lost a page, broke a canonical or drifted from its sitemap is
+# caught here rather than on the live server after an FTP release.
+#
+# Enable once per clone:  git config core.hooksPath .githooks
+
+set -e
+
+cd "$(git rev-parse --show-toplevel)"
+
+echo "pre-commit: npm run check"
+npm run check
+
+if git diff --cached --name-only | grep -Eq '^(src|public)/|^next\.config\.ts$|^package\.json$|^scripts/'; then
+  echo "pre-commit: building and smoke-testing the export"
+  npm run build
+  npm run smoke:local
+else
+  echo "pre-commit: nothing in the export changed, skipping the build smoke"
+fi

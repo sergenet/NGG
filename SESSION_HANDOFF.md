@@ -5,7 +5,9 @@
 **Site URL:** https://newgiftsandgadgets.com  
 **Project Path:** `C:\newgiftsandgadgets.com` (junction to `C:\Projects\NewGiftsAndGadgets-Website\newgiftsandgadgets.com`)
 
-**Build & deploy:** `npm run build` (validation + static export + sitemap/RSS), then `python deploy-zip.py`, which zips `out/`, uploads one bundle, unpacks it server-side with a temporary PHP script, and prunes pages the build no longer produces.
+**Build & deploy:** `npm run build` (validation + static export + sitemap/RSS), then `python deploy-zip.py`, which zips `out/`, uploads one bundle, unpacks it server-side with a temporary PHP script, prunes pages the build no longer produces, and finishes with the live smoke check.
+
+**Pre-commit gate:** enable once per clone with `git config core.hooksPath .githooks`. The hook runs `npm run check` on every commit, and when the change touches the export (`src/`, `public/`, `next.config.ts`, `package.json`, `scripts/`) it also builds and runs `npm run smoke:local` — 30+ checks against the built site, so a lost page or broken canonical is caught before it reaches a deploy.
 
 ---
 
