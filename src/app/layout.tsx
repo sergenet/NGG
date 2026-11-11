@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     images: [{ url: '/social/home.png', width: 1200, height: 630, alt: 'NewGiftsAndGadgets gift and gadget portal' }],
   },
   twitter: { card: 'summary_large_image', title: 'NewGiftsAndGadgets', description: 'Useful gifts and clever gadgets, thoughtfully curated.', images: ['/social/home.png'] },
-  robots: { index: true, follow: true },
   verification: { other: { 'p:domain_verify': '72cef8dccd016abd8a0325a8f305d18d' } },
 };
 

@@ -33,6 +33,16 @@ RedirectMatch 301 ^/home-office\.html$ /shop/home-office/
 RedirectMatch 301 ^/kitchen\.html$ /shop/kitchen/
 RedirectMatch 301 ^/smart-home\.html$ /shop/smart-home/
 
+# Bare section roots exist only to hold their children, so they answered 403
+# Forbidden instead of pointing anywhere. Send each to the page that serves the
+# same intent. Anchored to the bare root, so /gifts/video-call-gifts/ and the
+# rest of the children are untouched.
+RedirectMatch 301 ^/shop/?$ /shop/all/
+RedirectMatch 301 ^/product/?$ /shop/all/
+RedirectMatch 301 ^/gifts/?$ /shop/all/
+RedirectMatch 301 ^/home-office/?$ /shop/home-office/
+RedirectMatch 301 ^/kitchen/?$ /shop/kitchen/
+
 Redirect 301 /home-office/best-monitor-arms/ /home-office/best-monitor-arms-for-dual-setups-2026/
 RedirectMatch 301 ^/smart-home/?$ /shop/smart-home/
 Redirect 301 /gift-guides/best-gifts-for-dad-fathers-day-2026/ /gift-guides/fathers-day-gadget-gifts/

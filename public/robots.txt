@@ -8,5 +8,5 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_not-found/
 
+# Only XML sitemaps are advertised: Google does not consume RSS/Atom feeds here.
 Sitemap: https://newgiftsandgadgets.com/sitemap.xml
-Sitemap: https://newgiftsandgadgets.com/rss.xml
