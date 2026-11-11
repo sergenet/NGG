@@ -75,3 +75,15 @@ See `NEXT_BUILD_TODO.md` for the current list. The two navigation controls previ
 - CSP now allows `www.recaptcha.net`, which unblocks the newsletter form's reCAPTCHA.
 - Hashed `/_next/static/*` assets return a one-year immutable `Cache-Control`.
 - Links no longer prefetch the RSC payloads the static export cannot serve.
+- Newsletter consent box is marked required, so an unticked Subscribe button explains itself instead of doing nothing.
+- `npm run check:newsletter` drives real Chrome over the live form: 10 checks that a submit is blocked without consent and allowed with it. `--submit` completes a genuine signup and creates a pending subscriber.
+
+---
+
+## 7. Search Console state (11 November 2026)
+- `/sitemap.xml` resubmitted; last read 11 Nov with **99** discovered pages (was 155 on 1 Nov, before the catalogue prune).
+- `/rss.xml` and `/sitemap.rss` removed from the sitemaps list; only the XML sitemap is submitted now.
+- Agent can read the property through the signed-in browser session (Chrome tab), not through an API integration — no service account is configured.
+- Of the 99 sitemap URLs, 55 were indexed at the 6 Nov snapshot. The 44 excluded all answer 200 with self-canonicals and no noindex: 39 product pages, plus `/shop/kitchen/`, `/shop/home-office/`, `/shop/travel-tech/`, `/shop/home-decor/`, `/shop/novelty-tech/`, `/gift-guides/`, `/gift-guides/fathers-day-gadget-gifts/`, `/contact/`.
+- Root cause is template duplication, not thin copy: median 450 words on excluded pages against 440 on indexed ones, but only ~35% of the wording on a `/shop/` page and ~43% on a product page is unique to it. Rewriting the template is the lever; rewriting single pages is not.
+- Buckets naming retired URLs (`/product/govee-ai-sync-box-2/` now 410, the Roomba comparison now 301) are stale and will clear as Google recrawls.
