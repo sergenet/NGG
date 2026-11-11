@@ -45,7 +45,20 @@ export function EmailOctopusForm() {
     script.dataset.form = FORM_ID;
     container.appendChild(script);
 
+    // The embed refuses to submit while its consent box is unticked, but shows no
+    // message: the Subscribe button simply appears dead. Marking the box required
+    // lets the browser block the submit and point at what is missing.
+    const requireConsent = () => {
+      const box = container.querySelector<HTMLInputElement>('input[name="consent"]');
+      if (!box) return;
+      if (!box.required) box.required = true;
+    };
+    requireConsent();
+    const consentObserver = new MutationObserver(requireConsent);
+    consentObserver.observe(container, { childList: true, subtree: true });
+
     return () => {
+      consentObserver.disconnect();
       container.removeEventListener('click', trackNewsletterInteraction);
       container.removeEventListener('submit', trackSignupAttempt, true);
       container.replaceChildren();
