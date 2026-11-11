@@ -26,6 +26,9 @@ export interface Product {
   pros?: string[];
   cons?: string[];
   setupTips?: string[];
+  // Written per product, not generated from the fields above: these are the notes
+  // that stop every page reading like the same page with a different name.
+  editorial?: { heading: string; body: string }[];
   faqs?: { question: string; answer: string }[];
   lastUpdated?: string;
 }

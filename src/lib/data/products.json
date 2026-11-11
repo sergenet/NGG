@@ -76,7 +76,17 @@
       "Manual height adjustment",
       "No gas spring"
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "What it actually solves",
+        "body": "Two monitor bases become one clamp, which is the cheapest way to reclaim desk depth without replacing the desk. Nothing about the screens improves; the workspace underneath them does."
+      },
+      {
+        "heading": "Manual height means one setting",
+        "body": "There is no gas spring, so you position the arm and leave it. That suits a fixed workstation and frustrates anyone who changes posture through the day, which is worth deciding before you buy."
+      }
+    ]
   },
   {
     "id": "P-B0DSJN4XSX",
@@ -320,7 +330,17 @@
       "Only works on vehicles with an OBD-II port (1996 or newer)",
       "No internal battery (relies on vehicle power)"
     ],
-    "lastUpdated": "2026-06-18"
+    "lastUpdated": "2026-06-18",
+    "editorial": [
+      {
+        "heading": "What the OBD-II port changes",
+        "body": "A tracker wired into the diagnostic port draws its power from the car, so there is no charging routine to forget and no cable across the dash. That is the difference between a device that stays installed for years and one that ends up in the glovebox."
+      },
+      {
+        "heading": "Check before you order",
+        "body": "The port has to exist and be reachable: pre-1996 vehicles, some EVs without a standard port, and cars that hide it behind a trim panel all defeat this design. Confirm too whether the listing price includes the data service the tracker needs to report."
+      }
+    ]
   },
   {
     "id": "P-B0CHBPXHC6",
@@ -366,7 +386,17 @@
       "Blade guard requires practice",
       "Container could be larger"
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "What it replaces",
+        "body": "A knife, a board and a grater in one container. The gain is speed and consistency on repetitive prep, not precision cuts, so it suits someone cooking in volume rather than plating."
+      },
+      {
+        "heading": "The blade guard takes practice",
+        "body": "The guard is what makes the tool safe and what makes it feel clumsy for the first few uses. Budget for hand washing the lid and blades, since the dishwasher shortens their edge."
+      }
+    ]
   },
   {
     "id": "P-B00D3MZTIA",
@@ -412,7 +442,17 @@
       "Premium price",
       "Not ideal for lounging"
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "Pay for the size, not the badge",
+        "body": "The chair comes in three sizes, and the wrong one is worse than a cheap chair that fits. The mesh seat also stays cooler than foam over a long day, which is the part people notice first."
+      },
+      {
+        "heading": "Who should look elsewhere",
+        "body": "There is no integrated headrest, and the price buys a twelve-year warranty rather than extra adjustability. If you stand for part of the day, a cheaper chair plus a sit-stand desk is the better spend."
+      }
+    ]
   },
   {
     "id": "P-AW-TRAVERSEON-REEL",
@@ -505,7 +545,17 @@
       "Requires manual recharging every 1-2 weeks",
       "Does not capture vehicle engine diagnostics"
     ],
-    "lastUpdated": "2026-06-18"
+    "lastUpdated": "2026-06-18",
+    "editorial": [
+      {
+        "heading": "Built for things without a battery",
+        "body": "An asset tracker belongs on a trailer, a toolbox or a bike, not in a car that already has power. Expect to recharge it every week or two, which is the real cost of a self-contained unit."
+      },
+      {
+        "heading": "Coverage beats specification",
+        "body": "Reported accuracy depends on the mobile network where the asset actually sits, so a strong spec sheet means little in a basement or a rural yard. Check the supported bands for your country before relying on one."
+      }
+    ]
   },
   {
     "id": "P-AW-NEAKASA-P1",
@@ -556,7 +606,17 @@
       "Dustbin capacity requires frequent emptying for very large dogs",
       "Power cord layout could be slightly longer"
     ],
-    "lastUpdated": "2026-06-05"
+    "lastUpdated": "2026-06-05",
+    "editorial": [
+      {
+        "heading": "The point is where the hair goes",
+        "body": "Attaching suction to the brush sends coat into a bin instead of across the floor. That single change is the argument for a grooming vacuum over a good brush."
+      },
+      {
+        "heading": "Noise and bin size decide the session",
+        "body": "Introduce it at the lowest setting, because noise is what ends grooming sessions early. On a large, heavy-coated dog the bin fills quickly, so expect to empty it mid-groom rather than once at the end."
+      }
+    ]
   },
   {
     "id": "P-B07782GG5T",
@@ -603,7 +663,17 @@
       "Premium pricing compared to standard travel packs",
       "Slightly heavier frame when empty (1.9kg)"
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "Why 30 litres is the useful size",
+        "body": "Thirty litres clears the carry-on allowance of most airlines while still holding a laptop sleeve and two days of clothes. The packing layout, not the capacity, is what the money goes on here."
+      },
+      {
+        "heading": "The premium is for one-bag travel",
+        "body": "If you check a suitcase anyway, a cheaper pack of the same volume does the same job. Pay for this one when the goal is to fly with one bag and keep a charger, a layer and a change of clothes findable without unpacking."
+      }
+    ]
   },
   {
     "id": "P-B07C228KMX",
@@ -1198,7 +1268,17 @@
     "setupTips": [
       "Extend the silicone bucket fully, plug into any standard household outlet, fill with warm water and detergent, and place the drain hose into a sink or bucket before starting."
     ],
-    "lastUpdated": "2026-10-22"
+    "lastUpdated": "2026-10-22",
+    "editorial": [
+      {
+        "heading": "Small loads, not laundry day",
+        "body": "This is for delicates, gym kit and baby clothes, where the alternative is hand washing in a sink. Treat it as a supplement to a washer rather than a replacement."
+      },
+      {
+        "heading": "It needs a drain and a flat surface",
+        "body": "The fold helps with storage only; the machine still wants to sit level, and it still has to empty somewhere. Check both before you commit counter or bathroom space to it."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-750LED-LIGHTS",
@@ -1252,7 +1332,17 @@
     "setupTips": [
       "Hang the central ring over the top of your tree or post first, then let the drops cascade down for perfectly spaced coverage."
     ],
-    "lastUpdated": "2026-10-22"
+    "lastUpdated": "2026-10-22",
+    "editorial": [
+      {
+        "heading": "One run, one colour temperature",
+        "body": "At 245 feet this covers a large tree or a fence line without a second set, which also avoids the colour mismatch that shows up when two batches are joined."
+      },
+      {
+        "heading": "Plan the socket, not just the lights",
+        "body": "A long run needs power near where it starts, so measure the route from the outlet rather than the length of the fence. Outdoor use depends on the rated connector and the plug housing, not on the LEDs themselves."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-SOLAR-EYEBALLS",
@@ -1360,7 +1450,17 @@
     "setupTips": [
       "Rotate the light in the headband silicone bracket to adjust the beam angle precisely to your line of sight."
     ],
-    "lastUpdated": "2026-10-23"
+    "lastUpdated": "2026-10-23",
+    "editorial": [
+      {
+        "heading": "Hands-free beats brighter",
+        "body": "A headlamp is for the jobs where one hand is holding something: bike repairs, wiring, night walks. Aim matters more than peak output, because a spot that misses your work is useless light."
+      },
+      {
+        "heading": "Magnetic charging removes the weak point",
+        "body": "The rubber port flap is usually what fails first on an outdoor light, and charging through the body sidesteps it. Check the runtime you get at the brightness you will actually use, not the headline figure."
+      }
+    ]
   },
   {
     "id": "P-AW-SKILHUNT-M150-V4",
@@ -1414,7 +1514,17 @@
     "setupTips": [
       "Double-click the side switch from off for direct instant access to Turbo mode without cycling through lower levels."
     ],
-    "lastUpdated": "2026-10-23"
+    "lastUpdated": "2026-10-23",
+    "editorial": [
+      {
+        "heading": "The cell decides the output",
+        "body": "This light runs on a 14500 rechargeable or a standard AA. The rated brightness assumes the rechargeable; on an AA it is a serviceable backup rather than the same light."
+      },
+      {
+        "heading": "Why carry this over a bigger light",
+        "body": "An AA-compatible body can be fed anywhere, which is the point of an everyday light. Accept less throw than a dedicated 18650 model in exchange for that flexibility."
+      }
+    ]
   },
   {
     "id": "P-AW-SKILHUNT-MIX7-GEN2",
@@ -1468,7 +1578,17 @@
     "setupTips": [
       "Hold the side switch from off to access moonlight and color auxiliary modes directly without activating the main white emitter."
     ],
-    "lastUpdated": "2026-10-23"
+    "lastUpdated": "2026-10-23",
+    "editorial": [
+      {
+        "heading": "Several lights in one body",
+        "body": "White, colour and UV in a single torch suits inspection work and camping, where packing one item instead of three matters. UV is the part that cannot be improvised."
+      },
+      {
+        "heading": "Complexity is the trade-off",
+        "body": "More modes mean more cycling to reach the one you want, so check the mode memory and the order before committing. In the dark, a light that starts on the wrong setting is worse than a simpler one."
+      }
+    ]
   },
   {
     "id": "P-AW-EVERBLOG-HOMECAL",
@@ -1522,7 +1642,17 @@
     "setupTips": [
       "Assign each family member a distinct color profile in settings before syncing accounts to keep multi-calendar views readable at a glance."
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "Shared visibility is the whole product",
+        "body": "A wall calendar earns its place because everyone can see it without opening an app. It only works if the household syncs the calendars they actually use, so agree on that first."
+      },
+      {
+        "heading": "Confirm the accounts it syncs",
+        "body": "Check which calendar services it supports and whether the features you want sit behind a subscription. A large display with a subscription requirement is a different purchase from a one-off panel."
+      }
+    ]
   },
   {
     "id": "P-AW-KINGBULL-HUNTER-2S",
@@ -1576,7 +1706,17 @@
     "setupTips": [
       "Check tire pressures with a dedicated low-pressure digital gauge before off-road rides: fat tires perform best between 15-20 PSI depending on terrain."
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "Fat tyres are a terrain decision",
+        "body": "Wide tyres carry weight and float over sand, snow and loose gravel. On pavement they add rolling resistance and noise, so they are a poor default for a purely urban commute."
+      },
+      {
+        "heading": "Weight and rules before enthusiasm",
+        "body": "This is a heavy bike to lift and store, and the motor output that makes it capable on trails is exactly what local rules restrict. Check power limits and standover height before ordering."
+      }
+    ]
   },
   {
     "id": "P-AW-SUNAOFE-LUNAR",
@@ -1630,7 +1770,17 @@
     "setupTips": [
       "Route monitor and power cables with slack at your maximum standing height preset before bundling them underneath to prevent cord tension."
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "What the second motor buys",
+        "body": "Two motors lift the top evenly and carry more weight than a single-motor frame allowed. The practical benefit is stability at standing height, not speed."
+      },
+      {
+        "heading": "Measure before you buy",
+        "body": "Check the height range against your seated and standing elbow height, and the top depth against the clamp your monitor arm needs. A desk that is right on paper and wrong at standing height is a return."
+      }
+    ]
   },
   {
     "id": "P-AW-LOVEISAROSE-GOLD",
@@ -1739,7 +1889,17 @@
     "setupTips": [
       "Test each lighting circuit with the included USB battery pack before snapping down the final locking plates."
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "It is cut for one set",
+        "body": "This kit is made for the Ultimate Collector Millennium Falcon 75192, not a generic strip you can trim to fit. Match the set number before buying, because there is nothing to adapt."
+      },
+      {
+        "heading": "The install is the real work",
+        "body": "Routing wiring inside a finished model means taking parts of it apart again. If that sounds like a weekend project rather than a chore, the result is a display piece that reads far better in a dim room."
+      }
+    ]
   },
   {
     "id": "P-AW-BURCHDA-R5-PRO-EBIKE",
@@ -1792,7 +1952,17 @@
     "setupTips": [
       "Check tire pressures and charge battery to 100% prior to your maiden ride."
     ],
-    "lastUpdated": "2026-10-28"
+    "lastUpdated": "2026-10-28",
+    "editorial": [
+      {
+        "heading": "The fold is for storage, not for riding",
+        "body": "A folding frame earns its hinge in a car boot, a lift or a small flat. It does not make a heavy bike light, so the stairs are still a consideration."
+      },
+      {
+        "heading": "Match it to local rules",
+        "body": "E-bike law varies by country and often by state on speed, throttle and where you can ride. Confirm the class this is sold as where you live before ordering, and check the standover height against your own."
+      }
+    ]
   },
   {
     "id": "P-AW-BKWAT-K80-RING",

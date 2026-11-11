@@ -385,6 +385,20 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </p>
               </div>
             )}
+
+            {product.editorial && product.editorial.length > 0 && (
+              <div className="mt-8 border-t border-slate-200 dark:border-slate-800 pt-6">
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-4">Editorial notes</p>
+                <div className="space-y-5">
+                  {product.editorial.map((note) => (
+                    <div key={note.heading}>
+                      <h3 className="font-bold text-slate-900 dark:text-white mb-1.5">{note.heading}</h3>
+                      <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{note.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           <aside className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl">
