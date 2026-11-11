@@ -34,6 +34,22 @@ for (const product of products) {
 
   const usable = (product.vendors || []).filter((vendor) => /^https:\/\//.test(vendor.url || ''));
 
+  // A product with no purchasable link is a dead end for the reader: the page
+  // renders "retailer links are being updated" and the schema points at a price
+  // nobody can pay. Every product must resolve to a retailer an editor verified.
+  const purchasable = (product.vendors || []).some((vendor) => {
+    if (!/^https:\/\//.test(vendor.url || '')) return false;
+    try {
+      const host = new URL(vendor.url).hostname.toLowerCase();
+      return !(host.includes('amazon.') || host === 'amzn.to');
+    } catch {
+      return false;
+    }
+  });
+  if (!purchasable) {
+    errors.push(`${product.slug}: no purchasable retailer link — remove the product or point it at a real storefront`);
+  }
+
   for (const vendor of product.vendors || []) {
     const isAmazon = /amazon/i.test(vendor.name || '') || /amazon\.|amzn\.to/i.test(vendor.url || '');
     if (!isAmazon) continue;

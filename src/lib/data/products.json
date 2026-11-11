@@ -9,16 +9,10 @@
     ],
     "vendors": [
       {
-        "name": "Sunaofe Official",
-        "url": "",
-        "price": 299.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
+        "name": "Vari Official Store",
+        "url": "https://www.vari.com/electric-standing-desk-with-comfortedge-48x30/FD-ESDCE4830.html",
         "price": 799,
-        "isPrimary": false
+        "isPrimary": true
       }
     ],
     "tags": {
@@ -48,16 +42,10 @@
     ],
     "vendors": [
       {
-        "name": "Sunaofe Accessories Official",
-        "url": "",
-        "price": 44.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 34,
-        "isPrimary": false
+        "name": "VIVO Official Store",
+        "url": "https://vivo-us.com/products/stand-v002",
+        "price": 39.99,
+        "isPrimary": true
       }
     ],
     "tags": {
@@ -100,16 +88,10 @@
     ],
     "vendors": [
       {
-        "name": "Sunaofe Ergonomics",
-        "url": "",
-        "price": 109.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 189,
-        "isPrimary": false
+        "name": "Ergotron Official Store",
+        "url": "https://www.ergotron.com/en-us/products/product-details/45-241",
+        "price": 219,
+        "isPrimary": true
       }
     ],
     "tags": {
@@ -139,162 +121,6 @@
     "cons": [
       "Very high price",
       "Strict weight limits"
-    ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
-    "id": "P-B074P7Y9ZG",
-    "slug": "amazon-basics-premium-monitor-stand",
-    "title": "Amazon Basics Premium Monitor Stand",
-    "description": "High-performance monitor arm that offers Ergotron-level quality at a slightly more accessible price point.",
-    "images": [
-      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Sunaofe Ergonomics",
-        "url": "",
-        "price": 119.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 112,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Home Office",
-      "recipient": [
-        "Remote Workers",
-        "Students"
-      ],
-      "priceBracket": "100-250"
-    },
-    "features": [
-      "OEM Ergotron quality",
-      "Great cable management",
-      "Easy to install",
-      "Plain aesthetics",
-      "Still relatively pricey"
-    ],
-    "brand": "Amazon",
-    "whoShouldBuy": [
-      "Rebranded Excellence"
-    ],
-    "pros": [
-      "OEM Ergotron quality",
-      "Great cable management",
-      "Easy to install"
-    ],
-    "cons": [
-      "Plain aesthetics",
-      "Still relatively pricey"
-    ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
-    "id": "P-B0CTHMKLH4",
-    "slug": "huanuo-dual-monitor-mount",
-    "title": "HUANUO Dual Monitor Mount",
-    "description": "A versatile gas-spring dual monitor mount that handles larger screens with ease and provides built-in cable management.",
-    "images": [
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Sunaofe Accessories Official",
-        "url": "",
-        "price": 69.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 69,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Home Office",
-      "recipient": [
-        "Remote Workers",
-        "Students"
-      ],
-      "priceBracket": "50-100"
-    },
-    "features": [
-      "Smooth gas spring adjustment",
-      "Built-in USB ports",
-      "Supports large screens",
-      "Plastic components",
-      "Slightly bulky"
-    ],
-    "brand": "HUANUO",
-    "whoShouldBuy": [
-      "Gas Spring Value"
-    ],
-    "pros": [
-      "Smooth gas spring adjustment",
-      "Built-in USB ports",
-      "Supports large screens"
-    ],
-    "cons": [
-      "Plastic components",
-      "Slightly bulky"
-    ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
-    "id": "P-B0FQMLC3CB",
-    "slug": "ergear-single-monitor-arm",
-    "title": "ErGear Single Monitor Arm",
-    "description": "A single-monitor arm with a gas-spring adjustment mechanism, cable routing, and published screen, weight, VESA, and desk-thickness limits that should be checked before installation.",
-    "images": [
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Sunaofe Ergonomics",
-        "url": "",
-        "price": 45,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 39,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Home Office",
-      "recipient": [
-        "Remote Workers",
-        "Students"
-      ],
-      "priceBracket": "under-50"
-    },
-    "features": [
-      "Heavy-duty gas spring",
-      "Stable at full extension",
-      "Easy installation",
-      "Basic aesthetics",
-      "Cable management is tight"
-    ],
-    "brand": "ErGear",
-    "whoShouldBuy": [
-      "Best Overall Value"
-    ],
-    "pros": [
-      "Heavy-duty gas spring",
-      "Stable at full extension",
-      "Easy installation"
-    ],
-    "cons": [
-      "Basic aesthetics",
-      "Cable management is tight"
     ],
     "lastUpdated": "2026-10-28"
   },
@@ -451,90 +277,6 @@
     "lastUpdated": "2026-10-17"
   },
   {
-    "id": "P-AW-NEXBIE",
-    "slug": "nexbie-custom-3d-pet-portrait",
-    "title": "Nexbie Custom 3D Pet Portrait",
-    "description": "Stunning custom pet paintings created directly from your photos, featuring high-quality 3D-relief physical textures.",
-    "images": [
-      "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Nexbie (Direct)",
-        "url": "",
-        "price": 59,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Home Office",
-      "recipient": [
-        "Remote Workers",
-        "Students",
-        "Pet Parents"
-      ],
-      "priceBracket": "50-100"
-    },
-    "features": [
-      "Genuine 3D-relief physical texture",
-      "100% custom made from any photo",
-      "Requires clear, well-lit source photos",
-      "Production takes 5-7 days before dispatch"
-    ],
-    "brand": "Nexbie",
-    "whoShouldBuy": [
-      "Pet Lovers & Personalized Gifts"
-    ],
-    "pros": [
-      "Genuine 3D-relief physical texture",
-      "100% custom made from any photo"
-    ],
-    "cons": [
-      "Requires clear, well-lit source photos",
-      "Production takes 5-7 days before dispatch"
-    ],
-    "lastUpdated": "2026-06-02"
-  },
-  {
-    "id": "P-B0BLS3Y632",
-    "slug": "amazon-echo-show-8-3rd-gen",
-    "title": "Amazon Echo Show 8 (3rd Gen)",
-    "description": "Features spatial audio and a built-in smart home hub. The screen adjusts content based on how close you are standing to it.",
-    "images": [
-      "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Everblog HomeCal (No Subscription)",
-        "url": "",
-        "price": 199,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 149.99,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Smart Home",
-      "recipient": [
-        "New Homeowners",
-        "Tech Enthusiasts"
-      ],
-      "priceBracket": "100-250"
-    },
-    "features": [],
-    "brand": "Amazon",
-    "whoShouldBuy": [
-      "Kitchen Hub"
-    ],
-    "pros": [],
-    "cons": [],
-    "lastUpdated": "2026-10-28"
-  },
-  {
     "id": "P-AW-SHADOWAUTO",
     "slug": "shadowauto-obd-ii-gps-car-tracker",
     "title": "ShadowAuto OBD-II GPS Car Tracker",
@@ -590,16 +332,10 @@
     ],
     "vendors": [
       {
-        "name": "DealGenius Kitchen",
-        "url": "",
-        "price": 14.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 29,
-        "isPrimary": false
+        "name": "Fullstar Kitchenware",
+        "url": "https://fullstarkitchenware.com/products/viral-vegetable-chopper",
+        "price": 29.99,
+        "isPrimary": true
       }
     ],
     "tags": {
@@ -633,59 +369,6 @@
     "lastUpdated": "2026-10-28"
   },
   {
-    "id": "P-B0002KZUNA",
-    "slug": "aerolatte-handheld-milk-frother",
-    "title": "Aerolatte Handheld Milk Frother",
-    "description": "The original handheld milk frother. Makes barista-quality froth in under 30 seconds.",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0627/9518/6325/files/1587591.jpg"
-    ],
-    "vendors": [
-      {
-        "name": "DealGenius Clearance",
-        "url": "",
-        "price": 12.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 16.99,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Kitchen",
-      "recipient": [
-        "Home Cooks",
-        "Hosts",
-        "Coffee Lovers"
-      ],
-      "priceBracket": "under-50"
-    },
-    "features": [
-      "Affordable",
-      "Battery powered",
-      "Easy to clean",
-      "Requires batteries",
-      "Not for heavy use"
-    ],
-    "brand": "Aerolatte",
-    "whoShouldBuy": [
-      "Coffee Upgrades"
-    ],
-    "pros": [
-      "Affordable",
-      "Battery powered",
-      "Easy to clean"
-    ],
-    "cons": [
-      "Requires batteries",
-      "Not for heavy use"
-    ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
     "id": "P-B00D3MZTIA",
     "slug": "herman-miller-aeron-chair",
     "title": "Herman Miller Aeron Chair",
@@ -695,16 +378,10 @@
     ],
     "vendors": [
       {
-        "name": "Sunaofe Ergonomic Seating",
-        "url": "",
-        "price": 289.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 1395,
-        "isPrimary": false
+        "name": "Herman Miller Official Store",
+        "url": "https://store.hermanmiller.com/office-chairs-aeron?lang=en_US",
+        "price": 1775,
+        "isPrimary": true
       }
     ],
     "tags": {
@@ -722,7 +399,7 @@
       "Premium price",
       "Not ideal for lounging"
     ],
-    "brand": "Herman",
+    "brand": "Herman Miller",
     "whoShouldBuy": [
       "Premium Ergonomics"
     ],
@@ -735,45 +412,6 @@
       "Premium price",
       "Not ideal for lounging"
     ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
-    "id": "P-B0D2QXRW9K",
-    "slug": "magsafe-compatible-phone-stand",
-    "title": "UGREEN Magnetic Phone Stand for MagSafe",
-    "description": "An adjustable desktop stand designed to hold MagSafe-compatible iPhones in portrait or landscape orientation.",
-    "images": [
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "FNTCase Official",
-        "url": "",
-        "price": 19.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 15.29,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Home Office",
-      "recipient": [
-        "Remote Workers",
-        "Students"
-      ],
-      "priceBracket": "under-50"
-    },
-    "features": [],
-    "brand": "UGREEN",
-    "whoShouldBuy": [
-      "Desk Organization"
-    ],
-    "pros": [],
-    "cons": [],
     "lastUpdated": "2026-10-28"
   },
   {
@@ -930,16 +568,10 @@
     ],
     "vendors": [
       {
-        "name": "Moosehill Outdoor",
-        "url": "",
-        "price": 269,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 279.99,
-        "isPrimary": false
+        "name": "NOMATIC Official Store",
+        "url": "https://www.nomatic.com/products/the-nomatic-travel-pack",
+        "price": 349.99,
+        "isPrimary": true
       }
     ],
     "tags": {
@@ -970,59 +602,6 @@
     "cons": [
       "Premium pricing compared to standard travel packs",
       "Slightly heavier frame when empty (1.9kg)"
-    ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
-    "id": "P-B09JJR6CP1",
-    "slug": "levitating-globe-lamp",
-    "title": "Levitating Globe Lamp",
-    "description": "A small magnetic-levitation globe with an illuminated C-shaped base, designed as a decorative desk or shelf piece.",
-    "images": [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Giftlab Official",
-        "url": "",
-        "price": 39.99,
-        "isPrimary": false
-      },
-      {
-        "name": "Amazon",
-        "url": "",
-        "price": 29.99,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Desk Toys Novelty Gifts",
-      "recipient": [
-        "Coworkers",
-        "Teens",
-        "Remote Workers"
-      ],
-      "priceBracket": "under-50"
-    },
-    "features": [
-      "Floating visual effect",
-      "Built-in multi-color LED lights",
-      "Perfect conversation starter",
-      "Requires constant power",
-      "Slight learning curve to balance"
-    ],
-    "brand": "Generic",
-    "whoShouldBuy": [
-      "Desk Aesthetics"
-    ],
-    "pros": [
-      "Floating visual effect",
-      "Built-in multi-color LED lights",
-      "Perfect conversation starter"
-    ],
-    "cons": [
-      "Requires constant power",
-      "Slight learning curve to balance"
     ],
     "lastUpdated": "2026-10-28"
   },
@@ -2163,59 +1742,6 @@
     "lastUpdated": "2026-10-28"
   },
   {
-    "id": "P-AW-DIMA-EYEWEAR-BLUELIGHT",
-    "slug": "dima-eyewear-blue-light-blocking-computer-glasses",
-    "title": "Dima Eyewear Anti-Blue Light Computer & Reading Glasses",
-    "description": "Ergonomic blue-light blocking glasses designed for prolonged screen work in home offices. Filters high-energy visible light without heavy color distortion.",
-    "images": [
-      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Dima Eyewear Official",
-        "url": "",
-        "price": 39.99,
-        "isPrimary": false
-      }
-    ],
-    "tags": {
-      "category": "Home Office",
-      "recipient": [
-        "Remote Workers",
-        "Students",
-        "Desk Workers"
-      ],
-      "priceBracket": "under-50"
-    },
-    "features": [
-      "Precision anti-reflective blue-light filtering lenses",
-      "Lightweight flexible frame designed for all-day comfort",
-      "Neutral lens tint preserves accurate on-screen color reproduction",
-      "Includes protective hard case and microfiber cleaning cloth"
-    ],
-    "brand": "Dima Eyewear",
-    "whoShouldBuy": [
-      "Remote workers and developers spending 8+ hours daily facing monitors",
-      "Anyone experiencing screen glare during evening computing"
-    ],
-    "whoShouldSkip": [
-      "Individuals requiring custom high-index prescription corrective lenses"
-    ],
-    "pros": [
-      "Lightweight construction prevents pressure on bridge of nose",
-      "Subtle frame profile looks natural on video calls",
-      "Comes with durable protective travel case"
-    ],
-    "cons": [
-      "Non-prescription base lenses only",
-      "Requires careful cleaning with included cloth to prevent hairline scratches"
-    ],
-    "setupTips": [
-      "Keep the microfiber cloth in your desk drawer and clean lenses with lukewarm water rather than shirts."
-    ],
-    "lastUpdated": "2026-10-28"
-  },
-  {
     "id": "P-AW-BURCHDA-R5-PRO-EBIKE",
     "slug": "burchda-r5-pro-folding-electric-bike",
     "title": "Burchda R5 Pro All-Terrain Folding Electric Bike",
@@ -2278,8 +1804,8 @@
     ],
     "vendors": [
       {
-        "name": "BKWAT Official",
-        "url": "https://www.awin1.com/cread.php?awinmid=77730&awinaffid=2913559&ued=https%3A%2F%2Fbkwat.com%2Fproducts%2Fbkwat-k80-screen-smart-ring",
+        "name": "BKWAT Official Store",
+        "url": "https://bkwat.com/products/bkwat-k80-screen-smart-ring",
         "price": 78,
         "isPrimary": true
       }
