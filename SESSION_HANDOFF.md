@@ -111,4 +111,16 @@ Re-read Search Console and compare against this baseline: 55 of 99 sitemap URLs 
 - Measured across the export: product pages mean **833 words** (min 714, max 895), mean pairwise 5-word-shingle similarity **0.30**, worst pair **0.55**. The unique-share percentage in §6 was computed with a different extraction, so it is not comparable to a number produced by `tmp/measure.mjs`.
 - `npm run check:links` (`scripts/check-affiliate-links.mjs`) follows every redirect in the catalogue and fails on a closed-merchant landing, a 404/410, an unreachable host, or a chain that never leaves `awin1.com`. It had to exist in this shape because the closed BKWAT merchant answered **200**.
 - First full run against the live catalogue: **13 ok, 0 dead, 29 unverified**. The 29 are Shopify storefronts answering 429 to scripted requests even after two retries with backoff; a 429 hides the product page but not the Awin redirect, so closed merchants are still caught. Verified failure mode: the old merchant 77730 URL fails with "landed on a closed-merchant page" and exit 1.
-- The check is **not** in `npm run check` or the pre-commit hook: it needs the network and takes minutes against 42 storefronts. Run it before a release or after editing vendor rows.
+- The check is **not** in `npm run check` or the pre-commit hook: it needs the network and takes minutes across every storefront. Run it before a release or after editing vendor rows.
+
+## 11. Catalog expansion (12 November 2026)
+- The catalogue went from **42 to 240 products** using `npm run import:catalog` (`scripts/import-merchant-catalog.mjs`), which reads the public product feed of merchants already approved on Awin and writes records with the merchant's own description, real variants, price, image, and an Awin deep link.
+- Sources: Traverseon (404 feed products, merchant 124816) and DealGenius (1,000, merchant 122504). Poster Master (121870) was **not** imported: only 2 of its 250 products carry a description, so the rest would be image-and-title pages. Tribesigns and SKILHUNT block scripted access entirely.
+- Deliberate brakes: category quotas (55 Outdoor, 55 Kitchen, 30 Travel, 20 each Home Office / Decor / Pet), a near-duplicate cap (Jaccard > 0.55 against earlier imports), and no invented editorial — imported products have no `editorial`, `pros` or `cons`.
+- Net: Outdoor 64, Kitchen 61, Travel 31, Home Office 29, Pet 21, Home Decor 21, plus the hand-picked remainder. Sitemap 90 → **288 URLs**; `/rss.xml` 248 items.
+- Three imported links were followed in a real browser and landed on the exact product page with a visible price through `source=aw`: the spotting scope, the DealGenius milk blender, and the dog car barrier.
+
+## 12. Discovery system (12 November 2026)
+- `npm run indexnow` pushes every sitemap URL to IndexNow engines; `deploy-zip.py` runs it automatically after a passing smoke check. **Google ignores IndexNow**, so this changes nothing there.
+- Key file: `public/6cabd90c47af379d82688b2af0b2209f.txt`. If it stops being deployed, submissions are rejected.
+- `TRAFFIC_PLAN.md` records the honest position: no code creates visitors, what the automation does and does not cover, the weekly human routine, and the decision rule for imported pages that fail to index (editorial on pages with impressions, not more imports).

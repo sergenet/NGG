@@ -153,6 +153,24 @@ def smoke_check():
     return result.returncode
 
 
+def announce_urls():
+    """Tell IndexNow engines the new URLs exist.
+
+    Google ignores IndexNow and crawls at its own pace, so this changes nothing
+    there. It removes the discovery delay on Bing and the other participating
+    engines, which is the only free push channel available. Best-effort: a
+    rejected submission leaves the release intact and only prints a warning.
+    """
+    print("Submitting URLs to IndexNow...")
+    try:
+        result = subprocess.run(["node", "scripts/indexnow-submit.mjs"], cwd=BASE_DIR, check=False)
+    except FileNotFoundError:
+        print("  node was not found; IndexNow submission skipped")
+        return
+    if result.returncode != 0:
+        print("  IndexNow submission did not complete; sitemap discovery still applies.")
+
+
 def deploy():
     total_files = build_zip()
     ftp = connect_ftp()
@@ -188,7 +206,10 @@ def deploy():
                     if ZIP_LOCAL.exists():
                         ZIP_LOCAL.unlink()
                     prune_orphans()
-                    return smoke_check()
+                    status = smoke_check()
+                    if status == 0:
+                        announce_urls()
+                    return status
                 else:
                     print(f"Extraction error: {body}")
                     return 1
