@@ -20,22 +20,22 @@ export const metadata: Metadata = {
 
 const guideItems = [
   {
-    slug: 'ergear-single-monitor-arm',
-    role: 'Free desk surface by lifting one monitor',
-    fitCheck: 'Confirm VESA pattern, monitor weight, desktop thickness, rear clamp clearance, and wall clearance.',
-    skipWhen: 'The desk is glass, unusually thin, built into a wall, or cannot accept the clamp safely.',
+    slug: 'vivo-dual-monitor-desk-mount',
+    role: 'Consolidate two monitor bases into one clamp',
+    fitCheck: 'Confirm both screens fit the stated weight limits, measure desktop thickness and rear clamp clearance, and check the swing room behind the desk.',
+    skipWhen: 'The desk is glass, unusually thin, built into a wall, or cannot accept a clamp safely — or the recipient changes monitor height through the day.',
   },
   {
-    slug: 'vivo-dual-monitor-desk-mount',
-    role: 'Consolidate two monitor bases into one mount',
-    fitCheck: 'Confirm both screens fit the stated limits and can move without hitting a wall or one another.',
-    skipWhen: 'The recipient frequently changes monitor height; this model uses manual height adjustment.',
+    slug: 'tribesigns-75-inch-solid-wood-bookshelf',
+    role: 'Move storage onto the wall instead of the desk or floor footprint',
+    fitCheck: 'Measure ceiling clearance and the wall run, plan for two people on a 65 lb assembly, and decide whether it needs anchoring for safety.',
+    skipWhen: 'The room has no free wall run, or the only candidate wall is a window, radiator, or rented-lease restriction.',
   },
-      {
-    slug: 'magsafe-compatible-phone-stand',
-    role: 'Give a phone a predictable upright position',
-    fitCheck: 'Confirm MagSafe compatibility, including the phone model and case.',
-    skipWhen: 'The recipient uses an incompatible phone or a thick, non-magnetic case.',
+  {
+    slug: 'poster-master-things-that-require-zero-talent-office-print',
+    role: 'Give the wall above the desk a purpose with zero surface footprint',
+    fitCheck: 'Measure the gap between the top of the monitor and the ceiling, pick a standard frame size, and budget a frame — it ships unframed by default.',
+    skipWhen: 'The desk faces a window or a wall the recipient cannot hang anything on.',
   },
   ] as const;
 
@@ -130,7 +130,7 @@ export default function SmallHomeOfficeGiftGuidePage() {
         </section>
 
         <section className="mt-16" aria-labelledby="products-heading">
-          <div className="section-heading-row"><div><p className="eyebrow">Shortlist</p><h2 id="products-heading" className="section-title">Six upgrades to compare</h2></div><Link href="/shop/home-office/" className="text-link">Browse all home-office finds</Link></div>
+          <div className="section-heading-row"><div><p className="eyebrow">Shortlist</p><h2 id="products-heading" className="section-title">{selectedProducts.length} upgrades to compare</h2></div><Link href="/shop/home-office/" className="text-link">Browse all home-office finds</Link></div>
           <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{selectedProducts.map(({ product }) => <DealCard key={product.id} product={product} />)}</div>
         </section>
 
