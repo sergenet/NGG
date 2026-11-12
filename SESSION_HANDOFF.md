@@ -90,6 +90,36 @@ See `NEXT_BUILD_TODO.md` for the current list. The two navigation controls previ
 - Root cause is template duplication, not thin copy: median 450 words on excluded pages against 440 on indexed ones, but only ~35% of the wording on a `/shop/` page and ~43% on a product page is unique to it. Rewriting the template is the lever; rewriting single pages is not.
 - Buckets naming retired URLs (`/product/govee-ai-sync-box-2/` now 410, the Roomba comparison now 301) are stale and will clear as Google recrawls.
 
+### 12 November 2026 re-read (after the 284-URL release)
+- Header still reads **Indexed 81 / Not indexed 256** of 337 known pages, "last update 11/9/26" — but the exclusion lists already contain product URLs created in today's release, so the tables are fresher than the header date.
+- Reconciled against the live sitemap (`tmp/gsc-report.mjs` over `tmp/sitemap-urls.txt` and `tmp/gsc-buckets.json`): Google knows **123 of the 284** sitemap URLs — **81 indexed, 42 known and refused**. The other **161 have never been crawled or discovered**; that is almost entirely the new imported stock.
+- The 42 refused sitemap URLs are the template-shaped pages, not products: **10 of 14 `/gifts/` hubs**, **5 of 14 `/shop/` categories**, **4 of 5 `/home-office/` articles**, both `/gift-guides/` pages, `/contact/`, `/kitchen/best-kitchen-gadgets-2026-updated/`, and **17 of 236** product pages (only 17 products are known at all).
+- Every one of those verdicts predates today's rewrites: `/gifts/video-call-gifts/` was last crawled **27 Sep**, `/gifts/small-home-office/` **30 Sep**, both rewritten today. Google has judged the old copy, so these numbers cannot yet show whether the rewrite worked.
+- Crawl budget is going to legacy URLs rather than new pages: 79 "Page with redirect" (no-slash variants), 31 "Alternate page with proper canonical tag" (29 of them `?brand=` filter URLs plus `/privacy/` and `/affiliate-disclosure/`), both self-canonicalising 200s today. `/shop/all/` no longer emits `?brand=` links, so those will drain on recrawl.
+- The 404 bucket is already resolved on the server: those URLs answer **410** (removed products) or **301** (retired articles) now. The single `noindex` page is the old `/smart-home` without a slash.
+- Not read in this pass: the two 403s and the one "Google chose a different canonical" URL.
+
+### Indexing requested, 12 November 2026
+Nine URLs queued through URL Inspection → **Request indexing** on the account `sergenet@yahoo.com`. Each one answered `check_circle | Indexing requested | URL was added to a priority crawl queue`, which is the only confirmation GSC gives — the button label does not change consistently afterwards, so the dialog is the evidence, not the button.
+
+| URL | Was in GSC as | Result |
+| --- | --- | --- |
+| `/gifts/video-call-gifts/` | Crawled – not indexed (27 Sep) | requested; button became "Request again" |
+| `/gifts/small-home-office/` | Crawled – not indexed (30 Sep) | confirmed |
+| `/gift-guides/` | Crawled – not indexed (21 Aug) | confirmed |
+| `/contact/` | Crawled – not indexed (13 Jul) | confirmed |
+| `/shop/kitchen/` | Crawled – not indexed (24 Sep) | confirmed (submitted twice; the first live test outlasted the check) |
+| `/shop/home-office/` | Crawled – not indexed (23 Sep) | confirmed |
+| `/shop/travel-tech/` | Crawled – not indexed (24 Sep) | confirmed |
+| `/shop/home-decor/` | Discovered – not indexed | confirmed |
+| `/shop/novelty-tech/` | Discovered – not indexed | confirmed |
+
+Why exactly these: a request is only worth spending on a page whose content changed, and these nine are the pages rewritten since Google's last crawl of them. The other eight excluded `/gifts/` hubs (`coworkers`, `remote-workers`, `new-homeowners`, `ergonomic-desk-worker-gifts`, `home-cooks-under-50`, `home-cooks-by-cooking-style`, `small-kitchen-gifts`, `travelers`) were **not** rewritten, so no request was filed for them — spending the queue on unchanged copy would prove nothing. `travelers` has never been crawled at all; it will surface on its own once the sitemap is re-read.
+
+The remaining 17 refused product pages, the four `/home-office/` articles and `/kitchen/best-kitchen-gadgets-2026-updated/` were not requested: the articles predate the current template and nothing has changed on them.
+
+Each request also runs a live test first, which is why the dialog takes 10–40 s. GSC has a daily request quota; no refusal appeared during this batch of nine, so the ceiling was not hit.
+
 ## 8. Catalogue integrity (12 November 2026)
 - The catalogue is **42 products**, all with a purchasable retailer link. `scripts/validate-catalog.mjs` now fails a build that contains a product without one.
 - Nine products were removed because no storefront could be verified: HUANUO and ErGear monitor mounts (HUANUO no longer sells mounts; ergear.com redirects to HUANUO), the UGREEN MagSafe stand, the Nexbie pet portrait (not a Nexbie product), Dima Eyewear blue-light glasses, the Aerolatte frother (official page has no purchase path), the two Amazon-only items (Associates account closed), and a generic levitating lamp.
@@ -99,11 +129,12 @@ See `NEXT_BUILD_TODO.md` for the current list. The two navigation controls previ
 - Removed products return **410 Gone** (the `.htaccess` rule handles missing product dirs), not 404.
 
 ## 9. Follow-up due around 19 November 2026
-Re-read Search Console and compare against this baseline: 55 of 99 sitemap URLs indexed at the 6 Nov snapshot; sitemap resubmitted 12 Nov carrying **90** URLs after the prune. Worth checking:
-1. Whether `/sitemap.xml` reports 90 discovered pages (if it still says 99, the submission did not trigger a re-read).
-2. Whether the five rewritten `/shop/` categories, `/gift-guides/` and `/contact/` moved out of "Crawled – currently not indexed".
-3. Whether the nine removed product URLs drop out of the 404/410 buckets.
-4. The count of indexed product pages against the 42 that now carry editorial notes (all of them, as of 12 Nov).
+Re-read Search Console and compare against this baseline: **81 indexed of 284 sitemap URLs** on 12 Nov, with 123 URLs known to Google and 161 never crawled. Worth checking:
+1. Whether the never-crawled count (161) has started to fall, and whether "Discovered – currently not indexed" grows rather than shrinks — the latter means Google is queuing 236 product pages faster than it crawls them.
+2. Whether the rewritten `/gifts/` hubs, the five `/shop/` categories, `/gift-guides/` and `/contact/` moved out of "Crawled – currently not indexed" **after** their recrawl (compare the Last crawled column against 12 Nov; earlier verdicts describe pre-rewrite copy).
+3. Whether the 42 refused sitemap URLs fall. If the count stays flat while the new product pages also go unindexed, the lever is editorial on the hubs, not more imports.
+4. How many of the 236 product pages are indexed; 17 were known and refused on 12 Nov and the remaining 219 had not been crawled at all.
+5. Whether the nine URLs in the 12 Nov indexing-request table moved out of "Crawled/Discovered – currently not indexed", or at least show a Last crawled date after 12 Nov. A fresh crawl with the same verdict is the signal that the rewrite itself is the problem, not the crawl schedule.
 
 ## 10. Content depth and link integrity (12 November 2026)
 - `/gifts/small-home-office/` and `/gifts/video-call-gifts/` were down to a single card each after the delistings, and the small-office page still said "Six upgrades to compare". Both list three verified products now and the heading counts the cards.
