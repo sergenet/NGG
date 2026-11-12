@@ -59,7 +59,7 @@ async function load() {
       ['Human page views', sum('page_view'), 'Document requests'],
       ['Daily unique estimates', sum('unique_visitors'), 'Rotating keyed hash'],
       ['Retailer clicks', sum('retailer_click'), 'Purchase intent, not sales'],
-      ['Signup attempts', sum('newsletter_attempt'), 'Not confirmed subscribers'],
+      ['Newsletter submits', sum('newsletter_attempt'), 'Form submits, not subscriptions'],
       ['Checklist downloads', sum('checklist_download'), 'Resource interest'],
     ];
     $('cards').innerHTML = cards
@@ -71,8 +71,10 @@ async function load() {
     table('funnel', [
       ['Page views', sum('page_view')],
       ['Retailer clicks', sum('retailer_click')],
-      ['Signup attempts', sum('newsletter_attempt')],
-      ['Confirmed subscribers', confirmed?.metric_value ?? 0],
+      ['Newsletter submits', sum('newsletter_attempt')],
+      // A missing snapshot means the provider is not connected, which is an unknown
+      // total, not a zero one. Printing 0 here asserted something never observed.
+      ['Confirmed subscribers', confirmed ? confirmed.metric_value : 'Not connected'],
     ], 'Signal', 'Count');
 
     const dims = (type) => data.dims.filter((row) => row.dimension_type === type).slice(0, 10).map((row) => [row.dimension_value, row.metric_count]);
