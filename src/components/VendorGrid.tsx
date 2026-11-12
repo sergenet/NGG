@@ -42,8 +42,8 @@ export function VendorGrid({ vendors, productSlug }: VendorGridProps) {
   return (
     <div className="w-full space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Select Your Retailer</h3>
-        <span className="text-[10px] text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">Secure Link</span>
+        <h3 className="text-xs font-black text-slate-600 uppercase tracking-[0.2em]">Select Your Retailer</h3>
+        <span className="text-[10px] text-slate-600 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">Secure Link</span>
       </div>
       <div className="grid grid-cols-1 gap-3">
         {sortedVendors.map((vendor, index) => {
@@ -85,10 +85,10 @@ export function VendorGrid({ vendors, productSlug }: VendorGridProps) {
                   <span className={`block font-black text-sm leading-none ${vendor.isPrimary ? 'text-blue-600 dark:text-blue-400' : 'text-slate-900 dark:text-white'}`}>
                     Check current price
                   </span>
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">View Deal</span>
+                  <span className="text-[10px] text-slate-600 font-bold uppercase tracking-tighter">View Deal</span>
                 </div>
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                  vendor.isPrimary ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30' : 'bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/30'
+                  vendor.isPrimary ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/30'
                 }`}>
                   <ExternalLink className="w-5 h-5" />
                 </div>
@@ -97,7 +97,7 @@ export function VendorGrid({ vendors, productSlug }: VendorGridProps) {
           );
         })}
       </div>
-      <div className="flex items-start text-xs text-slate-400 mt-2">
+      <div className="flex items-start text-xs text-slate-600 mt-2">
         <Tag className="w-3.5 h-3.5 mr-1.5 shrink-0 mt-0.5" />
         <p>Confirm the current price, availability, shipping, and return terms on the retailer’s site.</p>
       </div>

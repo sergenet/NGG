@@ -178,15 +178,15 @@ export default async function GuidePage({ params }: { params: Promise<{ category
           <p className="mb-8 text-sm font-semibold text-slate-500">Research-based guide by the NewGiftsAndGadgets Research Desk · Reviewed {lastReviewed}</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
-              <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Guide angle</div>
+              <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Guide angle</div>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{getGuideAngle(category)}</p>
             </div>
             <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
-              <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Picks in this guide</div>
+              <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Picks in this guide</div>
               <p className="text-3xl font-black text-slate-900 dark:text-white">{products.length}</p>
             </div>
             <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
-              <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Next step</div>
+              <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Next step</div>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Jump into the product cards below, then verify current retailer terms before you buy.</p>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default async function GuidePage({ params }: { params: Promise<{ category
         <section className="mb-12 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 md:p-8 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Before you buy</p>
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Before you buy</p>
               <h2 className="text-2xl font-black text-slate-900 dark:text-white">What this guide is really helping you do</h2>
             </div>
             <Link href={`/shop/${category}`} className="text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline">
@@ -212,7 +212,7 @@ export default async function GuidePage({ params }: { params: Promise<{ category
         </section>
 
         <section className="mb-12 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm" aria-labelledby="compare-heading">
-          <div className="p-6 md:p-8"><p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400">Decision table</p><h2 id="compare-heading" className="mt-2 text-2xl font-black text-slate-900">Compare the shortlist</h2></div>
+          <div className="p-6 md:p-8"><p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600">Decision table</p><h2 id="compare-heading" className="mt-2 text-2xl font-black text-slate-900">Compare the shortlist</h2></div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[720px] border-collapse text-left text-sm">
               <thead className="bg-slate-100 text-xs uppercase tracking-wider text-slate-600"><tr><th className="px-6 py-4">Product</th><th className="px-6 py-4">Best fit</th><th className="px-6 py-4">Catalog price</th><th className="px-6 py-4">Main tradeoff</th></tr></thead>
@@ -248,7 +248,7 @@ export default async function GuidePage({ params }: { params: Promise<{ category
           <section className="mt-20 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 md:p-8 shadow-sm">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Related guides</p>
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Related guides</p>
                 <h2 className="text-2xl font-black text-slate-900 dark:text-white">More pages in the same category</h2>
               </div>
               <Link href={`/shop/${category}`} className="text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline">

@@ -73,7 +73,7 @@ export function DealCard({ product }: DealCardProps) {
                   {/* Price Header */}
                   <div className="flex items-center justify-between py-2 border-t border-slate-100 dark:border-slate-800/60">
                     <div className="flex flex-col">
-                      <span className="text-[10px] text-slate-400 dark:text-slate-500 font-black uppercase tracking-wider">Typical price band</span>
+                      <span className="text-[10px] text-slate-600 dark:text-slate-500 font-black uppercase tracking-wider">Typical price band</span>
                       <span className="text-2xl font-black text-slate-900 dark:text-white">
                         {formatPriceBracket(product.tags.priceBracket)}
                       </span>

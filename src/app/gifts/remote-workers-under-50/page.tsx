@@ -85,7 +85,7 @@ export default function RemoteWorkerGiftsUnderFiftyPage() {
           <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-600">
             A low price does not make a desk accessory useful. These ideas solve a specific workspace problem and include the fit or setup question worth checking before you buy.
           </p>
-          <p className="mt-5 text-sm leading-6 text-slate-500">
+          <p className="mt-5 text-sm leading-6 text-slate-600">
             Updated August 23, 2026. “Under $50” reflects our catalog snapshot, not a guaranteed retailer price. Confirm the current total, shipping, model, and return terms before purchasing.
           </p>
         </header>

@@ -43,7 +43,7 @@ export function StickyMobileBanner() {
           <p className="text-white font-bold text-sm leading-tight">
             Get the Free 2026 Checklist
           </p>
-          <p className="text-slate-400 text-[10px] uppercase tracking-wider font-semibold">
+          <p className="text-slate-600 text-[10px] uppercase tracking-wider font-semibold">
             Avoid Buying Junk Tech
           </p>
         </div>

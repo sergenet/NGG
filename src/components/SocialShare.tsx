@@ -39,7 +39,9 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title, media }) =
         </svg>
       ),
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      color: 'bg-[#1877F2] hover:bg-[#0d65d9]',
+      // Facebook's own #1877F2 only reaches 4.23:1 against white, below AA for the
+      // 10px label. The darker brand-consistent shade passes at 5.4:1.
+      color: 'bg-[#0d65d9] hover:bg-[#0a55b8]',
     }
   ];
 

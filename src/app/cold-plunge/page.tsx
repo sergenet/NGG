@@ -172,7 +172,7 @@ export default function ColdPlungePage() {
                 priority
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center text-slate-400">Plunge Chill</div>
+              <div className="absolute inset-0 flex items-center justify-center text-slate-600">Plunge Chill</div>
             )}
           </div>
         </div>
@@ -440,7 +440,7 @@ export default function ColdPlungePage() {
               'You are not going to use it several times a week. The running cost only makes sense against a habit.',
             ].map((line) => (
               <li key={line} className="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
-                <CheckCircle2 className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" aria-hidden="true" />
+                <CheckCircle2 className="w-5 h-5 text-slate-500 shrink-0 mt-0.5" aria-hidden="true" />
                 <span>{line}</span>
               </li>
             ))}
@@ -481,7 +481,7 @@ export default function ColdPlungePage() {
               <details key={faq.question} className="group py-5">
                 <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900 dark:text-white">
                   {faq.question}
-                  <span className="text-slate-400 group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+                  <span className="text-slate-500 group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
                 </summary>
                 <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">{faq.answer}</p>
               </details>

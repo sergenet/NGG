@@ -73,7 +73,7 @@ export default function SmallHomeOfficeGiftGuidePage() {
           <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-600">
             The wrong office gift creates clutter. The right one replaces something bulky, moves equipment off the desk, or removes a recurring setup annoyance. Measure first, then choose.
           </p>
-          <p className="mt-5 text-sm leading-6 text-slate-500">
+          <p className="mt-5 text-sm leading-6 text-slate-600">
             Updated August 23, 2026. Product details and catalog prices can change. Verify dimensions, compatibility, current price, shipping, warranty, and return terms with the retailer.
           </p>
         </header>

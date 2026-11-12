@@ -43,7 +43,7 @@ export default function AdSlot({ className = '', slot = AD_SLOT }: { className?:
 
   return (
     <div className={`ad-slot ${className}`.trim()}>
-      <p className="mb-2 text-center text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">
+      <p className="mb-2 text-center text-[10px] font-black uppercase tracking-[0.25em] text-slate-600">
         Advertisement
       </p>
       <ins

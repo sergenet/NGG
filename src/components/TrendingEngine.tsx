@@ -29,7 +29,7 @@ export function TrendingEngine({ products }: TrendingEngineProps) {
             </div>
             <h2 className="text-4xl md:text-5xl font-black italic">Trending This Week</h2>
           </div>
-          <Link href="/shop/all" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold group">
+          <Link href="/shop/all" className="flex items-center gap-2 text-slate-600 hover:text-white transition-colors font-bold group">
             <span>View all gadgets</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>

@@ -420,11 +420,11 @@ export default async function CategoryPage({
             </div>
             <div className="grid grid-cols-2 gap-3 text-sm text-slate-500 dark:text-slate-400">
               <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Products</div>
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Products</div>
                 <div className="text-2xl font-black text-slate-900 dark:text-white">{baseProducts.length}</div>
               </div>
               <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Filters</div>
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Filters</div>
                 <div className="text-2xl font-black text-slate-900 dark:text-white">3</div>
               </div>
             </div>
@@ -444,7 +444,7 @@ export default async function CategoryPage({
             <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
                 <div>
-                  <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Featured picks</p>
+                  <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Featured picks</p>
                   <h2 className="text-2xl font-black text-slate-900 dark:text-white">
                     {category === 'new-arrivals' ? 'Latest Highlight Launches' : 'Best starting points in this category'}
                   </h2>
@@ -496,7 +496,7 @@ export default async function CategoryPage({
             </section>
 
             <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">How to choose</p>
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">How to choose</p>
               <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">What to look for before you click</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
@@ -533,7 +533,7 @@ export default async function CategoryPage({
 
             {categoryCopy.sections && categoryCopy.sections.length > 0 && (
               <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
-                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">In depth</p>
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">In depth</p>
                 <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">
                   How this {categoryName.toLowerCase()} collection is built
                 </h2>
@@ -550,7 +550,7 @@ export default async function CategoryPage({
             )}
 
             <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Frequently asked</p>
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Frequently asked</p>
               <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">Common questions for this category</h2>
 
               <div className="space-y-4">

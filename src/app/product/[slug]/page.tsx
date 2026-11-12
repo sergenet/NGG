@@ -229,7 +229,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Disclosure */}
-        <div className="mb-6 flex items-center justify-center gap-2 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-widest bg-white/50 dark:bg-slate-900/50 py-2 rounded-full border border-slate-100 dark:border-slate-800">
+        <div className="mb-6 flex items-center justify-center gap-2 text-[10px] sm:text-xs text-slate-600 font-medium uppercase tracking-widest bg-white/50 dark:bg-slate-900/50 py-2 rounded-full border border-slate-100 dark:border-slate-800">
           <Clock className="w-3 h-3" />
           Research desk update: {product.lastUpdated || 'May 2026'} • Retailer relationships are disclosed where active.
         </div>
@@ -320,7 +320,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-8">
           <section className="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-3">Editorial context</p>
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-3">Editorial context</p>
             <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-4">
               Why this product makes the cut
             </h2>
@@ -333,21 +333,21 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
             <dl className="mb-6 grid grid-cols-2 gap-3 text-sm md:grid-cols-4">
               <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
-                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Brand</dt>
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-600">Brand</dt>
                 <dd className="font-bold text-slate-900 dark:text-white">{product.brand ?? 'Unlisted'}</dd>
               </div>
               <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
-                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Retailers tracked</dt>
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-600">Retailers tracked</dt>
                 <dd className="font-bold text-slate-900 dark:text-white">{trackedPrices.length}</dd>
               </div>
               <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
-                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Lowest recorded</dt>
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-600">Lowest recorded</dt>
                 <dd className="font-bold text-slate-900 dark:text-white">
                   {lowestPrice !== null ? money(lowestPrice) : lowestRecorded !== null ? money(lowestRecorded) : '—'}
                 </dd>
               </div>
               <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2">
-                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Notes updated</dt>
+                <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-600">Notes updated</dt>
                 <dd className="font-bold text-slate-900 dark:text-white">{product.lastUpdated ?? '—'}</dd>
               </div>
             </dl>
@@ -386,7 +386,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     </li>
                   ))}
                 </ul>
-                <p className="mt-3 text-xs leading-6 text-slate-400">
+                <p className="mt-3 text-xs leading-6 text-slate-600">
                   These are the points that decided the shortlisting, including the ones that count against it.
                 </p>
               </div>
@@ -394,7 +394,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
             {product.editorial && product.editorial.length > 0 && (
               <div className="mt-8 border-t border-slate-200 dark:border-slate-800 pt-6">
-                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-4">Editorial notes</p>
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-4">Editorial notes</p>
                 <div className="space-y-5">
                   {product.editorial.map((note) => (
                     <div key={note.heading}>
@@ -466,7 +466,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <section className="mt-12 bg-white dark:bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Related picks</p>
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Related picks</p>
                 <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">Other products in the same decision set</h2>
               </div>
               <Link href={`/shop/${categorySlug}/`} className="text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline">See the full category</Link>

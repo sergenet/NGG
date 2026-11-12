@@ -69,7 +69,7 @@ export default function Home() {
           <div className="hero-card-grid" aria-label="Featured gift categories">
             {categoryDetails.slice(0, 4).map((category, index) => (
               <Link key={category.slug} href={`/shop/${category.slug}/`} className={`hero-category-card hero-category-${index + 1}`}>
-                <span className="text-4xl" aria-hidden="true">{category.icon}</span><span className="mt-8 block text-sm font-bold uppercase tracking-[.18em] text-slate-500">Explore</span><span className="mt-1 block text-xl font-black text-slate-950">{category.name}</span>
+                <span className="text-4xl" aria-hidden="true">{category.icon}</span><span className="mt-8 block text-sm font-bold uppercase tracking-[.18em] text-slate-700">Explore</span><span className="mt-1 block text-xl font-black text-slate-950">{category.name}</span>
               </Link>
             ))}
           </div>
@@ -115,7 +115,7 @@ export default function Home() {
       <section className="site-container pb-16" aria-labelledby="category-heading">
         <div className="section-heading-row"><div><p className="eyebrow">Or start with their interests</p><h2 id="category-heading" className="section-title">Shop ideas, not endless aisles</h2></div><p className="section-intro">Focused collections make it easier to get from “I need a gift” to a shortlist worth comparing.</p></div>
         <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {categoryDetails.map((category) => <Link key={category.slug} href={`/shop/${category.slug}/`} className="category-tile group"><span className="category-icon" aria-hidden="true">{category.icon}</span><span><strong className="block text-lg text-slate-950">{category.name}</strong><span className="mt-1 block text-sm text-slate-600">{category.copy}</span></span><ArrowRight className="ml-auto h-5 w-5 text-slate-400 transition-transform group-hover:translate-x-1" /></Link>)}
+          {categoryDetails.map((category) => <Link key={category.slug} href={`/shop/${category.slug}/`} className="category-tile group"><span className="category-icon" aria-hidden="true">{category.icon}</span><span><strong className="block text-lg text-slate-950">{category.name}</strong><span className="mt-1 block text-sm text-slate-600">{category.copy}</span></span><ArrowRight className="ml-auto h-5 w-5 text-slate-600 transition-transform group-hover:translate-x-1" /></Link>)}
         </div>
       </section>
 
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       <section className="site-container pb-16" aria-labelledby="budget-heading">
-        <div className="rounded-[2.5rem] bg-[#18231d] px-6 py-10 text-white md:px-10 md:py-14"><div className="section-heading-row"><div><p className="eyebrow eyebrow-dark">Ready to compare</p><h2 id="budget-heading" className="section-title text-white">Available from active retailers</h2></div><Link href="/shop/all/" className="text-link text-amber-300">Browse all researched picks <ArrowRight className="h-4 w-4" /></Link></div><div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{retailerBacked.map((product) => <DealCard key={product.id} product={product} />)}</div></div>
+        <div className="rounded-[2.5rem] bg-[#18231d] px-6 py-10 text-white md:px-10 md:py-14"><div className="section-heading-row"><div><p className="eyebrow eyebrow-dark">Ready to compare</p><h2 id="budget-heading" className="section-title text-white!">Available from active retailers</h2></div><Link href="/shop/all/" className="text-link text-amber-300!">Browse all researched picks <ArrowRight className="h-4 w-4" /></Link></div><div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{retailerBacked.map((product) => <DealCard key={product.id} product={product} />)}</div></div>
       </section>
       <section className="site-container pb-20"><NewsletterInline /></section>
     </main>
