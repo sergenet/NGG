@@ -1,6 +1,17 @@
 # Should the catalogue be pruned?
 
-**Decision, 12 November 2026: not yet, and not for the reason it was proposed.**
+> **This document records two decisions, and the second supersedes the first.**
+>
+> **12 November, morning — do not prune yet.** The catalogue was not the cause of the site's
+> search problem, so removing pages would have changed no number. Reasoning below.
+>
+> **12 November, later — prune to the 42 hand-picked products.** AdSense refused the site for
+> Low value content the same day, which makes the 194 imported pages a fault rather than merely
+> inert. The first decision was right about search and incomplete about value. The reconciled
+> decision is in **“Reconciled with the AdSense verdict”** at the end of this file; read that
+> one for the current position, and this one for why it is not a reversal of evidence.
+
+**First decision, 12 November 2026: not yet, and not for the reason it was proposed.**
 
 Pruning was on the table because 236 product pages looked like a liability: near-duplicate
 text, 100 of them written only yesterday, and an index that refused most of them. The
@@ -149,3 +160,128 @@ write for queries people actually search.
 If the 19 November re-check shows the rewritten product pages entering the index and
 attracting impressions, this document is wrong about demand and the catalogue is the asset,
 not the liability. That is the check to run before spending anything on pruning.
+
+---
+
+# Reconciled with the AdSense verdict (12 November 2026)
+
+**Decision: prune — not to 236, and not by similarity. Cut the product pages to the 42 that
+were chosen by hand, and consolidate the rest into category guides.**
+
+The earlier conclusion above is superseded, and the reason is worth stating precisely
+because it was not a mistake of evidence. It was a mistake of criteria.
+
+## What changed
+
+Not the traffic data. Every number in the first half of this document still holds: 0 clicks,
+21 impressions, 81 indexed of 337, and no current product page earning an impression except
+`nemo-grabo-v2`. The argument was **cost-based** — removing pages with no traffic costs
+nothing, so pruning is cheap; but it also *earns* nothing, so there is no reason to bother.
+
+That accounting was correct while search was the only judge. It stopped being correct when
+AdSense refused the site on **12 November** for **Low value content**, a policy that judges
+the site's aggregate value and explicitly requires it to "provide substantial unique value".
+A second judge with authority over revenue now treats the status quo as a fault. Pruning
+therefore has a benefit it did not have before, and the cost side is unchanged.
+
+## The evidence that settles the shape
+
+Provenance, not word count. Measured from `src/lib/data/products.json`:
+
+| | |
+|---|---|
+| Product pages | 236 |
+| Hand-picked, with `pros` / `cons` / `whoShouldBuy` recorded | **42** |
+| Imported from merchant feeds | **194** |
+| Whose `brand` field is the supplier, not a manufacturer | **207** |
+| `brand` = Traverseon | 108 |
+| `brand` = DealGenius | 96 |
+| Products with a real manufacturer brand | **29** |
+
+The two groups do not overlap at all: **all 29 real-brand products are inside the 42
+hand-picked ones, and every one of the 194 imports has a supplier name in its brand field.**
+There is no real-branded import to reconsider.
+
+The 13 hand-picked products that still carry a supplier name (the three Poster Master prints,
+the baitcasting reel, the milk frother, the food scale and seven others) are hand-picked
+*despite* their branding, because their retailer and listing were verified individually. Their
+brand field should be corrected to the actual maker — that is a data fix, and it is not a
+reason to keep the other 194.
+
+This is what a reviewer sees. A page for a butane torch lighter, a 12V car heater, a camping
+hammock and an air mattress all filed under the brand "Traverseon" is not a brand — it is a
+feed. The anonymity is visible on the page, in the byline position where a reader expects a
+manufacturer, before anyone counts a word.
+
+Substance, measured separately (`ADSENSE_READINESS.md` §Test 1): 34 words of merchant
+description, 112 words of site-written notes, **~146 words of substance per page**, and 230
+of 236 pages under 150 words of their own notes.
+
+## The recommended shape
+
+| | Now | After |
+|---|---|---|
+| Product pages | 236 | **42** |
+| Non-product pages | 48 | **48 + 6–10 new guides** |
+| Product share of the sitemap | 83% | **≈43%** |
+| Pages with a hand-picked record and a purchasable link | 42 (18%) | **42 (100%)** |
+| Pages with a real manufacturer brand | 29 (12%) | **29 (69% of products)** |
+
+**Keep** the 42 hand-picked products. Each has a real retailer, a real brand, recorded pros
+and cons, and two notes anchored to its own listing. Those are the pages that can survive a
+reviewer asking "what is this worth".
+
+**Consolidate** the 194 imports rather than delete them. Their product *types* have real
+search demand — winter car heaters, camping hammocks, air mattresses, kitchen smallwares —
+but as 194 individual 146-word pages they cannot serve it. Each category becomes one
+substantive guide that compares the strongest handful and states plainly what the rest are:
+products in a feed, not tested units.
+
+| Category | Imports | Guide it becomes |
+|---|---|---|
+| Outdoor Adventure | 55 | camping and vehicle-camping kit |
+| Kitchen | 52 | kitchen smallwares |
+| Travel Tech | 28 | travel and in-car power |
+| Pet Tech | 20 | pet travel and grooming |
+| Home Office | 20 | desk accessories |
+| Home Decor | 19 | small-space decor |
+
+**Retire** the URLs with a 301 to the guide or category that covers the product type, using
+the same pattern as the 76 redirects in §16 — a retired product points at the closest live
+page rather than 410ing, so nothing indexed dies and nothing transfers a thin page's weight.
+
+## Sequencing
+
+1. **Traffic before pruning.** The 19 November re-read decides whether the rewritten hubs
+   moved. Pruning into a site with no audience changes the value judgement without changing
+   the demand one, and AdSense tests both.
+2. **Then the six guides, then the 301s, then the deletions** — in that order, so no URL is
+   ever retired before its destination exists. Deleting first would leave 194 redirects to
+   pages that do not exist.
+3. **Then reapply to AdSense**, not before. The decision rule is in `ADSENSE_READINESS.md`.
+
+## Trade-offs accepted
+
+- **Losing 194 URLs.** They have produced no clicks in three months and 161 sitemap URLs have
+  never even been crawled. What is lost is the *appearance* of a large catalogue.
+- **Outdoor Adventure stops being a product section.** 55 of its 64 products are imports, and
+  only 9 were hand-picked (8 of those with a real brand). The category survives as a guide, not
+  as a grid.
+- **Kitchen shrinks from 58 to 6.** The largest hand-picked categories are Home Office and
+  Outdoor at 9 each, so the curated catalogue is genuinely small. That is the point.
+- **More work per page, fewer pages.** Six guides written properly is a larger task than 194
+  pages of feed copy, and it cannot be automated from a feed — which is exactly why it counts
+  as unique value.
+- **This may still not earn approval.** Test 3 is user interest, and a curated site with no
+  traffic fails it just as a thin one does. Pruning removes one of two failures, not both.
+
+## What would change this recommendation
+
+- The 19 November re-read showing a *current* product page — one of the 194 — gaining
+  impressions. That would say some import types do earn search demand as individual pages,
+  and they should be deepened rather than consolidated.
+- AdSense approving the site on its current shape, which would leave the catalogue untouched
+  and make the ratio argument irrelevant.
+- Evidence that the six guides cannot be written from what the listings record. They can be:
+  every claim would be anchored to a listed specification, and where the listing is silent the
+  guide says so, as the notes already do.

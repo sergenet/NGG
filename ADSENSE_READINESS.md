@@ -111,14 +111,16 @@ In the order that matters, not the order that is easiest:
    `SESSION_HANDOFF.md` §9 and `TRAFFIC_PLAN.md`. AdSense should be reconsidered *after*
    the 19 November re-read shows movement, not before.
 2. **Change the ratio, not the copy.** 83% product pages is the structural signal. A site
-   that is mostly affiliate listings reads as a shopfront; a site with twenty substantial
-   guides and a smaller, well-chosen catalogue reads as a publication. This is where the
-   pruning question in `CATALOGUE_PRUNE_DECISION.md` needs revisiting — that document
-   decided *not* to prune on search-demand grounds, which remains correct, but it did not
-   weigh AdSense's "substantial unique value" test, which points the other way.
-3. **Deepen fewer pages.** 112 words per product is below any threshold a reviewer would
-   call substantial. Deepening 30 pages properly beats adding notes to 236, and it is the
-   only version of this work with a finish line.
+   that is mostly affiliate listings reads as a shopfront; a site with substantial guides and
+   a smaller, well-chosen catalogue reads as a publication. **This is now decided** — the
+   reconciled shape is in `CATALOGUE_PRUNE_DECISION.md`: keep the 42 hand-picked products,
+   consolidate the 194 imports into six category guides, 301 the retired URLs. Product share
+   drops 83% → ~43%.
+3. **Provenance is visible on the page.** 207 of 236 products carry the *supplier* in the
+   brand field (108 Traverseon, 96 DealGenius, 3 Poster Master). A butane torch, a car heater
+   and a hammock all bylined to the same aggregator reads as a feed before anyone counts a
+   word. Only 29 products have a real manufacturer brand, and all 29 sit inside the 42 that
+   were hand-picked; every one of the 194 imports is supplier-branded.
 4. **Show the cadence.** Dates on guides, a named author, an archive that grows. Cheap, and
    it addresses the one criterion that is close to being met.
 

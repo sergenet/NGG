@@ -314,10 +314,22 @@ Re-run with `node scripts/verify-live-notes.mjs` after any content or deploy cha
   judged the current content. Of five sites on this AdSense account, three are refused for
   the same reason and one for a missing `ads.txt`; only `blueseasfishing.com` is Ready.
 - Full measurement, the reasoning and a decision rule for when to reapply: `ADSENSE_READINESS.md`.
-- Tension worth resolving rather than ignoring: `CATALOGUE_PRUNE_DECISION.md` concluded *not*
-  to prune, on search-demand grounds, which still holds. It did not weigh this policy's
-  "substantial unique value" test, which points the other way. That is the next real
-  decision on this project, and it is not a code change.
+- **The tension is resolved, and the prune decision is reversed on value grounds.**
+  `CATALOGUE_PRUNE_DECISION.md` now carries both decisions. The morning conclusion (do not
+  prune; removing traffic-less pages changes no number) was cost-based and correct while
+  search was the only judge. This policy adds a benefit to pruning that did not exist before,
+  so the same evidence now points the other way.
+- The evidence that settles the *shape* is provenance, not word count: **207 of 236 products
+  carry the supplier in the `brand` field** (108 Traverseon, 96 DealGenius, 3 Poster Master).
+  Only **29** have a real manufacturer brand, and **all 29 are inside the 42 hand-picked
+  products** — no real-brand product was imported. The other 13 hand-picked ones carry a
+  supplier name too (the three Poster Master prints, a baitcasting reel, two kitchen items),
+  which is a reason to fix their brand field, not to keep the other 194.
+- Recommended shape: **236 → 42 product pages**, the 194 imports consolidated into six
+  category guides, retired URLs 301'd, product share of the sitemap 83% → ~43%.
+- Order matters and is recorded: traffic first (19 November re-read), then the guides, then the
+  301s, then the deletions — no URL retired before its destination exists. Not implemented yet;
+  it is a content programme, not a code change.
 
 ### `operations-console/deploy_php.py` repaired (was §14)
 - The tool could not authenticate: `NGG_FTP_PASSWORD` in `.env.local` returns **530**, while the
