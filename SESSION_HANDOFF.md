@@ -189,7 +189,7 @@ Re-read Search Console and compare against this baseline: **81 indexed of 284 si
 ### Fourth tranche, completing the catalogue (12 November 2026)
 - Threshold: every remaining un-noted product. **100 products, 200 notes**, written in four files and applied through one checked merge: 25 / 25 / 27 / 23 keys, each carrying exactly two notes, verified against the un-noted set before any data was written (0 missing, 0 extra, 0 duplicates).
 - **All 236 product pages now carry two per-product notes; 472 in total.** No page relies on template phrasing for its substance any more.
-- After: **no pair at or above 0.70 remains** (it was 257 pairs at that level before this pass). Whole page mean **0.34 → 0.31**, worst **0.80 → 0.67**; main content mean **0.24 → 0.21**, worst **0.75 → 0.61**; mean content words **549 → 598**, minimum **408 → 485**.
+- After: **no pair at or above 0.70 remains** (it was 257 pairs at that level before this pass). Whole page mean **0.34 → 0.31**, worst **0.80 → 0.67**; main content mean **0.24 → 0.21**, worst **0.75 → 0.61**; mean content words **549 → 598**, minimum **408 → 485**. (That word count is a whole-`<main>` measure and includes shared page furniture — the per-page substance figure is ~146 words, see §18.)
 - The most similar two pages on the site are now two SUV tailgate canopies at **0.61**, and they are genuinely similar products — one a mosquito screen and sun shade, the other a 210T canopy with a 3000 mm rating. Their notes lead with that difference rather than around it.
 - Same anchor rule as before. Where a listing states nothing — seat height, runtime, pack weight, battery type — the note names the gap. Where a listing contradicts itself, the page says so: the 3-in-1 pet carrier headlines 28 lb while the description limits cats to 25 and dogs to 20, and the note tells the reader to use the smaller number.
 - Two claims were handled with care rather than enthusiasm: the hydrogen water bottle is described as a 460 ml bottle with a display and three modes, with the antioxidant language marked as unestablished; the 350 W plug-in heater is described as warming a person, not a room, because 350 W is about a quarter of a full-size space heater.
@@ -286,6 +286,38 @@ Re-run with `node scripts/verify-live-notes.mjs` after any content or deploy cha
   the rewrites, the 301s or the notes. §9 lists the five comparisons to make.
 - **Nothing else.** The two open items above are external to this repository: one needs a
   quota reset, one needs a date.
+
+## 18. AdSense refused the site: Low value content (12 November 2026)
+- Read from AdSense → Sites while signed in as the property owner. `newgiftsandgadgets.com`
+  shows **Needs attention · Low value content · ads.txt Authorized**, last updated
+  **12 Nov 2026 09:29 PST** — this morning, on the current site. The rejection email does not
+  name a policy; the Sites page does.
+- The policy text names **three** tests, not one: substantial unique value, a consistent web
+  presence, and genuine user interest sufficient for a commercial partnership. Measured
+  against those, the site fails the first and the third.
+- **A number in this document was misleading and is corrected here.** "Mean content words
+  598" (§13, measured on `<main>`) counts the retailer grid, the "Keep comparing" aside and
+  the shared page furniture, which are near-identical on every product page. Measured from
+  `products.json` alone, a product page carries **34 words of merchant description and 112
+  words of written notes — about 146 words of substance**, and **230 of 236 pages are under
+  150 words** of their own notes. 598 was the right figure for duplication, which is what
+  `scripts/measure-content-depth.mjs` was built to measure; it is the wrong figure for
+  substance, which is what AdSense judges.
+- Structural ratio: **236 of 284 sitemap URLs (83%) are product pages.** 48 are not.
+- Demand: **0 clicks and 21 impressions** on 11 Aug – 10 Nov, 81 indexed of 337 known. This is
+  the criterion no rewrite reaches.
+- Everything mechanical passes and should not be revisited: ownership verified, `ads.txt`
+  Authorized and served correctly, loader present, all seven policy pages live, privacy
+  policy 1,212 words with an Advertising section and a consent platform, analytics gated on
+  opt-in.
+- **Do not press Request review yet.** The verdict is from today, so Google has already
+  judged the current content. Of five sites on this AdSense account, three are refused for
+  the same reason and one for a missing `ads.txt`; only `blueseasfishing.com` is Ready.
+- Full measurement, the reasoning and a decision rule for when to reapply: `ADSENSE_READINESS.md`.
+- Tension worth resolving rather than ignoring: `CATALOGUE_PRUNE_DECISION.md` concluded *not*
+  to prune, on search-demand grounds, which still holds. It did not weigh this policy's
+  "substantial unique value" test, which points the other way. That is the next real
+  decision on this project, and it is not a code change.
 
 ### `operations-console/deploy_php.py` repaired (was §14)
 - The tool could not authenticate: `NGG_FTP_PASSWORD` in `.env.local` returns **530**, while the
