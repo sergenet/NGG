@@ -12,15 +12,21 @@ interface PrimaryCTAProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElem
   storeName?: string;
   productSlug?: string;
   className?: string;
+  /**
+   * Names the CTA that was clicked. A page with several offers needs this to
+   * tell them apart in analytics; it also becomes the outbound utm_content.
+   * Defaults to the original single-CTA value so existing cards are unchanged.
+   */
+  placement?: string;
 }
 
-export function PrimaryCTA({ href, storeName = 'Amazon', productSlug, className, ...props }: PrimaryCTAProps) {
+export function PrimaryCTA({ href, storeName = 'Amazon', productSlug, className, placement = 'primary_cta', ...props }: PrimaryCTAProps) {
   if (!isActiveRetailerUrl(href)) return null;
-  const trackedHref = withAffiliateTracking(href, 'primary-cta');
+  const trackedHref = withAffiliateTracking(href, placement.replace(/_/g, '-'));
 
   const handleClick = () => {
     trackEvent('affiliate_click', {
-      placement: 'primary_cta',
+      placement,
       vendor: storeName,
       product_slug: productSlug,
       destination: trackedHref,
