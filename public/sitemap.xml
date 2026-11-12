@@ -122,6 +122,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://newgiftsandgadgets.com/home-decor/small-space-lighting-what-earns-a-socket/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://newgiftsandgadgets.com/home-office/best-ergonomic-chairs/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -129,7 +135,7 @@
   </url>
   <url>
     <loc>https://newgiftsandgadgets.com/home-office/best-monitor-arms-for-dual-setups-2026/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -141,7 +147,7 @@
   </url>
   <url>
     <loc>https://newgiftsandgadgets.com/home-office/essential-desk-upgrades/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -159,7 +165,19 @@
   </url>
   <url>
     <loc>https://newgiftsandgadgets.com/kitchen/best-kitchen-gadgets-2026-updated/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://newgiftsandgadgets.com/outdoor-adventure/cold-weather-camping-kit-what-to-buy-and-in-what-order/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://newgiftsandgadgets.com/pet-tech/pet-travel-kit-car-trail-and-home/</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1690,6 +1708,12 @@
     <loc>https://newgiftsandgadgets.com/terms/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://newgiftsandgadgets.com/travel-tech/in-car-power-and-comfort-on-a-long-drive/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://newgiftsandgadgets.com/work-with-us/</loc>
