@@ -206,7 +206,7 @@ Re-read Search Console and compare against this baseline: **81 indexed of 284 si
 - Read live from Search Console (report last updated **9 November**, so the 12 November deploys are not in it): **81 indexed, 256 not indexed** of 337 known URLs. Not-indexed reasons: crawled-not-indexed 114, redirect 79, alternate canonical 31, discovered-not-indexed 19, 404 9, 403 2, noindex 1, duplicate 1.
 - Performance, 11 Aug – 10 Nov: **0 clicks**, 21 impressions on the summary tile, average position 11.8, 33 pages with any impression. The tile disagrees with the pages table (which sums higher); the disagreement is noted in the decision doc rather than resolved, and it does not change the conclusion of zero clicks.
 - **Ten of the eleven product pages with any impression return 410** — they are delisted products from §8. Only `nemo-grabo-v2-electric-vacuum-lifter` is still in the catalogue and it has one impression. Every other current product page has zero impressions in three months.
-- `/audio/` serves 200 with an old "Premium Audio & Headphone Reviews 2026" title although `out/audio` is not in the build, and it is excluded from pruning because `audio` is listed in `PROTECTED` in `tools/prune-stale.py`. It is the third-highest page by impressions (7). Either rebuild it or remove and redirect it.
+- `/audio/` served 200 with an old "Premium Audio & Headphone Reviews 2026" title although `out/audio` is not in the build. It is the third-highest page by impressions (7). **Resolved 12 November** — see §17: it 301s to `/shop/home-entertainment/` now.
 - The prune decision and its trade-offs are written up in `CATALOGUE_PRUNE_DECISION.md`: do not prune yet, because there is no demand to protect and the rewritten pages have not been judged on their current content. Re-read on **19 November**; the numbers to compare are the indexed count, the 114 crawled-not-indexed, and whether any current product page gains impressions.
 
 ## 16. 410s and 404s recovered as 301s (12 November 2026)
@@ -222,8 +222,67 @@ Re-read Search Console and compare against this baseline: **81 indexed of 284 si
 - **Unknown slugs still 410.** `/product/not-a-real-product-xyz/` and its bare form both answered 410 after the deploy; a live product page answered 200.
 - Verification: offline check (76 rules, 18 targets, every target present in `out/`); deploy extracted **2,613 files**; live check of **all 152 URL variants** — every one **301 to its expected target**, and all 18 targets **200**; `/comparisons/` and `/comparisons` both **301 → /shop/all/**; live smoke check **48/48**. Reproduce with `npm run check:redirects` (offline) and `npm run check:redirects:live`.
 - Deploy hazard found and fixed: `next build` did **not** re-copy `public/.htaccess` over the existing `out/.htaccess`, so the first attempt shipped the previous rule set and `/comparisons/` stayed 410. `deploy-zip.py` now copies that file into `out/` before zipping. Any future question of "the redirect is in the repo but not live" starts there.
-- What this does not do: Search Console will not move until Google re-crawls, and the report it serves is from 9 November. The 79 "page with redirect" URLs were left alone — they already point somewhere valid, and stacking another hop would only slow them down. `/audio/` is still 200 with a stale page (see §15).
+- What this does not do: Search Console will not move until Google re-crawls, and the report it serves is from 9 November. The 79 "page with redirect" URLs were left alone — they already point somewhere valid, and stacking another hop would only slow them down. (`/audio/` was still 200 at this point; it was redirected in §17.)
 - Re-indexing requests, 12 November: the ten delisted product pages that still carry impressions were submitted through URL Inspection. **One was accepted** (`/product/govee-ai-sync-box-2/` — "added to a priority crawl queue"); the second was refused with **Quota Exceeded**, and the remaining eight were not attempted. The property's allowance had already been used up by the second attempt (the button on the first URL already read "Request again", so it had been submitted on some earlier occasion), and Google exposes no history of past requests, so only that one is confirmed. **Nine still pending.**
 - What URL Inspection showed for the old URLs matters more than the submission: `govee-ai-sync-box-2` reported **last crawl 10 November, 09:16** — before the redirect existed — and `elgato-prompter` reported `Crawled - currently not indexed` from 27 September. Google's view of these URLs is the pre-fix state, so until they are recrawled the 301s have transferred nothing.
 - Record: `data/search-console/2026-11-12/indexing-requests.md` — the per-URL table, what was accepted, what was refused, and why the targets were not submitted instead.
 - The nine pending submissions are queued as plain URLs in `data/search-console/2026-11-12/pending-indexing-queue.txt`, with the resumption procedure in the record beside it. Quota resets at midnight Pacific (08:00 UTC), so retrying before then only reproduces the refusal.
+
+## 17. Link sweep, `/audio/`, and the full live crawl (12 November 2026)
+
+### The affiliate checker was blind on bot walls (commit `ca4818f`)
+- The checker sent one fixed Chrome user-agent from Node's own TLS stack. Storefronts that
+  fingerprint the connection answered 429 or 403, and the checker counted those as
+  "unverified" — so a dead merchant behind a wall could not fail the check. On a fixed 14-link
+  sample it verified **3 of 14**.
+- Three changes: rotate through several identities instead of impersonating one browser,
+  retry across `BOT_WALL_STATUSES` (`401/403/429/503`) with backoff until every identity has
+  had a turn, and set `process.exitCode` instead of calling `process.exit` so a flushed fetch
+  pool cannot turn the meaningful exit 1 into a libuv abort. Same sample after: **11 of 14
+  verified**.
+- The failure paths were re-tested, not assumed: a dead page, a closed-merchant landing and an
+  unreachable host all still fail with exit 1. Unverified links do **not** fail the run; only
+  dead ones do.
+
+### Full catalogue sweep: 236 links, 0 dead
+`AFFILIATE_CONCURRENCY=1 npm run check:links` over all 236 products, run serially because the
+catalogue hits only **27 distinct destinations**, and hammering a small set of hosts is what
+produced the walls in the first place. About 35 minutes.
+
+| | |
+|---|---|
+| OK | **231** |
+| Dead | **0** |
+| Unverified | **5 (2.1%)** |
+
+All five are plain bot walls, not defects: Ergotron (`403`), GiftLab via Awin (`403`), and
+three SKILHUNT flashlights (`403`). Every Awin link resolved to its merchant, so no closed
+programme is hiding in the catalogue. Exit code 0. Nothing had to be fixed.
+
+### `/audio/` redirected
+`RedirectMatch 301 ^/audio(/.*)?$ /shop/home-entertainment/` in `public/.htaccess`, ahead of
+the retired-WordPress block. Deployed with the 12 November build (2,613 files) and verified
+live: `/audio/`, `/audio` and `/audio/index.html` all **301** to a target that answers **200**.
+Live smoke check **48/48** afterwards. Rationale is in `CATALOGUE_PRUNE_DECISION.md` item 2:
+the file exists only on the server, so rebuilding it would mean inventing a category that has
+no inventory behind it.
+
+### Every live product page carries its own notes
+`scripts/verify-live-notes.mjs` crawls the deployed host, not the build: for each of the 236
+slugs it requires HTTP 200, the `Editorial notes` block, and **every heading from that
+product's own recorded notes** present in the response — the check that a page cannot pass by
+borrowing another product's copy. HTML entities are decoded before matching, because Next
+escapes the text in the stream.
+
+**236 pages crawled, 236 passed, 0 failed.** Record in `tmp/live-notes-crawl.log` (untracked).
+Re-run with `node scripts/verify-live-notes.mjs` after any content or deploy change; it exits
+1 on the first shortfall and names the slug and the missing heading.
+
+### Still open, and why
+- **Nine Search Console submissions.** Quota was spent on 12 November (one of ten accepted).
+  It resets at 08:00 UTC on 13 November. Queue and procedure: `data/search-console/2026-11-12/`.
+  No script can drive this — Google exposes no API for "Request indexing".
+- **The 19 November re-read.** The report served today is dated 9 November and cannot contain
+  the rewrites, the 301s or the notes. §9 lists the five comparisons to make.
+- **`operations-console/deploy_php.py` credentials** are still 530 in `.env.local` (§14). The
+  site's own FTP account works and is what was used for every deploy in this section.

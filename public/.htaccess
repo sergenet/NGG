@@ -180,6 +180,12 @@ RedirectMatch 301 ^/product/qipecedm-4-pcs-ribbed-coupe-glasses-10-oz-vintage-co
 # full catalogue instead of dying as a 410 while it still earns impressions.
 RedirectMatch 301 ^/comparisons/?$ /shop/all/
 
+# /audio/ is a WordPress-era file that only survives on the server: it is not
+# in the build, not in the sitemap, and it still earns impressions under a 2026
+# title that no current catalogue product supports. Nothing replaced it, so it
+# goes to the category that serves the same intent rather than dying.
+RedirectMatch 301 ^/audio(/.*)?$ /shop/home-entertainment/
+
 # The expired sale page has no current equivalent at all.
 RewriteRule ^deals/amazon-big-spring-sale-2026-the-best-tech-gadget-deals/?$ - [G,L]
 RewriteRule ^reviews/?$ - [G,L]

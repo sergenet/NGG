@@ -102,9 +102,13 @@ This one has 81 indexed pages, 0 clicks, and no page ranking for any query it ta
    products will not come back, but `/product/elgato-prompter/` could point at the best live
    teleprompter-adjacent page instead of telling Google the topic is gone. The same applies
    to the 9 URLs in the 404 bucket.
-2. **Fix `/audio/`.** Either rebuild it in `app/` so it is maintained and in the sitemap, or
-   remove it and 301 it to `/shop/`. Leaving an unbuilt, unprotected-in-intent section serving
-   200 with a 2026 title is the worst of both.
+2. ~~**Fix `/audio/`.**~~ **Done, 12 November.** A file that only survives on the server cannot
+   be maintained, so it was not rebuilt: `/audio`, `/audio/` and `/audio/index.html` all 301 to
+   `/shop/home-entertainment/`, which answers 200 and carries current inventory. The stale file
+   is still on disk but no request reaches it; the redirect decides first. `audio` stays in
+   `PROTECTED` in `tools/prune-stale.py` because that set is inert for a directory the prune
+   does not walk — `SECTIONS` is what gets pruned — so the entry is harmless rather than
+   load-bearing.
 3. **Check the 403s and the `noindex`.** Two pages are blocked by access rules and one carries
    a noindex. Those are cheap to confirm and might be an accidental rule on a real page.
 4. **Stop growing on merchant feeds.** The 194 imported products are the ones Google refused
@@ -137,8 +141,8 @@ feed to reach "hundreds of products", and reading a rising page count as progres
 Control Room showed no traffic.
 
 Pruning now would feel like action and would change no number that matters. The measurable
-work is the three items above: recover the 301s, resolve the stale section, and write for
-queries people actually search.
+work is the three items above: recover the 301s (done), resolve the stale section (done), and
+write for queries people actually search.
 
 ## What would falsify this
 
