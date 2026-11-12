@@ -122,3 +122,49 @@ Two things to watch on the next run:
   `REQUEST INDEXING` button can be present. The last one is the current URL.
 - If the first URL in the queue is refused, stop: the rest will be too, and the
   queue is unchanged.
+
+## Second attempt, same day, ~20:15 UTC
+
+Quota turned out not to be spent: the first submission of the evening was
+accepted. It was exhausted again immediately afterwards, so the allowance is
+far smaller than ten per day.
+
+| # | URL | Result |
+|---|-----|--------|
+| 2 | /product/elgato-prompter/ | **Indexing requested** — "URL was added to a priority crawl queue." |
+| 3 | /product/wyze-bulb-color/ | **Quota Exceeded** — refused |
+| 4-10 | the rest | Not attempted — the queue rule says stop at the first refusal |
+
+So two requests have now landed across the two runs (#1 and #2), and eight are
+still queued in `pending-indexing-queue.txt`.
+
+Two operational findings worth carrying forward:
+
+- **The button needs a real click.** Driving it with a scripted `element.click()`
+  produced an `Oops! Something went wrong — we had a problem submitting your
+  indexing request` dialog, and that attempt appears to have consumed quota
+  without queueing anything. The page also carries a reCAPTCHA iframe, which is
+  the likely reason. Use the real pointer path.
+- **Quota is spent per submission, not per URL inspected.** Inspecting is free;
+  only `REQUEST INDEXING` counts. One acceptance followed by one refusal is the
+  whole allowance here.
+
+What the inspection panels showed on this run:
+
+- `/product/elgato-prompter/` — **Crawled – currently not indexed**, last crawl
+  **27 Sep 2026**, user-declared canonical itself, Google-selected canonical
+  empty. Unchanged from the 12 Nov morning read, so Google has not recrawled it
+  since the 301 went live.
+- `/product/wyze-bulb-color/` — **Page is indexed**, reported as "URL is on
+  Google, but has issues" with one invalid Product snippet. Indexed under its
+  old identity; the 301 is still unseen.
+
+## For the run after this one
+
+Eight old URLs remain. Once they are submitted, the three targets that absorb
+the most redirects are worth a request each — `/shop/smart-home/` (13 old URLs),
+`/smart-home/top-smart-home-tech-2026/` (10) and
+`/home-office/essential-desk-upgrades/` (9) — because all three were rewritten
+on 12, 13 November and Google has judged none of them on their current copy.
+At one accepted request per day, that is a multi-day queue, so spend it in this
+order: the eight old URLs first, then those three targets.

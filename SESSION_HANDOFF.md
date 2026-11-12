@@ -343,3 +343,72 @@ Re-run with `node scripts/verify-live-notes.mjs` after any content or deploy cha
   it would have crashed **after** uploading files and **before** the rewrite — a half-applied
   deploy. `_deployed/` is now created first and added to `.gitignore`, because that backup
   holds the control room's DB password and API keys and must never be committed.
+
+## 19. The guide set, completed and deployed (12 November 2026)
+
+- The prune recommendation in §18 depends on six category guides that did not
+  exist. **All six now do**, plus the seven guides that were already live but
+  still carried 20–275 words. The set is **13 guides, every one 701–1,026 words**,
+  of which 11 are 724 words or more.
+- Two were rewrites rather than new pages, deliberately: `/home-office/` already
+  had five guides including *Essential Desk Upgrades*, and a sixth would have
+  competed with it for the same intent. The guide URL is derived from its title,
+  so nothing was renamed and **no URL changed** — sitemap stayed at **288**.
+- Every claim is anchored to a figure the listing states. Where a listing states
+  nothing, the guide names the gap instead of writing around it: the standing-desk
+  guide lists the four figures neither desk publishes (height range, lifting
+  capacity, warranty, top thickness); the tracker guide says the subscription
+  cost is not recorded in the catalogue.
+- The imported stock is what the guides are written from, not the hand-picked
+  remainder: 22 lb/1 g scale precision, 245 ft/750 LEDs at $29, 4.2 gal folding
+  to five inches, 150 W at a 12V socket, 0.75 acre RTK mowing, 375 lb on the V2,
+  Nomatic's 1.9 kg empty weight against a 20→30 L expansion.
+
+### Two defects found while writing
+
+- **Eight dead product references** in four existing guides
+  (`Best Kitchen Gadgets`, `Top Smart Home Tech`, `Essential Desk Upgrades`,
+  `Best Monitor Arms`) pointed at products no longer in the catalogue. The
+  template does not fail on a dead reference — it silently backfills from the
+  category — so those guides had been rendering unrelated items. All 13 guides
+  now validate with **zero** dead references.
+- **The backfill itself was the bigger problem.** Its purpose was to pad thin
+  guides, but it had put a **GRABO vacuum suction lifter** into the ShadowAuto vs
+  ShadowTrack tracker comparison as a recommendation the copy never made. A guide
+  now renders **only the products it names**; the fallback applies only to a
+  guide that names none at all.
+
+### Verification
+
+- `npm run build` — exit 0, sitemap **288** URLs (unchanged).
+- Per-page check over all 13 built guides: ≥6 `<h2>`, one `<h3>` per pick,
+  **cards equal to the named product count** on every page, self-canonical, and
+  present in the sitemap.
+- `npm run smoke:local` — **33/33**.
+- Deployed from commit `52f84a1`: **2,653 files** extracted, zero stale pages
+  pruned, live smoke check **48/48**, IndexNow **288 URLs** in three HTTP 200
+  batches.
+- Re-checked against the **live host**, not the build: all **13 guides** return
+  200 with their own first sentence present and no unnamed product card. The
+  tracker page renders exactly its two trackers and no suction lifter.
+
+### Re-indexing, second attempt (~20:15 UTC)
+
+- Quota had reset: `/product/elgato-prompter/` was **accepted** ("added to a
+  priority crawl queue"). The very next submission returned **Quota Exceeded**,
+  so the allowance here is roughly one request, not the ten assumed. **Eight
+  remain queued** in `data/search-console/2026-11-12/pending-indexing-queue.txt`.
+- A scripted `element.click()` on the button produced *"Something went wrong"*
+  and burned quota without queueing anything; the page carries a reCAPTCHA
+  iframe, so use the real pointer path. Recorded in the same directory.
+- Neither old URL has been recrawled: `elgato-prompter` was still
+  **Crawled – not indexed, last crawl 27 Sep**, and `wyze-bulb-color` still
+  reports **Page is indexed** under its old identity.
+
+### Still open, and why
+
+1. **Eight Search Console submissions** — external quota, one per day.
+2. **The 19 November re-read** — the served report is dated 9 November and
+   cannot contain any of this.
+3. **The 194-page prune** from §18 — ordered after the re-read, and the guides
+   that are its precondition now exist, so only the traffic read is missing.
