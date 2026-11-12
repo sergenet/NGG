@@ -2958,7 +2958,17 @@
       "priceBracket": "100-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A hundred centimetres wide is what makes it a double",
+        "body": "Most single hammocks are around seventy centimetres across, which is fine for lying still and cramped the moment you turn. A hundred centimetres gives two people room, or one person room to sleep diagonally, which is how a flat lay is achieved. The 250-kilogram capacity is a claim about the stitching and the fabric rather than about comfort."
+      },
+      {
+        "heading": "The net changes what you need to hang it from",
+        "body": "An integrated net means no separate purchase and no gap for insects to find, but it also means the hammock has to be pitched taut enough for the net to stand off your face. At 273 centimetres long, plan on roughly three metres between anchors. Straps and a stand are not mentioned, so check what is in the bag before you arrive at a site without trees."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-053",
@@ -2988,7 +2998,17 @@
       "priceBracket": "100-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Three pounds before you load it",
+        "body": "The listed 3.09 pounds is the empty weight, and that is the number that matters once pouches, a radio and a torch go on. A mesh body keeps it wearable in heat, which is the reason to choose this over a solid plate carrier for anything short of actual armour. The adjustable fit is claimed but the size range is not stated."
+      },
+      {
+        "heading": "MOLLE is a standard, so the pouches are not locked in",
+        "body": "Webbing laid out to the PALS pattern means pouches from any maker will thread on, which is what makes a modular vest worth buying: you build the loadout over time. The removable pouches included cover magazine, radio and flashlight storage. What the listing does not say is whether the vest takes a plate or a hydration bladder, so confirm that against your intended use."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-054",
@@ -3286,7 +3306,17 @@
       "priceBracket": "over-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Two jobs in one moulded box",
+        "body": "The lid folds out into a tabletop, which is why this costs what it does and why it is wheeled rather than carried. For a picnic or a fishing spot that means one object instead of a cooler plus a folding table, and the wheels matter because a 32-litre box full of ice is not something you want to carry far."
+      },
+      {
+        "heading": "Hot and cold in the same compartment is a compromise",
+        "body": "One box claiming both hot and cold retention is doing neither as well as a dedicated cooler or a dedicated hot box, because the insulation is shared and the walls are the same on both sides. The listing gives no ice-retention hours, no temperature drop figure, and no load rating for the tabletop, so treat the table as a surface for drinks and plates rather than for a stove."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-062",
@@ -3389,7 +3419,17 @@
       "priceBracket": "over-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Forty-eight hours of retention changes how you use it",
+        "body": "Insulation good enough to hold temperature for two days unplugged means the fridge can be loaded at home, driven to a site, and left overnight without a power source. That is the difference between a car fridge and a cooler with a compressor. The 48-quart capacity is a family weekend or a long shop, not a single person's commute."
+      },
+      {
+        "heading": "AC and DC together is what makes it a second fridge",
+        "body": "A DC-only unit lives in the vehicle; with an AC lead as well it can run in a garage or a spare room between trips. The listing does not state the current draw at 12 volts, the cooling range in degrees, or whether both leads are in the box. Draw is the number that decides whether it can run from a car socket with the engine off."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-065",
@@ -3452,7 +3492,17 @@
       "priceBracket": "over-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Two motors mean steering, not speed",
+        "body": "A single motor pushes you in one direction, and the second lets you turn and come back, which is the difference between drifting to the far end and floating there. The listing claims movement across pools and calm lakes without quoting a speed or a runtime, so the practical range is unknown until you use it."
+      },
+      {
+        "heading": "Flat water is stated as the limit, and it is real",
+        "body": "The lounger is for pools and still water, not surf, current or a river. The 250-pound capacity is a load claim about the inflated shell, and the listing does not say how the battery is charged or whether it is removable. Deflating and drying a motorised float takes longer than a plain one, which matters at the end of every session."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-067",
@@ -3743,7 +3793,17 @@
       "priceBracket": "over-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "6100 BTU is one small space, one person",
+        "body": "That rating suits a tent, a van bunk, a cabin or a single room, and it will not cool a living area. The listing describes efficient and stable airflow without giving a coverage figure, which is the number that would let you size it. For a sleeping space it is plausible; for anything with a window open to the sun it is not."
+      },
+      {
+        "heading": "Portable air conditioning produces heat that has to leave",
+        "body": "Any air conditioner moves heat rather than destroying it, and a portable unit has to exhaust it somewhere. The listing does not describe the ducting, the window kit or the condensate handling, and those three decide whether it works in a closed tent or just makes the inside warmer and damper. Check what ships with it before planning the setup."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-076",
@@ -4156,7 +4216,17 @@
       "priceBracket": "over-250"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A compressor is why minus 20 is believable",
+        "body": "Cheap portable coolers use a Peltier plate, which can only pull the interior a fixed amount below the air around it and cannot freeze anything. This one specifies a compressor and a minus 20 Celsius floor, which is a genuine freezer. The 77-hour figure refers to how long it holds cold once unplugged, not to how long it runs on a battery, and the listing is careful about that difference."
+      },
+      {
+        "heading": "Wearable is the claim nobody tests for you",
+        "body": "An 18-litre box loaded with food is heavy, and the listing gives no packed weight and no strap rating for the wearable harness. Before planning to carry it, check the weight full and the current draw at 12 volts, because a compressor cycling from a car socket while you walk is the worst case for both the battery and your shoulder."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-088",
@@ -4222,7 +4292,17 @@
     "features": [
       "6 variants — Color, Capacity"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Twenty-five litres is twenty-five kilos",
+        "body": "The range runs from 11 to 25 litres across six variants, and the largest one is a car-camping jug rather than something you carry to a pitch. That is not a fault, it is a choice to make deliberately: a full 25-litre container is heavy enough to need two hands and a flat place to set it down. Smaller sizes suit a day trip."
+      },
+      {
+        "heading": "A spigot at the base is the ergonomic argument",
+        "body": "Being able to fill a bottle or a mug without lifting the whole container is the reason to buy this over a jerry can. What the listing does not state is whether there is a second, wide opening for cleaning and refilling, or whether the spout can be replaced when it splits. Both decide how long it stays usable, so check the cap layout before buying."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-090",
@@ -4364,7 +4444,17 @@
     "features": [
       "3 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The gel bags are the running cost",
+        "body": "The toilet is a frame and a seat; the bags are what you keep buying, and the gel is what turns liquid into something you can bin. Before committing, check the pack size and whether standard bin liners can be used instead of proprietary ones, because a cheap toilet with expensive consumables is an expensive toilet. Three colour options are offered."
+      },
+      {
+        "heading": "A seat and a bag, not a tank",
+        "body": "There is no flush and no water seal, so odour control is entirely the bag and how you store it until you can dispose of it properly. The listing gives no seat height when open, which is the number that matters for anyone with knee or hip trouble, and it says nothing about a weight limit. This is a backup for a queue or a night, not a replacement for a toilet."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-094",
@@ -5794,7 +5884,17 @@
       "priceBracket": "50-100"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Cordless means the battery is the product",
+        "body": "Everything about this heater depends on a lithium pack the listing describes without giving a capacity, a runtime or a charge time. Rechargeable PTC heaters produce strong heat while the pack is full and noticeably less as it drains, so the useful session is shorter than the battery life suggests. That is fine for warming hands and hopeless for warming a room."
+      },
+      {
+        "heading": "Where it actually earns its place",
+        "body": "A tent before sleep, a cab on a cold morning, a shed or a desk in a room nobody heats: these are the situations a cordless heater solves, because they are small, personal and unpowered. Indoors at home it competes with a blanket and loses on running cost. Nothing in the listing claims to heat a space, and that restraint is worth respecting."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-134",
@@ -5824,7 +5924,17 @@
       "priceBracket": "50-100"
     },
     "brand": "Traverseon",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "External 21 volts means a separate battery",
+        "body": "The heat comes from a 21-volt pack, not from the car's 12-volt socket, which is why it can be used away from a vehicle at all. It also means runtime is the specification that decides whether it is useful, and the listing does not give one. A PTC element draws a lot of current, so expect minutes of strong heat rather than an hour of gentle warmth."
+      },
+      {
+        "heading": "Three seconds is the element, not the cabin",
+        "body": "A PTC heater reaches temperature almost immediately, but it warms the air it pushes, which is a hand's width of space. For defrosting you point it at the glass and wait for the ice to soften; it will not clear a windscreen at the speed the demister does. Nine times out of ten it is a personal heater for cold hands at a desk or in a tent."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-135",
@@ -6482,7 +6592,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Lock in place is the claim that decides everything",
+        "body": "These dividers hold position by pressing against the drawer's sides, so the tension mechanism and the drawer's internal width decide whether they work at all. The listing gives no width range, which is the one number a buyer needs. Measure the inside of the drawer across its widest point, and check the walls are straight, because a divider that slips turns a sorted drawer into a shuffled one."
+      },
+      {
+        "heading": "Four dividers is roughly one drawer",
+        "body": "A cutlery drawer needs three or four bays to be useful, so a four-pack covers a single drawer with no spares. At $16 that is reasonable per divider, but check the standing height against the drawer's internal depth: these sit on the base and need clearance for the cutlery tray or the drawer will not close."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-153",
@@ -6598,7 +6718,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Six stackable trays is a drying rack",
+        "body": "Stacking is the function: wet paintings go in one, dry in another, and the stack keeps them apart while the glue sets. In a classroom that is the difference between thirty pieces of work on every surface and thirty pieces in one column. The bright plastic is also colour-coding, one tray per table or per material."
+      },
+      {
+        "heading": "Check the depth against the paper",
+        "body": "The listing gives no dimensions, and a tray that is too shallow lets A4 sheets curl over the edge and stick together. It also does not say whether the trays nest when empty or only stack when loaded, which decides how much cupboard space six of them take. Measure the paper size you actually use before buying a six-pack."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-157",
@@ -6627,7 +6757,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Six colours is a sorting system, not decoration",
+        "body": "One colour per subject, per child or per project is what makes a shelf legible at a glance, and it is the reason to buy a colour-coded six-pack rather than six identical bins. For books, folders and magazines standing upright, the vertical format is also what keeps spines visible instead of stacked."
+      },
+      {
+        "heading": "Magazine bins need a shelf deep enough",
+        "body": "The listing calls the plastic sturdy and gives no dimensions, which is the gap that catches buyers: an A4 folder or ring binder needs roughly 25 centimetres of depth, and a bin that is shallower lets it lean out. Measure the shelf depth and the tallest thing going in before ordering a set of six."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-158",
@@ -6885,7 +7025,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Silicone and rechargeable is the whole specification",
+        "body": "The soft body is what makes it safe to leave within reach of a child, and rechargeable means no cable across a bedside table. Dimmable matters more than brightness for a night light, because the useful setting is the one you can sleep through. No runtime, no brightness figure and no charge time are given, so expect a USB cable rather than a promise."
+      },
+      {
+        "heading": "A squishy lamp is a toy that happens to light up",
+        "body": "Soft silicone will survive being dropped, sat on and squeezed, which is why it suits a child's room or a novelty shelf. It also means it collects dust and needs a wipe rather than a wash. At this size it lights a corner, not a room, and the pumpkin shape is a seasonal choice you will live with year round."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-167",
@@ -6953,7 +7103,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Twenty-one cups is a large box plus spare",
+        "body": "Two containers at that capacity hold roughly two family-size boxes of cereal, or one box plus the bag that would otherwise sit open in the cupboard. That is the point of going extra large: you buy once and decant, rather than pouring half a box into something too small. The snap-lock lid is what keeps it crisp."
+      },
+      {
+        "heading": "Check the height before the capacity",
+        "body": "A container tall enough for 21 cups has to fit under the shelf or on the door, and the listing does not state its dimensions. Nor does it say whether the opening takes a scoop comfortably, which is the difference between a useful container and one you tip. Measure the cupboard gap first."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-169",
@@ -7040,7 +7200,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The point is where the drips land",
+        "body": "A spoon rest exists to catch sauce that would otherwise be a ring on the worktop, and ceramic does that job better than silicone because its weight stops it sliding when you drop a ladle onto it. The farmhouse finish is the reason it can sit out between cooking sessions rather than going back in a drawer."
+      },
+      {
+        "heading": "Small rest, large spoon",
+        "body": "The listing gives no dimensions, and a small rest will not hold a serving spoon or a ladle by the bowl. It also will not survive being set down on a hot hob, so it needs a spot beside the cooker rather than on it. Check the width against the utensils you actually use before deciding it is decorative enough to keep out."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-172",
@@ -7107,7 +7277,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A decoration kit, not a baking kit",
+        "body": "The box supplies an apron, a child-sized spatula and piping tools; the gingerbread and the icing are yours to make or buy. That is the honest description of what arrives, and it is worth knowing before a child opens it expecting a house. As a way into decorating it is well pitched, because piping is the part children can actually do successfully."
+      },
+      {
+        "heading": "The apron and spatula outlast the season",
+        "body": "Those two pieces keep working after the gingerbread is gone, which is what justifies a kit over a bag of sweets. The piping tools are the seasonal part. No age range is stated, and piping needs a steady hand, so expect this to work best with a child who is being helped rather than left to it."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-174",
@@ -7175,7 +7355,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A strop realigns an edge, it does not create one",
+        "body": "Leather with compound straightens the microscopic burr left by a stone, which is why a knife stropped properly cuts better than one freshly honed and left ragged. It will not remove a chip, reprofile a bevel or rescue a blunt blade; that is the sharpening stone's job and this is the step after it. Buying a strop expecting it to sharpen is the common mistake."
+      },
+      {
+        "heading": "Double-sided means two compounds, and the listing is vague",
+        "body": "The two faces are meant for different abrasive compounds, usually a coarser green and a finer one, and the listing does not say whether compound is included or which side is which. The bamboo base is there to keep the leather flat, which matters more than it sounds: a strop that rocks rounds the edge you are trying to refine."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-176",
@@ -7262,7 +7452,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Twenty-five inches reaches a trap, not a main line",
+        "body": "That length is designed for the hair ball that forms in the bend under a sink or a shower, which is the cause of most slow drains. It will not clear a blockage further down the stack, and pushing one past a trap risks breaking it off inside. Four of them means one per drain, which is the right way to think about a barbed disposable."
+      },
+      {
+        "heading": "Barbed and cheap means single use",
+        "body": "These work by hooking hair and pulling it back out, so the barbs are what do the job and what make them hard to clean. The listing calls them eco-friendly because they avoid chemicals, which is fair, but it does not say whether they can be reused after a wash. At this price, treat each one as belonging to a drain."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-179",
@@ -7291,7 +7491,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The title says shakers, the description says grinders",
+        "body": "Adjustable grinding only makes sense for a mill with a mechanism, not for a shaker with holes, and the listing uses both words. That ambiguity is worth resolving before buying: if you want a grinder, confirm the burr material and the grind range; if you want a shaker, this may not be it. It is the one inconsistency on the page."
+      },
+      {
+        "heading": "Mess-free refills depend on the body material",
+        "body": "The listing promises easy refills and no mess without stating whether the body is glass or acrylic, and that is what decides whether the set survives being knocked off a table. Capacity is also unstated, which matters if you refill from a large bag of peppercorns. Both are simple questions to answer before ordering."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-180",
@@ -7388,7 +7598,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Eleven pounds is the useful capacity",
+        "body": "Most inexpensive kitchen scales top out around five pounds, which is fine until you put a mixing bowl on first and lose half the range. Eleven pounds weighs a bowl plus a full batch of dough. Grams, ounces and pounds together mean you can follow a European recipe and a American one without converting in your head."
+      },
+      {
+        "heading": "The increment is the number nobody prints",
+        "body": "The listing describes accurate measurement without stating the precision, and precision is what decides whether a scale is usable for yeast and salt or only for flour. A scale that steps in single grams is fine for bread and frustrating for a teaspoon of instant yeast. Stainless on top usually means a plastic body underneath, so wipe rather than soak."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-183",
@@ -7417,7 +7637,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The app is the product, the bottle is the sensor",
+        "body": "Glow reminders and intake tracking live in the phone app; the bottle supplies the measurement. Without the app you own a well-made 21-ounce bottle and nothing more, so the questions worth asking before buying are which platforms the app supports and whether the tracking features sit behind a subscription. The listing describes smart technology without answering either."
+      },
+      {
+        "heading": "21 ounces means refilling, deliberately",
+        "body": "A small bottle is the point of a reminder system: more refills means more chances to notice you are behind. It also means the bottle must be charged, and the listing gives no battery life or charging interval. For a desk or a commute that is a weekly habit to build, not a one-time setup."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-184",
@@ -7478,7 +7708,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Twist lids stay on in a bag",
+        "body": "A screw thread takes a moment longer to close than a snap flap and stays closed when the container goes into a work bag, which is the case where most clip lids fail. At 17 ounces it holds a single portion of soup or a day of chopped fruit rather than a batch, so a six-pack is closer to a week of prep than a freezer restock."
+      },
+      {
+        "heading": "Freezer use needs a fill line, and none is given",
+        "body": "Liquid expands when it freezes, and the listing mentions freezing in the title without stating a maximum fill level or a working temperature range. Filled to the shoulder, a sealed container will split or push the lid. The safer habit is to leave an inch of headroom, and to confirm the plastic is marked freezer safe before relying on it for stock."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-187",
@@ -7604,7 +7844,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The wide neck is the whole difference",
+        "body": "Narrow squeeze bottles are almost impossible to clean once sauce has dried in them, which is why most end up in a bin after one summer. A wide neck lets you fill from a pan and get a brush inside. At $8 for four, that detail is what makes them worth buying rather than disposable."
+      },
+      {
+        "heading": "Sixteen ounces is a commercial portion",
+        "body": "That is a lot of one sauce for a home cook, so four bottles suits someone who batch-makes dressings, or who wants oil, vinegar, mayo and hot sauce each in their own. The listing does not state the cap type, and a hinged cap clogs faster than a screw top with a nozzle. Consider whether you need four before you need sixteen ounces."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-191",
@@ -7662,7 +7912,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Sealing is the half that actually matters",
+        "body": "Shaped cutters are common; the crimping edge that presses two slices together into a sealed pocket is what stops the filling escaping into a lunch bag. That only works on soft, fresh bread, and it works badly on a crusty loaf or a thick slice. Four shapes give a child the choice, and the container keeps them together in a drawer."
+      },
+      {
+        "heading": "Check the cutter against the slice",
+        "body": "A small cutter in the middle of a slice wastes the crust and leaves a lot of bread behind, so the shape size relative to your usual loaf is the practical question. The listing gives no dimensions. BPA-free and food-safe are stated, which is the baseline for anything pressed directly onto food."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-193",
@@ -7691,7 +7951,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The side opening is the entire idea",
+        "body": "A normal jar forces you to tip the whole thing to reach the leaves, which is how dressing ends up over everything. Opening the side lets you eat straight down through the layers, and the separate dressing compartment keeps the wet element away from the greens until you decide otherwise. That is a real difference in how a packed lunch survives until noon."
+      },
+      {
+        "heading": "34 ounces is a full lunch, and a wide one",
+        "body": "This is a meal-sized jar rather than a snack pot, so check it against the bag or cup holder it will travel in. The listing does not state the material, whether the jar is dishwasher safe, or how the dressing compartment seals. Those three answers decide whether it lasts a term or a month."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-194",
@@ -7720,7 +7990,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Lids and airlocks, no jars",
+        "body": "This kit supplies the four wide-mouth lids and their airlocks; the jars are the vessel you provide. Wide-mouth Mason jars are the standard fit, but thread sizes vary between brands and countries, so confirm what your jars are before ordering. The kit is the reusable part of fermenting, which is why it costs more than a jar does."
+      },
+      {
+        "heading": "The airlock is the safety mechanism",
+        "body": "Lacto-fermentation produces gas, and an airlock lets it escape while keeping air out, which is what stops a batch going mouldy on the surface. That makes the water level in the airlock something you check rather than set once. The listing does not state whether the lids have a pressure-release valve as well, and it does not mention weighting, so plan on keeping the vegetables submerged yourself."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-195",
@@ -7817,7 +8097,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Forty-two colours is the reason to buy this refill",
+        "body": "A basic refill gives you a handful of colours; this one includes glow in the dark, glitter and metallic bands alongside the plain ones, and those finishes are what let a child make something that looks different from the kit everyone else has. Over eleven thousand bands in a 14 by 9 by 2 inch case is enough to keep going well past the first project."
+      },
+      {
+        "heading": "A refill set may not include the loom",
+        "body": "The listing describes bands and a storage case, and the word refill suggests the loom and hook are assumed to already be in the house. Before gifting this to a child starting out, confirm what is actually in the box, because a box of bands without a loom is a box of bands. The case is the part that stops the collection ending up in a carpet."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-198",
@@ -7875,7 +8165,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A weighted spout closes when you put the bottle down",
+        "body": "That is the mechanism that keeps oil from oxidising in the air and keeps fruit flies out of vinegar, and it is the reason to choose this over a bottle with a cork or a flip cap. It also means the spout seals by gravity rather than by a gasket, so a bottle left on its side will still leak."
+      },
+      {
+        "heading": "11.8 ounces is a counter bottle, not a storage bottle",
+        "body": "Each bottle holds about a third of a litre, which suits oil you use daily and not the five-litre tin you buy twice a year. Refilling through a narrow neck needs a funnel, and the listing does not state the neck diameter, so check that before you tip a full bottle into it. Two bottles means oil and vinegar both stay out."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-200",
@@ -7961,7 +8261,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The three-inch walls do the work",
+        "body": "A grill basket earns its place by keeping small food from dropping through the grates, and the 3-inch depth is what makes that true for chopped vegetables and shrimp, not just whole skewers. At 13.8 by 11.9 inches it covers a good share of a standard grate, so it is one basket per zone rather than a garnish tray. Nothing in the listing states a maximum temperature, which is the number that matters for a basket used over direct charcoal."
+      },
+      {
+        "heading": "Non-stick and stainless describe two different layers",
+        "body": "The pan is stainless steel with a non-stick coating, and the coating is what stops vegetables welding themselves to the surface. That distinction matters at the end of the cook: metal tongs and abrasive scourers are fine on bare stainless and not on this. The listing says dishwasher-safe for nothing and says nothing about a temperature ceiling, so treat the coating as the part that ages."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-203",
@@ -8019,7 +8329,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "It rests on the screen, it is not clamped",
+        "body": "No tools and no clamp is the selling point, which means the shelf balances on the monitor's top edge. A 5.1-inch depth pushes the load forward off that edge, so what you put on it matters more than the ABS frame does. The listing gives no maximum weight or a thickness range for the bezel it will sit on, and those two numbers decide whether it stays put on a thin laptop screen or a curved monitor."
+      },
+      {
+        "heading": "Check what it will cover before you buy",
+        "body": "The shelf spans 11.8 by 5.1 inches across the top of the display, and at that size it is directly above the webcam on most monitors. If the camera is recessed into the top bezel, a shelf overhanging it is a problem you will notice on the first call rather than before. The listing says almost any screen, but says nothing about curved panels or built-in camera bumps."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-205",
@@ -8077,7 +8397,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Two bottles of mix is one afternoon",
+        "body": "The machine is the durable part; the mix is a consumable and two bottles will not last a summer of use. Whether it takes standard bubble solution or a proprietary refill is the question that decides the running cost, and the listing does not answer it. Battery type and runtime are also unstated, which for a cordless toy is the difference between an hour of play and five minutes."
+      },
+      {
+        "heading": "Motorised means small children can keep up",
+        "body": "A button-driven wheel produces bubbles continuously instead of one dip-and-blow at a time, so a four-year-old gets the same output as an adult. That is the reason to buy a machine rather than a wand. The cleanup claim is about the solution being non-sticky, not about the puddle it leaves on a patio."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-207",
@@ -8511,7 +8841,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The grinder cup is a second appliance",
+        "body": "A separate cup for spices and coffee means you can grind cumin without your next smoothie tasting of it, which is the detail most personal blenders miss. It also means two cups to wash rather than one, and a small grinder is only as good as its seal. For a small kitchen it replaces a blender and a coffee grinder at once."
+      },
+      {
+        "heading": "Personal blenders trade power for footprint",
+        "body": "The listing does not quote a wattage, so expect it to handle fruit, yoghurt and ice in small batches rather than nut butter or a full litre of frozen blocks. The spill-proof lid and travel cup are the reason to buy this shape: you blend and leave with the same vessel. Keep the batches small and it will do the job."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-223",
@@ -8540,7 +8880,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "It hides a strip, so the interior size is the spec",
+        "body": "The box earns its place by swallowing a power strip and the plugs in it, and that only works if the internal dimensions clear your strip plus the deepest adapter on it. The listing gives no internal measurements, so measure the strip and the largest plug before ordering. A box that is slightly too small is worse than none, because the lid will not close over the cables."
+      },
+      {
+        "heading": "The gold legs lift it off the floor",
+        "body": "That detail is styling, but it changes the practical side: cables enter through the sides rather than the base, and the box can sit on a rug without trapping heat. It also means it needs floor or desk space rather than being tucked under a cabinet. White with gold is a deliberate decor choice, not a neutral one."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-224",
@@ -8611,7 +8961,17 @@
     "features": [
       "2 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Three inches is the constraint, not a feature",
+        "body": "Most bed frames clear four to six inches, and a rigid box wastes that gap on its own walls. These are three inches tall, which is what lets them slide under a divan where a plastic tote will not go. That is also the limit: three inches holds bedding, shoes and out-of-season clothes, not books or anything with a rigid frame."
+      },
+      {
+        "heading": "Fabric bins that fold are for soft goods",
+        "body": "The composite linen body has no frame, so it holds its shape only while something fills it. The clear lid and zip keep dust off, and the waterproof claim matters for a basement or a garage floor. Two colour options are offered, and the listing does not state the footprint, which is the measurement to take before assuming they fit your bed."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-226",
@@ -8640,7 +9000,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Four tools, one hinge",
+        "body": "Everything here pivots on a single joint, and that joint is where inexpensive multi-tools fail: it either locks or it folds under load. The listing specifies carbon steel but gives no gauge, no overall length open or closed, and no lock type. At this price the steel is likely to be thin, which is fine for a boot kit and not fine for digging a fire pit in stony ground."
+      },
+      {
+        "heading": "Treat it as an emergency tool, not a spade",
+        "body": "A folding shovel is for the job you did not plan: a tyre trench, a small latrine, moving snow off a windscreen. Prising roots or levering rocks puts the hinge under exactly the load it is least able to take. The pickaxe end is the part most likely to be used and least likely to be needed, and the bottle opener is a marketing line rather than a reason to buy."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-227",
@@ -8727,7 +9097,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A gooseneck holds position by friction",
+        "body": "That is the whole mechanism, and it means the neck sags once the microphone is heavier than the joint can carry. The listing calls it heavy duty without quoting a weight limit, so weigh your mic before assuming this will hold it at eye level through a service or a recording. Lighter dynamic mics are the safe pairing."
+      },
+      {
+        "heading": "360 degrees is what a shared podium needs",
+        "body": "Re-aiming the mic without moving the stand is the point when several people speak from one lectern or when a desk is shared between a keyboard and a couch. The listing does not state the mounting method, the clamp size, or the thread, and those decide whether it grips your desk or a podium top. Check the surface thickness before ordering."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-230",
@@ -8756,7 +9136,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The bottle is the craft, the stickers are consumable",
+        "body": "Once the stickers are on, the design is fixed, and a child who wants to change it needs another kit rather than another sheet. That is fine for a gift, less fine if the appeal is repeat play. The reusable bottle underneath is the part that lasts, which is what stops the whole thing becoming landfill after a weekend."
+      },
+      {
+        "heading": "Ages five to eight is unusually specific, and it is right",
+        "body": "The listing gives an age range, which most toys avoid, and at that age personalising an object is the activity rather than the result. Older children will find the bottle small and the sticker set limiting. Capacity is not stated, so check it against a school bag pocket before assuming it will be the everyday bottle."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-231",
@@ -8882,7 +9272,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Four tenths of an inch is the storage answer",
+        "body": "At 8.3 by 5.9 by 0.4 inches this slides into a drawer or a gap beside the cutlery, which is the difference between a scale you use and one that lives in a cupboard because it does not fit anywhere. The 0.04 ounce precision is stated explicitly, which is unusual at this price and is what makes it usable for small quantities."
+      },
+      {
+        "heading": "Titanium-coated is a finish, not a construction",
+        "body": "The iridescent surface is a coating over the platform, and the listing does not say whether it is dishwasher safe, whether the platform lifts off for cleaning, or what the 11-pound capacity is measured against. A CR2032 battery is included, so it works out of the box. Wipe it rather than washing it, and check the coating's care instructions if it matters to you."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-236",
@@ -8911,7 +9311,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Real tools, sized down",
+        "body": "The value here is that these are functional utensils shrunk for small hands, not toy versions that fail the moment a child presses them into dough. Across 28 pieces the kit covers measuring, mixing and serving, with bowls that have lids so a project can stop halfway. That is what makes it a baking set rather than a play set."
+      },
+      {
+        "heading": "Dishwasher safe is the spec a parent checks first",
+        "body": "Everything in the kit is BPA-free and dishwasher safe, which is the difference between a gift that gets used and one that sits in a cupboard. Two things the listing does not state are worth confirming: an age range, and whether the timer needs its own battery. A whisk and an oven-adjacent prep kit imply supervision regardless."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-237",
@@ -8938,7 +9348,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Four pieces for nine dollars sets the expectation",
+        "body": "What matters is which four, and the listing does not say. A set without a turner or a slotted spoon is not a cooking set, and a set that includes both is a bargain at this price. Heat-safe and dishwasher-friendly are claimed without a temperature or a material, so treat them as intentions rather than specifications."
+      },
+      {
+        "heading": "This is a starter drawer, not a replacement",
+        "body": "Four utensils covers the basics for someone setting up a first kitchen or filling a holiday let, and it is priced so that buying two sets is still cheap. The trade is that thin handles and unstated materials do not survive heavy daily use the way a single well-made tool does. Buy it as a supplement, not as the whole drawer."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-238",
@@ -8967,7 +9387,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Folds flat enough for a boot",
+        "body": "The trade for a folding grill is grate area, and the listing gives no dimensions at all, which makes it hard to tell whether it cooks for two or for six. Stainless steel at this price is thin, so expect it to discolour on the first burn and to need drying before it goes away wet. For a beach, a campsite or a small balcony it is the difference between grilling and not."
+      },
+      {
+        "heading": "Charcoal needs air, and the vents are the design",
+        "body": "A charcoal fire is controlled by airflow, and a compact grill with poor venting either runs too hot or goes out. The listing does not describe the vent arrangement or whether there is a lid, and without a lid it is a grill rather than a smoker despite the title. Check both before planning a long, slow cook."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-239",
@@ -8996,7 +9426,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Reversible means two signs in one",
+        "body": "One face carries the wine quote, the other the chocolate one, so it can be flipped for a different occasion rather than swapped out. That is a small thing that makes a cheap decor piece last longer than a single-faced print. The listing does not name the wood or the printing method, so expect the print to be the part that ages."
+      },
+      {
+        "heading": "Wall or table is a mounting question",
+        "body": "A sign that claims both needs a stand for the table and a fixing for the wall, and the listing does not say whether either is included. Nor does it give the size, which decides whether it belongs on a shelf beside plates or on a wall above a bar. At this price, assume you supply the stand."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-240",
@@ -9025,6 +9465,16 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Forty ounces is two ordinary bottles",
+        "body": "The size is the feature: one fill covers a workday or a long drive, which means fewer trips to a tap and more chance the bottle actually gets emptied. Double-wall insulation is what stops condensation forming on a desk or in a bag, and it is the difference between a steel bottle and a cold sweaty one."
+      },
+      {
+        "heading": "Leakproof and insulated are both unquantified",
+        "body": "The listing claims leakproof and hot or cold without giving a cold-retention time, a steel grade, or a lid type. Those are the numbers that separate a bottle that keeps ice until lunch from one that does not. If it will live in a bag next to a laptop, check the lid seal first, because that is the part that fails."
+      }
+    ]
   }
 ]
