@@ -97,10 +97,15 @@ export default async function GuidePage({ params }: { params: Promise<{ category
 
   const linkedIds = new Set(linkedProducts.map((product) => product.id));
 
-  // Backfill thin guides with products from the same category to ensure real comparison depth.
-  const categoryFallback = allProducts
-    .filter((product) => categoryToSlug(product.tags.category) === category && !linkedIds.has(product.id))
-    .slice(0, Math.max(MIN_GUIDE_PRODUCTS - linkedProducts.length, 0));
+  // A guide renders the products it actually names. This used to pad every
+  // short guide from the same category, which silently turned unrelated items
+  // into picks — a vacuum suction lifter appeared as a recommendation in the
+  // tracker comparison, and the page's copy never mentioned it. Backfilling now
+  // applies only to a guide that names nothing at all, so such a page still has
+  // something to show instead of an empty list.
+  const categoryFallback = linkedProducts.length > 0 ? [] : allProducts
+    .filter((product) => categoryToSlug(product.tags.category) === category)
+    .slice(0, MIN_GUIDE_PRODUCTS);
 
   const products = [...linkedProducts, ...categoryFallback].slice(0, MAX_GUIDE_PRODUCTS);
 
