@@ -352,20 +352,26 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </div>
             </dl>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">Best fit</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  {product.whoShouldBuy?.[0] || `Shoppers who want a dependable ${displayCategory.toLowerCase()} upgrade.`}
-                </p>
+            {(product.whoShouldBuy?.[0] || product.cons?.[0]) && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {product.whoShouldBuy?.[0] && (
+                  <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-2">Best fit</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      {product.whoShouldBuy[0]}
+                    </p>
+                  </div>
+                )}
+                {product.cons?.[0] && (
+                  <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-2">Main tradeoff</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      {product.cons[0]}
+                    </p>
+                  </div>
+                )}
               </div>
-              <div className="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">Main tradeoff</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  {product.cons?.[0] || 'It is worth weighing convenience, price, and long-term value before you buy.'}
-                </p>
-              </div>
-            </div>
+            )}
 
             {product.features && product.features.length > 0 && (
               <div className="mt-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-5">
@@ -418,35 +424,43 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </aside>
         </div>
 
-        {/* Pros and Cons */}
-        <div className="mt-8 bg-slate-900 dark:bg-slate-900/50 text-white p-8 md:p-12 rounded-[2.5rem] shadow-xl">
-          <h2 className="text-3xl font-black mb-3 text-center">Research snapshot</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-6 text-slate-300">What the shortlist records about the {product.brand ?? 'unbranded'} {product.title} and the alternatives around it — catalog-level considerations, not hands-on test results. Check recent owner feedback and retailer terms before buying.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto">
-            <div className="text-center">
-              <h4 className="text-green-400 font-bold uppercase tracking-widest text-xs mb-4">Pros</h4>
-              <ul className="space-y-4 inline-block text-left">
-                {((product.pros && product.pros.length) ? product.pros : ['Published features address the intended use', 'Available specifications support comparison', 'Can be compared with alternatives before purchase']).map((pro, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-slate-300">
-                    <span className="text-green-400 font-bold">+</span>
-                    {pro}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="text-center">
-              <h4 className="text-red-400 font-bold uppercase tracking-widest text-xs mb-4">Cons</h4>
-              <ul className="space-y-4 inline-block text-left">
-                {((product.cons && product.cons.length) ? product.cons : ['Compatibility still needs confirmation', 'Current retailer terms may change', 'Long-term performance has not been independently tested']).map((con, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-slate-300">
-                    <span className="text-red-400 font-bold">-</span>
-                    {con}
-                  </li>
-                ))}
-              </ul>
+        {/* Pros and Cons. Rendered only from real recorded notes: the template used to
+            synthesise three generic pros and cons here, which put the same paragraph on
+            every imported product page and made unrelated products read as duplicates. */}
+        {((product.pros && product.pros.length) || (product.cons && product.cons.length)) && (
+          <div className="mt-8 bg-slate-900 dark:bg-slate-900/50 text-white p-8 md:p-12 rounded-[2.5rem] shadow-xl">
+            <h2 className="text-3xl font-black mb-3 text-center">Research snapshot</h2>
+            <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-6 text-slate-300">What the shortlist records about the {product.brand ?? 'unbranded'} {product.title} and the alternatives around it — catalog-level considerations, not hands-on test results. Check recent owner feedback and retailer terms before buying.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto">
+              {product.pros && product.pros.length > 0 && (
+                <div className="text-center">
+                  <h4 className="text-green-400 font-bold uppercase tracking-widest text-xs mb-4">Pros</h4>
+                  <ul className="space-y-4 inline-block text-left">
+                    {product.pros.map((pro, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-slate-300">
+                        <span className="text-green-400 font-bold">+</span>
+                        {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {product.cons && product.cons.length > 0 && (
+                <div className="text-center">
+                  <h4 className="text-red-400 font-bold uppercase tracking-widest text-xs mb-4">Cons</h4>
+                  <ul className="space-y-4 inline-block text-left">
+                    {product.cons.map((con, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-slate-300">
+                        <span className="text-red-400 font-bold">-</span>
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        )}
 
         {relatedProducts.length > 0 && (
           <section className="mt-12 bg-white dark:bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">

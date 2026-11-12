@@ -2617,7 +2617,17 @@
     "features": [
       "3 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Start at 25x to find it, zoom to 75x to study it",
+        "body": "The point of the range is the order you use it in: 25x is wide enough to locate a bird on a branch or across water, and 75x is for plumage once you are already pointed at it. The 60mm objective is what keeps the image usable at the top of that range."
+      },
+      {
+        "heading": "The angled eyepiece and the tripod both earn their place",
+        "body": "Angled eyepieces let two people look without dismantling the setup, and at 75x no handheld view is steady enough to be worth having, so the included tripod is not a spare part. Eye relief and glass coatings are not quoted, which matters if you wear glasses."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-044",
@@ -2683,7 +2693,17 @@
     "features": [
       "2 variants — Voltage"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Hard-wired to the battery, not plugged into the socket",
+        "body": "This wires directly to the vehicle battery and blows warm air through two outlets, which is the difference between it and the socket heaters: a 12V outlet is typically fused at 15A, and 600W at 12V draws roughly 50A by the listing's own figure. Check the fuse, the cable gauge and the route for the wiring before buying."
+      },
+      {
+        "heading": "Clear glass first, warm cab second",
+        "body": "Two outlets aimed at the windscreen clear fog faster than they heat a cab, so judge it as a demisting tool that also warms hands. It is sold for trucks and UTVs, where the wiring run is short and the glass is large; in a small car expect it to work on the screen and less on the interior."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-046",
@@ -2716,7 +2736,17 @@
     "features": [
       "2 variants — Voltage"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Three outlets and a genuinely hot vent",
+        "body": "The listing quotes 78 degrees C at the outlet and an air velocity of 4.5 m/s, with three outlets to spread across the windscreen and side glass. That is the temperature at the vent, not in the cabin — the air has cooled considerably by the time it reaches the far side of the glass."
+      },
+      {
+        "heading": "500W is still a direct-wire job",
+        "body": "Like the higher-rated version in this category, it bypasses the 12V socket and takes power straight from the battery; by the listing's 500W that is around 40A at 12V. If the vehicle stands for days between cold-morning starts, the drain matters as much as the heat."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-047",
@@ -2815,7 +2845,17 @@
     "features": [
       "2 variants — Options"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "The 8cm thickness is the specification that matters",
+        "body": "At 190 x 130 x 8cm the mattress is thick enough to keep hips off the seat gaps, and the wire-draw interior is what the listing credits for spreading pressure instead of letting you roll into the middle. That construction, not the footprint, separates it from an inflatable taken out of a pool bag."
+      },
+      {
+        "heading": "130cm is a narrow double",
+        "body": "130cm across is about 51 inches: comfortable for one adult with a child, tight for two adults. At 3.8kg it is light enough to move between vehicles, and no pump is mentioned on the listing, so check whether inflation is included before planning to use it straight out of the boot."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-050",
@@ -2971,7 +3011,17 @@
     "features": [
       "3 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "900D Oxford is the durability claim",
+        "body": "Denier is fabric weight, and 900D Oxford sits in the range used for load-bearing gear that gets dragged over ground and rubbed against pouches. That is the reason to choose it over a lighter carrier when the vest is for training and field use rather than display."
+      },
+      {
+        "heading": "Adjustable, but no load rating",
+        "body": "The listing covers adjustability, MOLLE attachment and quick release, but not a maximum load or a chest-size range. Weigh what you intend to hang on it before ordering: a vest spreads load across the shoulders, it does not remove it."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-055",
@@ -3259,7 +3309,17 @@
     "features": [
       "2 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A compressor, measured in minutes",
+        "body": "The listing states its cooling as 86F down to 59F in 10 minutes and down to 32F in 30 minutes, which is compressor behaviour rather than the slow crawl of a thermoelectric box. That speed, not the capacity, is what justifies the price over a cooler full of ice."
+      },
+      {
+        "heading": "18 litres is a weekend for two",
+        "body": "The 19 Qt / 18L capacity is the number to weigh against $399.90: it holds a short trip's food, not a week of it. Cooling performance is quoted but power draw in watts is not, and that is the figure that decides how hard it works a car battery overnight."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-064",
@@ -3963,7 +4023,17 @@
     "features": [
       "2 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Wood armrests are the tell",
+        "body": "Solid wood arms and a thick high-elastic cushion put this nearer garden furniture than festival kit. It is the one to take when the seat will be sat in for an afternoon rather than unfolded at dusk, and the padded back is what makes that possible."
+      },
+      {
+        "heading": "110cm of seat, unknown packed size",
+        "body": "The widened seat is quoted at 110cm, narrower than the 137cm double chair in the same category. No packed dimensions or weight are given, and that matters more here than on a lightweight chair, because comfort this deep is usually paid for in bulk."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-086",
@@ -3996,7 +4066,17 @@
     "features": [
       "3 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "One box instead of two",
+        "body": "A 21L insulated cooler with a Bluetooth speaker built into the body saves carrying a separate speaker to a picnic or tailgate, and the listing claims 72-hour hot or cold retention from a three-layer wall. For a day out that is the whole kit in one lift."
+      },
+      {
+        "heading": "The speaker costs you capacity",
+        "body": "21L is shared between food, ice and the speaker housing, so plan on less usable volume than a plain cooler of the same quoted size. No speaker wattage or battery life is quoted either, so do not buy it for the audio."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-087",
@@ -4158,7 +4238,17 @@
     "features": [
       "4 variants — Options, Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A bench that calls itself a chair",
+        "body": "The 137cm seat is the entire pitch: two adults side by side without their shoulders overlapping, or one person reclining across the width. Where the seat has to hold two people by the fire, this does the job of a pair of chairs with one thing to carry."
+      },
+      {
+        "heading": "Where $400 and five layers of steel go",
+        "body": "The frame is described as five-layer thickened carbon steel on an X-brace, which is the answer to the wobble that ends cheap double chairs. Packed weight and folded length are not on the listing, so confirm them before assuming it is the one you will carry to a remote pitch."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-092",
@@ -4518,7 +4608,17 @@
     "features": [
       "4 variants — Options, option"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Deep freeze, in the boot",
+        "body": "The -20C rating with switchable freezer and fridge modes is why this sits at the top of the category: it keeps frozen food frozen on a long drive rather than merely cold. That is a different job from a cooler box, and the listing prices it as one."
+      },
+      {
+        "heading": "Dual-use is a two-power commitment",
+        "body": "Running it at home as well as in the car means it needs both AC and DC supply, and at $519.90 it is the most expensive item in this set. Power consumption in watts is not quoted, and that is the figure that decides whether an overnight stop flattens the battery."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-103",
@@ -4614,7 +4714,17 @@
     "features": [
       "2 variants — Color"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Six square metres of shade for three or four",
+        "body": "3.05 x 1.98m works out to roughly 6m2, which the listing sizes for 3-4 people sitting, eating or storing gear outside the vehicle. It sits between the windshield shades and the full tailgate tents: enough for a table and chairs, without the weight or the price of a sleepable structure."
+      },
+      {
+        "heading": "A screen, not a shelter",
+        "body": "The listing promises mosquito net and sun shade; it does not claim waterproofing, and at $159.90 that is exactly the difference between it and the tent versions beside it. Buy it for insects and glare rather than for rain."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-106",
@@ -4740,7 +4850,17 @@
     "features": [
       "6 variants — color, Options"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "210T with a 3000mm rating is the spec to read",
+        "body": "A 3000mm hydrostatic head is proper rain cover for a car awning rather than a shower-proof one, and 210T polyester is the fabric weight that carries it. That combination, with the UV treatment, is what costs more here than on the screen canopy."
+      },
+      {
+        "heading": "195cm at the peak, so stand near the centre",
+        "body": "The 485 x 240 x 195cm interior sleeps the 3-4 campers the listing describes, but 195cm is the peak height: most adults will stand at the centre and stoop at the edges. The listing describes the vehicle connection generically, so check it against your own tailgate."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-110",
@@ -4773,7 +4893,17 @@
     "features": [
       "3 variants — options"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "No tap, no hose, no trailing lead",
+        "body": "Battery power plus a 23L onboard tank makes this self-contained: fill it and take it to a car park, a campsite or a muddy bike. The six modes are there to match pressure to the surface, from wheels and arches to garden furniture."
+      },
+      {
+        "heading": "23 litres runs out, and pressure is not quoted",
+        "body": "The tank is the limit on a full car, so plan on a refill and know where the next tap is. Pressure in bar or psi is absent from the listing, and that is the number that would put it alongside a corded washer rather than a hose with a nozzle."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-111",
@@ -4806,7 +4936,17 @@
     "features": [
       "4 variants — Color, Option"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "It extends the boot rather than replacing the tent",
+        "body": "This attaches to the rear of the vehicle to give shade, rain cover and a mosquito net over the open tailgate — a place to sit and eat out of the weather, or to sleep with the boot open. The listing fits it to most hatchback SUVs and describes the connection as quick."
+      },
+      {
+        "heading": "Fitment is the risk, not the shelter",
+        "body": "No dimensions or fitment measurements are quoted, only most hatchback SUVs, so measure the tailgate opening before ordering. At $179.90 it costs more than a basic tailgate screen, which is what buys the waterproofing and the net over the simpler canopies beside it."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-112",
@@ -5659,7 +5799,17 @@
     "features": [
       "4 variants — options"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Stake it into the lawn or wrap it round something",
+        "body": "Two mounting behaviours in one set: push the stakes into turf for a border, or wrap the same lights around a tree, railing or porch post. Rain and snow resistance is the claim that makes outdoor use the intended job rather than an optimistic one."
+      },
+      {
+        "heading": "Length and bulb count are missing",
+        "body": "The listing gives no run length, bulb count or power source, and those decide how much of a garden one set covers. At $45.52 it is cheap enough to buy two, but measure the run you actually need before finding that out."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-139",
@@ -5691,7 +5841,17 @@
     "features": [
       "6 variants — options"
     ],
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Figurines rather than a light string",
+        "body": "Bears, snowmen, trees and zodiac animals make this a set of shaped pieces to place, not a strand to drape. That is the useful distinction when you are dressing a windowsill, a mantel or a table rather than a roofline."
+      },
+      {
+        "heading": "USB power limits where it can go",
+        "body": "USB is the stated power source, so the set needs a socket or a power bank rather than its own wall plug — worth knowing before planning to run it across a garden. No run length or piece count appears on the listing."
+      }
+    ]
   },
   {
     "id": "P-AW-TR-140",
@@ -5978,7 +6138,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Light that points where your fingers do",
+        "body": "The light sits on the hand, so it aims wherever you are working rather than wherever a torch happens to be pointing. That is the whole case for it: under a sink, behind a radiator, or anywhere one hand has to hold something in place while the other is busy."
+      },
+      {
+        "heading": "The listing is thin on numbers",
+        "body": "No lumen output, runtime, battery type or water-resistance rating appears on the listing, and the word waterproof is doing work that a stated IP rating would normally do. Treat it as close-range task lighting rather than something that lights a path."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-149",
@@ -6006,7 +6176,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "A 13-key remote is the whole point",
+        "body": "Brightness and light settings are driven from a 13-key remote rather than a wall switch, which is what makes it worth considering for a shed, cupboard, loft or stairwell where there is no wiring, or for a light you routinely want dimmer than full. The listing does not say how many brightness steps sit behind those keys."
+      },
+      {
+        "heading": "400 lumens is ambience, not room lighting",
+        "body": "400 lumens is roughly a bright table lamp, not a ceiling fixture, so compare it against the bulb it would replace before planning the swap. No battery capacity or runtime is quoted, and a wireless fitting makes the mount the deciding detail — check how it attaches to your ceiling before ordering."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-150",
@@ -6034,7 +6214,17 @@
       "priceBracket": "under-50"
     },
     "brand": "DealGenius",
-    "lastUpdated": "2026-11-11"
+    "lastUpdated": "2026-11-11",
+    "editorial": [
+      {
+        "heading": "Two lights doing two jobs",
+        "body": "The 350-lumen front light is the one you will actually use for close work — wiring, reading a fuse box, threading something into a dark cupboard — and the 60-lumen side light exists so the front light does not blind whoever is working beside you. Five modes is more than the two you will use, but being able to switch between a wide flood and a tighter spot is the reason to wear the light instead of holding one."
+      },
+      {
+        "heading": "What $15 does not buy",
+        "body": "The listing quotes no runtime, no battery capacity and no water-resistance rating, so treat the charge figure as unknown until it is in your hands. At this price the hinge and the lens mount are the parts that fail first; keep them out of a toolbox that gets thrown into a van."
+      }
+    ]
   },
   {
     "id": "P-AW-DG-151",
