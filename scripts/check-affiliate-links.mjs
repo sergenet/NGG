@@ -6,11 +6,20 @@
 // a perfectly healthy 200 page at awin1.com/closedMerchant.html. The only way to
 // catch that is to follow the chain and look at where it actually lands.
 //
+// Storefronts increasingly sit behind Cloudflare, which answers a request that
+// claims to be Chrome but arrives with a non-browser TLS fingerprint with 429.
+// That is why this sends several honest-or-plain identities instead of one
+// spoofed browser: a wall that blocks "Chrome" often lets the plain one through,
+// and vice versa. Whichever answers without a bot-wall status is used.
+//
 // Usage:
 //   node scripts/check-affiliate-links.mjs                # every catalog link
 //   node scripts/check-affiliate-links.mjs <url> [<url>]  # ad-hoc links
 //
-// Exit codes: 0 = no dead links, 1 = at least one link is dead.
+// Exit codes: 0 = no dead links found, 1 = at least one link is dead.
+// "Unverified" is not a pass: it means the merchant walled the script, so that
+// link's status is unknown. A closed programme still reports dead, because
+// Awin signals it at its own hop, before any merchant is contacted.
 
 import { readFile } from 'node:fs/promises';
 
@@ -18,8 +27,22 @@ const TIMEOUT_MS = Number(process.env.AFFILIATE_TIMEOUT_MS || 20000);
 const MAX_HOPS = 10;
 const CONCURRENCY = Number(process.env.AFFILIATE_CONCURRENCY || 2);
 const RETRY_DELAYS_MS = [4000, 10000];
-const USER_AGENT =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+
+// Tried in turn on each bot-wall answer. The browser identity goes last on
+// purpose: a Chrome user-agent on a non-browser connection is the easiest
+// combination for a wall to reject, so it is the fallback rather than the
+// opening move.
+const IDENTITIES = [
+  { label: 'identifying', headers: { 'user-agent': 'NGG-LinkCheck/1.0 (+https://newgiftsandgadgets.com/contact/)' } },
+  { label: 'plain', headers: {} },
+  {
+    label: 'browser',
+    headers: {
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    },
+  },
+];
+const MAX_ATTEMPTS = IDENTITIES.length;
 
 const args = process.argv.slice(2);
 const adHoc = args.filter((arg) => /^https?:\/\//.test(arg));
@@ -54,31 +77,34 @@ async function loadCatalogUrls() {
 
 const sleep = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
 
-// Storefronts rate-limit bursts, and a 429 says nothing about whether a link
-// works. Retry with backoff before recording anything as unverified.
+// A 429 or 403 says nothing about whether a link works, only that the wall did
+// not like this request. Change identity and back off before recording anything
+// as unverified, and give up only once every identity has had a turn.
 async function requestWithRetry(url) {
-  let attempt = 0;
-  for (;;) {
+  for (let attempt = 0; ; attempt += 1) {
+    const identity = IDENTITIES[attempt % IDENTITIES.length];
+    let response;
+    let error;
     try {
-      const response = await fetch(url, {
+      response = await fetch(url, {
         redirect: 'manual',
         headers: {
-          'user-agent': USER_AGENT,
+          ...identity.headers,
           accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
           'accept-language': 'en-US,en;q=0.9',
         },
         signal: AbortSignal.timeout(TIMEOUT_MS),
       });
       await response.arrayBuffer().catch(() => {});
-      if (response.status !== 429 && response.status !== 503) return { response };
-      if (attempt >= RETRY_DELAYS_MS.length) return { response };
-      await sleep(RETRY_DELAYS_MS[attempt]);
-      attempt += 1;
-    } catch (error) {
-      if (attempt >= RETRY_DELAYS_MS.length) return { error };
-      await sleep(RETRY_DELAYS_MS[attempt]);
-      attempt += 1;
+    } catch (caught) {
+      error = caught;
     }
+
+    const walled = response && BOT_WALL_STATUSES.has(response.status);
+    if (!walled || attempt >= MAX_ATTEMPTS - 1) {
+      return { response, error };
+    }
+    await sleep(RETRY_DELAYS_MS[Math.min(attempt, RETRY_DELAYS_MS.length - 1)]);
   }
 }
 
@@ -182,5 +208,8 @@ if (unverified.length) {
 if (dead.length) {
   console.error(`\nDead affiliate link(s) found. Fix the vendor URL or remove the product:`);
   for (const result of dead) console.error(`- ${label(result)}: ${result.reason} (${result.url})`);
-  process.exit(1);
+  // Set the code instead of calling process.exit: exiting while the fetch
+  // pool is still closing aborts the process with a libuv assertion, which
+  // replaces the meaningful exit 1 with a crash.
+  process.exitCode = 1;
 }
