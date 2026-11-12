@@ -284,5 +284,18 @@ Re-run with `node scripts/verify-live-notes.mjs` after any content or deploy cha
   No script can drive this — Google exposes no API for "Request indexing".
 - **The 19 November re-read.** The report served today is dated 9 November and cannot contain
   the rewrites, the 301s or the notes. §9 lists the five comparisons to make.
-- **`operations-console/deploy_php.py` credentials** are still 530 in `.env.local` (§14). The
-  site's own FTP account works and is what was used for every deploy in this section.
+- **Nothing else.** The two open items above are external to this repository: one needs a
+  quota reset, one needs a date.
+
+### `operations-console/deploy_php.py` repaired (was §14)
+- The tool could not authenticate: `NGG_FTP_PASSWORD` in `.env.local` returns **530**, while the
+  site account in `.env` (`serge@newgiftsandgadgets.com` + `NGG_FTP_PASS`) — the one
+  `deploy-zip.py`, `upload_zip.py` and `tools/prune-stale.py` all use — still works. It now
+  tries `.env.local` first and falls back to `.env`, so a stale personal override degrades to
+  the shared account instead of making the tool unusable. Verified by calling `connect()`
+  directly: first candidate refused, second logged in at `/`. The upload path was not run,
+  because it rewrites `/control-room/.htaccess` and issues a fresh setup token.
+- Second fault fixed: it wrote its `.htaccess` backup into `_deployed/` without creating it, so
+  it would have crashed **after** uploading files and **before** the rewrite — a half-applied
+  deploy. `_deployed/` is now created first and added to `.gitignore`, because that backup
+  holds the control room's DB password and API keys and must never be committed.

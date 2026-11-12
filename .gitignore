@@ -74,3 +74,7 @@ operations-console/data/
 next-env.d.ts
 
 .vercel
+
+# Local backup of the deployed /control-room/.htaccess, which holds the app's
+# DB password and API keys server-side. Never commit it.
+_deployed/
