@@ -190,7 +190,7 @@ export default function ColdPlungePage() {
               className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5"
             >
               <fact.icon className="w-5 h-5 text-cyan-600 dark:text-cyan-400 mb-3" aria-hidden="true" />
-              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-600 mb-1">
                 {fact.label}
               </div>
               <div className="text-2xl font-black text-slate-900 dark:text-white leading-none mb-1">
@@ -451,7 +451,7 @@ export default function ColdPlungePage() {
         <section className="mb-20 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-2">Merchant record</p>
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Merchant record</p>
               <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-2">
                 4.7 out of 5 on Trustpilot, from 188 reviews
               </h2>

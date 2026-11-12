@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* This site is a single, light design: body background is fixed cream (--paper)
+   and no element ever receives a `dark` class. Tailwind v4's default `dark:`
+   variant follows the OS colour-scheme preference, so on a dark-mode machine
+   every `dark:` utility fired while the background stayed light — headings
+   rendered white on cream and the text was unreadable. Scoping the variant to a
+   `.dark` ancestor makes those utilities inert, so the palette is consistent for
+   every visitor until a real dark theme exists. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root { --ink:#172019; --paper:#fbfaf6; --cream:#f1eee4; --coral:#ef6a4d; --sage:#bfd0b8; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
