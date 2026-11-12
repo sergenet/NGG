@@ -16,7 +16,9 @@
     "build": "npm run validate:data && next build && python engine/sitemap_generator.py && python engine/rss_generator.py && python engine/generate_pinterest_feed.py",
     "start": "next start",
     "lint": "eslint src",
-    "report:traffic": "node scripts/build-traffic-report.mjs"
+    "report:traffic": "node scripts/build-traffic-report.mjs",
+    "check:redirects": "node scripts/check-redirects.mjs",
+    "check:redirects:live": "node scripts/check-redirects.mjs --live"
   },
   "dependencies": {
     "clsx": "^2.1.1",

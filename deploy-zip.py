@@ -12,6 +12,7 @@ import os
 import subprocess
 import sys
 import time
+import shutil
 import zipfile
 import ftplib
 import base64
@@ -102,6 +103,11 @@ def connect_ftp():
 def build_zip():
     if not OUT_DIR.exists():
         raise RuntimeError(f"out/ directory {OUT_DIR} does not exist. Run npm run build first.")
+    # Next's export does not reliably re-copy public/.htaccess once out/ exists, so
+    # a redirect change can silently ship stale. Keep the deployed copy exact.
+    htaccess = BASE_DIR / "public" / ".htaccess"
+    if htaccess.exists():
+        shutil.copy2(htaccess, OUT_DIR / ".htaccess")
     
     files = [p for p in OUT_DIR.rglob("*") if p.is_file()]
     print(f"Compressing {len(files)} files from out/ into {ZIP_LOCAL.name}...")

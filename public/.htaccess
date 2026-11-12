@@ -92,8 +92,95 @@ RedirectMatch 301 ^/gift-guides/15-best-gadget-gifts-under-50/?$ /gift-guides/
 RedirectMatch 301 ^/gift-guides/best-gifts-for-mom-mothers-day-2026/?$ /gift-guides/
 RedirectMatch 301 ^/gift-guides/best-gifts-for-dad-father-s-day-2026/?$ /gift-guides/fathers-day-gadget-gifts/
 
-# Comparisons and the expired sale page have no current equivalent at all.
-RewriteRule ^comparisons/ - [G,L]
+# --- Legacy product URLs: 301, not 410 -------------------------------------
+# These slugs were in the catalogue, earned impressions, and left it. Each one
+# now points at the live page that serves the same intent, so the rankings and
+# links have somewhere to land instead of dying as 410. Six are the same item
+# under a new slug; the rest are product types the catalogue retired, mapped to
+# the hub or guide that covers that type today. Anything under /product/ that is
+# not listed here still falls through to the 410 rule further down.
+RedirectMatch 301 ^/product/scary-eyeballs-solar-pathway-lights-waterproof-with-flashing-modes-4-pack/?$ /product/dealgenius-scary-eyeballs-solar-pathway-lights-4-pack/
+RedirectMatch 301 ^/product/electric-milk-blender-battery-operated-handheld/?$ /product/dealgenius-handheld-electric-milk-frother-blender/
+RedirectMatch 301 ^/product/2-pack-stainless-steel-rolling-grill-basket-heavy-duty-bbq-mesh-for/?$ /product/dealgenius-rolling-grill-basket-2-pack-stainless-steel/
+RedirectMatch 301 ^/product/multi-function-5-in-1-bottle-opener-set-jar-cap-and-corkscrew-opener-with/?$ /product/dealgenius-5-in-1-multi-function-bottle-jar-opener-set/
+RedirectMatch 301 ^/product/aerolatte-handheld-milk-frother/?$ /product/dealgenius-handheld-electric-milk-frother-blender/
+RedirectMatch 301 ^/product/mobi-l1fe-led-flashlight-gloves-cool-gadgets-for-men-camping-gear-tech-gadgets-birthday-gifts-for-someone-who-has-everything-coolest-camping-gadgets/?$ /product/rechargeable-led-flashlight-gloves-waterproof/
+RedirectMatch 301 ^/product/amazon-basics-premium-monitor-stand/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/huanuo-dual-monitor-mount/?$ /home-office/best-monitor-arms-for-dual-setups-2026/
+RedirectMatch 301 ^/product/ergear-single-monitor-arm/?$ /home-office/best-monitor-arms-for-dual-setups-2026/
+RedirectMatch 301 ^/product/nexbie-custom-3d-pet-portrait/?$ /shop/home-decor/
+RedirectMatch 301 ^/product/magsafe-compatible-phone-stand/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/levitating-globe-lamp/?$ /shop/desk-toys-novelty-gifts/
+RedirectMatch 301 ^/product/dima-eyewear-blue-light-blocking-computer-glasses/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/elgato-prompter/?$ /gifts/video-call-gifts/
+RedirectMatch 301 ^/product/logitech-ergo-k860-wireless-keyboard/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/anker-555-usb-c-hub-8-in-1/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/caldigit-ts4-thunderbolt-4-dock/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/samsung-t7-shield-1tb/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/logitech-mx-master-3s/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/benq-screenbar-halo/?$ /home-office/essential-desk-upgrades/
+RedirectMatch 301 ^/product/taotronics-led-desk-lamp/?$ /shop/home-office/
+RedirectMatch 301 ^/product/lepower-metal-desk-lamp/?$ /shop/home-office/
+RedirectMatch 301 ^/product/eppiebasic-led-desk-lamp/?$ /shop/home-office/
+RedirectMatch 301 ^/product/dyson-lightcycle-morph/?$ /shop/home-office/
+RedirectMatch 301 ^/product/elgato-facecam-pro/?$ /gifts/video-call-gifts/
+RedirectMatch 301 ^/product/logitech-brio-4k/?$ /gifts/video-call-gifts/
+RedirectMatch 301 ^/product/razer-kiyo-pro-ultra/?$ /gifts/video-call-gifts/
+RedirectMatch 301 ^/product/anker-powerconf-c200/?$ /gifts/video-call-gifts/
+RedirectMatch 301 ^/product/opal-tadpole/?$ /gifts/video-call-gifts/
+RedirectMatch 301 ^/product/sony-wh-1000xm5-wireless-headphones/?$ /shop/home-entertainment/
+RedirectMatch 301 ^/product/apple-homepod-mini/?$ /shop/home-entertainment/
+RedirectMatch 301 ^/product/sonos-era-100/?$ /shop/home-entertainment/
+RedirectMatch 301 ^/product/elgato-stream-deck-mk-2/?$ /shop/home-entertainment/
+RedirectMatch 301 ^/product/elgato-stream-deck-mk2/?$ /shop/home-entertainment/
+RedirectMatch 301 ^/product/ember-smart-mug-2/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/anker-737-power-bank-powercore-24k/?$ /shop/travel-tech/
+RedirectMatch 301 ^/product/anker-prime-20-000mah-power-bank/?$ /shop/travel-tech/
+RedirectMatch 301 ^/product/irobot-roomba-j9/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/irobot-roomba-j9-series/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/irobot-roomba-j9-plus-series/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/irobot-roomba-combo-j7/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/roborock-qrevo-curv/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/ring-indoor-cam-2nd-gen/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/ring-battery-doorbell-plus/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/wyze-cam-v4-latest-model/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/arlo-pro-5s-2k-spotlight-camera/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/google-nest-cam-battery/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/august-wi-fi-smart-lock-4th-gen/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/amazon-echo-show-8-3rd-gen/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/google-nest-hub-2nd-gen/?$ /shop/smart-home/
+RedirectMatch 301 ^/product/lifx-a19-smart-led/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/lifx-luna-smart-lamp/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/wyze-bulb-color/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/govee-smart-led-bulbs/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/tp-link-kasa-smart-bulb/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/switchbot-hub-2-matter/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/govee-ai-sync-box-2/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/philips-hue-bridge-starter-kit/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/ecobee-premium-smart-thermostat/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/aqara-fp2-presence-sensor/?$ /smart-home/top-smart-home-tech-2026/
+RedirectMatch 301 ^/product/thermopro-twin-tempspike-plus/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/product/ninja-air-fryer-4-in-1-pro/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/product/cosori-turboblaze-60-quart/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/product/cosori-smart-air-fryer/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/product/instant-vortex-plus-6-in-1/?$ /kitchen/best-kitchen-gadgets-2026-updated/
+RedirectMatch 301 ^/product/breville-barista-express-impress/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/breville-barista-express-espresso-machine/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/vitamix-e310-explorian-blender/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/ninja-professional-blender-bl610/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/keurig-k-elite-coffee-maker/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/hamilton-beach-flexbrew-coffee-maker/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/zyliss-e900010u-viral-peeler/?$ /shop/kitchen/
+RedirectMatch 301 ^/product/furbo-360-dog-camera/?$ /shop/pet-tech/
+RedirectMatch 301 ^/product/infinity-fidget-cube/?$ /shop/desk-toys-novelty-gifts/
+RedirectMatch 301 ^/product/smootherpro-bolt-action-brass-pen/?$ /shop/desk-toys-novelty-gifts/
+RedirectMatch 301 ^/product/qipecedm-4-pcs-ribbed-coupe-glasses-10-oz-vintage-cocktail-coupe-glasses-set-unique-martini-glass-classic-cocktail-galssware-bar-drinking-glasses-set-pefect-for-cocktail-wine-champagne-gif/?$ /shop/kitchen/
+
+# The comparison section is gone and nothing replaced it, so it lands on the
+# full catalogue instead of dying as a 410 while it still earns impressions.
+RedirectMatch 301 ^/comparisons/?$ /shop/all/
+
+# The expired sale page has no current equivalent at all.
 RewriteRule ^deals/amazon-big-spring-sale-2026-the-best-tech-gadget-deals/?$ - [G,L]
 RewriteRule ^reviews/?$ - [G,L]
 
