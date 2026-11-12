@@ -18,6 +18,10 @@
 /out/
 /temp_extract/
 /scratch/
+
+# scratch space for one-off scripts and commit-message drafts. Nothing here is a
+# record: anything worth keeping belongs in scripts/ or data/ and gets committed.
+/tmp/
 /__pycache__/
 **/__pycache__/
 *.pyc
