@@ -2,11 +2,14 @@ import React, { Suspense } from 'react';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
 import productsData from '@/lib/data/products.json';
+import articlesData from '@/lib/data/articles.json';
 import { Product } from '@/lib/schema';
 import { GiftFinderClient, ProductGrid } from './GiftFinderClient';
 import { StickyMobileFilter } from '@/components/StickyMobileFilter';
 import ProductImageDisplay from '@/components/ProductImageDisplay';
-import { categorySlug, formatPriceBracket, isActiveRetailerUrl, sortByRecency } from '@/lib/utils';
+import { categorySlug, formatPriceBracket, guideSlug, isActiveRetailerUrl, sortByRecency } from '@/lib/utils';
+
+type GuideRecord = { title: string; category_slug: string; status: string; body_intro: string };
 
 // How many picks "New Arrivals" shows. The window is recency-ordered rather than
 // date-filtered so the page can never render empty when the catalog goes quiet.
@@ -377,6 +380,17 @@ export default async function CategoryPage({
     { label: 'Over $250', value: 'over-250' },
   ];
 
+  // Every guide in this category, linked from the hub that covers it. Without
+  // this the guides were reachable only from the sitemap, which is a poor signal
+  // for both a reader and a reviewer: a page nobody links to looks abandoned.
+  const categoryGuides = (articlesData.queue as GuideRecord[])
+    .filter((guide) => guide.status === 'published' && guide.category_slug === category)
+    .map((guide) => ({
+      title: guide.title,
+      href: `/${guide.category_slug}/${guideSlug(guide.title)}/`,
+      dek: guide.body_intro.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160),
+    }));
+
   const categoryName = category === 'all' 
     ? 'All Gifts & Gadgets' 
     : category === 'new-arrivals'
@@ -546,6 +560,23 @@ export default async function CategoryPage({
                     </div>
                   ))}
                 </div>
+              </section>
+            )}
+
+            {categoryGuides.length > 0 && (
+              <section className="rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Research guides</p>
+                <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">Written research for this category</h2>
+                <ul className="divide-y divide-slate-200 dark:divide-slate-800">
+                  {categoryGuides.map((guide) => (
+                    <li key={guide.href} className="py-4 first:pt-0 last:pb-0">
+                      <Link href={guide.href} className="group block">
+                        <h3 className="font-bold text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 leading-snug">{guide.title}</h3>
+                        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{guide.dek}&hellip;</p>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </section>
             )}
 

@@ -206,6 +206,12 @@ function jsonBody(): array
     return is_array($data) ? $data : [];
 }
 
+function campaignValue($raw): string
+{
+    $text = preg_replace('/[^a-z0-9._-]+/', '-', strtolower(trim((string) $raw)));
+    return substr(trim((string) $text, '-.'), 0, 60);
+}
+
 function sameOrigin(): bool
 {
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -350,6 +356,13 @@ function trackEvent(): void
         $page = '/unknown';
     }
 
+    $campaign = is_array($body['campaign'] ?? null) ? $body['campaign'] : [];
+    $campaignSource = campaignValue($campaign['source'] ?? '');
+    $campaignMedium = campaignValue($campaign['medium'] ?? '');
+    $campaignName = campaignValue($campaign['campaign'] ?? '');
+    $campaignContent = campaignValue($campaign['content'] ?? '');
+    $placement = campaignValue($body['placement'] ?? '');
+
     $referrer = (string) ($body['referrer'] ?? '');
     $parts = parse_url($referrer);
     $host = isset($parts['host']) ? strtolower(preg_replace('/^www\./', '', $parts['host'])) : '';
@@ -366,8 +379,26 @@ function trackEvent(): void
         }
     }
 
+    // A tagged visit is labelled by its campaign. The referrer cannot do this job:
+    // a paid click and an organic result both arrive from google.com, so without
+    // this the campaign's clicks are indistinguishable from free traffic.
+    if ($campaignSource !== '' || $campaignMedium !== '') {
+        $source = $campaignSource !== '' && $campaignMedium !== ''
+            ? $campaignSource . '/' . $campaignMedium
+            : ($campaignSource !== '' ? $campaignSource : $campaignMedium);
+    }
+
     $visitor = hash_hmac('sha256', gmdate('Y-m-d') . '|' . ($_SERVER['REMOTE_ADDR'] ?? '') . '|' . substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 160), envv('ANALYTICS_HASH_SECRET'));
     $c = db();
+    $addDimension = static function (mysqli $conn, string $type, string $value): void {
+        if ($value === '') {
+            return;
+        }
+        $s = $conn->prepare('INSERT INTO traffic_dimensions_daily (metric_date, dimension_type, dimension_value, metric_count) VALUES (CURRENT_DATE, ?, ?, 1) ON DUPLICATE KEY UPDATE metric_count = metric_count + 1');
+        $s->bind_param('ss', $type, $value);
+        $s->execute();
+        $s->close();
+    };
     $c->begin_transaction();
     try {
         $stmt = $c->prepare("INSERT INTO site_metrics_daily (metric_date, metric_key, metric_count) VALUES (CURRENT_DATE, ?, 1) ON DUPLICATE KEY UPDATE metric_count = metric_count + 1");
@@ -388,16 +419,19 @@ function trackEvent(): void
                 $stmt->close();
             }
 
-            $stmt = $c->prepare('INSERT INTO traffic_dimensions_daily (metric_date, dimension_type, dimension_value, metric_count) VALUES (CURRENT_DATE, ?, ?, 1) ON DUPLICATE KEY UPDATE metric_count = metric_count + 1');
-            $dimension = 'landing_page';
-            $stmt->bind_param('ss', $dimension, $page);
-            $stmt->execute();
+            $addDimension($c, 'landing_page', $page);
             if ($source !== 'internal') {
-                $dimension = 'source';
-                $stmt->bind_param('ss', $dimension, $source);
-                $stmt->execute();
+                $addDimension($c, 'source', $source);
             }
-            $stmt->close();
+            if ($campaignSource !== '' || $campaignMedium !== '') {
+                $addDimension($c, 'campaign', $campaignName !== '' ? $source . '/' . $campaignName : $source);
+            }
+            $addDimension($c, 'campaign_creative', $campaignContent);
+        } elseif ($type === 'retailer_click') {
+            // Clicks are recorded against the page that produced them, so
+            // retailer_click ÷ page_view can be read for one page at a time.
+            $addDimension($c, 'click_page', $page);
+            $addDimension($c, 'click_placement', $placement);
         }
         $c->commit();
     } catch (Throwable $e) {

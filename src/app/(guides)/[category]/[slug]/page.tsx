@@ -8,10 +8,25 @@ import { NewsletterInline } from '@/components/NewsletterInline';
 import productsData from '@/lib/data/products.json';
 import articlesData from '@/lib/data/articles.json';
 import { Product } from '@/lib/schema';
-import { formatPriceBracket } from '@/lib/utils';
+import { formatPriceBracket, guideSlug } from '@/lib/utils';
 
-// Helper to slugify titles
-const slugify = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+/**
+ * The article queue, typed once. `publishedAt` is optional because the guides
+ * written before the field existed have no recorded publication date, and the
+ * page must not invent one for them.
+ */
+type Guide = {
+  title: string;
+  category_slug: string;
+  product_asins: string[];
+  status: string;
+  body_intro: string;
+  publishedAt?: string;
+};
+
+const guides = articlesData.queue as Guide[];
+
+const slugify = guideSlug;
 
 const getGuideAngle = (category: string) => {
   switch (category) {
@@ -36,7 +51,7 @@ const normalizeGuideHtml = (html: string) => html
   .replace(/<p>### ([^<\n]+)\n?/g, '<h3>$1</h3><p>');
 
 export async function generateStaticParams() {
-  return articlesData.queue.map((article) => ({
+  return guides.map((article) => ({
     category: article.category_slug,
     slug: slugify(article.title),
   }));
@@ -44,7 +59,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string, slug: string }> }) {
   const { category, slug } = await params;
-  const article = articlesData.queue.find((a) => slugify(a.title) === slug && a.category_slug === category);
+  const article = guides.find((a) => slugify(a.title) === slug && a.category_slug === category);
   
   if (!article) return { title: 'Not Found' };
 
@@ -80,7 +95,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 
 export default async function GuidePage({ params }: { params: Promise<{ category: string, slug: string }> }) {
   const { category, slug } = await params;
-  const article = articlesData.queue.find((a) => slugify(a.title) === slug && a.category_slug === category);
+  const article = guides.find((a) => slugify(a.title) === slug && a.category_slug === category);
 
   if (!article) {
     notFound();
@@ -127,6 +142,7 @@ export default async function GuidePage({ params }: { params: Promise<{ category
       name: 'New Gifts And Gadgets',
     },
     dateModified: lastReviewed,
+    ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
   };
 
   const itemListJsonLd = {
@@ -141,7 +157,7 @@ export default async function GuidePage({ params }: { params: Promise<{ category
     })),
   };
 
-  const relatedArticles = articlesData.queue
+  const relatedArticles = guides
     .filter((candidate) => candidate.category_slug === category && slugify(candidate.title) !== slug)
     .slice(0, 3);
 
@@ -175,7 +191,10 @@ export default async function GuidePage({ params }: { params: Promise<{ category
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
             {article.title}
           </h1>
-          <p className="mb-8 text-sm font-semibold text-slate-500">Research-based guide by the NewGiftsAndGadgets Research Desk · Reviewed {lastReviewed}</p>
+          <p className="mb-8 text-sm font-semibold text-slate-500">
+            Research-based guide by the NewGiftsAndGadgets Research Desk
+            {article.publishedAt ? ` · Published ${article.publishedAt}` : ''} · Reviewed {lastReviewed}
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
               <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-600 mb-2">Guide angle</div>

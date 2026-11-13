@@ -80,6 +80,12 @@ async function load() {
     const dims = (type) => data.dims.filter((row) => row.dimension_type === type).slice(0, 10).map((row) => [row.dimension_value, row.metric_count]);
     table('pages', dims('landing_page'), 'Page', 'Landings');
     table('sources', dims('source'), 'Source', 'Visits');
+    // Campaign rows only exist for tagged visits, so an empty table here means
+    // no campaign traffic has arrived — not that the tagging failed.
+    table('campaigns', dims('campaign'), 'Campaign (source/medium/name)', 'Landings');
+    table('creatives', dims('campaign_creative'), 'Creative', 'Landings');
+    table('placements', dims('click_placement'), 'Placement', 'Clicks');
+    table('clicked', dims('click_page'), 'Page', 'Clicks');
 
     const labels = { subscribed: 'confirmed subscribers', pending: 'pending confirmation', unsubscribed: 'unsubscribed' };
     table('providers', data.snapshots.map((row) => [`EmailOctopus: ${labels[row.metric_key] || row.metric_key}`, row.metric_value]), 'Provider metric', 'Latest');

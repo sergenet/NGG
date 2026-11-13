@@ -32,6 +32,17 @@ export function sortByRecency<T extends { lastUpdated?: string }>(items: T[]): T
   return [...items].sort((a, b) => (b.lastUpdated ?? '').localeCompare(a.lastUpdated ?? ''))
 }
 
+/**
+ * Single implementation of the guide URL slug, shared by the guide route and the
+ * category hubs that link to it. The Python sitemap generator mirrors this rule.
+ */
+export function guideSlug(title: string | undefined): string {
+  return String(title ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 export function formatPriceBracket(bracket: string | undefined): string {
   const labels: Record<string, string> = {
     'under-50': 'Under $50',

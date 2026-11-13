@@ -140,3 +140,63 @@ It does not predict approval. Tests 1 and 3 are human judgements made by Google 
 sample of pages, and a site can fail them while looking fine by every measurement in this
 repository. What is measurable is stated above with its source; what is judgement is
 labelled as such.
+
+---
+
+## Addendum, 13 November 2026: content added, ratio still short
+
+Five guides were written and published, and every guide is now linked from the
+category hub that covers it. Measured from the built sitemap the same day:
+
+| | 12 Nov | 13 Nov |
+|---|---|---|
+| Sitemap URLs | 289 | **294** |
+| Product pages | 236 | 236 |
+| Non-product pages | 53 | **58** |
+| Product share | 81.7% | **80.3%** |
+| Guides in the queue | 13 | **18** |
+| Guides under 600 words of their own writing | 0 | **0** |
+| Guides linked from a category hub | 0 | **18** |
+
+The five new guides are *Heated Jackets and Heated Clothing: The Battery
+Arithmetic*, *Flashlights and Headlamps: Lumens Are Not Beam Distance*, *Electric
+Bikes: Class, Motor Power and the Range Claim*, *Boundary-Free Robotic Mowers:
+What "No Wire" Actually Requires*, and *Desk Geometry: Measure Before You Buy the
+Arm or the Desk*. Each runs 1,015–1,247 words of original writing, quotes
+specifications from the product listing rather than restating marketing, shows
+its arithmetic, and names the specifications the listing does not publish.
+
+**What this fixes.** Test 2, curation and structural maintenance. Before today
+the thirteen existing guides were reachable only from the sitemap and from each
+other — no hub page linked them, which is what an abandoned site looks like to a
+crawler. They are now listed on all twelve shop category pages, and new guides
+show a publication date and a `datePublished` value that the older ones do not
+claim.
+
+**What it does not fix.** The ratio. Product pages were 81.7% of the sitemap and
+are now 80.3%. Removing five or five hundred words of thin copy was never the
+point: 236 pages of ~146 words of substance still outnumber 58 pages of real
+writing by four to one, and a reviewer sampling ten pages at random still lands on
+a product page eight times in ten.
+
+The decision rule above asks for the non-product share to be at least a third.
+Against 236 products that would need **174** non-product pages — 116 more than
+exist. The alternative recorded in `CATALOGUE_PRUNE_DECISION.md` reaches the same
+threshold with far less writing: retire the 194 imported products to 301s, keep
+the 42 hand-picked ones, and the site becomes **58 non-product against 42
+product**, or 58% non-product.
+
+That prune was **not** executed today. It is a separate, deliberate action: it
+deletes 194 URLs and writes 194 redirects, and it should not happen in the same
+change as a content release, so that the two can be measured apart.
+
+**Test 3 is unchanged and is still the decisive one.** Content does not create
+demand. Search Console showed zero clicks over three months as of 10 November,
+and no amount of writing changes that criterion — only visitors do. The paid
+campaign on `/cold-plunge/` is now instrumented to measure whether a click turns
+into a merchant visit, which is the first real evidence about this site's ability
+to hold a visitor's attention that the project will have.
+
+**Recommendation stands:** do not request a review until the 19 November Search
+Console re-read shows clicks, or until the prune is done. Both are conditions in
+the decision rule above, and neither is met today.

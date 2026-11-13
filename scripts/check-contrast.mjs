@@ -43,6 +43,9 @@ const PAGES = [
   '/home-office/essential-desk-upgrades/',
   '/gifts/video-call-gifts/',
   '/cold-plunge/',
+  '/shop/outdoor-adventure/',
+  '/outdoor-adventure/flashlights-and-headlamps-lumens-are-not-beam-distance/',
+  '/home-office/desk-geometry-measure-before-you-buy-the-arm-or-the-desk/',
   '/product/plunge-chill-recovery-tub-system/',
   '/product/vivo-dual-monitor-desk-mount/',
 ];
