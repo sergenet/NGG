@@ -123,8 +123,9 @@ clicks, a zero is ambiguous and a second $100 inherits the same ambiguity.
 - [ ] Confirm the $10 first-sale bonus applies to this account for Nov–Dec
 - [ ] Check the price is still $1,359 — the catalogue was corrected to this on
       12 Nov 2026 and the page and schema both read from it
-- [ ] Add the negative keyword list
-- [ ] Set the campaign end date to day 7, so it cannot quietly keep spending
+- [x] Add the negative keyword list — done 13 Nov 2026, all 15 at campaign level
+- [x] Set the campaign end date to day 7 — **20 Nov 2026**, so it cannot quietly
+      keep spending
 - [ ] Note the $100 is not charged by us — it needs their ad account and card
 
 ## What is not automated, deliberately
@@ -319,8 +320,8 @@ It is complete except for pressing Publish, which the browser would not do.
 |---|---|
 | Campaign name | **Plunge Chill Search Nov26** |
 | Type / goal | Search, website visits |
-| Bidding | **Clicks** (manual), max CPC **$1.00** |
-| Budget | **$14.00/day** |
+| Bidding | *Maximize clicks* with a **$1.00 max CPC bid limit** (confirmed by the account holder on 13 Nov 2026) |
+| Budget | **$100.00 campaign total**, end date **20 November 2026** |
 | Networks | Google Search only — Search Partners **off**, Display **off** |
 | Locations | **United States** |
 | AI Max | **Off**; text customization and Final URL expansion **off** |
@@ -349,14 +350,86 @@ check on the account holder, not something that can be delegated.
   turned off"*. Re-check this before publishing — it is the single setting most
   likely to spend the budget on automated matching.
 - **The $100 campaign-total budget requires an end date**, which the date picker
-  would not set in this browser. The budget was moved to **$14.00/day × 7 days =
-  $98** as the runbook originally specified. Because a daily budget can
-  overdeliver up to 2× on any single day, **set an end date of 20 November** and
-  expect the weekly total to land near $98, not exactly at it.
+  would not set in this browser. It was switched to **$14.00/day** as a
+  workaround, then the account holder set the end date by hand on 13 November:
+  **20 November 2026**. With a valid end date the campaign-total figure was
+  restored, and the review summary now reads **"Campaign total: $100.00"**
+  paced across 13–20 November. That is the shape the runbook wanted: a hard cap
+  on total spend, not a daily rate that can overdeliver up to 2× on one day.
 
-### Not configured
+### Final state before publish, 13 November 2026
 
-Negative keywords were not entered (the wizard has no field for them; they are
-added per campaign afterwards under Keywords → Negative keywords). Add the 15
-terms from the runbook before the campaign accumulates spend. Sitelinks and
-callouts are also empty, which is what holds ad strength at "Average".
+The review page reported **"Your campaign is ready to publish"** with the end date accepted. Summary as read back from the page:
+
+- Bidding: *Maximize clicks*; Customer acquisition: bid equally for new and
+  existing. The summary does not render the bid limit, so it was checked in the
+  campaign's Bidding settings and **confirmed at $1.00 max CPC on 13 Nov 2026**.
+  The strategy spends the budget evenly but cannot pay more than $1.00 a click,
+  which keeps the ~95-clicks-a-week estimate honest.
+- Budget: **Campaign total $100.00**, promotion mode off, all channels high.
+- Networks: Google Search only. Locations: United States.
+- AI Max: *Text customization and Final URL expansion **turned off***; brands
+  limited to 0 lists, excluded 0.
+- Keywords: 6, *using only your keywords and match types*.
+- Ads: 1. Optimization score 84.6%.
+
+### Published, 13 November 2026
+
+The account holder pressed Publish. Read back from the campaign itself:
+
+| Field | Value |
+|---|---|
+| Campaign | **Plunge Chill Search Nov26** |
+| Status | **Enabled · Eligible (Learning)** |
+| Type | Search |
+| Budget | **$100.00 / campaign** |
+| Start and end | **Nov 13, 2026 – Nov 20, 2026** |
+| Bidding | *Maximize clicks*, **$1.00 max CPC bid limit** |
+
+"Learning" is the bid strategy calibrating; it is not an error. Impressions may
+lag the publish by several hours.
+
+### Negative keywords added, 13 November 2026
+
+All 15 terms now sit at **campaign** level, applied to Plunge Chill Search Nov26
+(Keywords → Negative keywords):
+
+| Match type | Terms |
+|---|---|
+| Broad | `free` `diy` `cheap` `rental` `used` `meaning` `benefits` `study` `reddit` `lawsuit` `review` `youtube` |
+| Phrase | `"how to build"` `"chest freezer"` `"near me"` |
+
+The three multi-word terms were quoted so they stay phrase negatives. Watch
+`review` in the search terms report: it is broad, so it also blocks queries like
+"cold plunge tub review", which can be purchase-adjacent. If the campaign
+under-delivers against its click estimate, that term is the first thing to
+loosen.
+
+### Sitelinks and callouts added, 13 November 2026
+
+Both sets are attached at **campaign** level to Plunge Chill Search Nov26. All
+landing pages return 200 and were checked before writing the copy; every claim is
+drawn from the page or the merchant listing, not invented.
+
+| Sitelink | Description | Destination |
+|---|---|---|
+| Full specifications | Chiller, tub, filtration, and the real footprint to plan for. | `/cold-plunge/#specifications` |
+| Price and what ships | What the Plus kit includes and what it leaves out. | `/product/plunge-chill-recovery-tub-system/` |
+| Health & wellness | More recovery and wellness gear we compared first. | `/shop/health-and-wellness/` |
+| How we review | How we pick and verify before linking a retailer. | `/editorial-policy/` |
+
+Callouts: `1HP chiller, 39°F` · `Filtration and ozone` · `Insulated Plus tub` ·
+`Setup steps explained` · `Space and fit checks` · `Buyer questions answered`.
+
+The first three come from the merchant listing's specifications; the last three
+name sections that exist on the landing page. Deliberately absent: any shipping,
+returns or warranty claim (affiliate sales are fulfilled by the merchant, so we
+cannot promise its terms) and any price in the sitelink copy, which would go
+stale the moment the merchant repriced.
+
+All ten assets show **Pending · Under review**, which is normal for new assets
+and does not block the campaign. One duplicate callout was created and removed
+during the build: the asset table is virtualised, so a first read showed only the
+rendered rows and made the sixth callout look like it had not saved. The live set
+is 4 sitelinks + 6 callouts, verified by reading the asset report filtered to
+each asset type.
