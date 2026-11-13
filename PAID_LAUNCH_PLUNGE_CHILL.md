@@ -309,3 +309,54 @@ clears. Budgeting has not changed — $14/day for 7 days, manual CPC capped at
 $1.00 — but the seven days cannot begin before Google enables the account. If
 verification stalls, creating a new Google Ads account is the alternative; it
 carries its own verification step and its own spend limits for a new advertiser.
+
+## Campaign draft built, 13 November 2026
+
+The campaign exists as a Google Ads **draft** in NGG-2026 (CID 772-705-1721).
+It is complete except for pressing Publish, which the browser would not do.
+
+| Setting | Value in the draft |
+|---|---|
+| Campaign name | **Plunge Chill Search Nov26** |
+| Type / goal | Search, website visits |
+| Bidding | **Clicks** (manual), max CPC **$1.00** |
+| Budget | **$14.00/day** |
+| Networks | Google Search only — Search Partners **off**, Display **off** |
+| Locations | **United States** |
+| AI Max | **Off**; text customization and Final URL expansion **off** |
+| Keywords | 6, phrase match |
+| Ads | 1 responsive search ad, 7 headlines, 2 descriptions |
+| Final URL | `/cold-plunge/?utm_source=google&utm_medium=cpc&utm_campaign=cp-launch-nov26` |
+| Display path | `newgiftsandgadgets.com/cold-plunge` |
+
+### Why it is not live
+
+The Google Ads web app refuses to render its publish footer in the shared
+browser: it detects an ad blocker ("Google Ads can't work when you're using an
+ad blocker") and the construction shell collapses to zero width. Every field
+saved correctly server-side — the review page reads back the values in the table
+above — but no Publish control is ever rendered to click.
+
+**To finish, in a normal browser with blockers off:** Google Ads → NGG-2026 →
+Campaigns → the draft card → **Finish draft** → Review → **Publish campaign**.
+Expect a "Confirm it's you" reauthentication at that point; it is Google's
+check on the account holder, not something that can be delegated.
+
+### Two corrections made during the build
+
+- **AI Max re-enabled itself once** after a back-navigation. It was switched off
+  again and the review page then read *"Text customization and Final URL expansion
+  turned off"*. Re-check this before publishing — it is the single setting most
+  likely to spend the budget on automated matching.
+- **The $100 campaign-total budget requires an end date**, which the date picker
+  would not set in this browser. The budget was moved to **$14.00/day × 7 days =
+  $98** as the runbook originally specified. Because a daily budget can
+  overdeliver up to 2× on any single day, **set an end date of 20 November** and
+  expect the weekly total to land near $98, not exactly at it.
+
+### Not configured
+
+Negative keywords were not entered (the wizard has no field for them; they are
+added per campaign afterwards under Keywords → Negative keywords). Add the 15
+terms from the runbook before the campaign accumulates spend. Sitelinks and
+callouts are also empty, which is what holds ad strength at "Average".
