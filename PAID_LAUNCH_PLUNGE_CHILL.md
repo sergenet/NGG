@@ -274,3 +274,38 @@ that decides.
 | **Spend** | **Not started — needs the ad account and payment method** |
 
 The campaign is ready to switch on. Nothing else in the repository blocks it.
+
+## Blocker found in the ad account, 13 November 2026
+
+The Google Ads account was opened in a signed-in browser and inspected. It
+cannot serve this campaign yet, for two reasons that are both outside the
+repository:
+
+1. **The account is cancelled.** `ads.google.com` lists two accounts on
+   `sergenet@yahoo.com`: *Cyberage* **(Closed)** and *NGG-2026* **(Cancelled)**.
+   Opening NGG-2026 shows the banner "Your account isn't active — your ads aren't
+   running because your account has been canceled." There is a **Reactivate**
+   control, a payment method on file (Mastercard •••• 9162), and one
+   **Performance Max draft from 30 March 2026** — no live campaign has ever run,
+   which is consistent with $0.00 lifetime cost and 0 clicks.
+2. **Advertiser verification is required.** A reactivation prompt leads to
+   "Your account can't run ads — you'll need to complete advertiser verification
+   to start running your ads again." That is an identity and business-document
+   check handled by Google, not a setting. It typically takes days, and it cannot
+   be completed on the account's owner's behalf.
+
+Neither is a fault in the landing page, the ad copy or the tracking. The campaign
+is configured and ready; the account that would serve it is not.
+
+A third, practical obstacle: Google Ads refuses to operate with an ad blocker
+active ("Google Ads can't work when you're using an ad blocker"), which is the
+state of the browser it was opened in. Use a normal browser profile with blockers
+off for this account, and do not disable protection for anything else.
+
+### What this means for the $100
+
+The spend cannot start until the account is reactivated *and* verification
+clears. Budgeting has not changed — $14/day for 7 days, manual CPC capped at
+$1.00 — but the seven days cannot begin before Google enables the account. If
+verification stalls, creating a new Google Ads account is the alternative; it
+carries its own verification step and its own spend limits for a new advertiser.
