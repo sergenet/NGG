@@ -1,5 +1,246 @@
 [
   {
+    "id": "P-AW-PERSONALHOUR-JANET-PLUS",
+    "slug": "personalhour-janet-elite-plus-foldable-pilates-reformer",
+    "title": "PersonalHour Janet Elite Plus Premium Foldable Pilates Reformer",
+    "description": "A studio-grade maple wood foldable Pilates reformer engineered with German beech accents, high-tensile resistance springs, and whisper-quiet rolling carriage for home spaces.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0605/3910/9628/files/JanetElitePlusChocolate.jpg?v=1793549311"
+    ],
+    "vendors": [
+      {
+        "name": "PersonalHour Official Store",
+        "url": "https://www.awin1.com/cread.php?awinmid=96347&awinaffid=2913559&ued=https%3A%2F%2Fpersonalhour.com%2Fproducts%2Fjanet-elite-plus-premium-foldable-pilates-reformer",
+        "price": 1797,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Fitness Enthusiasts",
+        "Athletes",
+        "Homeowners"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Foldable solid maple wood frame collapses to half its length with integrated transport wheels for storage",
+      "Five balanced German spring steel tension springs calibrated for smooth, progressive resistance",
+      "High-density EVA foam carriage upholstered in tear-resistant vegan leather for supportive posture",
+      "Multi-angle adjustable padded footbar and ergonomic quick-adjust headrest",
+      "Includes commercial sitting box and jump board accessories for full repertoire workouts"
+    ],
+    "brand": "PersonalHour",
+    "whoShouldBuy": [
+      "Pilates practitioners wanting studio-grade workout versatility without sacrificing a dedicated full room permanently",
+      "Fitness enthusiasts prioritizing low-impact core stability, posture refinement, and flexibility training"
+    ],
+    "whoShouldSkip": [
+      "Apartment dwellers lacking storage clearance or looking exclusively for lightweight resistance band kits"
+    ],
+    "pros": [
+      "Folds upright smoothly to clear floor space after daily practice",
+      "Solid hardwood construction delivers wobble-free commercial stability under dynamic footbar load",
+      "Includes sitting box and jump board accessories out of the box"
+    ],
+    "cons": [
+      "Weighs over 140 lbs, requiring deliberate rolling rather than casual lifting",
+      "Initial setup requires two adults to unfold and secure initial carriage alignment"
+    ],
+    "setupTips": [
+      "Unpack in a room with at least 8.5 feet of unobstructed floor length and use an exercise floor mat underneath."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "Studio precision without losing an entire room",
+        "body": "The defining compromise of home Pilates has always been footprint. Full-length studio reformers dominate a room; portable units often rattle or flex under tension. The Janet Elite Plus solves this by folding at the center chassis while maintaining a rigid locking hinge that does not buckle when you extend on the footbar."
+      },
+      {
+        "heading": "Resistance feel versus commercial studio gear",
+        "body": "German spring steel gives a smooth, progressive tension curve without the sudden snatching of cheaper coil units. The carriage glides on heavy-duty polyurethane wheels along anodized tracks, keeping carriage noise minimal so morning routines won't disturb the household."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-PERSONALHOUR-NOUR-ADVANCED",
+    "slug": "personalhour-nour-advanced-foldable-home-pilates-reformer",
+    "title": "PersonalHour Nour Advanced Foldable Home Pilates Reformer",
+    "description": "A handcrafted solid oak wood folding Pilates reformer offering commercial resistance balance, plush carriage glide, and compact space-saving home storage.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0605/3910/9628/files/Nourhomereformer.jpg?v=1793510322"
+    ],
+    "vendors": [
+      {
+        "name": "PersonalHour Official Store",
+        "url": "https://www.awin1.com/cread.php?awinmid=96347&awinaffid=2913559&ued=https%3A%2F%2Fpersonalhour.com%2Fproducts%2Ffoldable-pilates-reformer-maple-wood-white-bed-nour-advanced",
+        "price": 1578,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Fitness Enthusiasts",
+        "Homeowners",
+        "Wellness Seekers"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Premium solid oak wood chassis finished with protective moisture-sealed coat",
+      "Precision 8-wheel carriage suspension system delivering frictionless, whisper-quiet travel",
+      "5-stage nickel-plated resistance spring system with color-coded resistance grading",
+      "Quick-fold locking mechanism with dual safety latches and heavy-duty swivel casters",
+      "Includes padded sitting box and foot strap"
+    ],
+    "brand": "PersonalHour",
+    "whoShouldBuy": [
+      "Home exercisers wanting natural hardwood aesthetics that blend with home furniture rather than industrial gym metal",
+      "Users seeking an accessible price point for a genuine wooden folding reformer"
+    ],
+    "whoShouldSkip": [
+      "Those needing heavy commercial gym gear intended for 10+ consecutive clients a day"
+    ],
+    "pros": [
+      "Gorgeous oak woodwork complements living spaces and modern home decors",
+      "Comfortable, thick shoulder rests prevent collarbone and neck fatigue during inversions",
+      "Quiet carriage travel ideal for shared home living"
+    ],
+    "cons": [
+      "Oak chassis requires occasional dust wipe-down to prevent rail track grit buildup",
+      "Footbar has fewer angle presets than the top-tier Janet Elite series"
+    ],
+    "setupTips": [
+      "Wipe the aluminum guide rails monthly with a microfiber cloth to preserve carriage glide."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "Furniture aesthetics meet daily workout durability",
+        "body": "Many home fitness machines look like steel medical rehabilitation rigs. The Nour Advanced features a warm oak wood chassis that looks intentional in a bright bedroom or living room corner, while the carriage tracking matches studio expectations."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-PERSONALHOUR-NANO-ELITE",
+    "slug": "personalhour-nano-elite-large-studio-pilates-reformer",
+    "title": "PersonalHour Nano Elite 2.0 Large Studio Pilates Reformer",
+    "description": "A heavy-duty non-folding commercial-grade Pilates reformer built for serious practitioners, instructors, and dedicated home fitness studios.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0605/3910/9628/files/image-20fc53d0.jpg?v=1794239742"
+    ],
+    "vendors": [
+      {
+        "name": "PersonalHour Official Store",
+        "url": "https://www.awin1.com/cread.php?awinmid=96347&awinaffid=2913559&ued=https%3A%2F%2Fpersonalhour.com%2Fproducts%2Fnano-elite-2-0-large-premium-studio-pilates-reformer-re005-2026",
+        "price": 2323,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Athletes",
+        "Fitness Enthusiasts",
+        "Biohackers"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Unibody rigid commercial-length frame engineered for zero deflection under maximum spring resistance",
+      "Extended carriage travel distance accommodates tall users and full limb extensions comfortably",
+      "Six multi-gauge professional springs with micro-tuning gear bar positions",
+      "Commercial-grade sitting box, jump board, and padded platform extender included"
+    ],
+    "brand": "PersonalHour",
+    "whoShouldBuy": [
+      "Dedicated practitioners and instructors building a permanent home workout room",
+      "Taller users (over 6ft 0in) who need extended carriage travel without hitting spring endstops"
+    ],
+    "whoShouldSkip": [
+      "Buyers who must store their equipment away in a closet or under a bed after each session"
+    ],
+    "pros": [
+      "Rock-solid structural rigidity identical to boutique commercial Pilates studios",
+      "Expanded spring bar configurations allow granular resistance micro-adjustments",
+      "Supports heavier user weights with zero frame creaking"
+    ],
+    "cons": [
+      "Permanent footprint requires a dedicated 9-foot clear room space",
+      "Very heavy shipping weight requiring freight delivery"
+    ],
+    "setupTips": [
+      "Dedicate a permanent room zone with at least 2 feet of perimeter clearance around all four sides."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "The zero-compromise platform for dedicated home studios",
+        "body": "If you have dedicated square footage for fitness, a rigid one-piece reformer eliminates any joint seam or chassis flex. The Nano Elite 2.0 provides the exact carriage inertia, travel length, and rock-solid platform feel found in elite downtown studios."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-PERSONALHOUR-ZOUS-PRO",
+    "slug": "personalhour-zous-pro-foldable-pilates-reformer",
+    "title": "PersonalHour Zous Pro Foldable Pilates Reformer",
+    "description": "A contemporary compact folding Pilates reformer with reinforced composite frame, modern matte finish, and smooth magnetic-assisted folding lock.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0605/3910/9628/files/ZousCoffee2.jpg?v=1777352968"
+    ],
+    "vendors": [
+      {
+        "name": "PersonalHour Official Store",
+        "url": "https://www.awin1.com/cread.php?awinmid=96347&awinaffid=2913559&ued=https%3A%2F%2Fpersonalhour.com%2Fproducts%2Fzous-pro-foldable-pilates-reformer-mothers-day-special-edition-2026-re017",
+        "price": 1477,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Fitness Enthusiasts",
+        "Homeowners",
+        "Wellness Seekers"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Space-efficient folding design with upright vertical stand capability",
+      "5 heavy-duty progressive resistance springs with ergonomic pull handles",
+      "Sweat-proof antimicrobial PU leather upholstery on dense posture cushioning",
+      "Quick-release footbar adjusting between multiple locked heights and angles"
+    ],
+    "brand": "PersonalHour",
+    "whoShouldBuy": [
+      "Fitness lovers wanting a sleek, modern aesthetic at a sub-$1,500 investment point",
+      "Apartment or townhouse owners who need upright vertical standing storage against a wall"
+    ],
+    "whoShouldSkip": [
+      "Users who prefer traditional antique wood aesthetics"
+    ],
+    "pros": [
+      "Can stand vertically against a closet or wall when folded to minimize floor footprint",
+      "Contemporary minimalist styling fits modern apartments",
+      "Substantial price savings while retaining 5-spring variable resistance"
+    ],
+    "cons": [
+      "Slightly firmer carriage cushioning than the plush maple models"
+    ],
+    "setupTips": [
+      "Always engage the dual safety locking pin before standing the unit upright."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "Upright storage makes apartment Pilates realistic",
+        "body": "For many homes, floor space is not available along an empty wall, but vertical space is. The Zous Pro is engineered to stand upright securely on its reinforced base feet, taking up less floor area than an accent chair when stored."
+      }
+    ]
+  },
+  {
     "id": "P-B0CT95KTQH",
     "slug": "vari-electric-standing-desk-48x30",
     "title": "Vari Electric Standing Desk (48x30)",
