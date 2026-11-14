@@ -1,5 +1,249 @@
 [
   {
+    "id": "P-AW-TORNADO-LUMINA-CHRONOSPHERE",
+    "slug": "tornado-lumina-chronosphere-chronograph-watch",
+    "title": "Tornado Lumina Chronosphere Chronograph Watch",
+    "description": "A high-impact 43mm sports chronograph featuring a sculpted octagonal bezel, Miyota JS05 movement, sapphire-coated crystal, 10 ATM water resistance, and an eye-catching orange silicone strap.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0650/2347/5791/files/T25103-SSRRB.webp?v=1779452958"
+    ],
+    "vendors": [
+      {
+        "name": "Tornado Store USA",
+        "url": "https://www.awin1.com/cread.php?awinmid=129777&awinaffid=2913559&ued=https%3A%2F%2Ftornado.store%2Fproducts%2Ft25103-ssrrb",
+        "price": 252,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Smart Wearables",
+      "recipient": [
+        "Significant Others",
+        "Tech Enthusiasts",
+        "Gadget Lovers"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Solid 316L surgical-grade stainless steel case with brushed and mirror-polished facets",
+      "Geometric 12-sided polygon case with sculpted octagonal bezel",
+      "Japanese Miyota JS05 quartz chronograph movement with sub-dial timing",
+      "Scratch-resistant sapphire-coated mineral crystal and 100-meter (10 ATM) water resistance",
+      "High-grade flexible silicone strap with dual-deployant butterfly clasp"
+    ],
+    "brand": "Tornado",
+    "whoShouldBuy": [
+      "Anyone looking for a bold statement sports chronograph that balances luxury aesthetic angles with everyday durability",
+      "Gift shoppers seeking a striking, high-spec timepiece under $300"
+    ],
+    "whoShouldSkip": [
+      "Purists wanting small vintage-dimension dress watches under 38mm"
+    ],
+    "pros": [
+      "High-contrast octagonal bezel channels luxury sports-watch styling at an accessible price point",
+      "10 ATM water resistance is genuine enough for swimming and rain without worry",
+      "Butterfly deployant clasp extends silicone strap lifespan compared to pin buckles"
+    ],
+    "cons": [
+      "43mm case diameter wears prominently on wrists smaller than 6.5 inches",
+      "Vibrant orange strap is designed for casual/sporty wear rather than black-tie formal events"
+    ],
+    "setupTips": [
+      "Rinse with fresh water after salt or chlorinated pool swimming to maintain strap suppleness."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "Luxury sports geometry without the four-figure price tag",
+        "body": "Integrated bracelet and polygon-bezel watches have dominated contemporary horology for the past five years. The Lumina Chronosphere captures that geometric presence with genuine 316L steel casework and crisp bevel transitions that reflect light cleanly across the wrist."
+      },
+      {
+        "heading": "Movement and real-world reliability",
+        "body": "Powered by a Japanese Miyota JS05 chronograph movement, you get accurate quartz timekeeping with responsive pusher tactile feedback, avoiding the costly multi-hundred dollar maintenance intervals of mechanical chronographs."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-TORNADO-CELESTIA-CLASSIC",
+    "slug": "tornado-celestia-classic-analog-watch",
+    "title": "Tornado Celestia Classic Analog Stainless Steel Watch",
+    "description": "A timeless 42mm daily timepiece crafted in solid stainless steel, featuring an integrated steel bracelet, crisp white dial with date window, and reliable Miyota 2115 quartz movement.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0650/2347/5791/files/T8007-SBSW-1.webp?v=1770395249"
+    ],
+    "vendors": [
+      {
+        "name": "Tornado Store USA",
+        "url": "https://www.awin1.com/cread.php?awinmid=129777&awinaffid=2913559&ued=https%3A%2F%2Ftornado.store%2Fproducts%2Ft8007-sbsw",
+        "price": 144,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Smart Wearables",
+      "recipient": [
+        "Parents",
+        "Significant Others",
+        "Coworkers"
+      ],
+      "priceBracket": "100-250"
+    },
+    "features": [
+      "Brushed and polished 316L solid stainless steel case and integrated link bracelet",
+      "Clean white dial layout with applied hour batons and quick-set date at 6 o'clock",
+      "Miyota 2115 quartz movement with 3+ year battery autonomy",
+      "Sapphire-coated protective crystal and 10 ATM / 100m water resistance",
+      "Push-button butterfly deployant clasp for seamless bracelet integration"
+    ],
+    "brand": "Tornado",
+    "whoShouldBuy": [
+      "Men needing a versatile 'one-watch collection' suitable for office wear, dinners, and casual weekends",
+      "Gift shoppers seeking a classic stainless steel watch under $150 with sapphire crystal"
+    ],
+    "whoShouldSkip": [
+      "Shoppers looking specifically for digital smartwatch notifications or health sensors"
+    ],
+    "pros": [
+      "Clean white dial and integrated steel bracelet pair seamlessly with suits or casual polo shirts",
+      "Date window balanced at 6 o'clock preserves dial symmetry",
+      "100-meter water resistance rating is twice as robust as standard entry-level dress watches"
+    ],
+    "cons": [
+      "Sizing the integrated steel bracelet requires a pin-removal tool or local jeweler adjustment",
+      "Simple baton hands prioritize minimalism over heavy nighttime luminous glow"
+    ],
+    "setupTips": [
+      "Use a standard watch bracelet sizing pin block to remove links evenly from both sides of the clasp."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "The versatile everyday dress-and-sports steel watch",
+        "body": "Finding a sub-$150 steel watch that avoids cheap hollow links or flimsy sheet-metal clasps is increasingly difficult. The Celestia Classic punches above its weight with solid links, a clean symmetrical date at six o'clock, and sapphire-coated glass."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-TORNADO-AUTONOVA-AUTOMATIC",
+    "slug": "tornado-autonova-automatic-skeleton-watch",
+    "title": "Tornado Autonova Automatic Skeleton Mechanical Watch",
+    "description": "A mesmerizing mechanical skeleton watch showcasing an exposed Miyota 8N24 automatic balance wheel, octagonal bezel, and integrated 316L stainless steel bracelet.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0650/2347/5791/files/T24303-SBSB-1.webp?v=1772197366"
+    ],
+    "vendors": [
+      {
+        "name": "Tornado Store USA",
+        "url": "https://www.awin1.com/cread.php?awinmid=129777&awinaffid=2913559&ued=https%3A%2F%2Ftornado.store%2Fproducts%2Ft24303-sbsb",
+        "price": 277,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Smart Wearables",
+      "recipient": [
+        "Tech Enthusiasts",
+        "Gadget Lovers",
+        "Significant Others"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Open-worked skeleton dial displaying the beating balance wheel, mainspring, and gear train",
+      "Japanese Miyota 8N24 automatic self-winding mechanical movement (powered by wrist motion)",
+      "41mm stainless steel case with modern octagonal bezel and slim 10mm profile",
+      "Exhibition transparent caseback revealing the engraved rotor",
+      "Sapphire-coated glass front and back with 10 ATM water resistance"
+    ],
+    "brand": "Tornado",
+    "whoShouldBuy": [
+      "Gearheads, engineers, and tech enthusiasts who appreciate micro-mechanical watchmaking and kinetic motion",
+      "Shoppers looking for a conversation-starter watch with open balance architecture"
+    ],
+    "whoShouldSkip": [
+      "Users who require split-second atomic precision and dislike resetting a mechanical watch after days in a drawer"
+    ],
+    "pros": [
+      "No battery replacements ever needed; charges automatically from your natural arm movement",
+      "Open skeleton architecture provides endless fascination watching the balance wheel oscillate at 21,600 vph",
+      "Slim 10mm thickness slides comfortably under buttoned shirt cuffs"
+    ],
+    "cons": [
+      "Mechanical power reserve runs ~42 hours when unworn; stops if left unused for two days",
+      "Skeleton dials take slightly longer to read at a quick glance compared to solid high-contrast dials"
+    ],
+    "setupTips": [
+      "Wind the crown clockwise 20-30 turns manually from a dead stop before strapping it on."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "Mechanical kinetic art on the wrist",
+        "body": "In a world of black-screen smartwatches that become obsolete in three years, an automatic skeleton watch celebrates pure mechanics. Watching the balance spring breathe and gears mesh under the sapphire crystal connects the wearer to centuries of horological craft."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-TORNADO-XENITH-CURVE",
+    "slug": "tornado-xenith-curve-multifunction-watch",
+    "title": "Tornado Xenith Curve Multifunction Square Watch",
+    "description": "An audacious 44mm square-cased sports watch featuring a Miyota JP25 multifunction movement, exhibition caseback, sapphire crystal, and premium red FKM rubber strap.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0650/2347/5791/files/T26101-XFRR.png?v=1771583288"
+    ],
+    "vendors": [
+      {
+        "name": "Tornado Store USA",
+        "url": "https://www.awin1.com/cread.php?awinmid=129777&awinaffid=2913559&ued=https%3A%2F%2Ftornado.store%2Fproducts%2Ft26101-xfrr",
+        "price": 293,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Smart Wearables",
+      "recipient": [
+        "Tech Enthusiasts",
+        "Gadget Lovers",
+        "Creators"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "44mm ergonomic square curved case designed for wrist-hugging comfort",
+      "Miyota JP25 multifunction calendar movement with 24-hour and day/date indicators",
+      "Transparent K9 crystal exhibition rear cover showing internal casework architecture",
+      "Fluorocarbon (FKM) vulcanized red rubber strap resistant to oils, UV, and temperature",
+      "10 ATM (100 meters) water resistance rating"
+    ],
+    "brand": "Tornado",
+    "whoShouldBuy": [
+      "Style-conscious watch lovers wanting an avant-garde square silhouette reminiscent of Monaco and Richard Mille styles",
+      "Active individuals who sweat through leather and prefer military-grade FKM rubber"
+    ],
+    "whoShouldSkip": [
+      "Conservatives looking for standard circular formal dress watches"
+    ],
+    "pros": [
+      "Ergonomically curved caseback distributes weight evenly across the forearm",
+      "FKM rubber is vastly superior to cheap silicone: lint-free, odorless, and virtually indestructible",
+      "Multifunction sub-dials provide day, date, and 24-hour military time without requiring crown adjustments"
+    ],
+    "cons": [
+      "44mm square shape has substantial presence and requires confidence to pull off",
+      "Bold red colorway is an accent piece that draws immediate attention"
+    ],
+    "setupTips": [
+      "Clean the case with lukewarm water and a soft cloth to keep the brushed satin edges looking fresh."
+    ],
+    "lastUpdated": "2026-11-14",
+    "editorial": [
+      {
+        "heading": "Square geometry and racing-inspired accents",
+        "body": "Square sports watches have a rich heritage in automotive motorsport. The Xenith Curve embraces that spirit with sub-dial instruments, industrial visible screws, and an ultra-durable FKM strap that won't degrade under sunscreen or sweat."
+      }
+    ]
+  },
+  {
     "id": "P-AW-PERSONALHOUR-JANET-PLUS",
     "slug": "personalhour-janet-elite-plus-foldable-pilates-reformer",
     "title": "PersonalHour Janet Elite Plus Premium Foldable Pilates Reformer",
