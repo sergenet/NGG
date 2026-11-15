@@ -259,14 +259,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
             {/* Product Info */}
             <div className="p-8 md:p-12 flex flex-col">
-              <div className="mb-2 flex items-center gap-2">
+              <div className="mb-2 flex items-center gap-2 flex-wrap">
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                   {displayCategory}
                 </span>
                 {product.brand && (
-                  <span className="text-sm font-semibold text-slate-500">
-                    by {product.brand}
-                  </span>
+                  <Link
+                    href={`/shop/all?brand=${encodeURIComponent(product.brand)}`}
+                    className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-indigo-950/50 dark:hover:text-indigo-400 border border-slate-200 dark:border-slate-700 transition-colors inline-flex items-center gap-1"
+                  >
+                    <span>Brand:</span> <strong className="font-extrabold">{product.brand}</strong>
+                  </Link>
                 )}
               </div>
               
@@ -407,19 +410,39 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             )}
           </section>
 
-          <aside className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-3">Quick links</p>
-            <h3 className="text-2xl font-black mb-5">Keep comparing</h3>
-            <div className="space-y-3 text-sm">
-              <Link href={`/shop/${categorySlug}/`} className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
-                Browse more {displayCategory} picks
-              </Link>
-              <Link href="/gift-guides/" className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
-                Browse gift guides
-              </Link>
-              <Link href="/about" className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
-                Read how we research products
-              </Link>
+          <aside className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between">
+            {product.brand && (
+              <div className="mb-6 rounded-2xl bg-white/5 border border-white/10 p-5">
+                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-amber-300 mb-1">Brand Spotlight</p>
+                <h4 className="text-xl font-black text-white">{product.brand}</h4>
+                <p className="text-xs text-slate-300 mt-1 mb-3">
+                  Explore other curated gifts and gear from this manufacturer.
+                </p>
+                <Link
+                  href={`/shop/all?brand=${encodeURIComponent(product.brand)}`}
+                  className="inline-flex items-center gap-1.5 text-xs font-black text-amber-300 hover:text-amber-200 transition-colors"
+                >
+                  All {product.brand} picks →
+                </Link>
+              </div>
+            )}
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-3">Quick links</p>
+              <h3 className="text-2xl font-black mb-5">Keep comparing</h3>
+              <div className="space-y-3 text-sm">
+                <Link href={`/shop/${categorySlug}/`} className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
+                  Browse more {displayCategory} picks
+                </Link>
+                <Link href="/brands/" className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
+                  Browse all 30 brands
+                </Link>
+                <Link href="/gift-guides/" className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
+                  Browse gift guides
+                </Link>
+                <Link href="/about" className="block rounded-2xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition-colors">
+                  Read how we research products
+                </Link>
+              </div>
             </div>
           </aside>
         </div>

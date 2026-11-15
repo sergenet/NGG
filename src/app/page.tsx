@@ -128,6 +128,53 @@ export default function Home() {
         <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{featured.map((product) => <DealCard key={product.id} product={product} />)}</div>
       </section>
 
+      {/* Featured Partner Brands Hub */}
+      <section className="site-container pb-16" aria-labelledby="brands-heading">
+        <div className="rounded-[2.5rem] border border-stone-200/90 bg-white p-8 md:p-12 shadow-xs">
+          <div className="section-heading-row mb-8">
+            <div>
+              <p className="eyebrow inline-flex items-center gap-1.5 text-indigo-900 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
+                <ShieldCheck className="h-3.5 w-3.5 text-indigo-600" /> Curated Partner Brands
+              </p>
+              <h2 id="brands-heading" className="section-title mt-3">Shop directly from trusted manufacturers</h2>
+            </div>
+            <Link href="/brands/" className="text-link font-black text-indigo-700 hover:text-indigo-900">
+              Browse all 30 brands <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+            {[
+              { name: 'PersonalHour', tag: 'Home Pilates', href: '/shop/all?brand=PersonalHour' },
+              { name: 'Tornado', tag: "Men's Watches", href: '/shop/all?brand=Tornado' },
+              { name: 'Plunge Chill', tag: 'Cold Therapy', href: '/cold-plunge/' },
+              { name: 'Billion Dollar Beauty', tag: 'Cosmetics & Tools', href: '/shop/all?brand=Billion%20Dollar%20Beauty' },
+              { name: 'Vari', tag: 'Standing Desks', href: '/shop/all?brand=Vari' },
+              { name: 'Ergotron', tag: 'Monitor Arms', href: '/shop/all?brand=Ergotron' },
+              { name: 'GRABO', tag: 'Power Tools', href: '/shop/all?brand=GRABO' },
+              { name: 'SKILHUNT', tag: 'Tactical Lights', href: '/shop/all?brand=SKILHUNT' },
+              { name: 'Herman Miller', tag: 'Ergonomic Seating', href: '/shop/all?brand=Herman%20Miller' },
+              { name: 'ShadowGPS', tag: 'Trackers', href: '/shop/all?brand=ShadowGPS' },
+              { name: 'DealGenius', tag: 'Home Gadgets', href: '/shop/all?brand=DealGenius' },
+              { name: 'Traverseon', tag: 'Travel & Outdoor', href: '/shop/all?brand=Traverseon' },
+            ].map((brand) => (
+              <Link
+                key={brand.name}
+                href={brand.href}
+                className="group flex flex-col justify-between p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-indigo-400 hover:bg-indigo-50/30 hover:shadow-md transition-all text-center"
+              >
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">{brand.tag}</span>
+                  <strong className="text-sm font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors block">{brand.name}</strong>
+                </div>
+                <span className="mt-3 text-[11px] font-black text-indigo-600 group-hover:translate-x-0.5 transition-transform inline-flex items-center justify-center gap-1">
+                  View <ArrowRight className="h-3 w-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="site-container pb-16" aria-labelledby="budget-heading">
         <div className="rounded-[2.5rem] bg-[#18231d] px-6 py-10 text-white md:px-10 md:py-14"><div className="section-heading-row"><div><p className="eyebrow eyebrow-dark">Ready to compare</p><h2 id="budget-heading" className="section-title text-white!">Available from active retailers</h2></div><Link href="/shop/all/" className="text-link text-amber-300!">Browse all researched picks <ArrowRight className="h-4 w-4" /></Link></div><div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{retailerBacked.map((product) => <DealCard key={product.id} product={product} />)}</div></div>
       </section>

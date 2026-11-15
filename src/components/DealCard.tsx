@@ -45,11 +45,14 @@ export function DealCard({ product }: DealCardProps) {
       <div className="flex flex-col flex-1 p-5 lg:p-6">
         <div className="flex-1">
           {product.brand && (
-            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2 block">
-              {product.brand}
-            </span>
+            <Link
+              href={`/shop/all?brand=${encodeURIComponent(product.brand)}`}
+              className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider text-indigo-700 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 border border-indigo-200/80 dark:border-indigo-800/60 px-2.5 py-0.5 rounded-full mb-2.5 transition-colors"
+            >
+              <span>{product.brand}</span>
+            </Link>
           )}
-          <Link href={`/product/${product.slug}`} className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <Link href={`/product/${product.slug}`} className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors block">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-tight mb-3 line-clamp-2">
               {product.title}
             </h2>

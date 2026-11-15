@@ -81,6 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               New Arrivals ✨
             </Link>
             <Link href="/shop/all/">All finds</Link>
+            <Link href="/brands/">Brands</Link>
             <Link href="/gift-guides/">Gift guides</Link>
             <Link href="/shop/home-office/">Home office</Link>
             <Link href="/shop/kitchen/">Kitchen</Link>
