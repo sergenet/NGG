@@ -41,7 +41,7 @@ ZIP_LOCAL = BASE_DIR / "deploy-bundle.zip"
 ZIP_REMOTE = "deploy-bundle.zip"
 UNZIP_REMOTE = "ngg-unzip.php"
 
-FTP_HOST = "newgiftsandgadgets.com"
+FTP_HOST = _cred("NGG_FTP_HOST", "premium303.web-hosting.com")
 FTP_USER = "serge@newgiftsandgadgets.com"
 FTP_PASS = _cred("NGG_FTP_PASS")
 if not FTP_PASS:
