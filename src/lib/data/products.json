@@ -1,5 +1,187 @@
 [
   {
+    "id": "P-AW-BDB-BOX-BUNDLE",
+    "slug": "billion-dollar-box-magnetic-palette-brush-bundle",
+    "title": "Billion Dollar Box Customizable Magnetic Makeup Palette & Brush Bundle",
+    "description": "A sustainable, waste-free magnetic cosmetics palette with built-in kickstand mirror and 3 magnetic-handle vegan brushes that click directly into place for travel.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0483/3588/0360/files/Square_MagneticBrushes_3_1.jpg?v=1738803388"
+    ],
+    "vendors": [
+      {
+        "name": "Billion Dollar Beauty Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=22999&awinaffid=2913559&ued=https%3A%2F%2Fbilliondollarbeauty.com%2Fproducts%2Fbillion-dollar-box%25C2%25AE-magnetic-brush-set-bundle",
+        "price": 35,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Significant Others",
+        "Travelers",
+        "Creators"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Customizable magnetic interior base holds ~10 interchangeable makeup pans and tools",
+      "Includes 3 travel mini brushes with magnetic ferrule handles that snap firmly inside the box",
+      "Integrated kickstand mirror lid allows hands-free makeup application anywhere",
+      "Reusable, eco-friendly chassis engineered to eliminate single-use plastic packaging waste",
+      "Compact 3.75-inch by 6-inch dimensions slip easily into travel carry-ons or purses"
+    ],
+    "brand": "Billion Dollar Beauty",
+    "whoShouldBuy": [
+      "Frequent travelers and commuters tired of packing bulky cosmetic bags with loose rolling brushes",
+      "Gift shoppers seeking an innovative, personalized makeup organization system under $40"
+    ],
+    "whoShouldSkip": [
+      "People who prefer large vanity-sized makeup organizers for home use only"
+    ],
+    "pros": [
+      "Magnetic handles keep brush bristles elevated and clean without rolling around in a bag",
+      "Kickstand lid stands upright firmly on airplane tray tables, desks, or car consoles",
+      "Eco-conscious design lets users replace individual pans without rebuying plastic cases"
+    ],
+    "cons": [
+      "Holds approximately 10 standard pans, requiring selection of favorite essentials for travel",
+      "Requires magnetic-compatible pan bases or magnetic adhesive stickers for non-BDB pans"
+    ],
+    "setupTips": [
+      "Arrange the magnetic brushes along the side edge first, then snap in your favorite powder and eye pans."
+    ],
+    "lastUpdated": "2026-11-15",
+    "editorial": [
+      {
+        "heading": "Solving the cluttered cosmetic bag once and for all",
+        "body": "Traditional makeup bags are black holes of scattered pencils, cracked powder compacts, and dirty loose brushes. The Billion Dollar Box replaces the entire clutter with a magnetic grid that holds only the exact shades and tools you actually use, clicking them into place with satisfying precision."
+      },
+      {
+        "heading": "Magnetic handles make mobile touch-ups seamless",
+        "body": "The genius touch is the magnetic brush handles. Instead of setting your powder or eye brush on a questionable public counter or trying to balance it while holding a mirror, the brushes snap directly onto the interior magnet wall whenever your hands need to be free."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-BDB-MAGNETIC-BRUSH-SET",
+    "slug": "billion-dollar-beauty-magnetic-vegan-brush-set",
+    "title": "Billion Dollar Beauty Magnetic Vegan Travel Brush Set",
+    "description": "A 3-piece multi-functional travel brush set featuring ultra-soft synthetic vegan bristles and magnetic handles designed to snap into magnetic palettes.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0483/3588/0360/files/Main_Listing_Image_Bundles_MagneticBrushes.jpg?v=1743445770"
+    ],
+    "vendors": [
+      {
+        "name": "Billion Dollar Beauty Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=22999&awinaffid=2913559&ued=https%3A%2F%2Fbilliondollarbeauty.com%2Fproducts%2Ftravel-brush-set",
+        "price": 16,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Travelers",
+        "Significant Others",
+        "Students"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "100% cruelty-free and vegan ultra-soft hypoallergenic synthetic bristles",
+      "Integrated magnetic ferrule handles snap securely into magnetic cosmetic boxes",
+      "Powder Brush: dome-shaped head for blush, bronzer, and setting powder",
+      "Eyebrow Brush: dual-ended with angled liner brush and blending spoolie",
+      "Blending & Precision Duo Brush: dual-ended eyeshadow shader and crease blender"
+    ],
+    "brand": "Billion Dollar Beauty",
+    "whoShouldBuy": [
+      "Anyone seeking compact, high-performance vegan makeup brushes for travel or gym bags",
+      "Gift givers looking for an affordable, high-utility stocking stuffer under $20"
+    ],
+    "whoShouldSkip": [
+      "Professional makeup artists requiring 20+ specialized studio brush shapes"
+    ],
+    "pros": [
+      "Dual-ended designs provide the utility of 5 essential tools in just 3 compact handles",
+      "Synthetic bristles wash clean easily without shedding or soaking up liquid product",
+      "Magnetic handles prevent brushes from touching dirty surfaces between applications"
+    ],
+    "cons": [
+      "Mini travel handle length is shorter than standard long-handle tabletop vanity brushes"
+    ],
+    "setupTips": [
+      "Wash weekly with gentle antibacterial soap and lay flat to dry to maintain bristle softness."
+    ],
+    "lastUpdated": "2026-11-15",
+    "editorial": [
+      {
+        "heading": "Five tools packed into three magnetic handles",
+        "body": "By putting a spoolie on the eyebrow brush and dual tips on the eyeshadow blender, this set covers full-face application in three compact tools. The synthetic bristles are dense and soft, picking up powder evenly without fallout."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-BDB-UNIVERSAL-BROW-KIT",
+    "slug": "billion-dollar-beauty-best-sellers-universal-brow-kit",
+    "title": "Billion Dollar Beauty Best Sellers Universal Brow Kit",
+    "description": "The cult-favorite 4-piece eyebrow shaping system featuring the self-adjusting Universal Brow Pencil, Brow Duo highlighter, smudge brush, and holding gel.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0483/3588/0360/files/Main_Listing_Image_Bundles_BestSellers.jpg?v=1743443760"
+    ],
+    "vendors": [
+      {
+        "name": "Billion Dollar Beauty Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=22999&awinaffid=2913559&ued=https%3A%2F%2Fbilliondollarbeauty.com%2Fproducts%2Fbillion-dollar-beauty-best-sellers-universal-brow-kit-3-piece-bundle-beginner-friendly",
+        "price": 32,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Significant Others",
+        "Parents",
+        "Students"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Mechanical Universal Brow Pencil formulated to naturally match virtually all skin tones and hair colors",
+      "Dual-ended Brow Duo Pencil features a matte highlighter for arch lift and concealer for clean lines",
+      "Firm synthetic smudge brush blends highlighter seamlessly into brow bones",
+      "Clear brow holding gel locks eyebrow hairs in place with a natural, non-flaking finish",
+      "Water-resistant, smudge-resistant, and beginner-friendly 3-step routine"
+    ],
+    "brand": "Billion Dollar Beauty",
+    "whoShouldBuy": [
+      "Anyone who struggles to color-match brow pencils across tricky blonde, brunette, or silver hair shades",
+      "Beauty beginners wanting a foolproof arch definition kit without complicated pomades"
+    ],
+    "whoShouldSkip": [
+      "Shoppers seeking micro-blading ink markers or heavy tattoo-style brow tints"
+    ],
+    "pros": [
+      "Universal formula takes the guesswork out of shade matching (lighter pressure for blonde, firmer for dark brown)",
+      "Highlighter pencil provides an instant visual lift to tired eyes",
+      "Clear gel holds brows in place all day without feeling stiff or crispy"
+    ],
+    "cons": [
+      "Mechanical pencil requires gentle pressure to avoid snapping the fine wax tip"
+    ],
+    "setupTips": [
+      "Apply with light, hair-like flick strokes following your natural brow growth pattern, then comb through with the spoolie."
+    ],
+    "lastUpdated": "2026-11-15",
+    "editorial": [
+      {
+        "heading": "Why universal pigmentation eliminates the shade-matching headache",
+        "body": "The Universal Brow Pencil made Billion Dollar Brows famous in Beverly Hills salons for a reason: pressure controls the color depth. Apply lightly for strawberry blondes and light brunettes; apply with slightly firmer pressure for deep dark brown. It neutralizes red undertones, making it virtually impossible to end up with unnaturally orange or ashy brows."
+      }
+    ]
+  },
+  {
     "id": "P-AW-TORNADO-LUMINA-CHRONOSPHERE",
     "slug": "tornado-lumina-chronosphere-chronograph-watch",
     "title": "Tornado Lumina Chronosphere Chronograph Watch",
