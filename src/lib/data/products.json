@@ -2998,7 +2998,9 @@
         "heading": "Small by design",
         "body": "The capacity is built for a multi-tool, levers, and a spare tube, so it will not swallow a jacket or a lock. The light has to come off the bike to charge, so plan for that in a daily commute."
       }
-    ]
+    ],
+    "promoCode": "WELCOME10",
+    "promoNote": "Use coupon code WELCOME10 for 10% off at checkout."
   },
   {
     "id": "P-AW-PLUNGE-CHILL-POD",
@@ -11078,6 +11080,136 @@
       {
         "heading": "Leakproof and insulated are both unquantified",
         "body": "The listing claims leakproof and hot or cold without giving a cold-retention time, a steel grade, or a lid type. Those are the numbers that separate a bottle that keeps ice until lunch from one that does not. If it will live in a bag next to a laptop, check the lid seal first, because that is the part that fails."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-ROCKBROS-HANDLEBAR-BAG-2L",
+    "slug": "rockbros-as-184-waterproof-handlebar-bag-2l",
+    "title": "ROCKBROS AS-184 Waterproof 2L Bike Handlebar Bag with Shoulder Strap",
+    "description": "A high-density waterproof 2-liter handlebar cockpit bag with quick-release straps and a detachable shoulder strap that converts into an everyday cross-body sling.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0580/9117/5988/files/as184-waterproof-2l-bike-handlebar-bag.jpg"
+    ],
+    "vendors": [
+      {
+        "name": "ROCKBROS Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=58007&awinaffid=2913559&ued=https%3A%2F%2Frockbrosbike.us%2Fproducts%2Fas-184-waterproof-2l-bike-handlebar-bag-with-shoulder-strap",
+        "price": 43,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Outdoor Adventure",
+      "recipient": [
+        "Cyclists",
+        "Commuters",
+        "Travelers"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Seamless welded waterproof PVC fabric keeps phones, wallets, and battery banks completely dry in heavy rain",
+      "2-liter main compartment accommodates multi-tools, snacks, a packable windbreaker, and compact cameras",
+      "Dual-function design includes a detachable shoulder strap to convert instantly into an everyday shoulder sling",
+      "Three-point reinforced hook-and-loop strap system mounts firmly onto road drop bars, flat commuter bars, and gravel bikes"
+    ],
+    "brand": "ROCKBROS",
+    "whoShouldBuy": [
+      "Commuters and gravel riders wanting quick-access waterproof handlebar storage without needing heavy racks",
+      "Bikepackers looking for an off-bike carry bag during cafe or supply stops"
+    ],
+    "whoShouldSkip": [
+      "Riders with narrow aero drop bars where crossbar cabling obstructs front handlebar bag clearance"
+    ],
+    "pros": [
+      "High water resistance with sealed zippers protects electronics against road spray",
+      "Included shoulder strap makes off-bike transport seamless",
+      "Stable 3-point mounting prevents swaying on gravel and rough pavement"
+    ],
+    "cons": [
+      "May interfere with forward-out-front GPS computer mounts depending on handlebar setup",
+      "Rigid shape takes up fixed cockpit real estate"
+    ],
+    "setupTips": [
+      "Route mounting straps beneath gear cables to ensure steering remains smooth and unobstructed."
+    ],
+    "lastUpdated": "2026-11-16",
+    "promoCode": "WELCOME10",
+    "promoNote": "Use coupon code WELCOME10 for 10% off at checkout.",
+    "editorial": [
+      {
+        "heading": "The shoulder strap changes how you use it",
+        "body": "Most handlebar bags stay bolted to the bike because removing them is tedious. With quick-buckle straps and an included sling strap, this moves from cockpit organizer to cross-body carry bag when you lock the bike outside a shop or cafe."
+      },
+      {
+        "heading": "Check bar clearance first",
+        "body": "At 2 liters, it sits comfortably between standard 40 cm or wider drop bars and almost all flat commuter bars. If you run out-front bike computers or tightly taped internal cable routing, measure your stem-to-tire drop to avoid tire rub over bumps."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-ROCKBROS-TOP-TUBE-BAG-1L",
+    "slug": "rockbros-waterproof-top-tube-bag-1l",
+    "title": "ROCKBROS Waterproof Top Tube Frame Bag 1L (Luminous Series)",
+    "description": "An ultra-narrow waterproof top-tube cockpit bag with reflective accents, engineered to store energy bars, phones, and repair tools without knee rub.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0580/9117/5988/files/rockbros-saddle-bike-1.jpg"
+    ],
+    "vendors": [
+      {
+        "name": "ROCKBROS Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=58007&awinaffid=2913559&ued=https%3A%2F%2Frockbrosbike.us%2Fproducts%2Fwaterproof-bike-top-tube-bag-1l-lightweight-cycling-frame-bag",
+        "price": 29,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Outdoor Adventure",
+      "recipient": [
+        "Cyclists",
+        "Commuters",
+        "Outdoor Enthusiasts"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Slim aerodynamic wedge profile prevents knee clearance interference while pedaling out of the saddle",
+      "Weatherproof PU composite shell with sealed storm zipper shields phones and valuables from driving rain",
+      "Reflective geometric branding enhances side visibility during low-light dawn and dusk rides",
+      "Triple non-slip strap system fastens securely to top tube and steerer column without frame scuffing"
+    ],
+    "brand": "ROCKBROS",
+    "whoShouldBuy": [
+      "Endurance road riders, gravel cyclists, and commuters wanting one-handed access to nutrition, keys, or phone",
+      "Riders who dislike handlebar clutter or seatpost bags"
+    ],
+    "whoShouldSkip": [
+      "Cyclists riding carbon frames with top-tube bolt bosses who prefer direct bolt-on packs over straps"
+    ],
+    "pros": [
+      "Narrow profile eliminates frustrating knee contact during hard climbs",
+      "Finger-loop zipper pull operates easily while wearing full-finger cycling gloves",
+      "Firm structural sidewalls keep bag shape intact even when only half full"
+    ],
+    "cons": [
+      "1-liter volume holds essentials only — not sized for large jacket layers",
+      "Straps can collect road grime on muddy gravel trails if not wiped periodically"
+    ],
+    "setupTips": [
+      "Apply clear protective helicopter tape under strap contact zones if riding in abrasive dusty conditions."
+    ],
+    "lastUpdated": "2026-11-16",
+    "promoCode": "WELCOME10",
+    "promoNote": "Use coupon code WELCOME10 for 10% off at checkout.",
+    "editorial": [
+      {
+        "heading": "Narrow enough to forget it is there",
+        "body": "The single biggest flaw in cheap top tube bags is width: pedaling out of the saddle causes your knees to brush the sides with every stroke. A 5 cm slim tapered profile stops that rub while still leaving enough depth for a phone, gel packs, and a mini-pump."
+      },
+      {
+        "heading": "Water protection on top tube mounts",
+        "body": "Unlike saddle bags that sit shielded under your seat, top tube bags face direct rain and sweat. Sealed storm zippers and welded seam construction are non-negotiable here if you keep a smartphone inside."
       }
     ]
   }

@@ -296,6 +296,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   </span>
                     <LivePriceChecker slug={product.slug} />
                 </div>
+
+                {product.promoCode && (
+                  <div className="rounded-xl border border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/40 p-4 text-emerald-900 dark:text-emerald-200">
+                    <div className="flex items-center justify-between gap-3">
+                      <div>
+                        <span className="inline-block text-[11px] font-black uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                          Active Promo Code
+                        </span>
+                        <p className="mt-0.5 text-sm font-medium">
+                          {product.promoNote || `Use code ${product.promoCode} at checkout.`}
+                        </p>
+                      </div>
+                      <span className="shrink-0 select-all rounded-md bg-emerald-600 px-3 py-1.5 font-mono text-sm font-bold tracking-wider text-white shadow-sm">
+                        {product.promoCode}
+                      </span>
+                    </div>
+                  </div>
+                )}
                 
                 {primaryVendor && (
                   <PrimaryCTA 

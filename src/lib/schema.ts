@@ -31,4 +31,6 @@ export interface Product {
   editorial?: { heading: string; body: string }[];
   faqs?: { question: string; answer: string }[];
   lastUpdated?: string;
+  promoCode?: string;
+  promoNote?: string;
 }

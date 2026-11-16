@@ -39,6 +39,11 @@ export function DealCard({ product }: DealCardProps) {
         <div className="absolute top-4 left-4 bg-white/90 dark:bg-black/90 backdrop-blur-sm text-xs font-bold px-3 py-1.5 rounded-full shadow-sm text-slate-800 dark:text-slate-200">
           {product.tags.category}
         </div>
+        {product.promoCode && (
+          <div className="absolute top-4 right-4 bg-emerald-600/90 text-white backdrop-blur-sm text-[11px] font-black px-2.5 py-1 rounded-full shadow-sm tracking-wide uppercase">
+            Code: {product.promoCode}
+          </div>
+        )}
       </Link>
 
       {/* Content Area */}
