@@ -81,6 +81,26 @@ const faqs = [
     answer:
       'No. The tub is an ultra-rigid inflatable crafted from double-layer military-grade PVC over a drop-stitch nylon core with an 8 cm thermal wall. It feels as solid as a rigid paddleboard when inflated, while giving you the freedom to pack it down, relocate, or store it in minutes.',
   },
+  {
+    question: 'Can you submerge your head during a cold plunge?',
+    answer:
+      'No. It is recommended to keep your head above the water. Sudden exposure to sub-40°F water triggers the involuntary mammalian cold shock response (rapid breathing, gasping, and elevated heart rate). Submerging your head increases the risk of inhaling water. Enter gradually, keep your neck and head elevated, and focus on slow, controlled nasal breathing.',
+  },
+  {
+    question: 'Is taking a cold plunge every day too much?',
+    answer:
+      'Not necessarily for experienced, healthy individuals, but more is not always better. Peer-reviewed cold exposure literature shows that consistency and comfort are far more impactful than extreme durations. A sustainable routine of 2 to 4 sessions per week (reaching roughly 11 minutes of total weekly immersion) delivers the full anti-inflammatory, dopamine, and metabolic benefits without over-taxing your nervous system.',
+  },
+  {
+    question: 'Cold shower vs. cold plunge: what is the difference?',
+    answer:
+      'While a cold shower is an accessible entry point, water rapidly rolls off the skin without delivering uniform thermal transfer. In contrast, full-body immersion in a 120-gallon tub surrounds your entire surface area with 36°F water, inducing a 250% increase in baseline dopamine, significant norepinephrine release, and deep muscular recovery that showers cannot replicate.',
+  },
+  {
+    question: 'When should you cold plunge after exercise (strength vs. endurance)?',
+    answer:
+      'Timing depends heavily on your training goals: After endurance or cardio sessions, cold water immersion quickly flushes metabolic fatigue and manages muscle soreness. However, after resistance and hypertrophy (strength) training, immediate cold immersion blunts the natural inflammatory signalling pathways essential for muscle protein synthesis and growth. For strength training, wait 4 to 6 hours before plunging, or reserve plunging for active recovery days.',
+  },
 ];
 
 export default function ColdPlungePage() {
@@ -505,6 +525,92 @@ export default function ColdPlungePage() {
                 <span className="text-[11px] text-center text-slate-500">Direct from Plunge Chill Official</span>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Science & Protocol Guide */}
+        <section className="mb-20">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
+              Recovery Science
+            </span>
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white mt-1 mb-3">
+              Safety, Frequency &amp; Workout Timing
+            </h2>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Cold plunging is not about pushing extreme limits—it is about creating a safe, sustainable stimulus for mental resilience and physical recovery.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 mb-4">
+                1. Head Positioning &amp; Safety
+              </span>
+              <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">
+                Keep Your Head Above Water
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                Sudden exposure to sub-40°F water triggers the mammalian cold shock response, causing involuntary gasping and sharp heart rate spikes. Submerging your head significantly increases the risk of water aspiration.
+              </p>
+              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                💡 <strong className="text-cyan-600 dark:text-cyan-400">Best Practice:</strong> Step in gradually up to your collarbone, keep your neck relaxed, and focus on slow diaphragmatic breathing.
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 mb-4">
+                2. Immersion Frequency
+              </span>
+              <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">
+                Consistency Beats Extreme Endurance
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                Daily plunging is safe for adapted individuals, but more is not necessarily better. Research shows that 11 total minutes of weekly cold exposure divided across 2 to 4 sessions achieves full metabolic and mood adaptations.
+              </p>
+              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                ⏱️ <strong className="text-cyan-600 dark:text-cyan-400">Target Protocol:</strong> 2 to 3 minutes per session at 36°F–42°F is the scientifically verified sweet spot.
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 mb-4">
+                3. Showers vs. Dedicated Tub
+              </span>
+              <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">
+                Why Showers Fall Short of True Immersion
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                Cold showers only cool isolated skin patches as water runs off. Full-body immersion in a 120-gallon tub creates uniform hydrostatic pressure and rapid convective heat extraction, unlocking prolonged 2.5x dopamine elevation.
+              </p>
+              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                ⚡ <strong className="text-cyan-600 dark:text-cyan-400">Key Difference:</strong> Precise 36°F temperature control ensures identical therapeutic intensity in winter or summer.
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 mb-4">
+                4. Workout Timing
+              </span>
+              <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">
+                Cardio vs. Hypertrophy Timing Rules
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                <strong>After Endurance:</strong> Plunging immediately flushes inflammation and perceived soreness. <br />
+                <strong>After Lifting:</strong> Immediate cold immersion blunts the cellular pathways required for muscle growth. Wait 4 to 6 hours or plunge on rest days.
+              </p>
+              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                🏋️ <strong className="text-cyan-600 dark:text-cyan-400">Rule of Thumb:</strong> Separate heavy weight training and cold immersion by at least 4 hours.
+              </div>
+            </div>
+          </div>
+
+          {/* Medical Disclaimer Banner */}
+          <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/40 flex items-start gap-3">
+            <span className="text-lg">⚠️</span>
+            <p className="text-xs text-amber-900 dark:text-amber-300/90 leading-relaxed">
+              <strong>Safety Note:</strong> Cold water immersion is not suitable for everyone. Individuals with cardiovascular conditions, arrhythmias, high blood pressure, or cold urticaria should consult a physician before plunging. Never plunge alone, and exit the water immediately if you experience lightheadedness, chest tightness, or disorientation.
+            </p>
           </div>
         </section>
 
