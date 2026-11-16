@@ -53,11 +53,11 @@ async function request(path, { method = 'GET' } = {}) {
       const body = method === 'GET' && res.status === 200 ? await res.text() : '';
       return { status: res.status, location: res.headers.get('location'), headers: res.headers, body };
     } catch (err) {
-      if (attempt === 2) {
+      if (attempt >= 5) {
         const code = err?.cause?.code ?? err?.message ?? 'unknown error';
         throw new Error(`${method} ${path} could not be fetched (${code})`);
       }
-      await new Promise((resolve) => setTimeout(resolve, 250));
+      await new Promise((resolve) => setTimeout(resolve, 300));
     }
   }
 }

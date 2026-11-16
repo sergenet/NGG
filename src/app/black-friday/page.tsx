@@ -34,7 +34,7 @@ interface VendorDeal {
   badge: string;
   badgeColor: string;
   shopHref: string;
-  productIds: string[];
+  featuredProductId: string;
 }
 
 const vendorsWithDeals: VendorDeal[] = [
@@ -49,7 +49,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Save $250 + 10% Extra',
     badgeColor: 'bg-red-600 text-white',
     shopHref: '/shop/all?brand=Anthbot',
-    productIds: ['P-AW-ANTHBOT-M9-PRO', 'P-AW-ANTHBOT-M5'],
+    featuredProductId: 'P-AW-ANTHBOT-M9-PRO',
   },
   {
     name: 'Billion Dollar Beauty',
@@ -62,12 +62,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Up to 50% Off Sitewide',
     badgeColor: 'bg-pink-600 text-white',
     shopHref: '/shop/all?brand=Billion%20Dollar%20Beauty',
-    productIds: [
-      'P-AW-BDB-BASICALLY-BRILLIANT',
-      'P-AW-BDB-BOX-BUNDLE',
-      'P-AW-BDB-UNIVERSAL-BROW-KIT',
-      'P-AW-BDB-MAGNETIC-BRUSH-SET',
-    ],
+    featuredProductId: 'P-AW-BDB-BASICALLY-BRILLIANT',
   },
   {
     name: 'ROCKBROS',
@@ -80,11 +75,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: '10% Off Sitewide',
     badgeColor: 'bg-emerald-600 text-white',
     shopHref: '/shop/all?brand=ROCKBROS',
-    productIds: [
-      'P-AW-ROCKBROS-SADDLE-TAILLIGHT',
-      'P-AW-ROCKBROS-HANDLEBAR-BAG-2L',
-      'P-AW-ROCKBROS-TOP-TUBE-BAG-1L',
-    ],
+    featuredProductId: 'P-AW-ROCKBROS-HANDLEBAR-BAG-2L',
   },
   {
     name: 'DealGenius',
@@ -96,12 +87,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Up to 70% Off Clearance',
     badgeColor: 'bg-amber-600 text-white',
     shopHref: '/shop/all?brand=DealGenius',
-    productIds: [
-      'P-AW-DG-MILK-BLENDER',
-      'P-AW-DG-ROLLING-GRILL-BASKET',
-      'P-AW-DG-PORTABLE-WASHER',
-      'P-AW-DG-750LED-LIGHTS',
-    ],
+    featuredProductId: 'P-AW-DG-ROLLING-GRILL-BASKET',
   },
   {
     name: 'Plunge Chill',
@@ -113,7 +99,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Factory Direct Pricing',
     badgeColor: 'bg-cyan-600 text-white',
     shopHref: '/cold-plunge/',
-    productIds: ['P-AW-PLUNGE-CHILL-POD'],
+    featuredProductId: 'P-AW-PLUNGE-CHILL-POD',
   },
   {
     name: 'PersonalHour',
@@ -125,7 +111,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Direct Studio Pricing',
     badgeColor: 'bg-indigo-600 text-white',
     shopHref: '/shop/all?brand=PersonalHour',
-    productIds: ['P-AW-PERSONALHOUR-JANET-PLUS', 'P-AW-PERSONALHOUR-NOUR-ADVANCED'],
+    featuredProductId: 'P-AW-PERSONALHOUR-JANET-PLUS',
   },
   {
     name: 'Tornado',
@@ -137,7 +123,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Under $300 Luxury Spec',
     badgeColor: 'bg-slate-800 text-white',
     shopHref: '/shop/all?brand=Tornado',
-    productIds: ['P-AW-TORNADO-LUMINA-CHRONOSPHERE', 'P-AW-TORNADO-AUTONOVA-AUTOMATIC'],
+    featuredProductId: 'P-AW-TORNADO-LUMINA-CHRONOSPHERE',
   },
   {
     name: 'GRABO',
@@ -149,7 +135,7 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Pro Contractor Direct',
     badgeColor: 'bg-orange-600 text-white',
     shopHref: '/shop/all?brand=GRABO',
-    productIds: ['P-AW-GRABO-PRO-20', 'P-AW-GRABO-OTTOVAC'],
+    featuredProductId: 'P-AW-GRABO-PRO-20',
   },
   {
     name: 'SKILHUNT',
@@ -161,30 +147,20 @@ const vendorsWithDeals: VendorDeal[] = [
     badge: 'Tactical EDC Deals',
     badgeColor: 'bg-emerald-700 text-white',
     shopHref: '/shop/all?brand=SKILHUNT',
-    productIds: ['P-AW-SKILHUNT-MIX7-GEN2', 'P-AW-SKILHUNT-H04-RC'],
+    featuredProductId: 'P-AW-SKILHUNT-MIX7-GEN2',
   },
 ];
 
 export default function BlackFridayPage() {
   const products = productsData as Product[];
-
-  // Collect all products with promoCode or promoNote, plus featured holiday deals
-  const dealProductIds = new Set(
-    vendorsWithDeals.flatMap((v) => v.productIds)
+  const purchasableProducts = products.filter((p) =>
+    p.vendors.some((v) => v.isPrimary && isActiveRetailerUrl(v.url))
   );
 
-  const promoProducts = products.filter(
-    (product) =>
-      product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)) &&
-      (Boolean(product.promoCode) || dealProductIds.has(product.id))
-  );
-
-  // Sort so items with promoCode come first
-  const sortedDeals = [...promoProducts].sort((a, b) => {
-    if (a.promoCode && !b.promoCode) return -1;
-    if (!a.promoCode && b.promoCode) return 1;
-    return (b.lastUpdated ?? '').localeCompare(a.lastUpdated ?? '');
-  });
+  // Exactly one distinct featured product per vendor to guarantee zero brand or item repetition
+  const brandDealItems: Product[] = vendorsWithDeals
+    .map((vendor) => purchasableProducts.find((p) => p.id === vendor.featuredProductId))
+    .filter(Boolean) as Product[];
 
   return (
     <main id="main-content" className="min-h-screen bg-[#fbfaf6] pb-24">
@@ -280,11 +256,11 @@ export default function BlackFridayPage() {
                   href={vendor.shopHref}
                   className="inline-flex items-center gap-1 text-xs font-black text-indigo-700 hover:text-indigo-900 group-hover:translate-x-0.5 transition-all"
                 >
-                  <span>Browse {vendor.name} Deals</span>
+                  <span>Browse All {vendor.name} Deals</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <span className="text-[11px] font-bold text-slate-400">
-                  {vendor.productIds.length} featured {vendor.productIds.length === 1 ? 'pick' : 'picks'}
+                  Direct Verified Partner
                 </span>
               </div>
             </div>
@@ -292,19 +268,19 @@ export default function BlackFridayPage() {
         </div>
       </section>
 
-      {/* Live Black Friday Deals Showcase */}
+      {/* Featured Deals Showcase — Distinct Brand Picks */}
       <section className="site-container py-10" aria-labelledby="deals-grid-heading">
         <div className="rounded-[2.5rem] border border-amber-300/80 bg-gradient-to-br from-amber-50/80 via-[#fcfaf5] to-orange-50/50 p-6 md:p-10 shadow-xs">
           <div className="section-heading-row mb-8">
             <div>
               <p className="eyebrow inline-flex items-center gap-1.5 text-amber-900 bg-amber-100/90 px-3 py-1 rounded-full border border-amber-200">
-                <Flame className="h-3.5 w-3.5 text-amber-600" /> Hand-Checked Picks
+                <Flame className="h-3.5 w-3.5 text-amber-600" /> 1 Hand-Picked Deal Per Partner
               </p>
               <h2 id="deals-grid-heading" className="section-title mt-3">
                 Featured Black Friday Products &amp; Promos
               </h2>
               <p className="text-slate-600 max-w-2xl mt-2 text-sm">
-                Each product below is equipped with direct merchant links, active promotional badges, and tested checkout codes.
+                A diverse selection of top-performing gadgets across each partner brand with verified coupon codes and active retailer discounts.
               </p>
             </div>
             <Link
@@ -315,8 +291,8 @@ export default function BlackFridayPage() {
             </Link>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {sortedDeals.map((product) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {brandDealItems.map((product) => (
               <DealCard key={product.id} product={product} />
             ))}
           </div>

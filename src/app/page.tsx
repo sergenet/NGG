@@ -51,20 +51,25 @@ export default function Home() {
     product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)),
   );
 
-  // 1. Fresh New Arrivals: 4 newest products by recency
-  const newArrivals = sortByRecency(purchasableProducts).slice(0, 4);
+  // 1. Black Friday Deals for dedicated showcase: 4 distinct brands with active promos
+  const bfFeaturedIds = [
+    'P-AW-ANTHBOT-M9-PRO',
+    'P-AW-BDB-BASICALLY-BRILLIANT',
+    'P-AW-ROCKBROS-HANDLEBAR-BAG-2L',
+    'P-AW-DG-ROLLING-GRILL-BASKET',
+  ];
+  const blackFridayDeals = bfFeaturedIds
+    .map((id) => purchasableProducts.find((p) => p.id === id))
+    .filter(Boolean) as Product[];
+  const bfDealIds = new Set(blackFridayDeals.map((p) => p.id));
+
+  // 2. Fresh New Arrivals: 4 newest products by recency, STRICTLY excluding any Black Friday deals above!
+  const newArrivals = sortByRecency(
+    purchasableProducts.filter((p) => !bfDealIds.has(p.id))
+  ).slice(0, 4);
   const newArrivalIds = new Set(newArrivals.map((p) => p.id));
 
-  // 2. Black Friday Deals for dedicated showcase: products with active promo codes
-  const blackFridayDeals = purchasableProducts
-    .filter(
-      (product) =>
-        Boolean(product.promoCode) ||
-        (product.promoNote && product.promoNote.toLowerCase().includes('black friday'))
-    )
-    .slice(0, 4);
-
-  // 3. Editor's Shortlist: 6 diverse, high-value standout staples with deep editorial, STRICTLY excluding new arrivals
+  // 3. Editor's Shortlist: 6 diverse, high-value standout staples with deep editorial, STRICTLY excluding new arrivals & BF deals
   const curatedStapleIds = [
     'P-AW-GRABO-PRO-20',
     'P-AW-TORNADO-LUMINA-CHRONOSPHERE',
@@ -74,12 +79,17 @@ export default function Home() {
     'P-AW-SHADOWAUTO',
   ];
   const staplePicks = curatedStapleIds
-    .map((id) => purchasableProducts.find((p) => p.id === id && !newArrivalIds.has(p.id)))
+    .map((id) =>
+      purchasableProducts.find(
+        (p) => p.id === id && !newArrivalIds.has(p.id) && !bfDealIds.has(p.id)
+      )
+    )
     .filter(Boolean) as Product[];
 
   const remainingCandidates = purchasableProducts.filter(
     (p) =>
       !newArrivalIds.has(p.id) &&
+      !bfDealIds.has(p.id) &&
       !curatedStapleIds.includes(p.id) &&
       Boolean(p.editorial && p.editorial.length > 0)
   );
