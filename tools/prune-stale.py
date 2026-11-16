@@ -40,7 +40,7 @@ import ftplib
 import os
 import sys
 
-HOST = "newgiftsandgadgets.com"
+HOST = "premium303.web-hosting.com"
 USER = "serge@newgiftsandgadgets.com"
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PW = next(
