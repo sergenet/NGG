@@ -19,6 +19,7 @@ EXCLUDE_DIRS = {"assets", "api", "data", "_next", "_not-found", "404", "admin"}
 # the newest date in the catalog, so it only moves when a product really changes.
 CATALOG_SCOPED = {
     "/",
+    "/black-friday/",
     "/shop/all/",
     "/shop/new-arrivals/",
     "/brands/",

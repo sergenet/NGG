@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
-import { ArrowUpRight, Gift, Mail } from 'lucide-react';
+import { ArrowUpRight, Flame, Gift, Mail } from 'lucide-react';
 import './globals.css';
 import productsData from '@/lib/data/products.json';
 import { CategoriesDropdown } from '@/components/CategoriesDropdown';
@@ -63,6 +63,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <span>NewGifts<span className="text-[#bd4b34]">&amp;</span>Gadgets</span>
             </Link>
             <nav aria-label="Primary navigation" className="hidden items-center gap-5 text-sm font-bold text-slate-700 lg:flex">
+              <Link href="/black-friday/" className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-red-600 to-amber-600 px-3 py-1 text-xs font-black text-white shadow-xs transition hover:brightness-110">
+                <Flame className="h-3.5 w-3.5 text-amber-200 animate-pulse" />
+                Black Friday 🔥
+              </Link>
               <Link href="/shop/new-arrivals/" className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-black text-amber-900 border border-amber-300/80 transition hover:bg-amber-500/20 hover:border-amber-400">
                 <span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
                 New Arrivals ✨
@@ -76,6 +80,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link href="/shop/all/" className="button-primary min-h-10 px-4 py-2 text-xs">Find a gift <ArrowUpRight className="h-4 w-4" /></Link>
           </div>
           <nav aria-label="Mobile navigation" className="site-container flex items-center gap-4 overflow-x-auto border-t border-stone-200 py-2.5 text-sm font-bold text-slate-700 no-scrollbar lg:hidden">
+            <Link href="/black-friday/" className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-red-600 to-amber-600 px-2.5 py-0.5 text-xs font-black text-white whitespace-nowrap shadow-xs">
+              <Flame className="h-3 w-3 text-amber-200" />
+              Black Friday 🔥
+            </Link>
             <Link href="/shop/new-arrivals/" className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-2.5 py-0.5 text-xs font-black text-amber-900 whitespace-nowrap border border-amber-300">
               <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
               New Arrivals ✨
@@ -92,7 +100,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="border-t border-stone-200 bg-[#18231d] text-white">
           <div className="site-container grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
             <div><div className="flex items-center gap-2 text-xl font-black"><Gift className="h-5 w-5 text-[#ef8a73]" /> NewGifts&amp;Gadgets</div><p className="mt-4 max-w-md text-sm leading-7 text-slate-300">A practical portal for finding useful, giftable products. We explain who each pick suits, what to consider, and where affiliate compensation may apply.</p><div className="mt-5"><a className="inline-flex rounded-full border border-white/20 p-2.5 hover:bg-white/10" href="mailto:contact@newgiftsandgadgets.com" aria-label="Email NewGiftsAndGadgets"><Mail className="h-4 w-4" /></a></div></div>
-            <div><h2 className="text-sm font-black uppercase tracking-[.18em] text-[#efb09f]">Explore</h2><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link href="/shop/new-arrivals/">New arrivals ✨</Link></li><li><Link href="/shop/all/">All gifts &amp; gadgets</Link></li><li><Link href="/gift-guides/">Gift guides</Link></li><li><Link href="/brands/">Browse brands</Link></li><li><Link href="/work-with-us/">Work with us</Link></li></ul></div>
+            <div><h2 className="text-sm font-black uppercase tracking-[.18em] text-[#efb09f]">Explore</h2><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link href="/black-friday/">Black Friday Deals 🔥</Link></li><li><Link href="/shop/new-arrivals/">New arrivals ✨</Link></li><li><Link href="/shop/all/">All gifts &amp; gadgets</Link></li><li><Link href="/gift-guides/">Gift guides</Link></li><li><Link href="/brands/">Browse brands</Link></li><li><Link href="/work-with-us/">Work with us</Link></li></ul></div>
             <div><h2 className="text-sm font-black uppercase tracking-[.18em] text-[#efb09f]">Trust</h2><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link href="/about/">How we choose</Link></li><li><Link href="/editorial-policy/">Editorial policy</Link></li><li><Link href="/affiliate-disclosure/">Affiliate disclosure</Link></li><li><Link href="/privacy/">Privacy</Link></li><li><AnalyticsPreferencesButton /></li><li><Link href="/terms/">Terms</Link></li><li><Link href="/contact/">Contact</Link></li></ul></div>
           </div>
           <div className="border-t border-white/10"><div className="site-container flex flex-col gap-2 py-5 text-xs text-slate-400 sm:flex-row sm:justify-between"><p>© 2026 NewGiftsAndGadgets. All rights reserved.</p><p>Prices and availability may change after publication.</p></div></div>

@@ -1,5 +1,18 @@
 import Link from '@/components/SiteLink';
-import { ArrowRight, BriefcaseBusiness, ChefHat, Compass, House, PawPrint, Plane, Search, ShieldCheck, Sparkles, Users } from 'lucide-react';
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  ChefHat,
+  Compass,
+  Flame,
+  House,
+  PawPrint,
+  Plane,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from 'lucide-react';
 import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { DealCard } from '@/components/DealCard';
@@ -9,7 +22,8 @@ import AdSlot from '@/components/AdSlot';
 
 export const metadata = {
   title: 'Gift Ideas & Useful Gadgets, Thoughtfully Curated',
-  description: 'Discover practical gifts, clever gadgets, and research-based buying guides for home, work, travel, pets, and everyday life.',
+  description:
+    'Discover practical gifts, clever gadgets, and research-based buying guides for home, work, travel, pets, and everyday life.',
   alternates: { canonical: '/' },
 };
 
@@ -33,32 +47,102 @@ const giftPaths = [
 
 export default function Home() {
   const products = productsData as Product[];
-  const newArrivals = sortByRecency(
-    products.filter((product) => product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url))),
-  ).slice(0, 4);
-  const featured = products
-    .filter((product) => product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)))
-    .reverse()
-    .slice(0, 6);
+  const purchasableProducts = products.filter((product) =>
+    product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)),
+  );
+
+  // 1. Fresh New Arrivals: 4 newest products by recency
+  const newArrivals = sortByRecency(purchasableProducts).slice(0, 4);
+  const newArrivalIds = new Set(newArrivals.map((p) => p.id));
+
+  // 2. Black Friday Deals for dedicated showcase: products with active promo codes
+  const blackFridayDeals = purchasableProducts
+    .filter(
+      (product) =>
+        Boolean(product.promoCode) ||
+        (product.promoNote && product.promoNote.toLowerCase().includes('black friday'))
+    )
+    .slice(0, 4);
+
+  // 3. Editor's Shortlist: 6 diverse, high-value standout staples with deep editorial, STRICTLY excluding new arrivals
+  const curatedStapleIds = [
+    'P-AW-GRABO-PRO-20',
+    'P-AW-TORNADO-LUMINA-CHRONOSPHERE',
+    'P-AW-PERSONALHOUR-JANET-PLUS',
+    'P-AW-SKILHUNT-MIX7-GEN2',
+    'P-B0CT95KTQH',
+    'P-AW-SHADOWAUTO',
+  ];
+  const staplePicks = curatedStapleIds
+    .map((id) => purchasableProducts.find((p) => p.id === id && !newArrivalIds.has(p.id)))
+    .filter(Boolean) as Product[];
+
+  const remainingCandidates = purchasableProducts.filter(
+    (p) =>
+      !newArrivalIds.has(p.id) &&
+      !curatedStapleIds.includes(p.id) &&
+      Boolean(p.editorial && p.editorial.length > 0)
+  );
+  const featured = [...staplePicks, ...remainingCandidates].slice(0, 6);
+
   const retailerBacked = products
-    .filter((product) =>
-      product.images[0] !== '/default-thumbnail.png'
-      && product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)),
+    .filter(
+      (product) =>
+        product.images[0] !== '/default-thumbnail.png' &&
+        product.vendors.some((vendor) => vendor.isPrimary && isActiveRetailerUrl(vendor.url)),
     )
     .sort((a, b) => Math.min(...a.vendors.map((vendor) => vendor.price)) - Math.min(...b.vendors.map((vendor) => vendor.price)))
     .slice(0, 8);
 
   return (
     <main id="main-content">
+      {/* Prominent Clickable Black Friday Banner — Top Middle */}
+      <section className="site-container pt-4 sm:pt-6 pb-2">
+        <Link
+          href="/black-friday/"
+          className="group relative block overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-r from-stone-950 via-red-950 to-amber-950 p-4 sm:p-5 text-white shadow-xl border-2 border-red-500/50 hover:border-amber-400 transition-all duration-300 hover:shadow-2xl hover:shadow-red-950/30"
+          aria-label="View All Black Friday Deals"
+        >
+          {/* Subtle Ambient Lighting Effects */}
+          <div className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-red-600/25 blur-3xl group-hover:bg-red-500/35 transition-all" />
+          <div className="pointer-events-none absolute -left-12 -bottom-12 h-44 w-44 rounded-full bg-amber-600/20 blur-3xl group-hover:bg-amber-500/30 transition-all" />
+
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div className="flex flex-col sm:flex-row items-center gap-3.5">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-red-600 to-amber-600 px-4 py-1.5 text-xs sm:text-sm font-black uppercase tracking-wider text-white shadow-md ring-1 ring-white/20 animate-pulse shrink-0">
+                <Flame className="h-4 w-4 text-amber-200" />
+                Black Friday Deals
+              </span>
+              <div>
+                <p className="text-sm sm:text-base font-black text-white">
+                  Exclusive Manufacturer Discounts &amp; Partner Coupon Codes Are Live
+                </p>
+                <p className="text-xs text-amber-200/90 font-medium hidden sm:block mt-0.5">
+                  Save up to 50%–70% across Anthbot, Billion Dollar Beauty, ROCKBROS, DealGenius, Plunge Chill &amp; more
+                </p>
+              </div>
+            </div>
+
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 px-4 py-2 text-xs sm:text-sm font-black text-amber-300 group-hover:text-white transition-all whitespace-nowrap shrink-0">
+              <span>View All Vendor Deals</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </div>
+          </div>
+        </Link>
+      </section>
+
       <section className="hero-shell">
-        <div className="site-container grid gap-12 py-16 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:py-24">
+        <div className="site-container grid gap-12 py-14 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:py-20">
           <div>
             <div className="eyebrow"><Sparkles className="h-4 w-4" /> Fresh finds, practical picks</div>
             <h1 className="display-title mt-6 max-w-4xl">Find the gift they’ll actually use.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">A research-led portal for useful gadgets, memorable gifts, and honest trade-offs—organized by person, purpose, and price.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/shop/all/" className="button-primary">Explore all picks <ArrowRight className="h-4 w-4" /></Link>
-              <Link href="/shop/new-arrivals/" className="button-secondary"><Sparkles className="h-4 w-4 text-amber-600" /> See new arrivals</Link>
+              <Link href="/black-friday/" className="button-primary bg-gradient-to-r from-red-700 to-stone-900 border border-red-500/40 text-white hover:from-red-600 hover:to-stone-800">
+                <Flame className="h-4 w-4 text-amber-300 animate-pulse" /> Black Friday Deals
+              </Link>
+              <Link href="/shop/all/" className="button-secondary">Explore all picks <ArrowRight className="h-4 w-4" /></Link>
+              <Link href="/shop/new-arrivals/" className="button-secondary"><Sparkles className="h-4 w-4 text-amber-600" /> New arrivals</Link>
             </div>
             <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-600">
               <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-600" /> Clear affiliate disclosure</span>
@@ -75,6 +159,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Featured Black Friday Deals Showcase */}
+      {blackFridayDeals.length > 0 && (
+        <section className="site-container py-12" aria-labelledby="black-friday-heading">
+          <div className="rounded-[2.5rem] border-2 border-red-300/80 bg-gradient-to-br from-red-50/70 via-[#fcfaf5] to-amber-50/60 p-6 md:p-10 shadow-sm">
+            <div className="section-heading-row mb-8">
+              <div>
+                <p className="eyebrow inline-flex items-center gap-1.5 text-red-950 bg-red-100/90 px-3 py-1 rounded-full border border-red-200">
+                  <Flame className="h-3.5 w-3.5 text-red-600 animate-pulse" /> Active Holiday Codes
+                </p>
+                <h2 id="black-friday-heading" className="section-title mt-3">
+                  Black Friday Deals Worth Grabbing
+                </h2>
+                <p className="text-slate-600 text-sm mt-1">
+                  Verified manufacturer coupon codes and flash discounts live for Cyber Season.
+                </p>
+              </div>
+              <Link
+                href="/black-friday/"
+                className="text-link font-black text-red-900 hover:text-red-700"
+              >
+                See all vendors with Black Friday deals <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {blackFridayDeals.map((product) => (
+                <DealCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Fresh New Arrivals Showcase */}
       <section className="site-container py-12" aria-labelledby="new-arrivals-heading">
@@ -123,9 +239,18 @@ export default function Home() {
         <AdSlot className="rounded-[2rem] border border-stone-200 bg-white px-4 py-5" />
       </section>
 
+      {/* Editor's Shortlist — Distinct Standout Gadgets */}
       <section className="site-container pb-16" aria-labelledby="featured-heading">
-        <div className="section-heading-row"><div><p className="eyebrow">Editor’s shortlist</p><h2 id="featured-heading" className="section-title">Standout gadgets right now</h2></div><Link href="/shop/all/" className="text-link">View the complete catalog <ArrowRight className="h-4 w-4" /></Link></div>
-        <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{featured.map((product) => <DealCard key={product.id} product={product} />)}</div>
+        <div className="section-heading-row">
+          <div>
+            <p className="eyebrow">Editor’s shortlist</p>
+            <h2 id="featured-heading" className="section-title">Standout gadgets right now</h2>
+          </div>
+          <Link href="/shop/all/" className="text-link">View the complete catalog <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+        <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((product) => <DealCard key={product.id} product={product} />)}
+        </div>
       </section>
 
       {/* Featured Partner Brands Hub */}
