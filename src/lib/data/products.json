@@ -61,7 +61,9 @@
         "heading": "Magnetic handles make mobile touch-ups seamless",
         "body": "The genius touch is the magnetic brush handles. Instead of setting your powder or eye brush on a questionable public counter or trying to balance it while holding a mirror, the brushes snap directly onto the interior magnet wall whenever your hands need to be free."
       }
-    ]
+    ],
+    "promoCode": "BLACKFRIDAY",
+    "promoNote": "Black Friday Sale is live: up to 50% off bundles & sitewide beauty gifts."
   },
   {
     "id": "P-AW-BDB-MAGNETIC-BRUSH-SET",
@@ -120,7 +122,9 @@
         "heading": "Five tools packed into three magnetic handles",
         "body": "By putting a spoolie on the eyebrow brush and dual tips on the eyeshadow blender, this set covers full-face application in three compact tools. The synthetic bristles are dense and soft, picking up powder evenly without fallout."
       }
-    ]
+    ],
+    "promoCode": "BLACKFRIDAY",
+    "promoNote": "Black Friday Sale is live: up to 50% off sitewide."
   },
   {
     "id": "P-AW-BDB-UNIVERSAL-BROW-KIT",
@@ -179,7 +183,9 @@
         "heading": "Why universal pigmentation eliminates the shade-matching headache",
         "body": "The Universal Brow Pencil made Billion Dollar Brows famous in Beverly Hills salons for a reason: pressure controls the color depth. Apply lightly for strawberry blondes and light brunettes; apply with slightly firmer pressure for deep dark brown. It neutralizes red undertones, making it virtually impossible to end up with unnaturally orange or ashy brows."
       }
-    ]
+    ],
+    "promoCode": "BLACKFRIDAY",
+    "promoNote": "Black Friday Sale is live: up to 50% off brow bundles & gift sets."
   },
   {
     "id": "P-AW-TORNADO-LUMINA-CHRONOSPHERE",
@@ -11210,6 +11216,71 @@
       {
         "heading": "Water protection on top tube mounts",
         "body": "Unlike saddle bags that sit shielded under your seat, top tube bags face direct rain and sweat. Sealed storm zippers and welded seam construction are non-negotiable here if you keep a smartphone inside."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-BDB-BASICALLY-BRILLIANT",
+    "slug": "billion-dollar-beauty-basically-brilliant-bundle",
+    "title": "Billion Dollar Beauty Basically Brilliant 7-Piece Customizable Magnetic Makeup Bundle",
+    "description": "A complete travel-ready magnetic beauty kit featuring the refillable Billion Dollar Box with built-in mirror, 3 magnetic charcoal brushes, two eyeshadow pans, and highlighter.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0483/3588/0360/files/Square_MagneticBrushes_3_1.jpg?v=1738803388"
+    ],
+    "vendors": [
+      {
+        "name": "Billion Dollar Beauty Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=22999&awinaffid=2913559&ued=https%3A%2F%2Fbilliondollarbeauty.com%2Fproducts%2Fbasically-brilliant-bundle",
+        "price": 25,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Health & Wellness",
+      "recipient": [
+        "Women",
+        "Travelers",
+        "Beauty Enthusiasts"
+      ],
+      "priceBracket": "under-50"
+    },
+    "features": [
+      "Complete 7-piece magnetic set combines a refillable mirror case, 3 magnetic brushes, 2 eyeshadows, and 1 highlighter",
+      "Magnetic base keeps brushes and color pans firmly locked in place to eliminate purse powder spills while traveling",
+      "Built-in stand-up mirror turns any airline tray table or hotel desk into a lighted vanity workstation",
+      "Infused with charcoal-treated vegan synthetic brush bristles for smooth blending and hygienic travel storage"
+    ],
+    "brand": "Billion Dollar Beauty",
+    "whoShouldBuy": [
+      "Frequent flyers and daily commuters looking to replace an overstuffed makeup pouch with one compact magnetic case",
+      "Gift shoppers seeking a full 7-piece vegan cosmetic kit at 50% Black Friday savings"
+    ],
+    "whoShouldSkip": [
+      "Makeup artists requiring full 20+ piece professional cosmetic brush rollouts"
+    ],
+    "pros": [
+      "Magnetic locking system stops individual powder pans from shattering against loose tools",
+      "Compact footprint replaces bulky separate palettes, loose brushes, and hand mirrors",
+      "Refillable modular format lets you swap pans when individual colors run empty"
+    ],
+    "cons": [
+      "Includes 3 essential eye/face brushes; specialized contouring requires auxiliary tools",
+      "Pans must be Billion Dollar Box compatible or use magnetic adapter stickers"
+    ],
+    "setupTips": [
+      "Wipe the magnetic tray with a dry microfiber cloth before arranging new pan configurations to ensure maximum magnetic hold."
+    ],
+    "lastUpdated": "2026-11-16",
+    "promoCode": "BLACKFRIDAY",
+    "promoNote": "Black Friday Sale is live: 50% off bundle sets and sitewide savings.",
+    "editorial": [
+      {
+        "heading": "Why magnetic pans belong in travel luggage",
+        "body": "Traditional cosmetic pouches are notorious for crushing loose powder compacts against zipper teeth. Locking pans and brush handles into a magnetic backplate removes internal movement, preventing broken highlighters and chalky suitcase spills."
+      },
+      {
+        "heading": "Refillable vs single-use packaging",
+        "body": "Most multi-color palettes end up in landfills when the two favorite shades hit pan while six others sit untouched. A modular magnetic box lets you replace only the individual eyeshadow or highlighter pan you actually finished."
       }
     ]
   }
