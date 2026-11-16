@@ -2749,69 +2749,6 @@
     ]
   },
   {
-    "id": "P-AW-BURCHDA-R5-PRO-EBIKE",
-    "slug": "burchda-r5-pro-folding-electric-bike",
-    "title": "Burchda R5 Pro All-Terrain Folding Electric Bike",
-    "description": "A heavy-duty folding e-bike with a 1000W peak motor, 48V battery, and dual suspension for smooth urban commuting and rough trail riding.",
-    "images": [
-      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80"
-    ],
-    "vendors": [
-      {
-        "name": "Burchda Official",
-        "url": "https://www.awin1.com/cread.php?awinmid=123118&awinaffid=2913559&clickref=&ued=https%3A%2F%2Fburchda-official.com%2Fproducts%2Fburchda-r5-pro",
-        "price": 999,
-        "isPrimary": true
-      }
-    ],
-    "tags": {
-      "category": "Outdoor Adventure",
-      "recipient": [
-        "Commuters",
-        "Travelers",
-        "Outdoor Enthusiasts"
-      ],
-      "priceBracket": "over-250"
-    },
-    "features": [
-      "1000W high-speed rear brushless motor for steep hill climbs",
-      "48V removable lithium battery with up to 50 miles pedal-assist range",
-      "Quick-folding aluminum alloy frame fits into car trunks and closets",
-      "Full front and rear suspension absorbs bumps on rough gravel and potholes"
-    ],
-    "brand": "Burchda",
-    "whoShouldBuy": [
-      "Commuters wanting a foldable high-power e-bike for easy trunk storage",
-      "Riders seeking reliable pedal assist for hilly suburban commutes"
-    ],
-    "whoShouldSkip": [
-      "Shoppers looking for an ultra-lightweight non-motorized racing bicycle"
-    ],
-    "pros": [
-      "Folding frame allows easy transport without needing a dedicated car rack",
-      "Dual suspension delivers a stable ride across varied terrain",
-      "Removable battery allows convenient indoor charging"
-    ],
-    "cons": [
-      "Heavier than non-folding rigid commuter bikes due to dual suspension and motor",
-      "Initial unpackaging and handlebar alignment requires roughly 30 minutes"
-    ],
-    "setupTips": [
-      "Check tire pressures and charge battery to 100% prior to your maiden ride."
-    ],
-    "lastUpdated": "2026-10-28",
-    "editorial": [
-      {
-        "heading": "The fold is for storage, not for riding",
-        "body": "A folding frame earns its hinge in a car boot, a lift or a small flat. It does not make a heavy bike light, so the stairs are still a consideration."
-      },
-      {
-        "heading": "Match it to local rules",
-        "body": "E-bike law varies by country and often by state on speed, throttle and where you can ride. Confirm the class this is sold as where you live before ordering, and check the standover height against your own."
-      }
-    ]
-  },
-  {
     "id": "P-AW-BKWAT-K80-RING",
     "slug": "bkwat-k80-smart-ring-with-display",
     "title": "BKWAT K80 Smart Ring with Built-In Display & Gesture Control",
