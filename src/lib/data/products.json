@@ -2931,7 +2931,7 @@
     "setupTips": [
       "Mount the RTK antenna in a clear outdoor location on your roofline or open fence."
     ],
-    "lastUpdated": "2026-11-01",
+    "lastUpdated": "2026-11-16",
     "editorial": [
       {
         "heading": "No perimeter wire means no repair job",
@@ -2941,7 +2941,9 @@
         "heading": "It needs sky and a base position",
         "body": "Satellite navigation wants an unobstructed view, so a heavily shaded or narrow garden will disappoint. Plan the base station location and charging route first, and check the 0.75-acre figure against the shape of the lawn rather than its area alone."
       }
-    ]
+    ],
+    "promoCode": "ABAFF10",
+    "promoNote": "Black Friday Sale: Save  direct + extra 10% off with code ABAFF10 (plus  protective garage flash deal)."
   },
   {
     "id": "P-AW-ROCKBROS-SADDLE-TAILLIGHT",
@@ -11281,6 +11283,71 @@
       {
         "heading": "Refillable vs single-use packaging",
         "body": "Most multi-color palettes end up in landfills when the two favorite shades hit pan while six others sit untouched. A modular magnetic box lets you replace only the individual eyeshadow or highlighter pan you actually finished."
+      }
+    ]
+  },
+  {
+    "id": "P-AW-ANTHBOT-M5",
+    "slug": "anthbot-m5-robot-lawn-mower",
+    "title": "Anthbot M5 Wire-Free Robotic Lawn Mower",
+    "description": "A compact wire-free robotic lawn mower utilizing RTK satellite positioning and dual-vision AI mapping to groom lawns up to 5,400 sq ft (0.125 acres) with zero perimeter wires.",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0761/6403/8958/files/m-pro-product-v_1.png?v=1791626832"
+    ],
+    "vendors": [
+      {
+        "name": "Anthbot Official",
+        "url": "https://www.awin1.com/cread.php?awinmid=127129&awinaffid=2913559&ued=https%3A%2F%2Fanthbot.com%2Fproducts%2Fm5-robot-lawn-mower",
+        "price": 549,
+        "isPrimary": true
+      }
+    ],
+    "tags": {
+      "category": "Smart Home",
+      "recipient": [
+        "Homeowners",
+        "Tech Enthusiasts",
+        "Gardeners"
+      ],
+      "priceBracket": "over-250"
+    },
+    "features": [
+      "Full-band RTK satellite and dual-vision sensor fusion maps yard boundaries with zero buried wire installation",
+      "Optimized for urban and suburban lawns up to 5,400 sq ft (500㎡) with precise edge-trimming algorithms",
+      "Agile drive chassis climbs inclines up to 45% (24 degrees) and navigates tight garden corridors",
+      "Companion smartphone app provides remote cutting height adjustments, multi-zone scheduling, and no-go garden zones"
+    ],
+    "brand": "Anthbot",
+    "whoShouldBuy": [
+      "Homeowners with small-to-medium yards wanting automated daily turf maintenance without boundary trenching",
+      "Shoppers looking for a wire-free RTK robotic mower at an accessible sub- entry price"
+    ],
+    "whoShouldSkip": [
+      "Property owners with multi-acre estates requiring heavy commercial acreage cutting decks"
+    ],
+    "pros": [
+      "Completely wire-free setup saves a full weekend of trenching and perimeter cable maintenance",
+      "Substantially more affordable entry price than larger commercial-scale robot mowers",
+      "Quiet electric operation allows silent morning and twilight mowing cycles"
+    ],
+    "cons": [
+      "5,400 sq ft cutting capacity is best suited for modest suburban plots rather than large acreages",
+      "Like all RTK satellite systems, base antenna needs an open view of the sky"
+    ],
+    "setupTips": [
+      "Use the smartphone app's remote-control mapping mode on your initial walk around the lawn to mark delicate flowerbeds."
+    ],
+    "lastUpdated": "2026-11-16",
+    "promoCode": "ABAFF10",
+    "promoNote": "Black Friday Sale: Save  direct + extra 10% off with code ABAFF10.",
+    "editorial": [
+      {
+        "heading": "Compact footprint for tight yards",
+        "body": "Larger robot mowers struggle with narrow side-yards and tight gate passages. The M5 uses a shorter wheelbase and dual front casters that turn on a dime, allowing it to navigate fenced suburban lots where wide-deck mowers get wedged."
+      },
+      {
+        "heading": "Entry-level price with wire-free RTK",
+        "body": "Until recently, boundary-free RTK satellite mowers commanded four-figure price tags. At under  during promotional windows, the M5 makes wire-free robotic turf care accessible to standard residential properties."
       }
     ]
   }
