@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 interface CopyPromoCodeProps {
   code: string;
@@ -16,10 +17,12 @@ export function CopyPromoCode({ code, label = 'Use code', className = '' }: Copy
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
+      trackEvent('promo_code_copy', { promo_code: code });
       setTimeout(() => setCopied(false), 2200);
     } catch {
       // Fallback if clipboard API is restricted
       setCopied(true);
+      trackEvent('promo_code_copy', { promo_code: code });
       setTimeout(() => setCopied(false), 2200);
     }
   };
