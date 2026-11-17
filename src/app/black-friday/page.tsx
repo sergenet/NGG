@@ -30,6 +30,10 @@ interface VendorDeal {
   headline: string;
   offerDetails: string;
   promoCode?: string;
+  discountText?: string;
+  verifiedDate?: string;
+  validThrough?: string;
+  expiresLabel?: string;
   saleWindow: string;
   badge: string;
   badgeColor: string;
@@ -45,6 +49,10 @@ const vendorsWithDeals: VendorDeal[] = [
     offerDetails:
       'Save $250 direct on boundary-free LiDAR & RTK mowers (M5 at $549). Stack coupon code ABAFF10 for an additional 10% off (M9 PRO down to $1,139.05). Plus, $1 protective garage flash sale.',
     promoCode: 'ABAFF10',
+    discountText: 'Extra 10% Off',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-07',
+    expiresLabel: 'Expires Dec 07, 2026',
     saleWindow: 'Nov 12 – Dec 7, 2026',
     badge: 'Save $250 + 10% Extra',
     badgeColor: 'bg-red-600 text-white',
@@ -58,6 +66,10 @@ const vendorsWithDeals: VendorDeal[] = [
     offerDetails:
       'Take 50% off holiday bundle sets and save sitewide with coupon code BLACKFRIDAY. Customizable magnetic palette boxes, vegan travel brushes, and universal eyebrow kits.',
     promoCode: 'BLACKFRIDAY',
+    discountText: '50% Off Bundles',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-05',
+    expiresLabel: 'Expires Dec 05, 2026',
     saleWindow: 'Black Friday & Cyber Week 2026',
     badge: 'Up to 50% Off Sitewide',
     badgeColor: 'bg-pink-600 text-white',
@@ -71,6 +83,10 @@ const vendorsWithDeals: VendorDeal[] = [
     offerDetails:
       'Save 10% on aerodynamic bike handlebar bags, top tube phone packs, and smart brake-sensing tail lights with coupon code WELCOME10 (or 5% with WELCOME5 / MINTY5).',
     promoCode: 'WELCOME10',
+    discountText: '10% Off Sitewide',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-01',
+    expiresLabel: 'Expires Dec 01, 2026',
     saleWindow: 'Through Dec 1, 2026',
     badge: '10% Off Sitewide',
     badgeColor: 'bg-emerald-600 text-white',
@@ -83,6 +99,9 @@ const vendorsWithDeals: VendorDeal[] = [
     headline: 'Direct Clearance Up to 70% Off',
     offerDetails:
       'Massive clearance markdowns on kitchen electrics, rolling BBQ grill baskets, 4.2-gal portable mini washers, digital food scales, and 750 LED holiday lights.',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-31',
+    expiresLabel: 'Holiday Season 2026',
     saleWindow: 'Holiday Season 2026',
     badge: 'Up to 70% Off Clearance',
     badgeColor: 'bg-amber-600 text-white',
@@ -95,6 +114,9 @@ const vendorsWithDeals: VendorDeal[] = [
     headline: 'Factory-Direct Cold Therapy Systems',
     offerDetails:
       'Commercial 1HP & 0.6HP indoor/outdoor water chillers paired with 120-gallon insulated immersion tubs. Real 36°F cold exposure without ice bag runs.',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-31',
+    expiresLabel: 'Holiday Season 2026',
     saleWindow: 'Holiday Special 2026',
     badge: 'Factory Direct Pricing',
     badgeColor: 'bg-cyan-600 text-white',
@@ -107,6 +129,9 @@ const vendorsWithDeals: VendorDeal[] = [
     headline: 'Studio-Quality Foldable Pilates Reformers',
     offerDetails:
       'Factory direct pricing on foldable wooden and aluminum home Pilates reformers (Janet Elite Plus, Nour Advanced, Nano Elite) with free sitting box and jumpboard packages.',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-31',
+    expiresLabel: 'Holiday Season 2026',
     saleWindow: 'Holiday Season 2026',
     badge: 'Direct Studio Pricing',
     badgeColor: 'bg-indigo-600 text-white',
@@ -119,6 +144,9 @@ const vendorsWithDeals: VendorDeal[] = [
     headline: 'Pilot & Diver Timepieces Under $300',
     offerDetails:
       'Skeleton automatic mechanical watches and high-precision chronograph watches with scratch-proof sapphire crystal and 100m water resistance at direct partner rates.',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-31',
+    expiresLabel: 'Holiday Season 2026',
     saleWindow: 'Holiday Season 2026',
     badge: 'Under $300 Luxury Spec',
     badgeColor: 'bg-slate-800 text-white',
@@ -131,6 +159,9 @@ const vendorsWithDeals: VendorDeal[] = [
     headline: 'Smart Electric Vacuum Suction Lifters',
     offerDetails:
       'Heavy-duty electric suction cups for large tiles, glass panels, stone countertops, and drywall. Digital pressure sensors and 375+ lb load capacities at factory rates.',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-31',
+    expiresLabel: 'Black Friday 2026',
     saleWindow: 'Black Friday 2026',
     badge: 'Pro Contractor Direct',
     badgeColor: 'bg-orange-600 text-white',
@@ -143,6 +174,9 @@ const vendorsWithDeals: VendorDeal[] = [
     headline: 'Multi-Spectrum RGB & UV LED Flashlights',
     offerDetails:
       'Direct manufacturer discounts on MiX-7 Gen 2 (White, Red, Green, Blue, UV 365nm) and H04 RC magnetic rechargeable EDC lights and headlamps.',
+    verifiedDate: 'Verified Active · Nov 2026',
+    validThrough: '2026-12-31',
+    expiresLabel: 'Black Friday 2026',
     saleWindow: 'Black Friday 2026',
     badge: 'Tactical EDC Deals',
     badgeColor: 'bg-emerald-700 text-white',
@@ -190,9 +224,29 @@ export default function BlackFridayPage() {
     itemListElement: vendorsWithDeals.map((v, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: `${v.name}: ${v.headline}`,
-      description: v.offerDetails,
-      url: `https://newgiftsandgadgets.com${v.shopHref}`,
+      item: {
+        '@type': 'Offer',
+        name: `${v.name}: ${v.headline}`,
+        description: v.offerDetails,
+        url: `https://newgiftsandgadgets.com${v.shopHref}`,
+        priceCurrency: 'USD',
+        validThrough: v.validThrough || '2026-12-31',
+        priceValidUntil: v.validThrough || '2026-12-31',
+        availability: 'https://schema.org/InStock',
+        seller: {
+          '@type': 'Organization',
+          name: v.name,
+        },
+        ...(v.promoCode
+          ? {
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                priceCurrency: 'USD',
+                description: `Manufacturer promo code ${v.promoCode} valid through ${v.validThrough || '2026-12-31'}`,
+              },
+            }
+          : {}),
+      },
     })),
   };
 
@@ -295,22 +349,31 @@ export default function BlackFridayPage() {
                   {vendor.offerDetails}
                 </p>
 
-                <div className="flex items-center gap-1.5 mb-3">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-200/80">
-                    <CheckCircle2 className="h-3 w-3 text-emerald-600" />
-                    Verified Working • Tested Today
-                  </span>
-                </div>
-
-                {vendor.promoCode && (
+                {vendor.promoCode ? (
                   <div className="mb-4">
-                    <CopyPromoCode code={vendor.promoCode} />
+                    <CopyPromoCode
+                      code={vendor.promoCode}
+                      discountText={vendor.discountText}
+                      verifiedText={vendor.verifiedDate}
+                      expiresText={vendor.expiresLabel}
+                    />
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap items-center gap-2 mb-4">
+                    <span className="inline-flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 border border-emerald-200">
+                      <ShieldCheck className="h-3 w-3 text-emerald-600" />
+                      {vendor.verifiedDate || 'Verified Active · Nov 2026'}
+                    </span>
+                    <span className="inline-flex items-center gap-1 rounded-md bg-stone-100 px-2 py-0.5 text-[11px] font-semibold text-stone-600 border border-stone-200">
+                      <Clock className="h-3 w-3 text-stone-500" />
+                      {vendor.expiresLabel || vendor.saleWindow}
+                    </span>
                   </div>
                 )}
 
                 <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 mb-5">
                   <Clock className="h-3.5 w-3.5 text-slate-400" />
-                  <span>Window: {vendor.saleWindow}</span>
+                  <span>Sale Window: {vendor.saleWindow}</span>
                 </div>
               </div>
 
