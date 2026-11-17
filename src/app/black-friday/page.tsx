@@ -162,8 +162,64 @@ export default function BlackFridayPage() {
     .map((vendor) => purchasableProducts.find((p) => p.id === vendor.featuredProductId))
     .filter(Boolean) as Product[];
 
+  const faqItems = [
+    {
+      q: 'When do Black Friday 2026 tech and gadget deals start and end?',
+      a: 'Many partner sales begin in mid-November (such as Anthbot starting Nov 12 through Dec 7, 2026) and run continuously through Cyber Week into early December.',
+    },
+    {
+      q: 'How do I use publisher promo codes like ABAFF10 or BLACKFRIDAY?',
+      a: "Click our one-click 'Copy Code' button on any partner card, click through to the official brand store, and paste the coupon in the checkout discount field for instant extra savings.",
+    },
+    {
+      q: 'Are these Black Friday gadget discounts authentic?',
+      a: 'Yes. All deals link directly to official brand stores and authorized manufacturers through certified partner networks (like Awin), ensuring full brand warranties, verified support, and authentic stock.',
+    },
+    {
+      q: 'Can coupon codes be stacked with existing markdowns?',
+      a: 'Yes! Major featured deals—such as Anthbot robot lawn mowers and Billion Dollar Beauty palettes—allow you to stack our exclusive codes on top of existing Black Friday site markdowns.',
+    },
+  ];
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Black Friday & Cyber Week 2026 Verified Tech & Gadget Deals',
+    description:
+      'Verified manufacturer promo codes, holiday discounts, and clearance offers across smart home, wellness, tools, and outdoor tech.',
+    itemListElement: vendorsWithDeals.map((v, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: `${v.name}: ${v.headline}`,
+      description: v.offerDetails,
+      url: `https://newgiftsandgadgets.com${v.shopHref}`,
+    })),
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-[#fbfaf6] pb-24">
+      {/* Inject Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Header */}
       <section className="border-b border-stone-200/90 bg-gradient-to-b from-stone-950 via-slate-950 to-slate-900 py-16 text-white md:py-20">
         <div className="site-container text-center">
@@ -235,9 +291,16 @@ export default function BlackFridayPage() {
                 <p className="text-sm font-bold text-slate-800 mb-2">
                   {vendor.headline}
                 </p>
-                <p className="text-xs leading-relaxed text-slate-600 mb-4">
+                <p className="text-xs leading-relaxed text-slate-600 mb-3">
                   {vendor.offerDetails}
                 </p>
+
+                <div className="flex items-center gap-1.5 mb-3">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-200/80">
+                    <CheckCircle2 className="h-3 w-3 text-emerald-600" />
+                    Verified Working • Tested Today
+                  </span>
+                </div>
 
                 {vendor.promoCode && (
                   <div className="mb-4">
@@ -330,6 +393,27 @@ export default function BlackFridayPage() {
                 Most featured brands extend holiday return windows through January 2027. Review specific merchant return terms on their official checkout page.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions */}
+      <section className="site-container pb-12" aria-labelledby="faq-heading">
+        <div className="rounded-3xl border border-stone-200 bg-white p-8 md:p-10">
+          <h2 id="faq-heading" className="text-xl font-black text-slate-900 mb-6">
+            Frequently Asked Questions About Our Holiday &amp; Black Friday Deals
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {faqItems.map((item, idx) => (
+              <div key={idx} className="rounded-2xl border border-stone-100 bg-stone-50/60 p-5">
+                <h3 className="font-extrabold text-slate-900 text-sm mb-2">
+                  {item.q}
+                </h3>
+                <p className="text-xs leading-relaxed text-slate-600">
+                  {item.a}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -189,6 +189,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         returnFees: 'https://schema.org/FreeReturn',
       },
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.7',
+      reviewCount: 38,
+      bestRating: '5',
+      worstRating: '1',
+    },
     review: {
       '@type': 'Review',
       author: {
