@@ -19,7 +19,7 @@ import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { DealCard } from '@/components/DealCard';
 import { CopyPromoCode } from '@/components/CopyPromoCode';
-import { vendorsWithDeals } from '@/lib/data/blackFridayDeals';
+import { getActiveDeals, getVerificationBadgeText } from '@/lib/data/blackFridayDeals';
 import { NewsletterInline } from '@/components/NewsletterInline';
 import { isActiveRetailerUrl, sortByRecency } from '@/lib/utils';
 import AdSlot from '@/components/AdSlot';
@@ -108,13 +108,15 @@ export default function Home() {
     .sort((a, b) => Math.min(...a.vendors.map((vendor) => vendor.price)) - Math.min(...b.vendors.map((vendor) => vendor.price)))
     .slice(0, 8);
 
+  const activeVendors = getActiveDeals();
+
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Verified Partner Promo Codes & Black Friday Deals 2026',
     description:
       'Verified manufacturer promo codes, holiday discounts, and clearance offers across smart home, wellness, tools, and outdoor tech.',
-    itemListElement: vendorsWithDeals.map((v, i) => ({
+    itemListElement: activeVendors.map((v, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: {
@@ -237,9 +239,9 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* 9 Partner Coupon Cards Grid with Verified Badges & Expiration Dates */}
+          {/* Active Partner Coupon Cards Grid with Verified Badges & Expiration Dates */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-10">
-            {vendorsWithDeals.map((vendor) => (
+            {activeVendors.map((vendor) => (
               <div
                 key={vendor.name}
                 className="flex flex-col justify-between rounded-2xl border border-stone-200/90 bg-white p-5 shadow-xs hover:border-amber-400 hover:shadow-lg transition-all duration-300 group"
@@ -273,7 +275,7 @@ export default function Home() {
                       <CopyPromoCode
                         code={vendor.promoCode}
                         discountText={vendor.discountText}
-                        verifiedText={vendor.verifiedDate}
+                        verifiedText={getVerificationBadgeText(vendor)}
                         expiresText={vendor.expiresLabel}
                       />
                     </div>
@@ -281,7 +283,7 @@ export default function Home() {
                     <div className="flex flex-wrap items-center gap-1.5 mb-3">
                       <span className="inline-flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 border border-emerald-200">
                         <ShieldCheck className="h-3 w-3 text-emerald-600" />
-                        {vendor.verifiedDate || 'Verified Active · Nov 2026'}
+                        {getVerificationBadgeText(vendor)}
                       </span>
                       <span className="inline-flex items-center gap-1 rounded-md bg-stone-100 px-2 py-0.5 text-[10px] font-semibold text-stone-600 border border-stone-200">
                         <Clock className="h-3 w-3 text-stone-500" />

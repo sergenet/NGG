@@ -24,16 +24,17 @@ export const metadata = {
   },
 };
 
-import { vendorsWithDeals } from '@/lib/data/blackFridayDeals';
+import { getActiveDeals, getVerificationBadgeText } from '@/lib/data/blackFridayDeals';
 
 export default function BlackFridayPage() {
+  const activeVendors = getActiveDeals();
   const products = productsData as Product[];
   const purchasableProducts = products.filter((p) =>
     p.vendors.some((v) => v.isPrimary && isActiveRetailerUrl(v.url))
   );
 
-  // Exactly one distinct featured product per vendor to guarantee zero brand or item repetition
-  const brandDealItems: Product[] = vendorsWithDeals
+  // Exactly one distinct featured product per active vendor
+  const brandDealItems: Product[] = activeVendors
     .map((vendor) => purchasableProducts.find((p) => p.id === vendor.featuredProductId))
     .filter(Boolean) as Product[];
 
@@ -62,7 +63,7 @@ export default function BlackFridayPage() {
     name: 'Black Friday & Cyber Week 2026 Verified Tech & Gadget Deals',
     description:
       'Verified manufacturer promo codes, holiday discounts, and clearance offers across smart home, wellness, tools, and outdoor tech.',
-    itemListElement: vendorsWithDeals.map((v, i) => ({
+    itemListElement: activeVendors.map((v, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: {
@@ -161,7 +162,7 @@ export default function BlackFridayPage() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {vendorsWithDeals.map((vendor) => (
+          {activeVendors.map((vendor) => (
             <div
               key={vendor.name}
               className="flex flex-col justify-between rounded-3xl border border-stone-200 bg-white p-6 shadow-sm hover:border-amber-400 hover:shadow-xl transition-all duration-300 group"
@@ -195,7 +196,7 @@ export default function BlackFridayPage() {
                     <CopyPromoCode
                       code={vendor.promoCode}
                       discountText={vendor.discountText}
-                      verifiedText={vendor.verifiedDate}
+                      verifiedText={getVerificationBadgeText(vendor)}
                       expiresText={vendor.expiresLabel}
                     />
                   </div>
@@ -203,7 +204,7 @@ export default function BlackFridayPage() {
                   <div className="flex flex-wrap items-center gap-2 mb-4">
                     <span className="inline-flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 border border-emerald-200">
                       <ShieldCheck className="h-3 w-3 text-emerald-600" />
-                      {vendor.verifiedDate || 'Verified Active · Nov 2026'}
+                      {getVerificationBadgeText(vendor)}
                     </span>
                     <span className="inline-flex items-center gap-1 rounded-md bg-stone-100 px-2 py-0.5 text-[11px] font-semibold text-stone-600 border border-stone-200">
                       <Clock className="h-3 w-3 text-stone-500" />

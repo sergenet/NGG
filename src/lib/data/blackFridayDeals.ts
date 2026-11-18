@@ -158,3 +158,22 @@ export const vendorsWithDeals: VendorDeal[] = [
     featuredProductId: 'P-AW-SKILHUNT-MIX7-GEN2',
   },
 ];
+
+export function isDealActive(deal: VendorDeal, now = new Date()): boolean {
+  if (!deal.validThrough) return true;
+  const expiry = new Date(`${deal.validThrough}T23:59:59Z`);
+  return now.getTime() <= expiry.getTime();
+}
+
+export function getActiveDeals(now = new Date()): VendorDeal[] {
+  return vendorsWithDeals.filter((deal) => isDealActive(deal, now));
+}
+
+export function getVerificationBadgeText(deal: VendorDeal, now = new Date()): string {
+  if (!isDealActive(deal, now)) {
+    return 'Offer Expired';
+  }
+  const monthName = now.toLocaleString('en-US', { month: 'short' });
+  const year = now.getFullYear();
+  return `Verified Active · ${monthName} ${year}`;
+}

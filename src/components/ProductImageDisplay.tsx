@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import Image from 'next/image';
 
 type ProductImageDisplayProps = {
   src: string;
@@ -41,6 +40,28 @@ function optimizeShopifyUrl(url: string, width = 640): string {
   return url;
 }
 
+function getShopifySrcSet(url: string): string | undefined {
+  try {
+    if (url.includes('cdn.shopify.com')) {
+      const parsed = new URL(url);
+      if (parsed.hostname.toLowerCase().endsWith('cdn.shopify.com')) {
+        const widths = [320, 480, 640, 800];
+        return widths
+          .map((w) => {
+            const u = new URL(url);
+            u.searchParams.set('width', String(w));
+            u.searchParams.set('format', 'webp');
+            return `${u.toString()} ${w}w`;
+          })
+          .join(', ');
+      }
+    }
+  } catch {
+    // ignore
+  }
+  return undefined;
+}
+
 export default function ProductImageDisplay({
   src,
   alt,
@@ -54,6 +75,7 @@ export default function ProductImageDisplay({
 
   const isEmoji = useMemo(() => isEmojiSource(src) || isAmazonHostedImage(src), [src]);
   const displaySrc = useMemo(() => optimizeShopifyUrl(src, 640), [src]);
+  const srcSet = useMemo(() => getShopifySrcSet(src), [src]);
 
   if (isEmoji || broken) {
     return (
@@ -64,13 +86,17 @@ export default function ProductImageDisplay({
   }
 
   return (
-    <Image
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
       src={displaySrc}
+      srcSet={srcSet}
+      sizes={sizes || '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'}
       alt={alt}
-      fill={fill}
-      sizes={sizes}
-      className={className}
-      priority={priority}
+      width={640}
+      height={640}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      className={`${fill ? 'absolute inset-0 w-full h-full' : ''} ${className || ''}`}
       onError={() => setBroken(true)}
     />
   );
