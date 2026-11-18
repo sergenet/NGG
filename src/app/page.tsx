@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   ChefHat,
+  Clock,
   Compass,
   Flame,
   House,
@@ -11,11 +12,14 @@ import {
   Search,
   ShieldCheck,
   Sparkles,
+  Tag,
   Users,
 } from 'lucide-react';
 import productsData from '@/lib/data/products.json';
 import { Product } from '@/lib/schema';
 import { DealCard } from '@/components/DealCard';
+import { CopyPromoCode } from '@/components/CopyPromoCode';
+import { vendorsWithDeals } from '@/lib/data/blackFridayDeals';
 import { NewsletterInline } from '@/components/NewsletterInline';
 import { isActiveRetailerUrl, sortByRecency } from '@/lib/utils';
 import AdSlot from '@/components/AdSlot';
@@ -104,8 +108,48 @@ export default function Home() {
     .sort((a, b) => Math.min(...a.vendors.map((vendor) => vendor.price)) - Math.min(...b.vendors.map((vendor) => vendor.price)))
     .slice(0, 8);
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Verified Partner Promo Codes & Black Friday Deals 2026',
+    description:
+      'Verified manufacturer promo codes, holiday discounts, and clearance offers across smart home, wellness, tools, and outdoor tech.',
+    itemListElement: vendorsWithDeals.map((v, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Offer',
+        name: `${v.name}: ${v.headline}`,
+        description: v.offerDetails,
+        url: `https://newgiftsandgadgets.com${v.shopHref}`,
+        priceCurrency: 'USD',
+        validThrough: v.validThrough || '2026-12-31',
+        priceValidUntil: v.validThrough || '2026-12-31',
+        availability: 'https://schema.org/InStock',
+        seller: {
+          '@type': 'Organization',
+          name: v.name,
+        },
+        ...(v.promoCode
+          ? {
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                priceCurrency: 'USD',
+                description: `Manufacturer promo code ${v.promoCode} valid through ${v.validThrough || '2026-12-31'}`,
+              },
+            }
+          : {}),
+      },
+    })),
+  };
+
   return (
     <main id="main-content">
+      {/* Inject Structured Data for 9 Verified Partner Offers */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       {/* Prominent Clickable Black Friday Banner — Top Middle */}
       <section className="site-container pt-4 sm:pt-6 pb-2">
         <Link
@@ -170,37 +214,119 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Black Friday Deals Showcase */}
-      {blackFridayDeals.length > 0 && (
-        <section className="site-container py-12" aria-labelledby="black-friday-heading">
-          <div className="rounded-[2.5rem] border-2 border-red-300/80 bg-gradient-to-br from-red-50/70 via-[#fcfaf5] to-amber-50/60 p-6 md:p-10 shadow-sm">
-            <div className="section-heading-row mb-8">
-              <div>
-                <p className="eyebrow inline-flex items-center gap-1.5 text-red-950 bg-red-100/90 px-3 py-1 rounded-full border border-red-200">
-                  <Flame className="h-3.5 w-3.5 text-red-600 animate-pulse" /> Active Holiday Codes
-                </p>
-                <h2 id="black-friday-heading" className="section-title mt-3">
-                  Black Friday Deals Worth Grabbing
-                </h2>
-                <p className="text-slate-600 text-sm mt-1">
-                  Verified manufacturer coupon codes and flash discounts live for Cyber Season.
-                </p>
-              </div>
-              <Link
-                href="/black-friday/"
-                className="text-link font-black text-red-900 hover:text-red-700"
-              >
-                See all vendors with Black Friday deals <ArrowRight className="h-4 w-4" />
-              </Link>
+      {/* Featured Black Friday Deals & Verified Partner Coupons Showcase */}
+      <section className="site-container py-12" aria-labelledby="black-friday-heading">
+        <div className="rounded-[2.5rem] border-2 border-red-300/80 bg-gradient-to-br from-red-50/70 via-[#fcfaf5] to-amber-50/60 p-6 md:p-10 shadow-sm">
+          <div className="section-heading-row mb-8">
+            <div>
+              <p className="eyebrow inline-flex items-center gap-1.5 text-red-950 bg-red-100/90 px-3 py-1 rounded-full border border-red-200">
+                <Flame className="h-3.5 w-3.5 text-red-600 animate-pulse" /> Active Holiday Codes &amp; Verified Badges
+              </p>
+              <h2 id="black-friday-heading" className="section-title mt-3">
+                Black Friday Deals &amp; Verified Partner Coupons
+              </h2>
+              <p className="text-slate-600 text-sm mt-1">
+                Verified manufacturer coupon codes, badges, and clearance discounts live for Cyber Season 2026.
+              </p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {blackFridayDeals.map((product) => (
-                <DealCard key={product.id} product={product} />
-              ))}
-            </div>
+            <Link
+              href="/black-friday/"
+              className="text-link font-black text-red-900 hover:text-red-700"
+            >
+              See all 9 partner deals &amp; FAQs <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-        </section>
-      )}
+
+          {/* 9 Partner Coupon Cards Grid with Verified Badges & Expiration Dates */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-10">
+            {vendorsWithDeals.map((vendor) => (
+              <div
+                key={vendor.name}
+                className="flex flex-col justify-between rounded-2xl border border-stone-200/90 bg-white p-5 shadow-xs hover:border-amber-400 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div>
+                  <div className="flex items-start justify-between gap-2 mb-2.5">
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 block mb-0.5">
+                        {vendor.category}
+                      </span>
+                      <h3 className="text-xl font-black text-slate-900 group-hover:text-red-700 transition-colors">
+                        {vendor.name}
+                      </h3>
+                    </div>
+                    <span
+                      className={`inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wide shrink-0 shadow-xs ${vendor.badgeColor}`}
+                    >
+                      {vendor.badge}
+                    </span>
+                  </div>
+
+                  <p className="text-xs font-bold text-slate-800 mb-1.5 line-clamp-1">
+                    {vendor.headline}
+                  </p>
+                  <p className="text-xs leading-relaxed text-slate-600 mb-3 line-clamp-2">
+                    {vendor.offerDetails}
+                  </p>
+
+                  {vendor.promoCode ? (
+                    <div className="mb-3">
+                      <CopyPromoCode
+                        code={vendor.promoCode}
+                        discountText={vendor.discountText}
+                        verifiedText={vendor.verifiedDate}
+                        expiresText={vendor.expiresLabel}
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap items-center gap-1.5 mb-3">
+                      <span className="inline-flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 border border-emerald-200">
+                        <ShieldCheck className="h-3 w-3 text-emerald-600" />
+                        {vendor.verifiedDate || 'Verified Active · Nov 2026'}
+                      </span>
+                      <span className="inline-flex items-center gap-1 rounded-md bg-stone-100 px-2 py-0.5 text-[10px] font-semibold text-stone-600 border border-stone-200">
+                        <Clock className="h-3 w-3 text-stone-500" />
+                        {vendor.expiresLabel || vendor.saleWindow}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-1.5 text-[10px] font-semibold text-slate-500 mb-3">
+                    <Clock className="h-3 w-3 text-slate-400" />
+                    <span>Sale Window: {vendor.saleWindow}</span>
+                  </div>
+                </div>
+
+                <div className="border-t border-slate-100 pt-3 flex items-center justify-between">
+                  <Link
+                    href={vendor.shopHref}
+                    className="inline-flex items-center gap-1 text-xs font-black text-indigo-700 hover:text-indigo-900 group-hover:translate-x-0.5 transition-all"
+                  >
+                    <span>Shop {vendor.name}</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </Link>
+                  <span className="text-[10px] font-bold text-slate-400">
+                    Direct Verified Partner
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Featured Product Deals Highlights */}
+          {blackFridayDeals.length > 0 && (
+            <div className="pt-6 border-t border-red-200/70">
+              <h3 className="text-sm font-black uppercase tracking-wider text-red-950 mb-4 inline-flex items-center gap-1.5">
+                <Tag className="h-3.5 w-3.5 text-red-600" /> Featured Hand-Picked Deal Highlights
+              </h3>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {blackFridayDeals.map((product, idx) => (
+                  <DealCard key={product.id} product={product} priority={idx === 0} />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* Fresh New Arrivals Showcase */}
       <section className="site-container py-12" aria-labelledby="new-arrivals-heading">

@@ -12,9 +12,10 @@ import { formatPriceBracket, isActiveRetailerUrl, pickBestPriceVendor, pickPrima
 interface DealCardProps {
   product: Product;
   showVendorGrid?: boolean;
+  priority?: boolean;
 }
 
-export function DealCard({ product }: DealCardProps) {
+export function DealCard({ product, priority = false }: DealCardProps) {
   const bestVendor = pickBestPriceVendor(product.vendors);
   const primaryVendor = pickPrimaryVendor(product.vendors) || bestVendor;
 
@@ -30,6 +31,7 @@ export function DealCard({ product }: DealCardProps) {
               src={imageSrc}
               alt={product.title}
               fill
+              priority={priority}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-in-out"
             />
