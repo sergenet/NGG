@@ -25,6 +25,22 @@ function isAmazonHostedImage(value: string) {
   }
 }
 
+function optimizeShopifyUrl(url: string, width = 640): string {
+  try {
+    if (url.includes('cdn.shopify.com')) {
+      const parsed = new URL(url);
+      if (parsed.hostname.toLowerCase().endsWith('cdn.shopify.com')) {
+        parsed.searchParams.set('width', String(width));
+        parsed.searchParams.set('format', 'webp');
+        return parsed.toString();
+      }
+    }
+  } catch {
+    // fallback if not a full url
+  }
+  return url;
+}
+
 export default function ProductImageDisplay({
   src,
   alt,
@@ -37,7 +53,7 @@ export default function ProductImageDisplay({
   const [broken, setBroken] = useState(false);
 
   const isEmoji = useMemo(() => isEmojiSource(src) || isAmazonHostedImage(src), [src]);
-  const displaySrc = src;
+  const displaySrc = useMemo(() => optimizeShopifyUrl(src, 640), [src]);
 
   if (isEmoji || broken) {
     return (
