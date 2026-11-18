@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     images: [{ url: '/social/home.png', width: 1200, height: 630, alt: 'NewGiftsAndGadgets gift and gadget portal' }],
   },
   twitter: { card: 'summary_large_image', title: 'NewGiftsAndGadgets', description: 'Useful gifts and clever gadgets, thoughtfully curated.', images: ['/social/home.png'] },
-  verification: { other: { 'p:domain_verify': '72cef8dccd016abd8a0325a8f305d18d' } },
+  verification: {
+    google: 'IQN0BRaEKHQKVeODbNUfhYAfNl7Boc7OiMkPkdYeei0',
+    other: { 'p:domain_verify': '72cef8dccd016abd8a0325a8f305d18d' },
+  },
 };
 
 const organizationSchema = {
@@ -38,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="IQN0BRaEKHQKVeODbNUfhYAfNl7Boc7OiMkPkdYeei0" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0467059729557007"
